@@ -47,9 +47,10 @@ public class DataInitializer implements CommandLineRunner {
         softwareList.add(software);
 
         Classroom classroom = new Classroom("A1", 10, 10, 10, true, softwareList);
-        classroomRepository.save(classroom);
 
         ClassSession classSession = new ClassSession("Test", lecturer, classRep, classroom, LocalDateTime.now(), Duration.ofHours(1));
+        classroom.addClass(classSession);
+        classroomRepository.save(classroom);
         classSessionRepository.save(classSession);
     }
 }

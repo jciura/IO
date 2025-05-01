@@ -1,6 +1,11 @@
 package pl.agh.edu.io.User;
 
 import jakarta.persistence.*;
+import pl.agh.edu.io.Class.ClassSession;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @Entity
 @Table(name = "Users")
@@ -14,6 +19,14 @@ public class User {
     private String email;
     private String phoneNumber;
     private UserRole role;
+    private String password;
+
+    @OneToMany(mappedBy = "lecturer")
+    private List<ClassSession> taughtClasses = new ArrayList<>();
+
+    @OneToMany(mappedBy = "classRep")
+    private List<ClassSession> representedClasses = new ArrayList<>();
+
 
 
     public User(String firstName, String lastName, String email, String phoneNumber, UserRole role) {
@@ -74,5 +87,27 @@ public class User {
 
     public void setRole(UserRole role) {
         this.role = role;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<ClassSession> getTaughtClasses() {
+        if (role == UserRole.PROWADZACY) {
+            return taughtClasses;
+        }
+        return Collections.emptyList();
+    }
+
+    public List<ClassSession> getRepresentedClasses() {
+        if (role == UserRole.STAROSTA) {
+            return representedClasses;
+        }
+        return Collections.emptyList();
     }
 }

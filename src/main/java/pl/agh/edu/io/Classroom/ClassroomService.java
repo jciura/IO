@@ -2,33 +2,138 @@ package pl.agh.edu.io.Classroom;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import pl.agh.edu.io.Software.Software;
+import pl.agh.edu.io.Software.SoftwareNotFoundException;
+import pl.agh.edu.io.Software.SoftwareNotFoundInClassroomException;
+import pl.agh.edu.io.Software.SoftwareRepository;
 
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Optional;
+import java.util.Set;
 
 @Service
 @Transactional
 public class ClassroomService {
     private final ClassroomRepository classroomRepository;
+    private final SoftwareRepository softwareRepository;
 
-    public ClassroomService(ClassroomRepository classroomRepository) {
+    public ClassroomService(ClassroomRepository classroomRepository, SoftwareRepository softwareRepository) {
         this.classroomRepository = classroomRepository;
+        this.softwareRepository = softwareRepository;
     }
 
-    public Classroom getClassroomById(int id) {
-        return classroomRepository.findById(id)
+    public ClassroomDto getClassroomById(int id) {
+        Classroom classroom = classroomRepository.findById(id)
                 .orElseThrow(() -> new ClassroomNotFoundException(id));
+
+        return convertToDto(classroom);
     }
 
-    public List<Classroom> getAllClassrooms() {
-        return classroomRepository.findAll();
-    }
-
-    public List<Classroom> getClassroomsBySoftware(String softwareName) {
+    public List<ClassroomDto> getAllClassrooms() {
         return classroomRepository.findAll().stream()
+                .map(this::convertToDto)
+                .toList();
+    }
+
+    public List<ClassroomDto> getClassroomsBySoftware(String softwareName) {
+        List<Classroom> classrooms = classroomRepository.findAll().stream()
                 .filter(classroom -> classroom.isHasComputers() &&
                         classroom.getSoftware().stream()
                                 .anyMatch(software -> software.getName().equalsIgnoreCase(softwareName)))
-                .collect(Collectors.toList());
+                .toList();
+
+        return classrooms.stream().map(this::convertToDto).toList();
+    }
+
+    public ClassroomDto createClassroom(ClassroomDto classroomDto) {
+        Optional<Classroom> existingClassroom = classroomRepository.findByBuildingAndNumber(classroomDto.building(), classroomDto.number());
+
+        if (existingClassroom.isPresent()) {
+            throw new ClassroomAlreadyExistsException(classroomDto.building(), classroomDto.number());
+        }
+
+        Classroom classroom = new Classroom(
+                classroomDto.building(),
+                classroomDto.number(),
+                classroomDto.floor(),
+                classroomDto.capacity(),
+                classroomDto.hasComputers()
+        );
+
+        return convertToDto(classroomRepository.save(classroom));
+    }
+
+    public void deleteClassroom(int id) {
+        Classroom classroom = classroomRepository.findById(id)
+                .orElseThrow(() -> new ClassroomNotFoundException(id));
+
+        if (!classroom.getClassSessions().isEmpty()) {
+            throw new ClassroomInUseException(id);
+        }
+
+        classroomRepository.delete(classroom);
+    }
+
+    public ClassroomDto updateClassroom(int id, ClassroomDto classroomDto) {
+        Classroom classroom = classroomRepository.findById(id)
+                .orElseThrow(() -> new ClassroomNotFoundException(id));
+
+        classroom.setBuilding(classroomDto.building());
+        classroom.setNumber(classroomDto.number());
+        classroom.setFloor(classroomDto.floor());
+        classroom.setCapacity(classroomDto.capacity());
+        classroom.setHasComputers(classroomDto.hasComputers());
+
+        return convertToDto(classroomRepository.save(classroom));
+    }
+
+    public void addSoftwareToClassroom(int classroomId, String softwareName) {
+        Classroom classroom = classroomRepository.findById(classroomId)
+                .orElseThrow(() -> new ClassroomNotFoundException(classroomId));
+
+        Software software = softwareRepository.findByName(softwareName)
+                .orElseThrow(() -> new SoftwareNotFoundException(softwareName));
+
+        classroom.addSoftware(software);
+        software.addClassroom(classroom);
+        classroomRepository.save(classroom);
+        softwareRepository.save(software);
+    }
+
+    public void removeSoftwareFromClassroom(int classroomId, String softwareName) {
+        Classroom classroom = classroomRepository.findById(classroomId)
+                .orElseThrow(() -> new ClassroomNotFoundException(classroomId));
+
+        Set<Software> softwareSet = classroom.getSoftware();
+
+        boolean removed = softwareSet.removeIf(s -> s.getName().equalsIgnoreCase(softwareName));
+
+        if (!removed) {
+            throw new SoftwareNotFoundInClassroomException(softwareName, classroom.getBuilding(), classroom.getNumber());
+        }
+
+        Software software = softwareRepository.findByName(softwareName).orElseThrow(() -> new SoftwareNotFoundException(softwareName));
+        software.removeClassroom(classroom);
+
+        softwareRepository.save(software);
+        classroomRepository.save(classroom);
+    }
+
+    public ClassroomDto convertToDto(Classroom classroom) {
+        List<String> softwareNames = classroom.getSoftware() != null
+                ? classroom.getSoftware().stream()
+                .map(Software::getName)
+                .toList()
+                : List.of();
+
+        return new ClassroomDto(
+                classroom.getId(),
+                classroom.getBuilding(),
+                classroom.getNumber(),
+                classroom.getFloor(),
+                classroom.getCapacity(),
+                classroom.isHasComputers(),
+                softwareNames
+        );
     }
 }

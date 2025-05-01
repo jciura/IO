@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import pl.agh.edu.io.Class.ClassSession;
 import pl.agh.edu.io.Software.Software;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -20,13 +21,26 @@ public class Classroom {
     private int capacity;
     private boolean hasComputers;
 
-    @OneToMany
-    private Set<Software> software;
+    @ManyToMany
+    @JoinTable(
+            name = "classroom_software",
+            joinColumns = @JoinColumn(name = "classroom_id"),
+            inverseJoinColumns = @JoinColumn(name = "software_id")
+    )
+    private Set<Software> software = new HashSet<>();
 
     @OneToMany(mappedBy = "classroom")
-    private Set<ClassSession> classes;
+    private Set<ClassSession> classes = new HashSet<ClassSession>();
 
     public Classroom() {
+    }
+
+    public Classroom(String building, int number, int floor, int capacity, boolean hasComputers) {
+        this.building = building;
+        this.number = number;
+        this.floor = floor;
+        this.capacity = capacity;
+        this.hasComputers = hasComputers;
     }
 
     public Classroom(String building, int number, int floor, int capacity, boolean hasComputers, Set<Software> software) {
@@ -36,6 +50,10 @@ public class Classroom {
         this.capacity = capacity;
         this.hasComputers = hasComputers;
         this.software = software;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getBuilding() {
@@ -54,6 +72,10 @@ public class Classroom {
         return capacity;
     }
 
+    public Set<ClassSession> getClassSessions() {
+        return classes;
+    }
+
     public boolean isHasComputers() {
         return hasComputers;
     }
@@ -62,7 +84,31 @@ public class Classroom {
         return software;
     }
 
+    public void addSoftware(Software software) {
+        this.software.add(software);
+    }
+
     public void addClass(ClassSession session) {
         this.classes.add(session);
+    }
+
+    public void setBuilding(String building) {
+        this.building = building;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public void setFloor(int floor) {
+        this.floor = floor;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public void setHasComputers(boolean hasComputers) {
+        this.hasComputers = hasComputers;
     }
 }

@@ -18,12 +18,12 @@ public class ClassSessionController {
     }
 
     @GetMapping
-    public ResponseEntity<List<ClassSession>> getAllClasses() {
+    public ResponseEntity<List<ClassSessionDto>> getAllClasses() {
         return ResponseEntity.ok(classSessionService.getAllClasses());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ClassSession> getClassById(@PathVariable int id) {
+    public ResponseEntity<ClassSessionDto> getClassById(@PathVariable int id) {
         return ResponseEntity.ok(classSessionService.getClassById(id));
     }
 

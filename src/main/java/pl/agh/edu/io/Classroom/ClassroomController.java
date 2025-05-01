@@ -1,10 +1,7 @@
 package pl.agh.edu.io.Classroom;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,19 +15,52 @@ public class ClassroomController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Classroom>> getAllClassrooms() {
+    public ResponseEntity<List<ClassroomDto>> getAllClassrooms() {
         return ResponseEntity.ok(classroomService.getAllClassrooms());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Classroom> getClassroomById(@PathVariable int id) {
+    public ResponseEntity<ClassroomDto> getClassroomById(@PathVariable int id) {
         return ResponseEntity.ok(classroomService.getClassroomById(id));
     }
 
     @GetMapping("/software/{softwareName}")
-    public ResponseEntity<List<Classroom>> getClassroomBySoftware(@PathVariable String softwareName) {
+    public ResponseEntity<List<ClassroomDto>> getClassroomBySoftware(@PathVariable String softwareName) {
         return ResponseEntity.ok(classroomService.getClassroomsBySoftware(softwareName));
     }
 
+    @PostMapping
+    public ResponseEntity<ClassroomDto> createClassroom(@RequestBody ClassroomDto classroomDto) {
+        return ResponseEntity.ok(classroomService.createClassroom(classroomDto));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<ClassroomDto> deleteClassroom(@PathVariable int id) {
+        classroomService.deleteClassroom(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ClassroomDto> updateClassroom(
+            @PathVariable int id,
+            @RequestBody ClassroomDto classroomDto) {
+        return ResponseEntity.ok(classroomService.updateClassroom(id, classroomDto));
+    }
+
+    @PostMapping("/{classroomId}/software/{softwareName}")
+    public ResponseEntity<Void> addSoftwareToClassroom(
+            @PathVariable int classroomId,
+            @PathVariable String softwareName) {
+        classroomService.addSoftwareToClassroom(classroomId, softwareName);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/{classroomId}/software/{softwareName}")
+    public ResponseEntity<Void> removeSoftwareFromClassroom(
+            @PathVariable int classroomId,
+            @PathVariable String softwareName) {
+        classroomService.removeSoftwareFromClassroom(classroomId, softwareName);
+        return ResponseEntity.ok().build();
+    }
 
 }
