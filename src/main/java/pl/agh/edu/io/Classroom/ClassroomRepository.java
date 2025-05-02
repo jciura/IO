@@ -6,4 +6,6 @@ import java.util.Optional;
 
 public interface ClassroomRepository extends JpaRepository<Classroom, Long> {
     Optional<Classroom> findByBuildingAndNumber(String building, int number);
+
+
 }

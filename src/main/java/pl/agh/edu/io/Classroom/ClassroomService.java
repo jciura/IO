@@ -10,6 +10,7 @@ import pl.agh.edu.io.Software.SoftwareRepository;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -117,6 +118,53 @@ public class ClassroomService {
 
         softwareRepository.save(software);
         classroomRepository.save(classroom);
+    }
+
+    public List<ClassroomDto> getClassroomsByAttributes(
+            String building,
+            Integer number,
+            Integer floor,
+            Integer capacity,
+            Boolean hasComputers,
+            String softwareName) {
+
+        List<Classroom> classrooms = classroomRepository.findAll();
+
+        if (building != null) {
+            classrooms = classrooms.stream()
+                    .filter(classroom -> classroom.getBuilding().equals(building))
+                    .collect(Collectors.toList());
+        }
+        if (number != null) {
+            classrooms = classrooms.stream()
+                    .filter(classroom -> classroom.getNumber() == number)
+                    .collect(Collectors.toList());
+        }
+        if (floor != null) {
+            classrooms = classrooms.stream()
+                    .filter(classroom -> classroom.getFloor() == floor)
+                    .collect(Collectors.toList());
+        }
+        if (capacity != null) {
+            classrooms = classrooms.stream()
+                    .filter(classroom -> classroom.getCapacity() >= capacity)
+                    .collect(Collectors.toList());
+        }
+        if (hasComputers != null) {
+            classrooms = classrooms.stream()
+                    .filter(classroom -> classroom.isHasComputers() == hasComputers)
+                    .collect(Collectors.toList());
+        }
+        if (softwareName != null) {
+            classrooms = classrooms.stream()
+                    .filter(classroom -> classroom.getSoftware().stream()
+                            .anyMatch(software -> software.getName().equalsIgnoreCase(softwareName)))
+                    .collect(Collectors.toList());
+        }
+
+        return classrooms.stream()
+                .map(this::convertToDto)
+                .collect(Collectors.toList());
     }
 
     public ClassroomDto convertToDto(Classroom classroom) {

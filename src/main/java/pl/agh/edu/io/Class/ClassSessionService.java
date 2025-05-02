@@ -5,8 +5,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.agh.edu.io.Classroom.ClassroomDto;
 import pl.agh.edu.io.Classroom.ClassroomRepository;
-import pl.agh.edu.io.Course.CourseService;
 import pl.agh.edu.io.Software.Software;
+import pl.agh.edu.io.User.UserService;
 
 import java.util.List;
 
@@ -15,13 +15,12 @@ import java.util.List;
 public class ClassSessionService {
     private final ClassSessionRepository classSessionRepository;
     private final ClassroomRepository classroomRepository;
-    private final CourseService courseService;
+    private final UserService userService;
 
-
-    public ClassSessionService(ClassSessionRepository classSessionRepository, ClassroomRepository classroomRepository, CourseService courseService) {
+    public ClassSessionService(ClassSessionRepository classSessionRepository, ClassroomRepository classroomRepository, UserService userService) {
         this.classSessionRepository = classSessionRepository;
         this.classroomRepository = classroomRepository;
-        this.courseService = courseService;
+        this.userService = userService;
     }
 
     public ClassSessionDto getClassById(long id) {
@@ -77,7 +76,9 @@ public class ClassSessionService {
 
         return new ClassSessionDto(
                 classSession.getId(),
-                courseService.convertToDto(classSession.getCourse()),
+                classSession.getCourse().getName(),
+                userService.convertToDto(classSession.getCourse().getLecturer()),
+                userService.convertToDto(classSession.getCourse().getStudentRep()),
                 classRoomDto,
                 classSession.getDateTime(),
                 classSession.getDuration()

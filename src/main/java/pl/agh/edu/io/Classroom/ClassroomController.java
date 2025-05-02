@@ -63,4 +63,17 @@ public class ClassroomController {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping("/search")
+    public ResponseEntity<List<ClassroomDto>> getClassroomsByAttributes(
+            @RequestParam(required = false) String building,
+            @RequestParam(required = false) Integer number,
+            @RequestParam(required = false) Integer floor,
+            @RequestParam(required = false) Integer capacity,
+            @RequestParam(required = false) Boolean hasComputers,
+            @RequestParam(required = false) String softwareName) {
+
+        List<ClassroomDto> classrooms = classroomService.getClassroomsByAttributes(building, number, floor, capacity, hasComputers, softwareName);
+        return ResponseEntity.ok(classrooms);
+    }
+
 }

@@ -107,7 +107,26 @@ public class User {
     }
 
     public void addCourse(Course course) {
-        this.courses.add(course);
+        if (!this.courses.contains(course)) {
+            this.courses.add(course);
+        }
+
+        if (role == UserRole.PROWADZACY) {
+            course.setLecturer(this);
+        } else if (role == UserRole.STAROSTA) {
+            course.setStudentRep(this);
+        }
     }
 
+    public void removeCourse(Course course) {
+        if (this.role == UserRole.PROWADZACY && course.getLecturer() != null &&
+                course.getLecturer().equals(this)) {
+            course.setLecturer(null);
+        } else if (this.role == UserRole.STAROSTA && course.getStudentRep() != null &&
+                course.getStudentRep().equals(this)) {
+            course.setStudentRep(null);
+        }
+
+        this.courses.remove(course);
+    }
 }
