@@ -13,7 +13,7 @@ import java.util.Set;
 public class Classroom {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private long id;
 
     private String building;
     private int number;
@@ -52,7 +52,7 @@ public class Classroom {
         this.software = software;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

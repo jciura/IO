@@ -15,11 +15,16 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public UserDto getUserById(int id) {
+    public UserDto getUserById(long id) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException(id));
 
-        return convertToDto(userRepository.save(user));
+        return convertToDto(user);
+    }
+
+    public User getUserEntityById(long id) {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException(id));
     }
 
     public List<UserDto> getAllUsers() {

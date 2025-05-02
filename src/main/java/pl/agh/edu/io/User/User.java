@@ -1,10 +1,9 @@
 package pl.agh.edu.io.User;
 
 import jakarta.persistence.*;
-import pl.agh.edu.io.Class.ClassSession;
+import pl.agh.edu.io.Course.Course;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 @Entity
@@ -12,7 +11,7 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     private String firstName;
     private String lastName;
@@ -21,13 +20,15 @@ public class User {
     private UserRole role;
     private String password;
 
-    @OneToMany(mappedBy = "lecturer")
-    private List<ClassSession> taughtClasses = new ArrayList<>();
 
-    @OneToMany(mappedBy = "classRep")
-    private List<ClassSession> representedClasses = new ArrayList<>();
-
-
+    //Kursy w których user jest starostą lub prowadzacyym
+    @ManyToMany
+    @JoinTable(
+            name = "user_courses",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id")
+    )
+    private List<Course> courses = new ArrayList<>();
 
     public User(String firstName, String lastName, String email, String phoneNumber, UserRole role) {
         this.firstName = firstName;
@@ -41,7 +42,7 @@ public class User {
 
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -97,17 +98,16 @@ public class User {
         this.password = password;
     }
 
-    public List<ClassSession> getTaughtClasses() {
-        if (role == UserRole.PROWADZACY) {
-            return taughtClasses;
-        }
-        return Collections.emptyList();
+    public List<Course> getCourses() {
+        return courses;
     }
 
-    public List<ClassSession> getRepresentedClasses() {
-        if (role == UserRole.STAROSTA) {
-            return representedClasses;
-        }
-        return Collections.emptyList();
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
     }
+
+    public void addCourse(Course course) {
+        this.courses.add(course);
+    }
+
 }

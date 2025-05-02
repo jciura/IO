@@ -20,7 +20,7 @@ public class ClassroomController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ClassroomDto> getClassroomById(@PathVariable int id) {
+    public ResponseEntity<ClassroomDto> getClassroomById(@PathVariable long id) {
         return ResponseEntity.ok(classroomService.getClassroomById(id));
     }
 
@@ -35,14 +35,14 @@ public class ClassroomController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<ClassroomDto> deleteClassroom(@PathVariable int id) {
+    public ResponseEntity<ClassroomDto> deleteClassroom(@PathVariable long id) {
         classroomService.deleteClassroom(id);
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<ClassroomDto> updateClassroom(
-            @PathVariable int id,
+            @PathVariable long id,
             @RequestBody ClassroomDto classroomDto) {
         return ResponseEntity.ok(classroomService.updateClassroom(id, classroomDto));
     }

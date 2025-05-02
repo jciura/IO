@@ -22,7 +22,7 @@ public class ClassroomService {
         this.softwareRepository = softwareRepository;
     }
 
-    public ClassroomDto getClassroomById(int id) {
+    public ClassroomDto getClassroomById(long id) {
         Classroom classroom = classroomRepository.findById(id)
                 .orElseThrow(() -> new ClassroomNotFoundException(id));
 
@@ -63,7 +63,7 @@ public class ClassroomService {
         return convertToDto(classroomRepository.save(classroom));
     }
 
-    public void deleteClassroom(int id) {
+    public void deleteClassroom(long id) {
         Classroom classroom = classroomRepository.findById(id)
                 .orElseThrow(() -> new ClassroomNotFoundException(id));
 
@@ -74,7 +74,7 @@ public class ClassroomService {
         classroomRepository.delete(classroom);
     }
 
-    public ClassroomDto updateClassroom(int id, ClassroomDto classroomDto) {
+    public ClassroomDto updateClassroom(long id, ClassroomDto classroomDto) {
         Classroom classroom = classroomRepository.findById(id)
                 .orElseThrow(() -> new ClassroomNotFoundException(id));
 
@@ -87,7 +87,7 @@ public class ClassroomService {
         return convertToDto(classroomRepository.save(classroom));
     }
 
-    public void addSoftwareToClassroom(int classroomId, String softwareName) {
+    public void addSoftwareToClassroom(long classroomId, String softwareName) {
         Classroom classroom = classroomRepository.findById(classroomId)
                 .orElseThrow(() -> new ClassroomNotFoundException(classroomId));
 
@@ -100,7 +100,7 @@ public class ClassroomService {
         softwareRepository.save(software);
     }
 
-    public void removeSoftwareFromClassroom(int classroomId, String softwareName) {
+    public void removeSoftwareFromClassroom(long classroomId, String softwareName) {
         Classroom classroom = classroomRepository.findById(classroomId)
                 .orElseThrow(() -> new ClassroomNotFoundException(classroomId));
 

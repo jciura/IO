@@ -2,9 +2,8 @@ package pl.agh.edu.io.Class;
 
 import jakarta.persistence.*;
 import pl.agh.edu.io.Classroom.Classroom;
-import pl.agh.edu.io.User.User;
+import pl.agh.edu.io.Course.Course;
 
-import java.time.Duration;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,47 +11,29 @@ import java.time.LocalDateTime;
 public class ClassSession {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    private String name;
-
-    @ManyToOne
-    @JoinColumn(name = "lecturer_id")
-    private User lecturer;
-
-    @ManyToOne
-    @JoinColumn(name = "classRep_id")
-    private User classRep;
+    private long id;
 
     @ManyToOne
     @JoinColumn(name = "classroom_id")
     private Classroom classroom;
 
     private LocalDateTime dateTime;
-    private Duration duration;
 
-    public ClassSession(String name, User lecturer, User classRep, Classroom classroom, LocalDateTime dateTime, Duration duration) {
-        this.name = name;
-        this.lecturer = lecturer;
-        this.classRep = classRep;
+    //Długość trwania w minutach
+    private long duration;
+
+    @ManyToOne
+    @JoinColumn(name = "course_id")
+    private Course course;
+
+    public ClassSession(String name, Course course, Classroom classroom, LocalDateTime dateTime, long duration) {
+        this.course = course;
         this.classroom = classroom;
         this.dateTime = dateTime;
         this.duration = duration;
     }
 
     public ClassSession() {
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public User getLecturer() {
-        return lecturer;
-    }
-
-    public User getClassRep() {
-        return classRep;
     }
 
     public Classroom getClassroom() {
@@ -63,13 +44,31 @@ public class ClassSession {
         return dateTime;
     }
 
-    public Duration getDuration() {
+    public long getDuration() {
         return duration;
     }
 
-    public int getId() {
+    public void setDuration(long duration) {
+        this.duration = duration;
+    }
+
+    public long getId() {
         return id;
     }
 
+    public Course getCourse() {
+        return course;
+    }
 
+    public void setCourse(Course course) {
+        this.course = course;
+    }
+
+    public void setDateTime(LocalDateTime localDateTime) {
+        this.dateTime = localDateTime;
+    }
+
+    public void setClassroom(Classroom classroom) {
+        this.classroom = classroom;
+    }
 }

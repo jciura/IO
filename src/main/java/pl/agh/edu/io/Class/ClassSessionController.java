@@ -1,10 +1,7 @@
 package pl.agh.edu.io.Class;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,5 +24,16 @@ public class ClassSessionController {
         return ResponseEntity.ok(classSessionService.getClassById(id));
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteClassById(@PathVariable int id) {
+        classSessionService.deleteClassById(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ClassSessionDto> updateClass(@PathVariable int id, @RequestBody ClassSessionDto updatedClass) {
+        ClassSessionDto updated = classSessionService.updateClass(id, updatedClass);
+        return ResponseEntity.ok(updated);
+    }
 
 }
