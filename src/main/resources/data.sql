@@ -19,7 +19,7 @@ INSERT INTO classroom_software (software_id, classroom_id) VALUES
 
 INSERT INTO users (id, first_name, last_name, email, phone_number, role, password) VALUES
   (0, 'Admin', 'Administer', 'administer@agh.edu.pl', '+48123456789', 0, 'root'); -- passwords needs to be hashed!
-insert into users (id, first_name, last_name, email, phone_number, role, password) values (1, 'Lynn', 'Pellissier', 'lpellissier0@marketwatch.com', '+86 410 770 4431', 1, '$2a$04$mBYgo57zbHhRpA7CR8u06eooXPpaNDgM9AjG5djL.Oxw2.kTc10vq');
+insert into users (id, first_name, last_name, email, phone_number, role, password) values (1, 'Lynn', 'Pellissier', 'lpellissier0@marketwatch.com', '+86 410 770 4431', 1, '$2a$10$kDtOd5y4iKTaj4nyaRvoyuU0EyV2THAF2w7y0Kl2/h4Uj35uGVJsC');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (2, 'Orelia', 'Sorrel', 'osorrel1@trellian.com', '+30 981 763 2428', 1, '$2a$04$sL2DE283jD5YITf0nH3TKuRFlMD.IdFXoocGgn2TKkckmxzpeubUW');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (3, 'Tanitansy', 'Caulder', 'tcaulder2@sogou.com', '+381 545 605 2118', 1, '$2a$04$r77FmAGgpJQaCkCMVIC.FOHThfAy8WywadLotw2NHq0d.q9nXt0Km');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (4, 'Roxi', 'Kalisz', 'rkalisz3@toplist.cz', '+86 407 870 9009', 1, '$2a$04$lPEMWoipXiLAv2tBI/4d0uHe0OB8z9RXW.X8hzmcPdPhQy4GcEGYi');
@@ -39,6 +39,7 @@ insert into users (id, first_name, last_name, email, phone_number, role, passwor
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (18, 'Naoma', 'Agate', 'nagateh@people.com.cn', '+7 719 297 3453', 3, '$2a$04$1AmUMXNHsJpNl0KI6ivrd.RzCVjNZjzEVyP8e/DnCa0fCtVzdg9xi');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (19, 'Frans', 'Seeger', 'fseegeri@artisteer.com', '+420 820 641 2918', 1, '$2a$04$0scwYqn8FFgnMMW0U9nE6uOZwH9z5HIcs8RYCpPPPQefFYGcv0Lse');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (20, 'Donn', 'Bouzan', 'dbouzanj@goodreads.com', '+256 398 456 7310', 2, '$2a$04$Dy6zEAw6wtvw2AAd9.Ib5uI9rlW7XXIY2zaVTzVAdJEHYIjk7dSwO');
+insert into users (id, first_name, last_name, email, phone_number, role, password) values (21, 'test', 'testowy', 'test@gmail.com', '+48 123 456 789', 1, '$2a$10$kDtOd5y4iKTaj4nyaRvoyuU0EyV2THAF2w7y0Kl2/h4Uj35uGVJsC');
 
 INSERT INTO courses (id, lecturer_id, representative_id, name) VALUES
   (0, 1, 5, 'Biologia molekularna'),
