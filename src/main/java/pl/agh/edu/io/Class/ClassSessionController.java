@@ -2,16 +2,21 @@ package pl.agh.edu.io.Class;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pl.agh.edu.io.Course.CourseDto;
+import pl.agh.edu.io.Course.CourseService;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/classes")
 public class ClassSessionController {
     private final ClassSessionService classSessionService;
+    private final CourseService courseService;
 
-    public ClassSessionController(ClassSessionService classSessionService) {
+    public ClassSessionController(ClassSessionService classSessionService, CourseService courseService) {
         this.classSessionService = classSessionService;
+        this.courseService = courseService;
     }
 
     @GetMapping
@@ -22,6 +27,15 @@ public class ClassSessionController {
     @GetMapping("/{id}")
     public ResponseEntity<ClassSessionDto> getClassById(@PathVariable int id) {
         return ResponseEntity.ok(classSessionService.getClassById(id));
+    }
+
+    @GetMapping("/course_id/{course_id}")
+    public ResponseEntity<List<ClassSessionDto>> getClassesWithinCourse(@PathVariable int course_id) {
+        CourseDto courseDto = courseService.getCourseById(course_id);
+        List<ClassSessionDto> classSessionDtos = classSessionService.getAllClasses().stream()
+                .filter(classSessionDto -> classSessionDto.courseName().equals(courseDto.name()))
+                .toList();
+        return ResponseEntity.ok(classSessionDtos);
     }
 
     @DeleteMapping("/{id}")

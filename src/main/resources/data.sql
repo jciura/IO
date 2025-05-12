@@ -45,8 +45,9 @@ INSERT INTO courses (id, lecturer_id, representative_id, name) VALUES
   (0, 1, 5, 'Biologia molekularna'),
   (1, 2, 7, 'Karboniki wschodnie'),
   (2, 3, 5, 'Czarne dziury w niewidzialnym wszechświecie'),
-  (3, 4, 16, 'ABOBA'),
-  (4, 19, 10, 'Zagadki niebieskiego sera');
+  (3, 21, 16, 'ABOBA'),
+  (4, 19, 10, 'Zagadki niebieskiego sera'),
+  (5, 21, 10, 'Algebra');
 
 insert into classes (id, classroom_id, date_time, duration, course_id) values (1, 0, '2025-03-14 01:44:45', 65, 2);
 insert into classes (id, classroom_id, date_time, duration, course_id) values (2, 1, '2024-07-27 14:40:15', 86, 2);
@@ -65,8 +66,8 @@ insert into classes (id, classroom_id, date_time, duration, course_id) values (1
 insert into classes (id, classroom_id, date_time, duration, course_id) values (15, 1, '2024-07-30 04:08:11', 73, 1);
 insert into classes (id, classroom_id, date_time, duration, course_id) values (16, 0, '2024-03-30 01:48:58', 85, 3);
 insert into classes (id, classroom_id, date_time, duration, course_id) values (17, 3, '2024-07-25 21:38:55', 89, 4);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (18, 0, '2024-06-01 13:11:25', 73, 3);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (19, 3, '2025-06-21 10:36:54', 65, 2);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (20, 4, '2024-07-31 19:57:05', 89, 3);
+insert into classes (id, classroom_id, date_time, duration, course_id) values (18, 0, '2024-06-01 13:11:25', 73, 5);
+insert into classes (id, classroom_id, date_time, duration, course_id) values (19, 3, '2025-06-21 10:36:54', 65, 5);
+insert into classes (id, classroom_id, date_time, duration, course_id) values (20, 4, '2024-07-31 19:57:05', 89, 5);
 
 

@@ -1,8 +1,7 @@
-import {useState, useEffect } from "react";
-
-var userFromLocalStorage = localStorage.getItem("USER") ?? null;
+import { useState } from "react";
 
 function LoginForm() {
+    var userFromLocalStorage = JSON.parse(localStorage.getItem("USER")) ?? null;
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isSuccessful, setIsSuccessful] = useState(false);
@@ -25,13 +24,12 @@ function LoginForm() {
             if (response.ok) {
                 const data = await response.json();
                 console.log(data.token);
-                console.log(data);
                 // const parsedData = parseJwt(data.token);
                 console.log(data);
                 // console.log(parsedData);
                 console.log("Logged in successfully");
                 setIsSuccessful(true);
-                localStorage.setItem("USER", data);
+                localStorage.setItem("USER", JSON.stringify(data));
                 userFromLocalStorage = data;
                 window.location.reload();
                 console.log(data.role);

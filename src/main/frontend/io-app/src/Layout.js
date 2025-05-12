@@ -1,8 +1,8 @@
 import {Link, Outlet} from "react-router-dom";
 
-const userFromLocalStorage = localStorage.getItem("USER") ?? null;
-
 function Layout() {
+
+    const userFromLocalStorage = JSON.parse(localStorage.getItem("USER")) ?? null;
 
     return (
         <div>
@@ -10,9 +10,14 @@ function Layout() {
                 <div className="container-fluid">
                     <ul className="navbar-nav">
                         <li className="nav-item me-2"><Link to="/" className="nav-link">Strona główna</Link></li>
+                        {userFromLocalStorage && userFromLocalStorage.role === "PROWADZACY" ?
+                            (<li className="nav-item me-2">
+                                <Link to={`/classes/${userFromLocalStorage.id}`} className="nav-link">Moje zajęcia</Link>
+                            </li>) : (<></>)}
                         {userFromLocalStorage ?
                             (<li className="nav-item me-2"><Link to="/login" className="nav-link">Moje konto</Link></li>) :
-                            (<li className="nav-item me-2"><Link to="/login" className="nav-link">Logowanie</Link></li>)}
+                            (<li className="nav-item me-2"><Link to="/login" className="nav-link">Logowanie</Link></li>)
+                        }
                     </ul>
                 </div>
             </nav>
