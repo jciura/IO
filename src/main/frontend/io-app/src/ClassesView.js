@@ -59,7 +59,7 @@ function ClassesView() {
 
     return (
         <div className="p-4">
-            <h1>My courses</h1>
+            <h1>Moje kursy</h1>
             <hr></hr>
             <div className="d-flex mb-5">
                 {courses.map(course =>
@@ -72,19 +72,19 @@ function ClassesView() {
             </div>
             {showClasses &&
                 <div>
-                    <h2>Classes within <i>{currentCourseName}</i> course:</h2>
+                    <h2>Zajęcia w ramach przedmiotu <i>{currentCourseName}</i>:</h2>
                     <hr></hr>
                     <div className="d-flex">
                         {classes.map(classSession =>
                             <div className="col-4 me-2 px-3 py-2 rounded-2 bg-info">
                                 <div className="mb-3">
                                     <b>Data:</b> {classSession.dateTime},
-                                    <b>Czas trwania zajęć:</b> {classSession.duration}
+                                    <b> Czas trwania zajęć:</b> {classSession.duration}
                                 </div>
                                 <div className="mb-3">
                                     <b>Budynek:</b> {classSession.classroomDto.building},
-                                    <b>Piętro:</b> {classSession.classroomDto.floor},
-                                    <b>Sala:</b> {classSession.classroomDto.number}
+                                    <b> Piętro:</b> {classSession.classroomDto.floor},
+                                    <b> Sala:</b> {classSession.classroomDto.number}
                                 </div>
                                 <div className="d-flex">
                                     <button className="btn btn-secondary ms-auto" disabled>Zaproponuj zmianę</button>
