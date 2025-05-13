@@ -16,7 +16,7 @@ public class Recommendation {
     public Recommendation() { }
     
     public Recommendation(ClassroomDto classroom, boolean isEnoughSpace, boolean hasRequiredSoftware, boolean isEconomic) {
-    	this.setClassroom(classroom);
+    	this.classroom = classroom;
     	this.isEnoughSpace = isEnoughSpace;
     	this.hasRequiredSoftware = hasRequiredSoftware;
     	this.isEconomic = isEconomic;

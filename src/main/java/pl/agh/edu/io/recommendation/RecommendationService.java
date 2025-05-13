@@ -7,19 +7,22 @@ import org.springframework.stereotype.Service;
 
 import pl.agh.edu.io.Classroom.*;
 import pl.agh.edu.io.Software.Software;
+import pl.agh.edu.io.Software.SoftwareRepository;
 
 
 @Service
 public class RecommendationService {
+    private final ClassroomService classroomService;
+    private final ClassroomRepository classroomRepository;
 
-    private final ClassroomRepository classroomRepo;
-
-    public RecommendationService(ClassroomRepository classroomRepo) {
-        this.classroomRepo = classroomRepo;
+    public RecommendationService(ClassroomService classroomService, ClassroomRepository classroomRepository) {
+        this.classroomService = classroomService;
+        this.classroomRepository = classroomRepository;
     }
 
     public List<Recommendation> getRecommendations(RecommendationRequest req) {
-        List<Classroom> all = classroomRepo.findAll();
+    	
+        List<Classroom> all = classroomRepository.findAll();
         
         // TODO: filter only those free at 
         // req.getDateTime();
@@ -27,7 +30,7 @@ public class RecommendationService {
         // req.getDuration();
         // and sort by how many 'soft requirements' are fulfilled
         
-        ClassroomDto oldClassroom = req.getClassroom();
+        ClassroomDto oldClassroom = classroomService.getClassroomById(req.getClassroomId());
 
         return all.stream()
             .map(c -> {
@@ -35,26 +38,8 @@ public class RecommendationService {
                 boolean hasRequiredSoftware = false;
                 boolean isEconomic = true;
                 
-                return new Recommendation(convertToDto(c), isEnoughSpace, hasRequiredSoftware, isEconomic);
+                return new Recommendation(classroomService.convertToDto(c), isEnoughSpace, hasRequiredSoftware, isEconomic);
             })
             .collect(Collectors.toList());
-    }
-    
-    private ClassroomDto convertToDto(Classroom classroom) {
-        List<String> softwareNames = classroom.getSoftware() != null
-                ? classroom.getSoftware().stream()
-                .map(Software::getName)
-                .toList()
-                : List.of();
-
-        return new ClassroomDto(
-                classroom.getId(),
-                classroom.getBuilding(),
-                classroom.getNumber(),
-                classroom.getFloor(),
-                classroom.getCapacity(),
-                classroom.isHasComputers(),
-                softwareNames
-        );
     }
 }
