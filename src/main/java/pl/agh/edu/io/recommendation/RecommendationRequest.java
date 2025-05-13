@@ -2,17 +2,19 @@ package pl.agh.edu.io.recommendation;
 
 import java.time.LocalDateTime;
 
+import pl.agh.edu.io.Classroom.ClassroomDto;
+
 
 public class RecommendationRequest {
-	private long classroomId;
+	private ClassroomDto classroomDto;
     private LocalDateTime dateTime;
 	private long duration;
 	
 	
 	public RecommendationRequest() { }
 
-	public RecommendationRequest(long classroomId, LocalDateTime dateTime, long duration) {
-		this.classroomId = classroomId;
+	public RecommendationRequest(ClassroomDto classroomDto, LocalDateTime dateTime, long duration) {
+		this.classroomDto = classroomDto;
 		this.dateTime = dateTime;
 		this.duration = duration;
 	}
@@ -33,12 +35,12 @@ public class RecommendationRequest {
 		this.duration = duration;
 	}
 
-	public long getClassroomId() {
-		return classroomId;
+	public ClassroomDto getClassroomDto() {
+		return classroomDto;
 	}
 
-	public void setClassroomId(long classroomId) {
-		this.classroomId = classroomId;
+	public void setClassroomDto(ClassroomDto classroomDto) {
+		this.classroomDto = classroomDto;
 	}
 	
 	

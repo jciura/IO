@@ -36,7 +36,7 @@ public class RecommendationService {
         List<Classroom> free = classroomRepository.findAllAvailable(reqStart, reqEnd);
 
         // Fetch the reference classroom
-        ClassroomDto reference = classroomService.getClassroomById(req.getClassroomId());
+        ClassroomDto reference = req.getClassroomDto();
 
         // Map to Recommendation and sort by how many 'soft requirements' filled
         return free.stream()
