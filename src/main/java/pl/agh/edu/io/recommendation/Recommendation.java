@@ -1,10 +1,13 @@
 package pl.agh.edu.io.recommendation;
 
-import pl.agh.edu.io.Classroom.Classroom;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import pl.agh.edu.io.Classroom.ClassroomDto;
 
 
 public class Recommendation {
-    private Classroom classroom;
+	@JsonIgnoreProperties("classes")
+    private ClassroomDto classroom;
     private boolean isEnoughSpace;
 	private boolean hasRequiredSoftware;
     private boolean isEconomic;
@@ -12,7 +15,7 @@ public class Recommendation {
     
     public Recommendation() { }
     
-    public Recommendation(Classroom classroom, boolean isEnoughSpace, boolean hasRequiredSoftware, boolean isEconomic) {
+    public Recommendation(ClassroomDto classroom, boolean isEnoughSpace, boolean hasRequiredSoftware, boolean isEconomic) {
     	this.setClassroom(classroom);
     	this.isEnoughSpace = isEnoughSpace;
     	this.hasRequiredSoftware = hasRequiredSoftware;
@@ -44,11 +47,11 @@ public class Recommendation {
 		this.isEconomic = isEconomic;
 	}
 
-	public Classroom getClassroom() {
+	public ClassroomDto getClassroom() {
 		return classroom;
 	}
 
-	public void setClassroom(Classroom classroom) {
+	public void setClassroom(ClassroomDto classroom) {
 		this.classroom = classroom;
 	}
 }

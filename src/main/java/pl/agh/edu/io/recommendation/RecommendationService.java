@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 import pl.agh.edu.io.Classroom.*;
+import pl.agh.edu.io.Software.Software;
 
 
 @Service
@@ -26,16 +27,34 @@ public class RecommendationService {
         // req.getDuration();
         // and sort by how many 'soft requirements' are fulfilled
         
-        Classroom oldClassroom = req.getClassroom();
+        ClassroomDto oldClassroom = req.getClassroom();
 
         return all.stream()
             .map(c -> {
-                boolean isEnoughSpace = c.getCapacity() >= oldClassroom.getCapacity();
-                boolean hasRequiredSoftware = c.getSoftware().containsAll(oldClassroom.getSoftware());
+                boolean isEnoughSpace = c.getCapacity() >= oldClassroom.capacity();
+                boolean hasRequiredSoftware = false;
                 boolean isEconomic = true;
-
-                return new Recommendation(c, isEnoughSpace, hasRequiredSoftware, isEconomic);
+                
+                return new Recommendation(convertToDto(c), isEnoughSpace, hasRequiredSoftware, isEconomic);
             })
             .collect(Collectors.toList());
+    }
+    
+    private ClassroomDto convertToDto(Classroom classroom) {
+        List<String> softwareNames = classroom.getSoftware() != null
+                ? classroom.getSoftware().stream()
+                .map(Software::getName)
+                .toList()
+                : List.of();
+
+        return new ClassroomDto(
+                classroom.getId(),
+                classroom.getBuilding(),
+                classroom.getNumber(),
+                classroom.getFloor(),
+                classroom.getCapacity(),
+                classroom.isHasComputers(),
+                softwareNames
+        );
     }
 }

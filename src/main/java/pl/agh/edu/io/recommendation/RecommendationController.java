@@ -5,6 +5,10 @@ import java.util.List;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import pl.agh.edu.io.Classroom.Classroom;
+import pl.agh.edu.io.Classroom.ClassroomDto;
+import pl.agh.edu.io.Software.Software;
+
 
 @RestController
 @RequestMapping("/recommendations")
