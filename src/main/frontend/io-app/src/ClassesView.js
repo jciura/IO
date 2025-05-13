@@ -16,6 +16,8 @@ function ClassesView() {
     const [newClassroom, setNewClassroom] = useState("");
     const [newCapacity, setNewCapacity] = useState(0);
     const [computersNeeded, setComputersNeeded] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [selectedClassroom, setSelectedClassroom] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -74,6 +76,11 @@ function ClassesView() {
     async function handleClassChangeRequest(classId) {
         console.log(classId);
         console.log(newDate, newClassDuration);
+    }
+
+    function handleClassroomSelection(selectedOption) {
+        console.log("Classroom selected: ", selectedOption);
+        setSelectedClassroom(selectedOption);
     }
 
     return (
@@ -142,8 +149,17 @@ function ClassesView() {
                                                                 <input id="durationInput" type="number" className="mb-3"
                                                                        defaultValue={classSession.duration} min={10} max={150}
                                                                        onChange={(event) => setNewClassDuration(event.target.value)}/>
-                                                                    <Select isDisabled={true} styles={{menuPortal: (base) =>
-                                                                        ({...base, zIndex: 9999})}} menuPortalTarget={document.body} menuPosition="fixed" onMenuOpen={() => console.log("OPEN")} onMenuClose={() => console.log("CLOSE")} onInputChange={() => console.log("Input change")} onChange={(selectedOption) => console.log("Selected option: ", selectedOption)} options={[{value: "A1", label: "Sala A1"}, {value: "A2", label: "Sala A2"}]} isSearchable={false} isClearable={true} />
+                                                                    <Select isDisabled={false}
+                                                                            onMenuOpen={() => setIsMenuOpen(true)}
+                                                                            onMenuClose={() => setIsMenuOpen(false)}
+                                                                            menuIsOpen={isMenuOpen}
+                                                                            value={selectedClassroom}
+                                                                            onInputChange={() => console.log("Input change")}
+                                                                            onChange={(selectedOption) => handleClassroomSelection(selectedOption)}
+                                                                            options={[{value: "A1", label: "Sala A1"}, {value: "A2", label: "Sala A2"}]}
+                                                                            isSearchable={false}
+                                                                            isClearable={true}
+                                                                    />
 
                                                                 {/*<input id="capacityInput" type="number" className="mb-3 mt-2"*/}
                                                                 {/*       defaultValue={classSession.classroomDto.capacity} min={1} max={500}*/}
