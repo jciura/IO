@@ -73,12 +73,12 @@ function LoginForm() {
                             <h1>Zaloguj się</h1>
                             <hr></hr>
                             <div className="mt-3">
-                                <label className="form-label mb-3 me-3">Email:</label>
-                                <input type="text" value={email} onChange={(event) => {setEmail(event.target.value)}} />
+                                <label for="emailInput" className="form-label mb-3 me-3">Email:</label>
+                                <input id="emailInput" type="text" value={email} onChange={(event) => {setEmail(event.target.value)}} />
                             </div>
                             <div>
-                                <label className="form-label mb-3 me-3">Hasło:</label>
-                                <input type="password" value={password} onChange={(event) => {setPassword(event.target.value)}} />
+                                <label for="passwordInput" className="form-label mb-3 me-3">Hasło:</label>
+                                <input id="passwordInput" type="password" value={password} onChange={(event) => {setPassword(event.target.value)}} />
                             </div>
                             <button className="btn btn-primary" onClick={handleLogin}>Zaloguj się</button>
                             {/*</form>*/}
