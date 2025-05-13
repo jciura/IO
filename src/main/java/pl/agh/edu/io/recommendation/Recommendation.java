@@ -1,25 +1,24 @@
 package pl.agh.edu.io.recommendation;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import pl.agh.edu.io.Classroom.ClassroomDto;
 
 
 public class Recommendation {
-	@JsonIgnoreProperties("classes")
     private ClassroomDto classroom;
     private boolean isEnoughSpace;
-	private boolean hasRequiredSoftware;
+	private boolean isRequiredSoftware;
     private boolean isEconomic;
+    private boolean isOkComputers;
     
     
     public Recommendation() { }
     
-    public Recommendation(ClassroomDto classroom, boolean isEnoughSpace, boolean hasRequiredSoftware, boolean isEconomic) {
+    public Recommendation(ClassroomDto classroom, boolean isEnoughSpace, boolean isRequiredSoftware, boolean isEconomic, boolean isOkComputers) {
     	this.classroom = classroom;
     	this.isEnoughSpace = isEnoughSpace;
-    	this.hasRequiredSoftware = hasRequiredSoftware;
+    	this.isRequiredSoftware = isRequiredSoftware;
     	this.isEconomic = isEconomic;
+    	this.isOkComputers = isOkComputers;
     }
     
     
@@ -31,12 +30,12 @@ public class Recommendation {
 		this.isEnoughSpace = isEnoughSpace;
 	}
 
-	public boolean isHasRequiredSoftware() {
-		return hasRequiredSoftware;
+	public boolean isRequiredSoftware() {
+		return isRequiredSoftware;
 	}
 
-	public void setHasRequiredSoftware(boolean hasRequiredSoftware) {
-		this.hasRequiredSoftware = hasRequiredSoftware;
+	public void setRequiredSoftware(boolean isRequiredSoftware) {
+		this.isRequiredSoftware = isRequiredSoftware;
 	}
 
 	public boolean isEconomic() {
@@ -53,6 +52,14 @@ public class Recommendation {
 
 	public void setClassroom(ClassroomDto classroom) {
 		this.classroom = classroom;
+	}
+
+	public boolean isOkComputers() {
+		return isOkComputers;
+	}
+
+	public void setOkComputers(boolean isOkComputers) {
+		this.isOkComputers = isOkComputers;
 	}
 }
 
