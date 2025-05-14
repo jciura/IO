@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import LoginForm from "./LoginForm";
 import Layout from "./Layout";
-import ClassesView from "./ClassesView";
+import ClassesView from "./classes/ClassesView";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
           <Routes>
               <Route path="/" element={<Layout  />}>
                   <Route index path="/login" element={<LoginForm />} />
-                  <Route path="/classes/:user_id" element={<ClassesView />} />
+                  <Route path="/classes" element={<ClassesView />} />
               </Route>
           </Routes>
       </BrowserRouter>
