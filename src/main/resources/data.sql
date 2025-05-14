@@ -48,7 +48,7 @@ INSERT INTO courses (id, lecturer_id, representative_id, name) VALUES
   (4, 19, 10, 'Zagadki niebieskiego sera');
 
 insert into classes (id, classroom_id, date_time, duration, course_id) values (1, 0, '2025-03-14 01:44:45', 65, 2);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (2, 1, '2024-07-27 14:40:15', 86, 2);
+insert into classes (id, classroom_id, date_time, duration, course_id) values (2, 1, '2025-03-14 14:40:15', 86, 2);
 insert into classes (id, classroom_id, date_time, duration, course_id) values (3, 3, '2024-07-24 06:16:06', 83, 4);
 insert into classes (id, classroom_id, date_time, duration, course_id) values (4, 4, '2024-01-29 14:30:02', 86, 1);
 insert into classes (id, classroom_id, date_time, duration, course_id) values (5, 1, '2024-11-30 04:42:30', 63, 2);
