@@ -32,7 +32,7 @@ function ClassesView() {
                     console.log("Wrong user id!");
                 }
             } catch (error) {
-                console.log("Error during loading classes: ", error);
+                console.log("Error while loading classes: ", error);
             }
         };
 
@@ -99,7 +99,7 @@ function ClassesView() {
                 setShowClasses(false);
             }
         } catch (error) {
-            console.log("Error during loading course's classes: ", error);
+            console.log("Error while loading course's classes: ", error);
         }
     }
 
