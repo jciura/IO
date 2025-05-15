@@ -3,9 +3,21 @@ import Popup from "reactjs-popup";
 function RequestCard({request}) {
 
     async function handleRequestDelete() {
-        // try {
-        //     const response = await fetch("http://localhost:8080/")
-        // }
+        try {
+            const response = await fetch(`http://localhost:8080/reschedule/${request.id}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+
+            if (response.ok) {
+                window.location.reload();
+                console.log("Request successfully deleted.");
+            }
+        } catch (error) {
+            console.log("Error during deleting request: ", error);
+        }
     }
 
     return (

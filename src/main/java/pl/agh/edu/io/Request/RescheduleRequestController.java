@@ -43,4 +43,10 @@ public class RescheduleRequestController {
         rescheduleRequestService.rejectRequest(id);
         return ResponseEntity.ok().build();
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable long id) {
+        rescheduleRequestService.deleteById(id);
+        return ResponseEntity.ok().build();
+    }
 }

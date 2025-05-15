@@ -152,6 +152,10 @@ public class RescheduleRequestService {
         rescheduleRequestRepository.save(request);
     }
 
+    public void deleteById(Long requestId) {
+        rescheduleRequestRepository.deleteById(requestId);
+    }
+
     public RescheduleRequestDto convertToDto(RescheduleRequest request) {
         return new RescheduleRequestDto(
                 request.getId(),
