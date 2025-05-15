@@ -27,10 +27,10 @@ public class RescheduleRequest {
 
     private RequestStatus status;
 
-    @OneToOne
+    @ManyToOne
     private User lecturer;
 
-    @OneToOne
+    @ManyToOne
     private User classRep;
 
     private boolean isForAllSessions;

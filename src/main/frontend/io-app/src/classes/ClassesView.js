@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import ClassCard from "./ClassCard";
+import RequestCard from "./RequestCard"
 
 function ClassesView() {
     const userFromLocalStorage = JSON.parse(localStorage.getItem("USER")) ?? null;
@@ -8,9 +9,10 @@ function ClassesView() {
     const [showClasses, setShowClasses] = useState(false);
     const [classes, setClasses] = useState([]);
     const [currentCourseName, setCurrentCourseName] = useState("");
+    const [rescheduleRequests, setRescheduleRequests] = useState([]);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchCourses = async () => {
             if (userId == null)
                 return
             try {
@@ -32,13 +34,32 @@ function ClassesView() {
             }
         };
 
+        const fetchRescheduleRequests = async () => {
+            try {
+                const response = await fetch(`http://localhost:8080/reschedule/${userFromLocalStorage.id}`, {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log("Requests: ", data);
+                    setRescheduleRequests(data);
+                }
+            } catch (error) {
+                console.log("Error during reschedule requests fetching: ", error);
+            }
+        }
         // const fetchSoftwares = () => {
         //     try {
         //         const response = await fetch("http")
         //     }
         // }
 
-        fetchData();
+        fetchCourses();
+        fetchRescheduleRequests();
     }, [userId]);
 
     async function showClassesWithinCourse(courseId, courseName) {
@@ -69,13 +90,15 @@ function ClassesView() {
         <div className="p-4">
             <h1>Moje kursy</h1>
             <hr></hr>
-            <div className="d-flex mb-5">
+            <div className="row flex-wrap mb-5">
                 {courses.length > 0 ? (
                     courses.map(course =>
-                        <div className="col-6 d-flex me-3 px-3 py-2 rounded-2 bg-light">
-                            <h4 className="me-5">{course.name}</h4>
-                            <p className="me-5">Starosta grupy: {course.studentRep.firstName} {course.studentRep.lastName}</p>
-                            <button className="btn btn-secondary" onClick={() => showClassesWithinCourse(course.id, course.name)}>Szczegóły kursu</button>
+                        <div className="col-6 d-flex p-3">
+                            <div className="d-flex px-3 py-2 rounded-2 bg-light" style={{width: "100%"}}>
+                                <h4 className="me-5">{course.name}</h4>
+                                <p className="me-5">Starosta grupy: {course.studentRep.firstName} {course.studentRep.lastName}</p>
+                                <button className="btn btn-secondary ms-auto" onClick={() => showClassesWithinCourse(course.id, course.name)}>Szczegóły kursu</button>
+                            </div>
                         </div>
                     )
                 ) : (
@@ -85,10 +108,10 @@ function ClassesView() {
                 )}
             </div>
             {showClasses &&
-                <div>
+                <div className="mb-5">
                     <h2>Zajęcia w ramach przedmiotu <i>{currentCourseName}</i>:</h2>
                     <hr></hr>
-                    <div className="d-flex">
+                    <div className="d-flex flex-wrap">
                         {classes.length > 0 ? (
                             classes.map(classSession =>
                                 <ClassCard classSession={classSession}/>
@@ -98,6 +121,17 @@ function ClassesView() {
                                 <p>Nie masz żadnych zajęć w tym kursie</p>
                             </div>
                         )}
+                    </div>
+                </div>}
+            {rescheduleRequests.length > 0 &&
+                <div className="mb-5">
+                    <h2>Prośby o zmianę terminu:</h2>
+                    <hr></hr>
+                    <div className="d-flex flex-wrap">
+                        {rescheduleRequests.map(
+                            request => <RequestCard request={request} />
+                        )
+                        }
                     </div>
                 </div>}
         </div>

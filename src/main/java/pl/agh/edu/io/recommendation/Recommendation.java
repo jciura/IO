@@ -4,7 +4,7 @@ import pl.agh.edu.io.Classroom.ClassroomDto;
 
 
 public class Recommendation {
-    private ClassroomDto classroom;
+    private ClassroomDto classroomDto;
     private boolean isEnoughSpace;
 	private boolean isRequiredSoftware;
     private boolean isEconomic;
@@ -13,8 +13,8 @@ public class Recommendation {
     
     public Recommendation() { }
     
-    public Recommendation(ClassroomDto classroom, boolean isEnoughSpace, boolean isRequiredSoftware, boolean isEconomic, boolean isOkComputers) {
-    	this.classroom = classroom;
+    public Recommendation(ClassroomDto classroomDto, boolean isEnoughSpace, boolean isRequiredSoftware, boolean isEconomic, boolean isOkComputers) {
+    	this.classroomDto = classroomDto;
     	this.isEnoughSpace = isEnoughSpace;
     	this.isRequiredSoftware = isRequiredSoftware;
     	this.isEconomic = isEconomic;
@@ -46,12 +46,12 @@ public class Recommendation {
 		this.isEconomic = isEconomic;
 	}
 
-	public ClassroomDto getClassroom() {
-		return classroom;
+	public ClassroomDto getClassroomDto() {
+		return classroomDto;
 	}
 
-	public void setClassroom(ClassroomDto classroom) {
-		this.classroom = classroom;
+	public void setClassroomDto(ClassroomDto classroomDto) {
+		this.classroomDto = classroomDto;
 	}
 
 	public boolean isOkComputers() {
