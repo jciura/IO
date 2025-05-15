@@ -125,7 +125,7 @@ function ClassesView() {
                 </div>}
             {rescheduleRequests.length > 0 &&
                 <div className="mb-5">
-                    <h2>Prośby o zmianę terminu:</h2>
+                    <h2>Propozycje zmiany zajęć:</h2>
                     <hr></hr>
                     <div className="d-flex flex-wrap">
                         {rescheduleRequests.map(

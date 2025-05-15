@@ -9,6 +9,7 @@ public record RescheduleRequestDto(Long id,
                                    ClassSessionDto classSessionDto,
                                    ClassroomDto newClassroom,
                                    LocalDateTime newDateTime,
+                                   int newDuration,
                                    RequestStatus status,
                                    boolean isForAllSessions) {
 }

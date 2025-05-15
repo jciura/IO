@@ -40,6 +40,7 @@ function ClassCard({classSession}) {
                         classSessionDto: classSession,
                         newClassroom: newClassroom,
                         newDateTime: newDate,
+                        newDuration: newClassDuration,
                         status: "PENDING",
                         isForAllSessions: false
                     })

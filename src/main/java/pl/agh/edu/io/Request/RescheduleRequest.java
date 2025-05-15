@@ -25,6 +25,8 @@ public class RescheduleRequest {
     @ManyToOne
     private Classroom newClassroom;
 
+    private int newDuration;
+
     private RequestStatus status;
 
     @ManyToOne
@@ -39,10 +41,11 @@ public class RescheduleRequest {
     }
 
     public RescheduleRequest(ClassSession classSession, LocalDateTime newDateTime, Classroom newClassroom
-            , RequestStatus status, User lecturer, User classRep, boolean isForAllSessions) {
+            , int newDuration, RequestStatus status, User lecturer, User classRep, boolean isForAllSessions) {
         this.classSession = classSession;
         this.newDateTime = newDateTime;
         this.newClassroom = newClassroom;
+        this.newDuration = newDuration;
         this.status = status;
         this.lecturer = lecturer;
         this.classRep = classRep;
@@ -75,6 +78,14 @@ public class RescheduleRequest {
 
     public void setNewDateTime(LocalDateTime newDateTime) {
         this.newDateTime = newDateTime;
+    }
+
+    public int getNewDuration() {
+        return newDuration;
+    }
+
+    public void setNewDuration(int newDuration) {
+        this.newDuration = newDuration;
     }
 
     public RequestStatus getStatus() {

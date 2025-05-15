@@ -1,13 +1,18 @@
-import Select from "react-select/base";
-
+import Popup from "reactjs-popup";
 
 function RequestCard({request}) {
 
+    async function handleRequestDelete() {
+        // try {
+        //     const response = await fetch("http://localhost:8080/")
+        // }
+    }
+
     return (
         <div className="col-4 p-2">
-            <div className="px-3 py-2 rounded-2 bg-info">
+            <div className="px-3 py-3 rounded-2 bg-info">
                 <div className="mb-3">
-                    <h4><b>Przedmiot:</b> {request.classSessionDto.courseName}</h4>
+                    <h4><b>Przedmiot:</b> <i>{request.classSessionDto.courseName}</i></h4>
                 </div>
                 <div className="d-flex p-2">
                     <div className="d-flex col-6">
@@ -34,6 +39,22 @@ function RequestCard({request}) {
                             <p>{request.newClassroom.building}, {request.newClassroom.floor}, {request.newClassroom.number}</p>
                         </div>
                     </div>
+                </div>
+                <div className="d-flex">
+                    <Popup trigger={<button className="btn btn-danger ms-auto">Usuń propozycję</button>} contentStyle={{maxWidth: "50%"}} className="bg-light rounded-2" modal nested>
+                        {
+                            close => (
+                                <div className="p-3">
+                                    <h1>Czy na pewno chcesz usunąć tę propozycję?</h1>
+                                    <hr></hr>
+                                    <div className="d-flex">
+                                        <button onClick={close} className="btn btn-outline-success ms-auto">Nie</button>
+                                        <button onClick={() => {handleRequestDelete(); close()}} className="btn btn-danger ms-3">Tak</button>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    </Popup>
                 </div>
             </div>
         </div>

@@ -65,6 +65,7 @@ public class RescheduleRequestService {
                 session,
                 rescheduleRequestDto.newDateTime(),
                 newClassroom,
+                rescheduleRequestDto.newDuration(),
                 RequestStatus.PENDING,
                 lecturer,
                 session.getCourse().getStudentRep(),
@@ -157,6 +158,7 @@ public class RescheduleRequestService {
                 classSessionService.convertToDto(request.getClassSession()),
                 classroomService.convertToDto(request.getNewClassroom()),
                 request.getNewDateTime(),
+                request.getNewDuration(),
                 request.getStatus(),
                 request.isForAllSessions()
         );
