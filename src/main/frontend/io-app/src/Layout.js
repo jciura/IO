@@ -14,6 +14,11 @@ function Layout() {
                             (<li className="nav-item me-2">
                                 <Link to={"/classes"} className="nav-link">Moje zajęcia</Link>
                             </li>) : (<></>)}
+                        {userFromLocalStorage && userFromLocalStorage.role === "ADMINISTRATOR" ?
+                            (<li className="nav-item me-2">
+                                <Link to={"/admin-panel"} className="nav-link">Sale</Link>
+                            </li>) : (<></>)
+                        }
                         {userFromLocalStorage ?
                             (<li className="nav-item me-2"><Link to="/login" className="nav-link">Moje konto</Link></li>) :
                             (<li className="nav-item me-2"><Link to="/login" className="nav-link">Logowanie</Link></li>)
