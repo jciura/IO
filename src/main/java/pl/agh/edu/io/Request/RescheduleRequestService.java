@@ -69,6 +69,7 @@ public class RescheduleRequestService {
                 RequestStatus.PENDING,
                 lecturer,
                 session.getCourse().getStudentRep(),
+                rescheduleRequestDto.requesterId(),
                 false
         );
 
@@ -114,6 +115,14 @@ public class RescheduleRequestService {
 //        );
 //    }
 
+    public List<RescheduleRequestDto> getCompletedUserRequests(long userId) {
+        return rescheduleRequestRepository.findAll().stream()
+                .filter(request -> request.getRequesterId() == userId)
+                .filter(request -> request.getStatus().equals(RequestStatus.REJECTED) || request.getStatus().equals(RequestStatus.ACCEPTED))
+                .map(this::convertToDto)
+                .toList();
+    }
+
     public List<RescheduleRequestDto> getPendingRequests(long userId) {
         User user = userService.getUserEntityById(userId);
 
@@ -133,8 +142,14 @@ public class RescheduleRequestService {
 
 
         ClassSession session = request.getClassSession();
+
+        request.setOldTime(session.getDateTime());
+        request.setOldDuration(session.getDuration());
+        request.setOldClassroom(session.getClassroom());
+
         session.setDateTime(request.getNewDateTime());
         session.setClassroom(request.getNewClassroom());
+        session.setDuration(request.getNewDuration());
         classSessionRepository.save(session);
 
         request.setStatus(RequestStatus.ACCEPTED);
@@ -160,9 +175,13 @@ public class RescheduleRequestService {
         return new RescheduleRequestDto(
                 request.getId(),
                 classSessionService.convertToDto(request.getClassSession()),
+                request.getRequesterId(),
                 classroomService.convertToDto(request.getNewClassroom()),
                 request.getNewDateTime(),
                 request.getNewDuration(),
+                request.getOldClassroom() != null ? classroomService.convertToDto(request.getOldClassroom()) : null,
+                request.getOldTime(),
+                request.getOldDuration(),
                 request.getStatus(),
                 request.isForAllSessions()
         );

@@ -35,13 +35,23 @@ public class RescheduleRequest {
     @ManyToOne
     private User classRep;
 
+    private int requesterId;
+
     private boolean isForAllSessions;
+
+    @ManyToOne
+    private Classroom oldClassroom;
+
+    private LocalDateTime oldTime;
+
+    private long oldDuration;
 
     public RescheduleRequest() {
     }
 
-    public RescheduleRequest(ClassSession classSession, LocalDateTime newDateTime, Classroom newClassroom
-            , int newDuration, RequestStatus status, User lecturer, User classRep, boolean isForAllSessions) {
+    public RescheduleRequest(ClassSession classSession, LocalDateTime newDateTime, Classroom newClassroom,
+                             int newDuration, RequestStatus status, User lecturer, User classRep, int requesterId,
+                             boolean isForAllSessions) {
         this.classSession = classSession;
         this.newDateTime = newDateTime;
         this.newClassroom = newClassroom;
@@ -49,6 +59,7 @@ public class RescheduleRequest {
         this.status = status;
         this.lecturer = lecturer;
         this.classRep = classRep;
+        this.requesterId = requesterId;
         this.isForAllSessions = isForAllSessions;
     }
 
@@ -112,6 +123,14 @@ public class RescheduleRequest {
         this.classRep = classRep;
     }
 
+    public int getRequesterId() {
+        return requesterId;
+    }
+
+    public void setRequesterId(int requesterId) {
+        this.requesterId = requesterId;
+    }
+
     public Course getCourse() {
         return course;
     }
@@ -126,5 +145,29 @@ public class RescheduleRequest {
 
     public void setForAllSessions(boolean forAllSessions) {
         isForAllSessions = forAllSessions;
+    }
+
+    public Classroom getOldClassroom() {
+        return oldClassroom;
+    }
+
+    public void setOldClassroom(Classroom oldClassroom) {
+        this.oldClassroom = oldClassroom;
+    }
+
+    public LocalDateTime getOldTime() {
+        return oldTime;
+    }
+
+    public void setOldTime(LocalDateTime oldTime) {
+        this.oldTime = oldTime;
+    }
+
+    public long getOldDuration() {
+        return oldDuration;
+    }
+
+    public void setOldDuration(long oldDuration) {
+        this.oldDuration = oldDuration;
     }
 }

@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import ClassCard from "./ClassCard";
 import RequestCard from "./RequestCard"
+import CompletedRequestCard from "./CompletedRequestCard";
 
 function ClassesView() {
     const userFromLocalStorage = JSON.parse(localStorage.getItem("USER")) ?? null;
@@ -10,6 +11,7 @@ function ClassesView() {
     const [classes, setClasses] = useState([]);
     const [currentCourseName, setCurrentCourseName] = useState("");
     const [rescheduleRequests, setRescheduleRequests] = useState([]);
+    const [completedRescheduleRequests, setCompletedRescheduleRequests] = useState([]);
 
     useEffect(() => {
         const fetchCourses = async () => {
@@ -52,14 +54,29 @@ function ClassesView() {
                 console.log("Error during reschedule requests fetching: ", error);
             }
         }
-        // const fetchSoftwares = () => {
-        //     try {
-        //         const response = await fetch("http")
-        //     }
-        // }
+
+        const fetchCompletedRescheduleRequests = async () => {
+            try {
+                const response = await fetch(`http://localhost:8080/reschedule/completed/${userFromLocalStorage.id}`, {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log("Requests: ", data);
+                    setCompletedRescheduleRequests(data);
+                }
+            } catch (error) {
+                console.log("Error during completed reschedule requests fetching: ", error);
+            }
+        }
 
         fetchCourses();
         fetchRescheduleRequests();
+        fetchCompletedRescheduleRequests();
     }, [userId]);
 
     async function showClassesWithinCourse(courseId, courseName) {
@@ -130,6 +147,17 @@ function ClassesView() {
                     <div className="d-flex flex-wrap">
                         {rescheduleRequests.map(
                             request => <RequestCard request={request} />
+                        )
+                        }
+                    </div>
+                </div>}
+            {completedRescheduleRequests.length > 0 &&
+                <div className="mb-5">
+                    <h2>Zaakceptowane lub odrzucone propozycje zmiany zajęć:</h2>
+                    <hr></hr>
+                    <div className="d-flex flex-wrap">
+                        {completedRescheduleRequests.map(
+                            request => <CompletedRequestCard request={request} />
                         )
                         }
                     </div>

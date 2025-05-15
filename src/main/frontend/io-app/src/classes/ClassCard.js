@@ -26,7 +26,6 @@ function ClassCard({classSession}) {
         return new Date(classSession.dateTime) > new Date();
     }
 
-    //TODO: Finish
     async function handleClassChangeRequest() {
         try {
             const response = await fetch(
@@ -38,6 +37,7 @@ function ClassCard({classSession}) {
                     },
                     body: JSON.stringify({
                         classSessionDto: classSession,
+                        requesterId: JSON.parse(localStorage.getItem("USER")).id,
                         newClassroom: newClassroom,
                         newDateTime: newDate,
                         newDuration: newClassDuration,

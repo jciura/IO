@@ -27,8 +27,14 @@ public class RescheduleRequestController {
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<List<RescheduleRequestDto>> getRequestByUser(@PathVariable long userId) {
+    public ResponseEntity<List<RescheduleRequestDto>> getPendingRequestByUser(@PathVariable long userId) {
         List<RescheduleRequestDto> dto = rescheduleRequestService.getPendingRequests(userId);
+        return ResponseEntity.ok(dto);
+    }
+
+    @GetMapping("/completed/{userId}")
+    public ResponseEntity<List<RescheduleRequestDto>> getCompletedRequestsByUser(@PathVariable long userId) {
+        List<RescheduleRequestDto> dto = rescheduleRequestService.getCompletedUserRequests(userId);
         return ResponseEntity.ok(dto);
     }
 

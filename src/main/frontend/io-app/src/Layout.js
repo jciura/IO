@@ -10,7 +10,8 @@ function Layout() {
                 <div className="container-fluid">
                     <ul className="navbar-nav">
                         <li className="nav-item me-2"><Link to="/" className="nav-link">Strona główna</Link></li>
-                        {userFromLocalStorage && userFromLocalStorage.role === "PROWADZACY" ?
+                        {userFromLocalStorage &&
+                        (userFromLocalStorage.role === "PROWADZACY" || userFromLocalStorage.role === "STAROSTA") ?
                             (<li className="nav-item me-2">
                                 <Link to={"/classes"} className="nav-link">Moje zajęcia</Link>
                             </li>) : (<></>)}
