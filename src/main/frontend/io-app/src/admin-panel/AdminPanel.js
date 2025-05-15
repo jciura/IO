@@ -129,7 +129,7 @@ function AdminPanel() {
                 {classrooms.length > 0 ? (
                     classrooms.map((classroom, index) =>
                         <div className="col-4 mb-3" key={index}>
-                            <ClassroomCard classroom={classroom}/>
+                            <ClassroomCard classroom={classroom} onUpdate={showClassrooms}/>
                         </div>
                     )
                 ) : (
