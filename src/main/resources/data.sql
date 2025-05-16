@@ -73,3 +73,5 @@ insert into classes (id, classroom_id, date_time, duration, course_id) values (2
 insert into classes (id, classroom_id, date_time, duration, course_id) values (21, 104, '2025-06-30 18:30:00', 90, 5);
 
 
+INSERT INTO special_day (id, date, treated_as)
+VALUES (1, '2025-05-30', 1);

@@ -7,6 +7,9 @@ import pl.agh.edu.io.Classroom.*;
 import pl.agh.edu.io.Course.Course;
 import pl.agh.edu.io.Course.CourseNotFoundException;
 import pl.agh.edu.io.Course.CourseRepository;
+import pl.agh.edu.io.SpecialDay.SpecialDay;
+import pl.agh.edu.io.SpecialDay.SpecialDayException;
+import pl.agh.edu.io.SpecialDay.SpecialDayRepository;
 import pl.agh.edu.io.User.User;
 import pl.agh.edu.io.User.UserRole;
 import pl.agh.edu.io.User.UserService;
@@ -28,8 +31,10 @@ public class RescheduleRequestService {
     private final ClassroomService classroomService;
     private final ClassSessionService classSessionService;
     private final CourseRepository courseRepository;
+    private final SpecialDayRepository specialDayRepository;
 
-    public RescheduleRequestService(RescheduleRequestRepository rescheduleRequestRepository, ClassSessionRepository classSessionRepository, ClassroomRepository classroomRepository, UserService userService, ClassroomService classroomService, ClassSessionService classSessionService, CourseRepository courseRepository) {
+    public RescheduleRequestService(RescheduleRequestRepository rescheduleRequestRepository, ClassSessionRepository classSessionRepository, ClassroomRepository classroomRepository, UserService userService, ClassroomService classroomService,
+                                    ClassSessionService classSessionService, CourseRepository courseRepository, SpecialDayRepository specialDayRepository) {
         this.rescheduleRequestRepository = rescheduleRequestRepository;
         this.classSessionRepository = classSessionRepository;
         this.classroomRepository = classroomRepository;
@@ -37,11 +42,13 @@ public class RescheduleRequestService {
         this.classroomService = classroomService;
         this.classSessionService = classSessionService;
         this.courseRepository = courseRepository;
+        this.specialDayRepository = specialDayRepository;
     }
 
     private LocalDateTime calculateNewDateTime(LocalDateTime currentDateTime, LocalDateTime newDateTime) {
         int newDayOfWeek = newDateTime.getDayOfWeek().getValue();
         LocalTime newTime = newDateTime.toLocalTime();
+
         int currentDayOfWeek = currentDateTime.getDayOfWeek().getValue();
 
         int daysDifference = (currentDayOfWeek - newDayOfWeek + 7) % 7;
@@ -53,8 +60,7 @@ public class RescheduleRequestService {
                 .withNano(0);
     }
 
-    //Nie obsługuje sytuacji z zamianą dnia np. jeżeli zajęcia są w piątek przesuwamy na czwartek, to jeżeli konkretne spotkanie
-    //jest w środę (bo zamiana dnia) to przesunie na wtorek
+    //Wszystkie przekłądania działają w jednej funkcji
     @Transactional
     public void createRequest(RescheduleRequestDto requestDto, long userId) {
         User lecturer = userService.getUserEntityById(userId);
@@ -68,8 +74,8 @@ public class RescheduleRequestService {
                 .findByBuildingAndNumber(classroomDto.building(), classroomDto.number())
                 .orElseThrow(() -> new ClassroomNotFoundException(classroomDto.building(), classroomDto.number()));
 
-
         if (requestDto.isForAllSessions()) {
+            //Multiple
             Course course = courseRepository.findByName(requestDto.classSessionDto().courseName())
                     .orElseThrow(() -> new CourseNotFoundException(requestDto.classSessionDto().courseName()));
 
@@ -87,6 +93,16 @@ public class RescheduleRequestService {
 
             for (ClassSession session : sessionsToReschedule) {
                 LocalDateTime newDateTime = calculateNewDateTime(session.getDateTime(), newDateTimeTemplate);
+
+
+                //Trzeba ten wyjątek obsłużyć na froncie, wyświelimy czy na pewno chce, jak tak to trzeba wysłać nowy request tylko pole confirmation musi mieć
+                //wartość true, za pierwyszym razem wysyłać z false
+                Optional<SpecialDay> specialDayOpt = specialDayRepository.findByDate(newDateTime.toLocalDate());
+
+                if (specialDayOpt.isPresent() && !requestDto.confirmation()) {
+                    SpecialDay specialDay = specialDayOpt.get();
+                    throw new SpecialDayException("Data: " + newDateTime + " to dzień specjalny i jest traktowana jako: " + specialDay.getTreatedAsPolishName());
+                }
 
                 boolean isAvailable = classSessionRepository
                         .findSessionsByClassroomAndTime(newClassroom.getId(), newDateTime)
@@ -201,6 +217,12 @@ public class RescheduleRequestService {
             if (session.getId() > 0) {
                 newDateTime = calculateNewDateTime(session.getDateTime(), request.getNewDateTime());
 
+                Optional<SpecialDay> specialDayOpt = specialDayRepository.findByDate(newDateTime.toLocalDate());
+                if (specialDayOpt.isPresent()) {
+                    classSessionRepository.delete(session);
+                    continue;
+                }
+
                 boolean isAvailable = classSessionRepository
                         .findSessionsByClassroomAndTime(request.getNewClassroom().getId(), newDateTime)
                         .isEmpty();
@@ -265,7 +287,8 @@ public class RescheduleRequestService {
                 request.getOldTime(),
                 request.getOldDuration(),
                 request.getStatus(),
-                request.isForAllSessions()
+                request.isForAllSessions(),
+                request.isConfirmation()
         );
     }
 }

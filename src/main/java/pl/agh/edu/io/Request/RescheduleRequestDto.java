@@ -15,5 +15,6 @@ public record RescheduleRequestDto(Long id,
                                    LocalDateTime oldTime,
                                    long oldDuration,
                                    RequestStatus status,
-                                   boolean isForAllSessions) {
+                                   boolean isForAllSessions,
+                                   boolean confirmation) {
 }

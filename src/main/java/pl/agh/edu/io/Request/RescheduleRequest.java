@@ -47,6 +47,8 @@ public class RescheduleRequest {
 
     private long oldDuration;
 
+    private boolean confirmation;
+
     public RescheduleRequest() {
     }
 
@@ -170,5 +172,13 @@ public class RescheduleRequest {
 
     public void setOldDuration(long oldDuration) {
         this.oldDuration = oldDuration;
+    }
+
+    public boolean isConfirmation() {
+        return confirmation;
+    }
+
+    public void setConfirmation(boolean confirmation) {
+        this.confirmation = confirmation;
     }
 }
