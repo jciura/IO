@@ -14,15 +14,9 @@ public class RescheduleRequestController {
         this.rescheduleRequestService = rescheduleRequestService;
     }
 
-    @PostMapping("/request/{userId}/single")
-    public ResponseEntity<Void> createOneTimeRequest(@PathVariable long userId, @RequestBody RescheduleRequestDto rescheduleRequestDto) {
-        rescheduleRequestService.createOneTimeRequest(rescheduleRequestDto, userId);
-        return ResponseEntity.ok().build();
-    }
-
-    @PostMapping("/request/{userId}/multiple")
-    public ResponseEntity<Void> createMultipleRequest(@PathVariable long userId, @RequestBody MultipleRescheduleRequestDto multipleRescheduleRequestDto) {
-        //rescheduleRequestService.createMultipleRequest(multipleRescheduleRequestDto, userId);
+    @PostMapping("/request/{userId}")
+    public ResponseEntity<Void> createRequest(@PathVariable long userId, @RequestBody RescheduleRequestDto rescheduleRequestDto) {
+        rescheduleRequestService.createRequest(rescheduleRequestDto, userId);
         return ResponseEntity.ok().build();
     }
 

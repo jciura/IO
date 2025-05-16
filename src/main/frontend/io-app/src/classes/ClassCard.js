@@ -12,6 +12,8 @@ function ClassCard({classSession}) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [selectedClassroom, setSelectedClassroom] = useState("");
     const [recommendedClassrooms, setRecommendedClassrooms] = useState([]);
+    const [isForAllSessions, setIsForAllSessions] = useState(false);
+
 
     var areInputsFilled = newDate && newClassDuration && newClassroom;
 
@@ -29,7 +31,7 @@ function ClassCard({classSession}) {
     async function handleClassChangeRequest() {
         try {
             const response = await fetch(
-                `http://localhost:8080/reschedule/request/${JSON.parse(localStorage.getItem("USER")).id}/single`,
+                `http://localhost:8080/reschedule/request/${JSON.parse(localStorage.getItem("USER")).id}`,
                 {
                     method: "POST",
                     headers: {
@@ -42,9 +44,9 @@ function ClassCard({classSession}) {
                         newDateTime: newDate,
                         newDuration: newClassDuration,
                         status: "PENDING",
-                        isForAllSessions: false
+                        isForAllSessions: isForAllSessions
                     })
-            });
+                });
 
             if (response.ok) {
                 console.log("Request sent");
@@ -159,7 +161,7 @@ function ClassCard({classSession}) {
                                                             value={selectedClassroom}
                                                             onInputChange={() => console.log("Input change")}
                                                             onChange={(selectedOption) => handleClassroomSelection(selectedOption)}
-                                                            // options={[{value: "A1", label: "Sala A1"}, {value: "A2", label: "Sala A2"}]}
+                                                        // options={[{value: "A1", label: "Sala A1"}, {value: "A2", label: "Sala A2"}]}
                                                             options={recommendedClassrooms}
                                                             isSearchable={false}
                                                             isClearable={true}
@@ -172,6 +174,15 @@ function ClassCard({classSession}) {
                                                     {/*       onChange={(event) => setComputersNeeded(event.target.value)} />*/}
                                                 </div>
                                             </div>
+                                            <label htmlFor="allSessionsCheckbox" className="mb-3 mt-3"><b>Zmiana dla
+                                                wszystkich zajęć?</b></label>
+                                            <input
+                                                id="allSessionsCheckbox"
+                                                type="checkbox"
+                                                className="mb-3"
+                                                checked={isForAllSessions}
+                                                onChange={(event) => setIsForAllSessions(event.target.checked)}
+                                            />
                                         </div>
                                         <div className="d-flex">
                                             <button onClick={() => {handleClassChangeRequest(); close()}} disabled={!areInputsFilled} className="btn btn-secondary ms-auto">Zaproponuj</button>

@@ -13,4 +13,6 @@ public interface ClassSessionRepository extends JpaRepository<ClassSession, Long
     List<ClassSession> findSessionsByClassroomAndTime(@Param("classroomId") Long classroomId, @Param("dateTime") LocalDateTime dateTime);
 
     List<ClassSession> findByCourse(Course course);
+
+    List<ClassSession> findAllByCourseId(long id);
 }

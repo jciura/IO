@@ -7,6 +7,7 @@ import pl.agh.edu.io.Course.Course;
 import pl.agh.edu.io.User.User;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 public class RescheduleRequest {
@@ -14,8 +15,8 @@ public class RescheduleRequest {
     @Id
     private Long id;
 
-    @ManyToOne
-    private ClassSession classSession;
+    @ManyToMany
+    private List<ClassSession> classSessions;
 
     @ManyToOne
     private Course course;
@@ -49,10 +50,10 @@ public class RescheduleRequest {
     public RescheduleRequest() {
     }
 
-    public RescheduleRequest(ClassSession classSession, LocalDateTime newDateTime, Classroom newClassroom,
+    public RescheduleRequest(List<ClassSession> classSessions, LocalDateTime newDateTime, Classroom newClassroom,
                              int newDuration, RequestStatus status, User lecturer, User classRep, int requesterId,
                              boolean isForAllSessions) {
-        this.classSession = classSession;
+        this.classSessions = classSessions;
         this.newDateTime = newDateTime;
         this.newClassroom = newClassroom;
         this.newDuration = newDuration;
@@ -67,12 +68,12 @@ public class RescheduleRequest {
         return id;
     }
 
-    public ClassSession getClassSession() {
-        return classSession;
+    public List<ClassSession> getClassSessions() {
+        return classSessions;
     }
 
-    public void setClassSession(ClassSession classSession) {
-        this.classSession = classSession;
+    public void setClassSessions(List<ClassSession> classSessions) {
+        this.classSessions = classSessions;
     }
 
     public Classroom getNewClassroom() {
