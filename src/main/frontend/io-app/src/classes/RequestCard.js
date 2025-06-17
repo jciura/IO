@@ -1,7 +1,6 @@
 import Popup from "reactjs-popup";
 
 function RequestCard({request}) {
-
     const currentUserId = JSON.parse(localStorage.getItem("USER")).id;
 
     async function handleRequestDelete() {

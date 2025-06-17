@@ -12,6 +12,7 @@ function ClassView({event}) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [selectedClassroom, setSelectedClassroom] = useState("");
     const [recommendedClassrooms, setRecommendedClassrooms] = useState([]);
+    const [isForAllSessions, setIsForAllSessions] = useState(false);
 
     var areInputsFilled = newDate && newClassDuration && newClassroom;
 
@@ -42,7 +43,7 @@ function ClassView({event}) {
     async function handleClassChangeRequest() {
         try {
             const response = await fetch(
-                `http://localhost:8080/reschedule/request/${currentUserId}/single`,
+                `http://localhost:8080/reschedule/request/${currentUserId}`,
                 {
                     method: "POST",
                     headers: {
@@ -55,7 +56,7 @@ function ClassView({event}) {
                         newDateTime: newDate,
                         newDuration: newClassDuration,
                         status: "PENDING",
-                        isForAllSessions: false
+                        isForAllSessions: isForAllSessions
                     })
             });
 
@@ -278,6 +279,18 @@ function ClassView({event}) {
                                                     />
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div className="form-check mt-2">
+                                            <input
+                                                className="form-check-input"
+                                                type="checkbox"
+                                                id="forAllSessionsCheck"
+                                                checked={isForAllSessions}
+                                                onChange={(e) => setIsForAllSessions(e.target.checked)}
+                                            />
+                                            <label className="form-check-label" htmlFor="forAllSessionsCheck">
+                                                Zastosuj do wszystkich sesji zajęć
+                                            </label>
                                         </div>
                                         <div className="d-flex">
                                             <button onClick={() => {handleClassChangeRequest(); close()}} disabled={!areInputsFilled} className="btn btn-secondary ms-auto">Zaproponuj</button>

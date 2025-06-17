@@ -1,5 +1,5 @@
 import Popup from "reactjs-popup";
-import Select from "react-select/base";
+import Select from 'react-select';
 import {useState} from "react";
 
 function ClassCard({classSession}) {
@@ -18,6 +18,7 @@ function ClassCard({classSession}) {
     var areInputsFilled = newDate && newClassDuration && newClassroom;
 
     function setInitialPopupValues() {
+        alert("HUJ");
         setNewDate(classSession.dateTime);
         setNewClassDuration(classSession.duration);
         setSelectedClassroom(null);
@@ -119,77 +120,87 @@ function ClassCard({classSession}) {
                 </div>
                 <div className="d-flex">
                     {checkIfClassSessionIsPast() && (
-                        <Popup trigger={<button className="btn btn-secondary ms-auto">Zaproponuj zmianę</button>} onOpen={() => setInitialPopupValues()} contentStyle={{maxWidth: "50%"}} className="bg-light rounded-2" modal nested>
-                            {
-                                close => (
-                                    <div>
-                                        <div className="d-flex p-2">
-                                            {/*<div className="bg-black rounded-2 p-3 border-0">*/}
-                                            {/*    <h4>{classSession.dateTime}</h4>*/}
-                                            {/*</div>*/}
-                                            <div className="d-flex col-6">
-                                                <div className="d-flex flex-column col-6">
-                                                    <label className="mb-4">Aktualna data:</label>
-                                                    <label className="mb-4">Aktualny czas trwania:</label>
-                                                    <label>Aktualna sala:</label>
-                                                </div>
-                                                <div className="d-flex flex-column col-6">
-                                                    <p className="mb-4">{classSession.dateTime}</p>
-                                                    <p className="mb-4">{classSession.duration}</p>
-                                                    <p>{classSession.classroomDto.building}, {classSession.classroomDto.floor}, {classSession.classroomDto.number}</p>
-                                                </div>
-                                            </div>
-                                            <div className="d-flex col-6">
-                                                <div className="d-flex flex-column col-6">
-                                                    <label htmlFor="dateInput" className="mb-4"><b>Nowa data:</b></label>
-                                                    <label htmlFor="durationInput" className="mb-4"><b>Nowy czas trwania:</b></label>
-                                                    <label htmlFor="classroomInput" className="mb-4"><b>Nowa sala:</b></label>
-                                                    {/*<label htmlFor="capacityInput" className="mb-4"><b>Wymagana liczba miejsc:</b></label>*/}
-                                                    {/*<label htmlFor="computersNeededInput" className="mb-4"><b>Komputery wymagane?:</b></label>*/}
-                                                </div>
-                                                <div className="d-flex flex-column col-6">
-                                                    <input id="dateInput" type="datetime-local" className="mb-3"
-                                                           defaultValue={classSession.dateTime}
-                                                           onChange={(event) => setNewDate(event.target.value)}/>
-                                                    <input id="durationInput" type="number" className="mb-3"
-                                                           defaultValue={classSession.duration} min={10} max={150}
-                                                           onChange={(event) => setNewClassDuration(event.target.value)}/>
-                                                    <Select isDisabled={false}
-                                                            onMenuOpen={() => {setIsMenuOpen(true); loadClassroomRecommendations()}}
-                                                            onMenuClose={() => setIsMenuOpen(false)}
-                                                            menuIsOpen={isMenuOpen}
-                                                            value={selectedClassroom}
-                                                            onInputChange={() => console.log("Input change")}
-                                                            onChange={(selectedOption) => handleClassroomSelection(selectedOption)}
-                                                        // options={[{value: "A1", label: "Sala A1"}, {value: "A2", label: "Sala A2"}]}
-                                                            options={recommendedClassrooms}
-                                                            isSearchable={false}
-                                                            isClearable={true}
-                                                    />
-                                                    {/*<input id="capacityInput" type="number" className="mb-3 mt-2"*/}
-                                                    {/*       defaultValue={classSession.classroomDto.capacity} min={1} max={500}*/}
-                                                    {/*       onChange={(event) => setNewCapacity(event.target.value)} />*/}
-                                                    {/*<input id="computersNeededInput" type="checkbox" className="mb-3 mt-4"*/}
-                                                    {/*       defaultChecked={classSession.classroomDto.hasComputers}*/}
-                                                    {/*       onChange={(event) => setComputersNeeded(event.target.value)} />*/}
-                                                </div>
-                                            </div>
-                                            <label htmlFor="allSessionsCheckbox" className="mb-3 mt-3"><b>Zmiana dla
-                                                wszystkich zajęć?</b></label>
-                                            <input
-                                                id="allSessionsCheckbox"
-                                                type="checkbox"
-                                                className="mb-3"
-                                                checked={isForAllSessions}
-                                                onChange={(event) => setIsForAllSessions(event.target.checked)}
-                                            />
+                        <Popup
+                            trigger={<button className="btn btn-secondary ms-auto">Zaproponuj zmianę</button>}
+                            onOpen={() => setInitialPopupValues()}
+                            contentStyle={{ maxWidth: "50%" }}
+                            className="bg-light rounded-2"
+                            modal
+                            nested
+                        >
+                            {close => (
+                                <div className="p-3">
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <div className="mb-3"><strong>Aktualna data:</strong> {classSession.dateTime}</div>
+                                            <div className="mb-3"><strong>Aktualny czas trwania:</strong> {classSession.duration}</div>
+                                            <div><strong>Aktualna sala:</strong> {classSession.classroomDto.building}, {classSession.classroomDto.floor}, {classSession.classroomDto.number}</div>
                                         </div>
-                                        <div className="d-flex">
-                                            <button onClick={() => {handleClassChangeRequest(); close()}} disabled={!areInputsFilled} className="btn btn-secondary ms-auto">Zaproponuj</button>
+                                        <div className="col-6">
+                                            <div className="mb-3">
+                                                <label htmlFor="dateInput" className="form-label"><b>Nowa data:</b></label>
+                                                <input
+                                                    id="dateInput"
+                                                    type="datetime-local"
+                                                    className="form-control"
+                                                    defaultValue={classSession.dateTime}
+                                                    onChange={(event) => setNewDate(event.target.value)}
+                                                />
+                                            </div>
+                                            <div className="mb-3">
+                                                <label htmlFor="durationInput" className="form-label"><b>Nowy czas trwania:</b></label>
+                                                <input
+                                                    id="durationInput"
+                                                    type="number"
+                                                    className="form-control"
+                                                    defaultValue={classSession.duration}
+                                                    min={10}
+                                                    max={150}
+                                                    onChange={(event) => setNewClassDuration(event.target.value)}
+                                                />
+                                            </div>
+                                            <div className="mb-3">
+                                                <label htmlFor="classroomInput" className="form-label"><b>Nowa sala:</b></label>
+                                                <Select
+                                                    onMenuOpen={() => { setIsMenuOpen(true); loadClassroomRecommendations(); }}
+                                                    onMenuClose={() => setIsMenuOpen(false)}
+                                                    menuIsOpen={isMenuOpen}
+                                                    value={selectedClassroom}
+                                                    onChange={(selectedOption) => handleClassroomSelection(selectedOption)}
+                                                    options={recommendedClassrooms}
+                                                    isSearchable={false}
+                                                    isClearable={true}
+                                                />
+                                            </div>
                                         </div>
                                     </div>
-                                )
-                            }
+
+                                    <div className="form-check mt-4">
+                                        <input
+                                            className="form-check-input"
+                                            type="checkbox"
+                                            id="allSessionsCheckbox"
+                                            checked={isForAllSessions}
+                                            onChange={(event) => setIsForAllSessions(event.target.checked)}
+                                        />
+                                        <label className="form-check-label" htmlFor="allSessionsCheckbox">
+                                            Zmiana dla wszystkich zajęć?
+                                        </label>
+                                    </div>
+                                    <div style={{ color: "red" }}>TEST: działa?</div>
+
+
+                                    <div className="d-flex justify-content-end mt-4">
+                                        <button
+                                            onClick={() => { handleClassChangeRequest(); close(); }}
+                                            disabled={!areInputsFilled}
+                                            className="btn btn-secondary"
+                                        >
+                                            Zaproponuj
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
                         </Popup>
                     )}
                 </div>
