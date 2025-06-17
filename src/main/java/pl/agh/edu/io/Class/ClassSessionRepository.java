@@ -15,4 +15,11 @@ public interface ClassSessionRepository extends JpaRepository<ClassSession, Long
     List<ClassSession> findByCourse(Course course);
 
     List<ClassSession> findAllByCourseId(long id);
+
+    @Query("SELECT cs FROM ClassSession cs WHERE cs.course.lecturer.id = :lecturerId AND cs.dateTime <= :end AND cs.dateTime >= :start")
+    List<ClassSession> findAllOverlappingByLecturer(
+            @Param("lecturerId") long lecturerId,
+            @Param("start") LocalDateTime start,
+            @Param("end") LocalDateTime end
+    );
 }

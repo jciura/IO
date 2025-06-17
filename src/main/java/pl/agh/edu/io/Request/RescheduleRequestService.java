@@ -60,6 +60,23 @@ public class RescheduleRequestService {
                 .withNano(0);
     }
 
+    private boolean isLecturerBusy(User lecturer, LocalDateTime proposedStart, int proposedDurationMinutes) {
+        LocalDateTime proposedEnd = proposedStart.plusMinutes(proposedDurationMinutes);
+
+        List<ClassSession> overlapping = classSessionRepository
+                .findAllOverlappingByLecturer(
+                        lecturer.getId(),
+                        proposedStart,
+                        proposedEnd
+                );
+
+        return overlapping.stream().anyMatch(session -> {
+            LocalDateTime sessionStart = session.getDateTime();
+            LocalDateTime sessionEnd = sessionStart.plusMinutes(session.getDuration());
+            return sessionStart.isBefore(proposedEnd) && sessionEnd.isAfter(proposedStart);
+        });
+    }
+
     //Wszystkie przekłądania działają w jednej funkcji
     @Transactional
     public void createRequest(RescheduleRequestDto requestDto, long userId) {
@@ -94,6 +111,9 @@ public class RescheduleRequestService {
             for (ClassSession session : sessionsToReschedule) {
                 LocalDateTime newDateTime = calculateNewDateTime(session.getDateTime(), newDateTimeTemplate);
 
+                if (isLecturerBusy(lecturer, newDateTime, requestDto.newDuration())) {
+                    throw new RuntimeException("Lecturer has another class at: " + newDateTime);
+                }
 
                 //Trzeba ten wyjątek obsłużyć na froncie, wyświelimy czy na pewno chce, jak tak to trzeba wysłać nowy request tylko pole confirmation musi mieć
                 //wartość true, za pierwyszym razem wysyłać z false
@@ -138,6 +158,7 @@ public class RescheduleRequestService {
                 throw new RuntimeException("Unauthorized: not the session's teacher");
             }
 
+
             List<ClassSession> sessionsAtSameTime = classSessionRepository.findSessionsByClassroomAndTime(
                     newClassroom.getId(),
                     requestDto.newDateTime()
@@ -145,6 +166,10 @@ public class RescheduleRequestService {
 
             if (!sessionsAtSameTime.isEmpty()) {
                 throw new RuntimeException("Classroom is not available at the selected time");
+            }
+
+            if (isLecturerBusy(lecturer, requestDto.newDateTime(), requestDto.newDuration())) {
+                throw new RuntimeException("Lecturer has another class at: " + requestDto.newDateTime());
             }
 
             RescheduleRequest request = new RescheduleRequest(
