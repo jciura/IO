@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'reactjs-popup/dist/index.css'
+import 'react-big-calendar/lib/css/react-big-calendar.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

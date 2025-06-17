@@ -29,11 +29,20 @@ public class ClassSessionController {
         return ResponseEntity.ok(classSessionService.getClassById(id));
     }
 
-    @GetMapping("/course_id/{course_id}")
-    public ResponseEntity<List<ClassSessionDto>> getClassesWithinCourse(@PathVariable int course_id) {
-        CourseDto courseDto = courseService.getCourseById(course_id);
+    @GetMapping("/course_id/{courseId}")
+    public ResponseEntity<List<ClassSessionDto>> getClassesWithinCourse(@PathVariable int courseId) {
+        CourseDto courseDto = courseService.getCourseById(courseId);
         List<ClassSessionDto> classSessionDtos = classSessionService.getAllClasses().stream()
                 .filter(classSessionDto -> classSessionDto.courseName().equals(courseDto.name()))
+                .toList();
+        return ResponseEntity.ok(classSessionDtos);
+    }
+
+    @GetMapping("/user_id/{userId}")
+    public ResponseEntity<List<ClassSessionDto>> getClassesOfUser(@PathVariable int userId) {
+        List<ClassSessionDto> classSessionDtos = classSessionService.getAllClasses().stream()
+                .filter(classSessionDto -> classSessionDto.lecturer().id() == userId ||
+                        classSessionDto.classRep().id() == userId)
                 .toList();
         return ResponseEntity.ok(classSessionDtos);
     }
