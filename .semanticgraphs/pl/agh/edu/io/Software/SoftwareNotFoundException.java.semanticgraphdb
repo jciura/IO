@@ -1,0 +1,37 @@
+
+Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.javaá
+Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.javaFILEE
+Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.java"
+LOC6*Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.javaÈ
+0pl.agh.edu.io.Software.SoftwareNotFoundExceptionCLASSM
+Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.java (&"
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"
+LOC4*SoftwareNotFoundException2º
+\pl.agh.edu.io.Software.SoftwareNotFoundException.SoftwareNotFoundException(java.lang.String)DECLARATIONM
+Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.java ($2s
+java.lang.RuntimeExceptionEXTENDM
+Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.java/ (?’
+\pl.agh.edu.io.Software.SoftwareNotFoundException.SoftwareNotFoundException(java.lang.String)CONSTRUCTORM
+Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.java ($"
+packagepl.agh.edu.io*SoftwareNotFoundException2”
+=java.lang.RuntimeException.RuntimeException(java.lang.String)CALLM
+Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.java (2¸
+apl.agh.edu.io.Software.SoftwareNotFoundException.SoftwareNotFoundException(java.lang.String)!nameCALLM
+Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.java ( 2½
+apl.agh.edu.io.Software.SoftwareNotFoundException.SoftwareNotFoundException(java.lang.String)!name	PARAMETERM
+Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.java, (02Ž
+0pl.agh.edu.io.Software.SoftwareNotFoundExceptionRETURN_TYPEM
+Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.java ($ù
+apl.agh.edu.io.Software.SoftwareNotFoundException.SoftwareNotFoundException(java.lang.String)!name	PARAMETERM
+Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.java, (0"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*name2g
+java.lang.StringTYPEM
+Csrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundException.java% (+

@@ -1,0 +1,100 @@
+
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.javaÓ
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.javaFILE@
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java"	
+LOC31*>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java
++pl.agh.edu.io.Classroom.ClassroomRepository	INTERFACEH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java
+ 
+($"
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"	
+LOC19*ClassroomRepository2³
+Zpl.agh.edu.io.Classroom.ClassroomRepository.findByBuildingAndNumber(java.lang.String, int)DECLARATIONH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java (/2Ç
+npl.agh.edu.io.Classroom.ClassroomRepository.findAllAvailable(java.time.LocalDateTime, java.time.LocalDateTime)DECLARATIONH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java ($2‰
+5org.springframework.data.jpa.repository.JpaRepositoryEXTENDH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java
+- 
+(:2ƒ
+!pl.agh.edu.io.Classroom.ClassroomEXTEND_TYPE_ARGUMENTH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java
+; 
+(D2p
+java.lang.LongEXTEND_TYPE_ARGUMENTH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java
+F 
+(JÈ
+Zpl.agh.edu.io.Classroom.ClassroomRepository.findByBuildingAndNumber(java.lang.String, int)METHODH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java (/"
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeOptional<Classroom>"
+accesspackage_private"
+LOC0*findByBuildingAndNumber2º
+cpl.agh.edu.io.Classroom.ClassroomRepository.findByBuildingAndNumber(java.lang.String, int)!building	PARAMETERH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java7 (?2¸
+apl.agh.edu.io.Classroom.ClassroomRepository.findByBuildingAndNumber(java.lang.String, int)!number	PARAMETERH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.javaE (K2k
+java.util.OptionalRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java (2ƒ
+!pl.agh.edu.io.Classroom.ClassroomRETURN_TYPE_ARGUMENTH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java (õ
+cpl.agh.edu.io.Classroom.ClassroomRepository.findByBuildingAndNumber(java.lang.String, int)!building	PARAMETERH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java7 (?"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*building2b
+java.lang.StringTYPEH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java0 (6á
+apl.agh.edu.io.Classroom.ClassroomRepository.findByBuildingAndNumber(java.lang.String, int)!number	PARAMETERH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.javaE (K"
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*number2U
+intTYPEH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.javaA (Dö
+npl.agh.edu.io.Classroom.ClassroomRepository.findAllAvailable(java.time.LocalDateTime, java.time.LocalDateTime)METHODH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java ($"
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeList<Classroom>"
+accesspackage_private"	
+LOC15*findAllAvailable2Î
+wpl.agh.edu.io.Classroom.ClassroomRepository.findAllAvailable(java.time.LocalDateTime, java.time.LocalDateTime)!reqStart	PARAMETERH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.javaF (N2Ì
+upl.agh.edu.io.Classroom.ClassroomRepository.findAllAvailable(java.time.LocalDateTime, java.time.LocalDateTime)!reqEnd	PARAMETERH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.javao (u2g
+java.util.ListRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java (2ƒ
+!pl.agh.edu.io.Classroom.ClassroomRETURN_TYPE_ARGUMENTH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java	 (—
+wpl.agh.edu.io.Classroom.ClassroomRepository.findAllAvailable(java.time.LocalDateTime, java.time.LocalDateTime)!reqStart	PARAMETERH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.javaF (N"
+typeLocalDateTime"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*reqStart2i
+java.time.LocalDateTimeTYPEH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.java8 (E“
+upl.agh.edu.io.Classroom.ClassroomRepository.findAllAvailable(java.time.LocalDateTime, java.time.LocalDateTime)!reqEnd	PARAMETERH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.javao (u"
+typeLocalDateTime"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*reqEnd2i
+java.time.LocalDateTimeTYPEH
+>src\main\java\pl\agh\edu\io\Classroom\ClassroomRepository.javaa (n

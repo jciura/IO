@@ -1,0 +1,37 @@
+
+.src\main\java\pl\agh\edu\io\User\UserRole.java¢
+.src\main\java\pl\agh\edu\io\User\UserRole.javaFILE0
+.src\main\java\pl\agh\edu\io\User\UserRole.java"
+LOC7*.src\main\java\pl\agh\edu\io\User\UserRole.javaÇ
+pl.agh.edu.io.User.UserRoleENUM8
+.src\main\java\pl\agh\edu\io\User\UserRole.java ("
+packagepl.agh.edu.io*UserRole2r
+)pl.agh.edu.io.User.UserRole?ADMINISTRATORDECLARATION8
+.src\main\java\pl\agh\edu\io\User\UserRole.java (2o
+&pl.agh.edu.io.User.UserRole?PROWADZACYDECLARATION8
+.src\main\java\pl\agh\edu\io\User\UserRole.java (2p
+'pl.agh.edu.io.User.UserRole?KOORDYNATORDECLARATION8
+.src\main\java\pl\agh\edu\io\User\UserRole.java (2m
+$pl.agh.edu.io.User.UserRole?STAROSTADECLARATION8
+.src\main\java\pl\agh\edu\io\User\UserRole.java (­
+)pl.agh.edu.io.User.UserRole?ADMINISTRATORVALUE8
+.src\main\java\pl\agh\edu\io\User\UserRole.java ("
+enumtrue"
+LOC0"
+packagepl.agh.edu.io*ADMINISTRATOR§
+&pl.agh.edu.io.User.UserRole?PROWADZACYVALUE8
+.src\main\java\pl\agh\edu\io\User\UserRole.java ("
+enumtrue"
+LOC0"
+packagepl.agh.edu.io*
+PROWADZACY©
+'pl.agh.edu.io.User.UserRole?KOORDYNATORVALUE8
+.src\main\java\pl\agh\edu\io\User\UserRole.java ("
+enumtrue"
+LOC0"
+packagepl.agh.edu.io*KOORDYNATOR£
+$pl.agh.edu.io.User.UserRole?STAROSTAVALUE8
+.src\main\java\pl\agh\edu\io\User\UserRole.java ("
+enumtrue"
+LOC0"
+packagepl.agh.edu.io*STAROSTA

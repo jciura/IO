@@ -1,0 +1,61 @@
+
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.javaÇ
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.javaFILEP
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.java"
+LOC6*Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.java≠
+;pl.agh.edu.io.Software.SoftwareNotFoundInClassroomExceptionCLASSX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.java (1"
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"
+LOC4*$SoftwareNotFoundInClassroomException2Û
+âpl.agh.edu.io.Software.SoftwareNotFoundInClassroomException.SoftwareNotFoundInClassroomException(java.lang.String, java.lang.String, int)DECLARATIONX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.java (/2~
+java.lang.RuntimeExceptionEXTENDX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.java: (Jﬂ
+âpl.agh.edu.io.Software.SoftwareNotFoundInClassroomException.SoftwareNotFoundInClassroomException(java.lang.String, java.lang.String, int)CONSTRUCTORX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.java (/"
+packagepl.agh.edu.io*$SoftwareNotFoundInClassroomException2ü
+=java.lang.RuntimeException.RuntimeException(java.lang.String)CALLX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.java (2˘
+ñpl.agh.edu.io.Software.SoftwareNotFoundInClassroomException.SoftwareNotFoundInClassroomException(java.lang.String, java.lang.String, int)!softwareNameCALLX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.java ((2ı
+ípl.agh.edu.io.Software.SoftwareNotFoundInClassroomException.SoftwareNotFoundInClassroomException(java.lang.String, java.lang.String, int)!buildingCALLX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.javaH (P2Û
+êpl.agh.edu.io.Software.SoftwareNotFoundInClassroomException.SoftwareNotFoundInClassroomException(java.lang.String, java.lang.String, int)!numberCALLX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.javag (m2˛
+ñpl.agh.edu.io.Software.SoftwareNotFoundInClassroomException.SoftwareNotFoundInClassroomException(java.lang.String, java.lang.String, int)!softwareName	PARAMETERX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.java7 (C2˙
+ípl.agh.edu.io.Software.SoftwareNotFoundInClassroomException.SoftwareNotFoundInClassroomException(java.lang.String, java.lang.String, int)!building	PARAMETERX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.javaL (T2¯
+êpl.agh.edu.io.Software.SoftwareNotFoundInClassroomException.SoftwareNotFoundInClassroomException(java.lang.String, java.lang.String, int)!number	PARAMETERX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.javaZ (`2§
+;pl.agh.edu.io.Software.SoftwareNotFoundInClassroomExceptionRETURN_TYPEX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.java (/Õ
+ñpl.agh.edu.io.Software.SoftwareNotFoundInClassroomException.SoftwareNotFoundInClassroomException(java.lang.String, java.lang.String, int)!softwareName	PARAMETERX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.java7 (C"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*softwareName2r
+java.lang.StringTYPEX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.java0 (6≈
+ípl.agh.edu.io.Software.SoftwareNotFoundInClassroomException.SoftwareNotFoundInClassroomException(java.lang.String, java.lang.String, int)!building	PARAMETERX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.javaL (T"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*building2r
+java.lang.StringTYPEX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.javaE (K±
+êpl.agh.edu.io.Software.SoftwareNotFoundInClassroomException.SoftwareNotFoundInClassroomException(java.lang.String, java.lang.String, int)!number	PARAMETERX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.javaZ (`"
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*number2e
+intTYPEX
+Nsrc\main\java\pl\agh\edu\io\Software\SoftwareNotFoundInClassroomException.javaV (Y

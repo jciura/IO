@@ -1,0 +1,650 @@
+
+*src\main\java\pl\agh\edu\io\User\User.javaò
+*src\main\java\pl\agh\edu\io\User\User.javaFILE,
+*src\main\java\pl\agh\edu\io\User\User.java"
+
+LOC131**src\main\java\pl\agh\edu\io\User\User.java√
+pl.agh.edu.io.User.UserCLASS4
+*src\main\java\pl\agh\edu\io\User\User.java
+ 
+("
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"
+
+LOC123*User2Ô
+©pl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java   (2c
+pl.agh.edu.io.User.User.User()DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java( ((2d
+pl.agh.edu.io.User.User.getId()DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java, ,(2g
+"pl.agh.edu.io.User.User.setId(int)DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java0 0(2k
+&pl.agh.edu.io.User.User.getFirstName()DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java4 4(2Ö
+@pl.agh.edu.io.User.User.setFirstName(jakarta.persistence.String)DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java8 8(2j
+%pl.agh.edu.io.User.User.getLastName()DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java< <(2Ñ
+?pl.agh.edu.io.User.User.setLastName(jakarta.persistence.String)DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java@ @(2g
+"pl.agh.edu.io.User.User.getEmail()DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.javaD D(2Å
+<pl.agh.edu.io.User.User.setEmail(jakarta.persistence.String)DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.javaH H(2m
+(pl.agh.edu.io.User.User.getPhoneNumber()DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.javaL L( 2á
+Bpl.agh.edu.io.User.User.setPhoneNumber(jakarta.persistence.String)DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.javaP P(2f
+!pl.agh.edu.io.User.User.getRole()DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.javaT T(2Å
+<pl.agh.edu.io.User.User.setRole(pl.agh.edu.io.User.UserRole)DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.javaX X(2j
+%pl.agh.edu.io.User.User.getPassword()DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java\ \(2Ñ
+?pl.agh.edu.io.User.User.setPassword(jakarta.persistence.String)DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java` `(2i
+$pl.agh.edu.io.User.User.getCourses()DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.javad d("2î
+Opl.agh.edu.io.User.User.setCourses(java.util.List<pl.agh.edu.io.Course.Course>)DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.javah h(2É
+>pl.agh.edu.io.User.User.addCourse(pl.agh.edu.io.Course.Course)DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.javal l(2Ü
+Apl.agh.edu.io.User.User.removeCourse(pl.agh.edu.io.Course.Course)DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.javax x(2k
+&pl.agh.edu.io.User.User?id@13.17:13.19DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java (2r
+-pl.agh.edu.io.User.User?firstName@15.19:15.28DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java (2q
+,pl.agh.edu.io.User.User?lastName@16.19:16.27DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java (2n
+)pl.agh.edu.io.User.User?email@17.19:17.24DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java (2t
+/pl.agh.edu.io.User.User?phoneNumber@18.19:18.30DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java (2m
+(pl.agh.edu.io.User.User?role@19.21:19.25DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java (2q
+,pl.agh.edu.io.User.User?password@20.19:20.27DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java (2p
++pl.agh.edu.io.User.User?courses@30.25:30.32DECLARATION4
+*src\main\java\pl\agh\edu\io\User\User.java ( °
+©pl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)CONSTRUCTOR4
+*src\main\java\pl\agh\edu\io\User\User.java   ("
+packagepl.agh.edu.io*User2Ú
+≥pl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!firstNameCALL4
+*src\main\java\pl\agh\edu\io\User\User.java! !("2Ò
+≤pl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!lastNameCALL4
+*src\main\java\pl\agh\edu\io\User\User.java" "( 2Ó
+Øpl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!emailCALL4
+*src\main\java\pl\agh\edu\io\User\User.java# #(2Ù
+µpl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!phoneNumberCALL4
+*src\main\java\pl\agh\edu\io\User\User.java$ $(&2Ì
+Æpl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!roleCALL4
+*src\main\java\pl\agh\edu\io\User\User.java% %(2k
+-pl.agh.edu.io.User.User?firstName@15.19:15.28CALL4
+*src\main\java\pl\agh\edu\io\User\User.java! !(2j
+,pl.agh.edu.io.User.User?lastName@16.19:16.27CALL4
+*src\main\java\pl\agh\edu\io\User\User.java" "(2g
+)pl.agh.edu.io.User.User?email@17.19:17.24CALL4
+*src\main\java\pl\agh\edu\io\User\User.java# #(2m
+/pl.agh.edu.io.User.User?phoneNumber@18.19:18.30CALL4
+*src\main\java\pl\agh\edu\io\User\User.java$ $(2f
+(pl.agh.edu.io.User.User?role@19.21:19.25CALL4
+*src\main\java\pl\agh\edu\io\User\User.java% %(2˜
+≥pl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!firstName	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java   ( 2ˆ
+≤pl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!lastName	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java )  (12Û
+Øpl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!email	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java :  (?2˘
+µpl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!phoneNumber	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java H  (S2Ú
+Æpl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!role	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java ^  (b2\
+pl.agh.edu.io.User.UserRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.java   (©
+≥pl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!firstName	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java   ( "
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*	firstName2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java   (ß
+≤pl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!lastName	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java )  (1"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*lastName2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java "  ((°
+Øpl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!email	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java :  (?"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*email2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java 3  (9≠
+µpl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!phoneNumber	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java H  (S"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*phoneNumber2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java A  (G¢
+Æpl.agh.edu.io.User.User.User(jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, jakarta.persistence.String, pl.agh.edu.io.User.UserRole)!role	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java ^  (b"
+typeUserRole"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*role2Y
+pl.agh.edu.io.User.UserRoleTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java U  (]·
+pl.agh.edu.io.User.User.User()CONSTRUCTOR4
+*src\main\java\pl\agh\edu\io\User\User.java( (("
+packagepl.agh.edu.io*User2\
+pl.agh.edu.io.User.UserRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.java( ((ï
+pl.agh.edu.io.User.User.getId()METHOD4
+*src\main\java\pl\agh\edu\io\User\User.java, ,("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typelong"
+accesspublic"
+LOC2*getId2d
+&pl.agh.edu.io.User.User?id@13.17:13.19CALL4
+*src\main\java\pl\agh\edu\io\User\User.java- -(2I
+longRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.java, ,(Á
+"pl.agh.edu.io.User.User.setId(int)METHOD4
+*src\main\java\pl\agh\edu\io\User\User.java0 0("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setId2c
+%pl.agh.edu.io.User.User.setId(int)!idCALL4
+*src\main\java\pl\agh\edu\io\User\User.java1 1(2d
+&pl.agh.edu.io.User.User?id@13.17:13.19CALL4
+*src\main\java\pl\agh\edu\io\User\User.java1 1(2h
+%pl.agh.edu.io.User.User.setId(int)!id	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java0 0(2I
+voidRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.java0 0(˘
+%pl.agh.edu.io.User.User.setId(int)!id	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java0 0("
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*id2A
+intTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java0 0(¬
+&pl.agh.edu.io.User.User.getFirstName()METHOD4
+*src\main\java\pl\agh\edu\io\User\User.java4 4("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeString"
+accesspublic"
+LOC2*getFirstName2k
+-pl.agh.edu.io.User.User?firstName@15.19:15.28CALL4
+*src\main\java\pl\agh\edu\io\User\User.java5 5(2_
+jakarta.persistence.StringRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.java4 4(ﬂ
+@pl.agh.edu.io.User.User.setFirstName(jakarta.persistence.String)METHOD4
+*src\main\java\pl\agh\edu\io\User\User.java8 8("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setFirstName2à
+Jpl.agh.edu.io.User.User.setFirstName(jakarta.persistence.String)!firstNameCALL4
+*src\main\java\pl\agh\edu\io\User\User.java9 9("2k
+-pl.agh.edu.io.User.User?firstName@15.19:15.28CALL4
+*src\main\java\pl\agh\edu\io\User\User.java9 9(2ç
+Jpl.agh.edu.io.User.User.setFirstName(jakarta.persistence.String)!firstName	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java8$ 8(-2I
+voidRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.java8 8(ø
+Jpl.agh.edu.io.User.User.setFirstName(jakarta.persistence.String)!firstName	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java8$ 8(-"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*	firstName2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java8 8(#ø
+%pl.agh.edu.io.User.User.getLastName()METHOD4
+*src\main\java\pl\agh\edu\io\User\User.java< <("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeString"
+accesspublic"
+LOC2*getLastName2j
+,pl.agh.edu.io.User.User?lastName@16.19:16.27CALL4
+*src\main\java\pl\agh\edu\io\User\User.java= =(2_
+jakarta.persistence.StringRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.java< <(ÿ
+?pl.agh.edu.io.User.User.setLastName(jakarta.persistence.String)METHOD4
+*src\main\java\pl\agh\edu\io\User\User.java@ @("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setLastName2Ü
+Hpl.agh.edu.io.User.User.setLastName(jakarta.persistence.String)!lastNameCALL4
+*src\main\java\pl\agh\edu\io\User\User.javaA A( 2j
+,pl.agh.edu.io.User.User?lastName@16.19:16.27CALL4
+*src\main\java\pl\agh\edu\io\User\User.javaA A(2ã
+Hpl.agh.edu.io.User.User.setLastName(jakarta.persistence.String)!lastName	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java@# @(+2I
+voidRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.java@ @(º
+Hpl.agh.edu.io.User.User.setLastName(jakarta.persistence.String)!lastName	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java@# @(+"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*lastName2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java@ @("∂
+"pl.agh.edu.io.User.User.getEmail()METHOD4
+*src\main\java\pl\agh\edu\io\User\User.javaD D("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeString"
+accesspublic"
+LOC2*getEmail2g
+)pl.agh.edu.io.User.User?email@17.19:17.24CALL4
+*src\main\java\pl\agh\edu\io\User\User.javaE E(2_
+jakarta.persistence.StringRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.javaD D(√
+<pl.agh.edu.io.User.User.setEmail(jakarta.persistence.String)METHOD4
+*src\main\java\pl\agh\edu\io\User\User.javaH H("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setEmail2Ä
+Bpl.agh.edu.io.User.User.setEmail(jakarta.persistence.String)!emailCALL4
+*src\main\java\pl\agh\edu\io\User\User.javaI I(2g
+)pl.agh.edu.io.User.User?email@17.19:17.24CALL4
+*src\main\java\pl\agh\edu\io\User\User.javaI I(2Ö
+Bpl.agh.edu.io.User.User.setEmail(jakarta.persistence.String)!email	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.javaH  H(%2I
+voidRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.javaH H(≥
+Bpl.agh.edu.io.User.User.setEmail(jakarta.persistence.String)!email	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.javaH  H(%"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*email2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.javaH H(»
+(pl.agh.edu.io.User.User.getPhoneNumber()METHOD4
+*src\main\java\pl\agh\edu\io\User\User.javaL L( "
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeString"
+accesspublic"
+LOC2*getPhoneNumber2m
+/pl.agh.edu.io.User.User?phoneNumber@18.19:18.30CALL4
+*src\main\java\pl\agh\edu\io\User\User.javaM M(2_
+jakarta.persistence.StringRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.javaL L(Ì
+Bpl.agh.edu.io.User.User.setPhoneNumber(jakarta.persistence.String)METHOD4
+*src\main\java\pl\agh\edu\io\User\User.javaP P("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setPhoneNumber2å
+Npl.agh.edu.io.User.User.setPhoneNumber(jakarta.persistence.String)!phoneNumberCALL4
+*src\main\java\pl\agh\edu\io\User\User.javaQ Q(&2m
+/pl.agh.edu.io.User.User?phoneNumber@18.19:18.30CALL4
+*src\main\java\pl\agh\edu\io\User\User.javaQ Q(2ë
+Npl.agh.edu.io.User.User.setPhoneNumber(jakarta.persistence.String)!phoneNumber	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.javaP& P(12I
+voidRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.javaP P(≈
+Npl.agh.edu.io.User.User.setPhoneNumber(jakarta.persistence.String)!phoneNumber	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.javaP& P(1"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*phoneNumber2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.javaP P(%∂
+!pl.agh.edu.io.User.User.getRole()METHOD4
+*src\main\java\pl\agh\edu\io\User\User.javaT T("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeUserRole"
+accesspublic"
+LOC2*getRole2f
+(pl.agh.edu.io.User.User?role@19.21:19.25CALL4
+*src\main\java\pl\agh\edu\io\User\User.javaU U(2`
+pl.agh.edu.io.User.UserRoleRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.javaT T(æ
+<pl.agh.edu.io.User.User.setRole(pl.agh.edu.io.User.UserRole)METHOD4
+*src\main\java\pl\agh\edu\io\User\User.javaX X("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setRole2
+Apl.agh.edu.io.User.User.setRole(pl.agh.edu.io.User.UserRole)!roleCALL4
+*src\main\java\pl\agh\edu\io\User\User.javaY Y(2f
+(pl.agh.edu.io.User.User?role@19.21:19.25CALL4
+*src\main\java\pl\agh\edu\io\User\User.javaY Y(2Ñ
+Apl.agh.edu.io.User.User.setRole(pl.agh.edu.io.User.UserRole)!role	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.javaX! X(%2I
+voidRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.javaX X(¥
+Apl.agh.edu.io.User.User.setRole(pl.agh.edu.io.User.UserRole)!role	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.javaX! X(%"
+typeUserRole"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*role2Y
+pl.agh.edu.io.User.UserRoleTYPE4
+*src\main\java\pl\agh\edu\io\User\User.javaX X( ø
+%pl.agh.edu.io.User.User.getPassword()METHOD4
+*src\main\java\pl\agh\edu\io\User\User.java\ \("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeString"
+accesspublic"
+LOC2*getPassword2j
+,pl.agh.edu.io.User.User?password@20.19:20.27CALL4
+*src\main\java\pl\agh\edu\io\User\User.java] ](2_
+jakarta.persistence.StringRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.java\ \(ÿ
+?pl.agh.edu.io.User.User.setPassword(jakarta.persistence.String)METHOD4
+*src\main\java\pl\agh\edu\io\User\User.java` `("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setPassword2Ü
+Hpl.agh.edu.io.User.User.setPassword(jakarta.persistence.String)!passwordCALL4
+*src\main\java\pl\agh\edu\io\User\User.javaa a( 2j
+,pl.agh.edu.io.User.User?password@20.19:20.27CALL4
+*src\main\java\pl\agh\edu\io\User\User.javaa a(2ã
+Hpl.agh.edu.io.User.User.setPassword(jakarta.persistence.String)!password	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java`# `(+2I
+voidRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.java` `(º
+Hpl.agh.edu.io.User.User.setPassword(jakarta.persistence.String)!password	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.java`# `(+"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*password2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java` `("°
+$pl.agh.edu.io.User.User.getCourses()METHOD4
+*src\main\java\pl\agh\edu\io\User\User.javad d(""
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeList<Course>"
+accesspublic"
+LOC2*
+getCourses2i
++pl.agh.edu.io.User.User?courses@30.25:30.32CALL4
+*src\main\java\pl\agh\edu\io\User\User.javae e(2S
+java.util.ListRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.javad d(2i
+pl.agh.edu.io.Course.CourseRETURN_TYPE_ARGUMENT4
+*src\main\java\pl\agh\edu\io\User\User.javad d(Ñ
+Opl.agh.edu.io.User.User.setCourses(java.util.List<pl.agh.edu.io.Course.Course>)METHOD4
+*src\main\java\pl\agh\edu\io\User\User.javah h("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*
+setCourses2ï
+Wpl.agh.edu.io.User.User.setCourses(java.util.List<pl.agh.edu.io.Course.Course>)!coursesCALL4
+*src\main\java\pl\agh\edu\io\User\User.javai i(2i
++pl.agh.edu.io.User.User?courses@30.25:30.32CALL4
+*src\main\java\pl\agh\edu\io\User\User.javai i(2ö
+Wpl.agh.edu.io.User.User.setCourses(java.util.List<pl.agh.edu.io.Course.Course>)!courses	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.javah( h(/2I
+voidRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.javah h(®
+Wpl.agh.edu.io.User.User.setCourses(java.util.List<pl.agh.edu.io.Course.Course>)!courses	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.javah( h(/"
+typeList<Course>"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*courses2L
+java.util.ListTYPE4
+*src\main\java\pl\agh\edu\io\User\User.javah h(2b
+pl.agh.edu.io.Course.CourseTYPE_ARGUMENT4
+*src\main\java\pl\agh\edu\io\User\User.javah  h(&⁄
+>pl.agh.edu.io.User.User.addCourse(pl.agh.edu.io.Course.Course)METHOD4
+*src\main\java\pl\agh\edu\io\User\User.javal l("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"	
+LOC10*	addCourse2g
+)java.util.List.contains(java.lang.Object)CALL4
+*src\main\java\pl\agh\edu\io\User\User.javam m("2S
+java.util.List.add(E)CALL4
+*src\main\java\pl\agh\edu\io\User\User.javan n(2É
+Epl.agh.edu.io.User.User.addCourse(pl.agh.edu.io.Course.Course)!courseCALL4
+*src\main\java\pl\agh\edu\io\User\User.javam# m()2É
+Epl.agh.edu.io.User.User.addCourse(pl.agh.edu.io.Course.Course)!courseCALL4
+*src\main\java\pl\agh\edu\io\User\User.javan n(#2f
+(pl.agh.edu.io.User.User?role@19.21:19.25CALL4
+*src\main\java\pl\agh\edu\io\User\User.javaq q(2É
+Epl.agh.edu.io.User.User.addCourse(pl.agh.edu.io.Course.Course)!courseCALL4
+*src\main\java\pl\agh\edu\io\User\User.javar r(2f
+(pl.agh.edu.io.User.User?role@19.21:19.25CALL4
+*src\main\java\pl\agh\edu\io\User\User.javas s(2É
+Epl.agh.edu.io.User.User.addCourse(pl.agh.edu.io.Course.Course)!courseCALL4
+*src\main\java\pl\agh\edu\io\User\User.javat t(2i
++pl.agh.edu.io.User.User?courses@30.25:30.32CALL4
+*src\main\java\pl\agh\edu\io\User\User.javam m(2i
++pl.agh.edu.io.User.User?courses@30.25:30.32CALL4
+*src\main\java\pl\agh\edu\io\User\User.javan n(2à
+Epl.agh.edu.io.User.User.addCourse(pl.agh.edu.io.Course.Course)!course	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.javal! l('2I
+voidRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.javal l(∏
+Epl.agh.edu.io.User.User.addCourse(pl.agh.edu.io.Course.Course)!course	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.javal! l('"
+typeCourse"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*course2Y
+pl.agh.edu.io.Course.CourseTYPE4
+*src\main\java\pl\agh\edu\io\User\User.javal l( Œ
+Apl.agh.edu.io.User.User.removeCourse(pl.agh.edu.io.Course.Course)METHOD4
+*src\main\java\pl\agh\edu\io\User\User.javax x("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"	
+LOC10*removeCourse2g
+'java.util.List.remove(java.lang.Object)CALL6
+*src\main\java\pl\agh\edu\io\User\User.javaÅ Å(2Ü
+Hpl.agh.edu.io.User.User.removeCourse(pl.agh.edu.io.Course.Course)!courseCALL4
+*src\main\java\pl\agh\edu\io\User\User.javay0 y(62Ü
+Hpl.agh.edu.io.User.User.removeCourse(pl.agh.edu.io.Course.Course)!courseCALL4
+*src\main\java\pl\agh\edu\io\User\User.javaz z(2Ü
+Hpl.agh.edu.io.User.User.removeCourse(pl.agh.edu.io.Course.Course)!courseCALL4
+*src\main\java\pl\agh\edu\io\User\User.java{ {(2Ü
+Hpl.agh.edu.io.User.User.removeCourse(pl.agh.edu.io.Course.Course)!courseCALL4
+*src\main\java\pl\agh\edu\io\User\User.java|5 |(;2Ü
+Hpl.agh.edu.io.User.User.removeCourse(pl.agh.edu.io.Course.Course)!courseCALL4
+*src\main\java\pl\agh\edu\io\User\User.java} }(2Ü
+Hpl.agh.edu.io.User.User.removeCourse(pl.agh.edu.io.Course.Course)!courseCALL4
+*src\main\java\pl\agh\edu\io\User\User.java~ ~(2à
+Hpl.agh.edu.io.User.User.removeCourse(pl.agh.edu.io.Course.Course)!courseCALL6
+*src\main\java\pl\agh\edu\io\User\User.javaÅ Å("2f
+(pl.agh.edu.io.User.User?role@19.21:19.25CALL4
+*src\main\java\pl\agh\edu\io\User\User.javay y(2f
+(pl.agh.edu.io.User.User?role@19.21:19.25CALL4
+*src\main\java\pl\agh\edu\io\User\User.java| |(2k
++pl.agh.edu.io.User.User?courses@30.25:30.32CALL6
+*src\main\java\pl\agh\edu\io\User\User.javaÅ Å(2ã
+Hpl.agh.edu.io.User.User.removeCourse(pl.agh.edu.io.Course.Course)!course	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.javax$ x(*2I
+voidRETURN_TYPE4
+*src\main\java\pl\agh\edu\io\User\User.javax x(ª
+Hpl.agh.edu.io.User.User.removeCourse(pl.agh.edu.io.Course.Course)!course	PARAMETER4
+*src\main\java\pl\agh\edu\io\User\User.javax$ x(*"
+typeCourse"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*course2Y
+pl.agh.edu.io.Course.CourseTYPE4
+*src\main\java\pl\agh\edu\io\User\User.javax x(#¢
+&pl.agh.edu.io.User.User?id@13.17:13.19VARIABLE4
+*src\main\java\pl\agh\edu\io\User\User.java ("
+isFinalfalse"
+typelong"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*id2B
+longTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java (»
+-pl.agh.edu.io.User.User?firstName@15.19:15.28VARIABLE4
+*src\main\java\pl\agh\edu\io\User\User.java ("
+isFinalfalse"
+typeString"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*	firstName2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java (∆
+,pl.agh.edu.io.User.User?lastName@16.19:16.27VARIABLE4
+*src\main\java\pl\agh\edu\io\User\User.java ("
+isFinalfalse"
+typeString"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*lastName2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java (¿
+)pl.agh.edu.io.User.User?email@17.19:17.24VARIABLE4
+*src\main\java\pl\agh\edu\io\User\User.java ("
+isFinalfalse"
+typeString"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*email2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java (Ã
+/pl.agh.edu.io.User.User?phoneNumber@18.19:18.30VARIABLE4
+*src\main\java\pl\agh\edu\io\User\User.java ("
+isFinalfalse"
+typeString"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*phoneNumber2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java (¡
+(pl.agh.edu.io.User.User?role@19.21:19.25VARIABLE4
+*src\main\java\pl\agh\edu\io\User\User.java ("
+isFinalfalse"
+typeUserRole"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*role2Y
+pl.agh.edu.io.User.UserRoleTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java (∆
+,pl.agh.edu.io.User.User?password@20.19:20.27VARIABLE4
+*src\main\java\pl\agh\edu\io\User\User.java ("
+isFinalfalse"
+typeString"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*password2X
+jakarta.persistence.StringTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java (Å
++pl.agh.edu.io.User.User?courses@30.25:30.32VARIABLE4
+*src\main\java\pl\agh\edu\io\User\User.java ( "
+isFinalfalse"
+typeList<Course>"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*courses2L
+java.util.ListTYPE4
+*src\main\java\pl\agh\edu\io\User\User.java (2b
+pl.agh.edu.io.Course.CourseTYPE_ARGUMENT4
+*src\main\java\pl\agh\edu\io\User\User.java (2]
+java.util.ArrayList.ArrayList()CALL4
+*src\main\java\pl\agh\edu\io\User\User.java' (2

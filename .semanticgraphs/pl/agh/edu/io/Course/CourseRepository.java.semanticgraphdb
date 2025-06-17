@@ -1,0 +1,47 @@
+
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.javaÀ
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.javaFILE:
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.java"
+LOC8*8src\main\java\pl\agh\edu\io\Course\CourseRepository.javaþ
+%pl.agh.edu.io.Course.CourseRepository	INTERFACEB
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.java (!"
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"
+LOC2*CourseRepository2•
+Bpl.agh.edu.io.Course.CourseRepository.findByName(java.lang.String)DECLARATIONB
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.java (2ƒ
+5org.springframework.data.jpa.repository.JpaRepositoryEXTENDB
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.java* (72w
+pl.agh.edu.io.Course.CourseEXTEND_TYPE_ARGUMENTB
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.java8 (>2j
+java.lang.LongEXTEND_TYPE_ARGUMENTB
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.java@ (Dª
+Bpl.agh.edu.io.Course.CourseRepository.findByName(java.lang.String)METHODB
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.java ("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeOptional<Course>"
+accesspackage_private"
+LOC0*
+findByName2˜
+Gpl.agh.edu.io.Course.CourseRepository.findByName(java.lang.String)!name	PARAMETERB
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.java' (+2e
+java.util.OptionalRETURN_TYPEB
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.java (2w
+pl.agh.edu.io.Course.CourseRETURN_TYPE_ARGUMENTB
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.java (É
+Gpl.agh.edu.io.Course.CourseRepository.findByName(java.lang.String)!name	PARAMETERB
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.java' (+"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*name2\
+java.lang.StringTYPEB
+8src\main\java\pl\agh\edu\io\Course\CourseRepository.java  (&

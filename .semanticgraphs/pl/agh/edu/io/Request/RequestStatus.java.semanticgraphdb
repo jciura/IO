@@ -1,0 +1,29 @@
+
+6src\main\java\pl\agh\edu\io\Request\RequestStatus.javaº
+6src\main\java\pl\agh\edu\io\Request\RequestStatus.javaFILE8
+6src\main\java\pl\agh\edu\io\Request\RequestStatus.java"
+LOC6*6src\main\java\pl\agh\edu\io\Request\RequestStatus.java’
+#pl.agh.edu.io.Request.RequestStatusENUM@
+6src\main\java\pl\agh\edu\io\Request\RequestStatus.java ("
+packagepl.agh.edu.io*RequestStatus2|
++pl.agh.edu.io.Request.RequestStatus?PENDINGDECLARATION@
+6src\main\java\pl\agh\edu\io\Request\RequestStatus.java (2}
+,pl.agh.edu.io.Request.RequestStatus?ACCEPTEDDECLARATION@
+6src\main\java\pl\agh\edu\io\Request\RequestStatus.java (2}
+,pl.agh.edu.io.Request.RequestStatus?REJECTEDDECLARATION@
+6src\main\java\pl\agh\edu\io\Request\RequestStatus.java (±
++pl.agh.edu.io.Request.RequestStatus?PENDINGVALUE@
+6src\main\java\pl\agh\edu\io\Request\RequestStatus.java ("
+enumtrue"
+LOC0"
+packagepl.agh.edu.io*PENDING³
+,pl.agh.edu.io.Request.RequestStatus?ACCEPTEDVALUE@
+6src\main\java\pl\agh\edu\io\Request\RequestStatus.java ("
+enumtrue"
+LOC0"
+packagepl.agh.edu.io*ACCEPTED³
+,pl.agh.edu.io.Request.RequestStatus?REJECTEDVALUE@
+6src\main\java\pl\agh\edu\io\Request\RequestStatus.java ("
+enumtrue"
+LOC0"
+packagepl.agh.edu.io*REJECTED

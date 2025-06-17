@@ -1,0 +1,37 @@
+
+;src\main\java\pl\agh\edu\io\User\UserNotFoundException.javaÉ
+;src\main\java\pl\agh\edu\io\User\UserNotFoundException.javaFILE=
+;src\main\java\pl\agh\edu\io\User\UserNotFoundException.java"
+LOC6*;src\main\java\pl\agh\edu\io\User\UserNotFoundException.javaŒ
+(pl.agh.edu.io.User.UserNotFoundExceptionCLASSE
+;src\main\java\pl\agh\edu\io\User\UserNotFoundException.java (""
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"
+LOC4*UserNotFoundException2š
+Dpl.agh.edu.io.User.UserNotFoundException.UserNotFoundException(long)DECLARATIONE
+;src\main\java\pl\agh\edu\io\User\UserNotFoundException.java ( 2k
+java.lang.RuntimeExceptionEXTENDE
+;src\main\java\pl\agh\edu\io\User\UserNotFoundException.java+ (;‘
+Dpl.agh.edu.io.User.UserNotFoundException.UserNotFoundException(long)CONSTRUCTORE
+;src\main\java\pl\agh\edu\io\User\UserNotFoundException.java ( "
+packagepl.agh.edu.io*UserNotFoundException2Œ
+=java.lang.RuntimeException.RuntimeException(java.lang.String)CALLE
+;src\main\java\pl\agh\edu\io\User\UserNotFoundException.java (2–
+Gpl.agh.edu.io.User.UserNotFoundException.UserNotFoundException(long)!idCALLE
+;src\main\java\pl\agh\edu\io\User\UserNotFoundException.java! (#2›
+Gpl.agh.edu.io.User.UserNotFoundException.UserNotFoundException(long)!id	PARAMETERE
+;src\main\java\pl\agh\edu\io\User\UserNotFoundException.java& ((2~
+(pl.agh.edu.io.User.UserNotFoundExceptionRETURN_TYPEE
+;src\main\java\pl\agh\edu\io\User\UserNotFoundException.java ( ¿
+Gpl.agh.edu.io.User.UserNotFoundException.UserNotFoundException(long)!id	PARAMETERE
+;src\main\java\pl\agh\edu\io\User\UserNotFoundException.java& (("
+typelong"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*id2S
+longTYPEE
+;src\main\java\pl\agh\edu\io\User\UserNotFoundException.java! (%

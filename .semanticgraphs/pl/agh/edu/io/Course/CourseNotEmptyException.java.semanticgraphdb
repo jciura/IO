@@ -1,0 +1,37 @@
+
+?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.java’
+?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.javaFILEA
+?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.java"
+LOC6*?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.java§
+,pl.agh.edu.io.Course.CourseNotEmptyExceptionCLASSI
+?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.java ($"
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"
+LOC4*CourseNotEmptyException2§
+Jpl.agh.edu.io.Course.CourseNotEmptyException.CourseNotEmptyException(long)DECLARATIONI
+?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.java ("2o
+java.lang.RuntimeExceptionEXTENDI
+?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.java- (=æ
+Jpl.agh.edu.io.Course.CourseNotEmptyException.CourseNotEmptyException(long)CONSTRUCTORI
+?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.java (""
+packagepl.agh.edu.io*CourseNotEmptyException2ê
+=java.lang.RuntimeException.RuntimeException(java.lang.String)CALLI
+?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.java (2†
+Mpl.agh.edu.io.Course.CourseNotEmptyException.CourseNotEmptyException(long)!idCALLI
+?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.java (2•
+Mpl.agh.edu.io.Course.CourseNotEmptyException.CourseNotEmptyException(long)!id	PARAMETERI
+?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.java( (*2Ü
+,pl.agh.edu.io.Course.CourseNotEmptyExceptionRETURN_TYPEI
+?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.java ("Õ
+Mpl.agh.edu.io.Course.CourseNotEmptyException.CourseNotEmptyException(long)!id	PARAMETERI
+?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.java( (*"
+typelong"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*id2W
+longTYPEI
+?src\main\java\pl\agh\edu\io\Course\CourseNotEmptyException.java# ('

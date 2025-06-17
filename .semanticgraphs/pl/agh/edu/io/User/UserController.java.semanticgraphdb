@@ -1,0 +1,213 @@
+
+4src\main\java\pl\agh\edu\io\User\UserController.javaµ
+4src\main\java\pl\agh\edu\io\User\UserController.javaFILE6
+4src\main\java\pl\agh\edu\io\User\UserController.java"	
+LOC60*4src\main\java\pl\agh\edu\io\User\UserController.javaÜ	
+!pl.agh.edu.io.User.UserControllerCLASS>
+4src\main\java\pl\agh\edu\io\User\UserController.java ("
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"	
+LOC50*UserController2Ÿ
+Ppl.agh.edu.io.User.UserController.UserController(pl.agh.edu.io.User.UserService)DECLARATION>
+4src\main\java\pl\agh\edu\io\User\UserController.java (2~
+/pl.agh.edu.io.User.UserController.getAllUsers()DECLARATION>
+4src\main\java\pl\agh\edu\io\User\UserController.java) (42
+2pl.agh.edu.io.User.UserController.getUserById(int)DECLARATION>
+4src\main\java\pl\agh\edu\io\User\UserController.java# (.2
+2pl.agh.edu.io.User.UserController.getUserRole(int)DECLARATION>
+4src\main\java\pl\agh\edu\io\User\UserController.java$ (/2
+2pl.agh.edu.io.User.UserController.deleteUser(long)DECLARATION>
+4src\main\java\pl\agh\edu\io\User\UserController.java#  #(*2Y
+
+updateUserDECLARATION>
+4src\main\java\pl\agh\edu\io\User\UserController.java)# )(-2X
+	userLoginDECLARATION>
+4src\main\java\pl\agh\edu\io\User\UserController.java.# .(,2ˆ
+9pl.agh.edu.io.User.UserController?userService@13.30:13.41DECLARATION>
+4src\main\java\pl\agh\edu\io\User\UserController.java ()’
+Ppl.agh.edu.io.User.UserController.UserController(pl.agh.edu.io.User.UserService)CONSTRUCTOR>
+4src\main\java\pl\agh\edu\io\User\UserController.java ("
+packagepl.agh.edu.io*UserController2¤
+\pl.agh.edu.io.User.UserController.UserController(pl.agh.edu.io.User.UserService)!userServiceCALL>
+4src\main\java\pl\agh\edu\io\User\UserController.java (&2
+9pl.agh.edu.io.User.UserController?userService@13.30:13.41CALL>
+4src\main\java\pl\agh\edu\io\User\UserController.java (2©
+\pl.agh.edu.io.User.UserController.UserController(pl.agh.edu.io.User.UserService)!userService	PARAMETER>
+4src\main\java\pl\agh\edu\io\User\UserController.java& (12p
+!pl.agh.edu.io.User.UserControllerRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java (ð
+\pl.agh.edu.io.User.UserController.UserController(pl.agh.edu.io.User.UserService)!userService	PARAMETER>
+4src\main\java\pl\agh\edu\io\User\UserController.java& (1"
+typeUserService"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*userService2f
+pl.agh.edu.io.User.UserServiceTYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java (%€
+/pl.agh.edu.io.User.UserController.getAllUsers()METHOD>
+4src\main\java\pl\agh\edu\io\User\UserController.java) (4"
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"%
+typeResponseEntity<List<UserDto>>"
+accesspublic"
+LOC3*getAllUsers2
+9pl.agh.edu.io.User.UserController?userService@13.30:13.41CALL>
+4src\main\java\pl\agh\edu\io\User\UserController.java! (,2]
+ResponseEntityRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java (
+2pl.agh.edu.io.User.UserController.getUserById(int)METHOD>
+4src\main\java\pl\agh\edu\io\User\UserController.java# (."
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeResponseEntity<UserDto>"
+accesspublic"
+LOC3*getUserById2
+9pl.agh.edu.io.User.UserController?userService@13.30:13.41CALL>
+4src\main\java\pl\agh\edu\io\User\UserController.java! (,2}
+5pl.agh.edu.io.User.UserController.getUserById(int)!idCALL>
+4src\main\java\pl\agh\edu\io\User\UserController.java9 (;2‚
+5pl.agh.edu.io.User.UserController.getUserById(int)!id	PARAMETER>
+4src\main\java\pl\agh\edu\io\User\UserController.javaA (C2]
+ResponseEntityRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java (
+5pl.agh.edu.io.User.UserController.getUserById(int)!id	PARAMETER>
+4src\main\java\pl\agh\edu\io\User\UserController.javaA (C"
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*id2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java= (@
+2pl.agh.edu.io.User.UserController.getUserRole(int)METHOD>
+4src\main\java\pl\agh\edu\io\User\UserController.java$ (/"
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse" 
+typeResponseEntity<UserRole>"
+accesspublic"
+LOC3*getUserRole2
+9pl.agh.edu.io.User.UserController?userService@13.30:13.41CALL>
+4src\main\java\pl\agh\edu\io\User\UserController.java! (,2}
+5pl.agh.edu.io.User.UserController.getUserRole(int)!idCALL>
+4src\main\java\pl\agh\edu\io\User\UserController.java9 (;2‚
+5pl.agh.edu.io.User.UserController.getUserRole(int)!id	PARAMETER>
+4src\main\java\pl\agh\edu\io\User\UserController.javaB (D2v
+'org.springframework.http.ResponseEntityRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java (2s
+pl.agh.edu.io.User.UserRoleRETURN_TYPE_ARGUMENT>
+4src\main\java\pl\agh\edu\io\User\UserController.java ("
+5pl.agh.edu.io.User.UserController.getUserRole(int)!id	PARAMETER>
+4src\main\java\pl\agh\edu\io\User\UserController.javaB (D"
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*id2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java> (A
+2pl.agh.edu.io.User.UserController.deleteUser(long)METHOD>
+4src\main\java\pl\agh\edu\io\User\UserController.java#  #(*"
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeResponseEntity<Void>"
+accesspublic"
+LOC4*
+deleteUser2
+9pl.agh.edu.io.User.UserController?userService@13.30:13.41CALL>
+4src\main\java\pl\agh\edu\io\User\UserController.java$ $(2}
+5pl.agh.edu.io.User.UserController.deleteUser(long)!idCALL>
+4src\main\java\pl\agh\edu\io\User\UserController.java$" $($2‚
+5pl.agh.edu.io.User.UserController.deleteUser(long)!id	PARAMETER>
+4src\main\java\pl\agh\edu\io\User\UserController.java#> #(@2v
+'org.springframework.http.ResponseEntityRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java# #(2„
+,org.springframework.web.bind.annotation.VoidRETURN_TYPE_ARGUMENT>
+4src\main\java\pl\agh\edu\io\User\UserController.java# #(Ÿ
+5pl.agh.edu.io.User.UserController.deleteUser(long)!id	PARAMETER>
+4src\main\java\pl\agh\edu\io\User\UserController.java#> #(@"
+typelong"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*id2L
+longTYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java#9 #(=Å
+
+updateUserMETHOD>
+4src\main\java\pl\agh\edu\io\User\UserController.java)# )(-"	
+package"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeResponseEntity<UserDto>"
+accesspublic"
+LOC3*
+updateUser2
+9pl.agh.edu.io.User.UserController?userService@13.30:13.41CALL>
+4src\main\java\pl\agh\edu\io\User\UserController.java*! *(,2]
+ResponseEntityRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java) )(Ý
+id	PARAMETER>
+4src\main\java\pl\agh\edu\io\User\UserController.java)A )(C"
+typelong"
+isFinalfalse"	
+package"
+isLocaltrue*id2L
+longTYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java)< )(@õ
+updatedUser	PARAMETER>
+4src\main\java\pl\agh\edu\io\User\UserController.java)Z )(e"
+typeUserDto"
+isFinalfalse"	
+package"
+isLocaltrue*updatedUser2O
+UserDtoTYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java)R )(YÈ
+	userLoginMETHOD>
+4src\main\java\pl\agh\edu\io\User\UserController.java.# .(,"	
+package"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeResponseEntity<UserDto>"
+accesspublic"	
+LOC14*	userLogin2
+9pl.agh.edu.io.User.UserController?userService@13.30:13.41CALL>
+4src\main\java\pl\agh\edu\io\User\UserController.java/! /(,2
+9pl.agh.edu.io.User.UserController?userService@13.30:13.41CALL>
+4src\main\java\pl\agh\edu\io\User\UserController.java2 2('2]
+ResponseEntityRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java. .(õ
+	loginData	PARAMETER>
+4src\main\java\pl\agh\edu\io\User\UserController.java.D .(M"
+type	LoginData"
+isFinalfalse"	
+package"
+isLocaltrue*	loginData2Q
+	LoginDataTYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java.: .(Cï
+9pl.agh.edu.io.User.UserController?userService@13.30:13.41VALUE>
+4src\main\java\pl\agh\edu\io\User\UserController.java ()"
+isFinaltrue"
+typeUserService"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*userService2f
+pl.agh.edu.io.User.UserServiceTYPE>
+4src\main\java\pl\agh\edu\io\User\UserController.java (

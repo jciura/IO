@@ -1,0 +1,56 @@
+
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.javaÂ
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.javaFILEF
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.java"	
+LOC15*Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.javañ
+1pl.agh.edu.io.Request.RescheduleRequestRepository	INTERFACEN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.java (,"
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"
+LOC7*RescheduleRequestRepository2Ÿ
+zpl.agh.edu.io.Request.RescheduleRequestRepository.findByClassSessionIdAndStatus(long, pl.agh.edu.io.Request.RequestStatus)DECLARATIONN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.java (92è
+5org.springframework.data.jpa.repository.JpaRepositoryEXTENDN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.java5 (B2è
+'pl.agh.edu.io.Request.RescheduleRequestEXTEND_TYPE_ARGUMENTN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.javaC (T2v
+java.lang.LongEXTEND_TYPE_ARGUMENTN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.javaV (Z⁄
+zpl.agh.edu.io.Request.RescheduleRequestRepository.findByClassSessionIdAndStatus(long, pl.agh.edu.io.Request.RequestStatus)METHODN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.java (9"
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeList<RescheduleRequest>"
+accesspackage_private"
+LOC5*findByClassSessionIdAndStatus2Á
+âpl.agh.edu.io.Request.RescheduleRequestRepository.findByClassSessionIdAndStatus(long, pl.agh.edu.io.Request.RequestStatus)!classSessionId	PARAMETERN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.java* (82ﬂ
+Åpl.agh.edu.io.Request.RescheduleRequestRepository.findByClassSessionIdAndStatus(long, pl.agh.edu.io.Request.RequestStatus)!status	PARAMETERN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.java+ (12m
+java.util.ListRETURN_TYPEN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.java (2è
+'pl.agh.edu.io.Request.RescheduleRequestRETURN_TYPE_ARGUMENTN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.java	 (†
+âpl.agh.edu.io.Request.RescheduleRequestRepository.findByClassSessionIdAndStatus(long, pl.agh.edu.io.Request.RequestStatus)!classSessionId	PARAMETERN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.java* (8"
+typelong"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*classSessionId2\
+longTYPEN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.java% ()∏
+Åpl.agh.edu.io.Request.RescheduleRequestRepository.findByClassSessionIdAndStatus(long, pl.agh.edu.io.Request.RequestStatus)!status	PARAMETERN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.java+ (1"
+typeRequestStatus"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*status2{
+#pl.agh.edu.io.Request.RequestStatusTYPEN
+Dsrc\main\java\pl\agh\edu\io\Request\RescheduleRequestRepository.java (*

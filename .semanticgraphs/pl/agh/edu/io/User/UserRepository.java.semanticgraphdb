@@ -1,0 +1,46 @@
+
+4src\main\java\pl\agh\edu\io\User\UserRepository.javaµ
+4src\main\java\pl\agh\edu\io\User\UserRepository.javaFILE6
+4src\main\java\pl\agh\edu\io\User\UserRepository.java"	
+LOC11*4src\main\java\pl\agh\edu\io\User\UserRepository.javaÜ
+!pl.agh.edu.io.User.UserRepository	INTERFACE>
+4src\main\java\pl\agh\edu\io\User\UserRepository.java ("
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"
+LOC4*UserRepository2Ž
+?pl.agh.edu.io.User.UserRepository.findByEmail(java.lang.String)DECLARATION>
+4src\main\java\pl\agh\edu\io\User\UserRepository.java	 	(2
+5org.springframework.data.jpa.repository.JpaRepositoryEXTEND>
+4src\main\java\pl\agh\edu\io\User\UserRepository.java( (52o
+pl.agh.edu.io.User.UserEXTEND_TYPE_ARGUMENT>
+4src\main\java\pl\agh\edu\io\User\UserRepository.java6 (:2f
+java.lang.LongEXTEND_TYPE_ARGUMENT>
+4src\main\java\pl\agh\edu\io\User\UserRepository.java< (@
+?pl.agh.edu.io.User.UserRepository.findByEmail(java.lang.String)METHOD>
+4src\main\java\pl\agh\edu\io\User\UserRepository.java	 	("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeOptional<User>"
+accesspackage_private"
+LOC0*findByEmail2’
+Epl.agh.edu.io.User.UserRepository.findByEmail(java.lang.String)!email	PARAMETER>
+4src\main\java\pl\agh\edu\io\User\UserRepository.java	& 	(+2a
+java.util.OptionalRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\User\UserRepository.java	 	(2o
+pl.agh.edu.io.User.UserRETURN_TYPE_ARGUMENT>
+4src\main\java\pl\agh\edu\io\User\UserRepository.java	 	(À
+Epl.agh.edu.io.User.UserRepository.findByEmail(java.lang.String)!email	PARAMETER>
+4src\main\java\pl\agh\edu\io\User\UserRepository.java	& 	(+"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*email2X
+java.lang.StringTYPE>
+4src\main\java\pl\agh\edu\io\User\UserRepository.java	 	(%

@@ -1,0 +1,629 @@
+
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java∂
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaFILE6
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java"
+
+LOC113*4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaõ
+!pl.agh.edu.io.Classroom.ClassroomCLASS>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java ("
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"
+
+LOC103*	Classroom2|
+-pl.agh.edu.io.Classroom.Classroom.Classroom()DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java" "(2Æ
+_pl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java% %(2ﬂ
+èpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java- -(2x
+)pl.agh.edu.io.Classroom.Classroom.getId()DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java6 6(2~
+/pl.agh.edu.io.Classroom.Classroom.getBuilding()DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java: :(2|
+-pl.agh.edu.io.Classroom.Classroom.getNumber()DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java> >(2{
+,pl.agh.edu.io.Classroom.Classroom.getFloor()DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaB B(2~
+/pl.agh.edu.io.Classroom.Classroom.getCapacity()DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaF F(2É
+4pl.agh.edu.io.Classroom.Classroom.getClassSessions()DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaJ J(-2Å
+2pl.agh.edu.io.Classroom.Classroom.isHasComputers()DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaN N(!2~
+/pl.agh.edu.io.Classroom.Classroom.getSoftware()DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaR R($2ù
+Npl.agh.edu.io.Classroom.Classroom.addSoftware(pl.agh.edu.io.Software.Software)DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaV V(2õ
+Lpl.agh.edu.io.Classroom.Classroom.addClass(pl.agh.edu.io.Class.ClassSession)DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaZ Z(2ò
+Ipl.agh.edu.io.Classroom.Classroom.setBuilding(jakarta.persistence.String)DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java^ ^(2
+0pl.agh.edu.io.Classroom.Classroom.setNumber(int)DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javab b(2~
+/pl.agh.edu.io.Classroom.Classroom.setFloor(int)DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaf f(2Å
+2pl.agh.edu.io.Classroom.Classroom.setCapacity(int)DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaj j(2â
+:pl.agh.edu.io.Classroom.Classroom.setHasComputers(boolean)DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javan n(2
+0pl.agh.edu.io.Classroom.Classroom?id@15.17:15.19DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java (2Ö
+6pl.agh.edu.io.Classroom.Classroom?building@17.19:17.27DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java (2É
+4pl.agh.edu.io.Classroom.Classroom?number@18.16:18.22DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java (2Ç
+3pl.agh.edu.io.Classroom.Classroom?floor@19.16:19.21DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java (2Ö
+6pl.agh.edu.io.Classroom.Classroom?capacity@20.16:20.24DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java (2â
+:pl.agh.edu.io.Classroom.Classroom?hasComputers@21.20:21.32DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java ( 2Ö
+6pl.agh.edu.io.Classroom.Classroom?software@29.26:29.34DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java ("2Ñ
+5pl.agh.edu.io.Classroom.Classroom?classes@32.30:32.37DECLARATION>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java   (%ì
+-pl.agh.edu.io.Classroom.Classroom.Classroom()CONSTRUCTOR>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java" "("
+packagepl.agh.edu.io*	Classroom2p
+!pl.agh.edu.io.Classroom.ClassroomRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java" "(⁄
+_pl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)CONSTRUCTOR>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java% %("
+packagepl.agh.edu.io*	Classroom2∞
+hpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!buildingCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java& &( 2Æ
+fpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!numberCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java' '(2≠
+epl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!floorCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java( ((2∞
+hpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!capacityCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java) )( 2¥
+lpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!hasComputersCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java* *((2~
+6pl.agh.edu.io.Classroom.Classroom?building@17.19:17.27CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java& &(2|
+4pl.agh.edu.io.Classroom.Classroom?number@18.16:18.22CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java' '(2{
+3pl.agh.edu.io.Classroom.Classroom?floor@19.16:19.21CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java( ((2~
+6pl.agh.edu.io.Classroom.Classroom?capacity@20.16:20.24CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java) )(2Ç
+:pl.agh.edu.io.Classroom.Classroom?hasComputers@21.20:21.32CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java* *(2µ
+hpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!building	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java% %($2≥
+fpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!number	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java%* %(02≤
+epl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!floor	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java%6 %(;2µ
+hpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!capacity	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java%A %(I2π
+lpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!hasComputers	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java%S %(_2p
+!pl.agh.edu.io.Classroom.ClassroomRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java% %(
+hpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!building	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java% %($"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*building2b
+jakarta.persistence.StringTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java% %(“
+fpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!number	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java%* %(0"
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*number2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java%& %()–
+epl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!floor	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java%6 %(;"
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*floor2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java%2 %(5÷
+hpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!capacity	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java%A %(I"
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*capacity2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java%= %(@Ê
+lpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean)!hasComputers	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java%S %(_"
+typeboolean"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*hasComputers2O
+booleanTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java%K %(R¬
+èpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)CONSTRUCTOR>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java- -("
+packagepl.agh.edu.io*	Classroom2·
+òpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!buildingCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java. .( 2ﬂ
+ñpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!numberCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java/ /(2ﬁ
+ïpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!floorCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java0 0(2·
+òpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!capacityCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java1 1( 2Â
+úpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!hasComputersCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java2 2((2·
+òpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!softwareCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java3 3( 2~
+6pl.agh.edu.io.Classroom.Classroom?building@17.19:17.27CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java. .(2|
+4pl.agh.edu.io.Classroom.Classroom?number@18.16:18.22CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java/ /(2{
+3pl.agh.edu.io.Classroom.Classroom?floor@19.16:19.21CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java0 0(2~
+6pl.agh.edu.io.Classroom.Classroom?capacity@20.16:20.24CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java1 1(2Ç
+:pl.agh.edu.io.Classroom.Classroom?hasComputers@21.20:21.32CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java2 2(2~
+6pl.agh.edu.io.Classroom.Classroom?software@29.26:29.34CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java3 3(2Ê
+òpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!building	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java- -($2‰
+ñpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!number	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-* -(02„
+ïpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!floor	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-6 -(;2Ê
+òpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!capacity	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-A -(I2Í
+úpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!hasComputers	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-S -(_2Ê
+òpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!software	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-o -(w2p
+!pl.agh.edu.io.Classroom.ClassroomRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java- -(°
+òpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!building	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java- -($"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*building2b
+jakarta.persistence.StringTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java- -(É
+ñpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!number	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-* -(0"
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*number2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-& -()Å
+ïpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!floor	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-6 -(;"
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*floor2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-2 -(5á
+òpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!capacity	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-A -(I"
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*capacity2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-= -(@ó
+úpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!hasComputers	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-S -(_"
+typeboolean"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*hasComputers2O
+booleanTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-K -(Rç
+òpl.agh.edu.io.Classroom.Classroom.Classroom(jakarta.persistence.String, int, int, int, boolean, java.util.Set<pl.agh.edu.io.Software.Software>)!software	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-o -(w"
+typeSet<Software>"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*software2U
+java.util.SetTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-a -(d2p
+pl.agh.edu.io.Software.SoftwareTYPE_ARGUMENT>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java-e -(m«
+)pl.agh.edu.io.Classroom.Classroom.getId()METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java6 6("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typelong"
+accesspublic"
+LOC2*getId2x
+0pl.agh.edu.io.Classroom.Classroom?id@15.17:15.19CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java7 7(2S
+longRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java6 6(Ò
+/pl.agh.edu.io.Classroom.Classroom.getBuilding()METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java: :("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeString"
+accesspublic"
+LOC2*getBuilding2~
+6pl.agh.edu.io.Classroom.Classroom?building@17.19:17.27CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java; ;(2i
+jakarta.persistence.StringRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java: :(—
+-pl.agh.edu.io.Classroom.Classroom.getNumber()METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java> >("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeint"
+accesspublic"
+LOC2*	getNumber2|
+4pl.agh.edu.io.Classroom.Classroom?number@18.16:18.22CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java? ?(2R
+intRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java> >(Œ
+,pl.agh.edu.io.Classroom.Classroom.getFloor()METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaB B("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeint"
+accesspublic"
+LOC2*getFloor2{
+3pl.agh.edu.io.Classroom.Classroom?floor@19.16:19.21CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaC C(2R
+intRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaB B(◊
+/pl.agh.edu.io.Classroom.Classroom.getCapacity()METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaF F("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeint"
+accesspublic"
+LOC2*getCapacity2~
+6pl.agh.edu.io.Classroom.Classroom?capacity@20.16:20.24CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaG G(2R
+intRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaF F(Ú
+4pl.agh.edu.io.Classroom.Classroom.getClassSessions()METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaJ J(-"
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeSet<ClassSession>"
+accesspublic"
+LOC2*getClassSessions2}
+5pl.agh.edu.io.Classroom.Classroom?classes@32.30:32.37CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaK K(2\
+java.util.SetRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaJ J(2x
+ pl.agh.edu.io.Class.ClassSessionRETURN_TYPE_ARGUMENT>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaJ J(Í
+2pl.agh.edu.io.Classroom.Classroom.isHasComputers()METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaN N(!"
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeboolean"
+accesspublic"
+LOC2*isHasComputers2Ç
+:pl.agh.edu.io.Classroom.Classroom?hasComputers@21.20:21.32CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaO O(2V
+booleanRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaN N(‰
+/pl.agh.edu.io.Classroom.Classroom.getSoftware()METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaR R($"
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeSet<Software>"
+accesspublic"
+LOC2*getSoftware2~
+6pl.agh.edu.io.Classroom.Classroom?software@29.26:29.34CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaS S(2\
+java.util.SetRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaR R(2w
+pl.agh.edu.io.Software.SoftwareRETURN_TYPE_ARGUMENT>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaR R(ü
+Npl.agh.edu.io.Classroom.Classroom.addSoftware(pl.agh.edu.io.Software.Software)METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaV V("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*addSoftware2\
+java.util.Set.add(E)CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaW W(2ü
+Wpl.agh.edu.io.Classroom.Classroom.addSoftware(pl.agh.edu.io.Software.Software)!softwareCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaW W("2~
+6pl.agh.edu.io.Classroom.Classroom?software@29.26:29.34CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaW W(2§
+Wpl.agh.edu.io.Classroom.Classroom.addSoftware(pl.agh.edu.io.Software.Software)!software	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaV% V(-2S
+voidRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaV V(Ê
+Wpl.agh.edu.io.Classroom.Classroom.addSoftware(pl.agh.edu.io.Software.Software)!software	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaV% V(-"
+typeSoftware"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*software2g
+pl.agh.edu.io.Software.SoftwareTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaV V($ì
+Lpl.agh.edu.io.Classroom.Classroom.addClass(pl.agh.edu.io.Class.ClassSession)METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaZ Z("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*addClass2\
+java.util.Set.add(E)CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java[ [(2ú
+Tpl.agh.edu.io.Classroom.Classroom.addClass(pl.agh.edu.io.Class.ClassSession)!sessionCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java[ [( 2}
+5pl.agh.edu.io.Classroom.Classroom?classes@32.30:32.37CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java[ [(2°
+Tpl.agh.edu.io.Classroom.Classroom.addClass(pl.agh.edu.io.Class.ClassSession)!session	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaZ& Z(-2S
+voidRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaZ Z(Á
+Tpl.agh.edu.io.Classroom.Classroom.addClass(pl.agh.edu.io.Class.ClassSession)!session	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaZ& Z(-"
+typeClassSession"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*session2h
+ pl.agh.edu.io.Class.ClassSessionTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaZ Z(%≤
+Ipl.agh.edu.io.Classroom.Classroom.setBuilding(jakarta.persistence.String)METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java^ ^("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setBuilding2ö
+Rpl.agh.edu.io.Classroom.Classroom.setBuilding(jakarta.persistence.String)!buildingCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java_ _( 2~
+6pl.agh.edu.io.Classroom.Classroom?building@17.19:17.27CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java_ _(2ü
+Rpl.agh.edu.io.Classroom.Classroom.setBuilding(jakarta.persistence.String)!building	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java^# ^(+2S
+voidRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java^ ^(⁄
+Rpl.agh.edu.io.Classroom.Classroom.setBuilding(jakarta.persistence.String)!building	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java^# ^(+"
+typeString"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*building2b
+jakarta.persistence.StringTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java^ ^("ﬁ
+0pl.agh.edu.io.Classroom.Classroom.setNumber(int)METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javab b("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*	setNumber2
+7pl.agh.edu.io.Classroom.Classroom.setNumber(int)!numberCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javac c(2|
+4pl.agh.edu.io.Classroom.Classroom?number@18.16:18.22CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javac c(2Ñ
+7pl.agh.edu.io.Classroom.Classroom.setNumber(int)!number	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javab b($2S
+voidRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javab b(£
+7pl.agh.edu.io.Classroom.Classroom.setNumber(int)!number	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javab b($"
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*number2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javab b(◊
+/pl.agh.edu.io.Classroom.Classroom.setFloor(int)METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaf f("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setFloor2}
+5pl.agh.edu.io.Classroom.Classroom.setFloor(int)!floorCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javag g(2{
+3pl.agh.edu.io.Classroom.Classroom?floor@19.16:19.21CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javag g(2Ç
+5pl.agh.edu.io.Classroom.Classroom.setFloor(int)!floor	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaf f("2S
+voidRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaf f(†
+5pl.agh.edu.io.Classroom.Classroom.setFloor(int)!floor	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaf f(""
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*floor2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaf f(Ì
+2pl.agh.edu.io.Classroom.Classroom.setCapacity(int)METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaj j("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setCapacity2É
+;pl.agh.edu.io.Classroom.Classroom.setCapacity(int)!capacityCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javak k( 2~
+6pl.agh.edu.io.Classroom.Classroom?capacity@20.16:20.24CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javak k(2à
+;pl.agh.edu.io.Classroom.Classroom.setCapacity(int)!capacity	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaj  j((2S
+voidRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaj j(©
+;pl.agh.edu.io.Classroom.Classroom.setCapacity(int)!capacity	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaj  j(("
+typeint"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*capacity2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javaj j(ñ
+:pl.agh.edu.io.Classroom.Classroom.setHasComputers(boolean)METHOD>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javan n("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setHasComputers2è
+Gpl.agh.edu.io.Classroom.Classroom.setHasComputers(boolean)!hasComputersCALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javao o((2Ç
+:pl.agh.edu.io.Classroom.Classroom?hasComputers@21.20:21.32CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javao o(2î
+Gpl.agh.edu.io.Classroom.Classroom.setHasComputers(boolean)!hasComputers	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javan( n(42S
+voidRETURN_TYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javan n(¡
+Gpl.agh.edu.io.Classroom.Classroom.setHasComputers(boolean)!hasComputers	PARAMETER>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javan( n(4"
+typeboolean"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*hasComputers2O
+booleanTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.javan  n('¿
+0pl.agh.edu.io.Classroom.Classroom?id@15.17:15.19VARIABLE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java ("
+isFinalfalse"
+typelong"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*id2L
+longTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java (‰
+6pl.agh.edu.io.Classroom.Classroom?building@17.19:17.27VARIABLE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java ("
+isFinalfalse"
+typeString"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*building2b
+jakarta.persistence.StringTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java (∆
+4pl.agh.edu.io.Classroom.Classroom?number@18.16:18.22VARIABLE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java ("
+isFinalfalse"
+typeint"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*number2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java (ƒ
+3pl.agh.edu.io.Classroom.Classroom?floor@19.16:19.21VARIABLE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java ("
+isFinalfalse"
+typeint"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*floor2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java ( 
+6pl.agh.edu.io.Classroom.Classroom?capacity@20.16:20.24VARIABLE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java ("
+isFinalfalse"
+typeint"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*capacity2K
+intTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java (⁄
+:pl.agh.edu.io.Classroom.Classroom?hasComputers@21.20:21.32VARIABLE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java ( "
+isFinalfalse"
+typeboolean"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*hasComputers2O
+booleanTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java (µ
+6pl.agh.edu.io.Classroom.Classroom?software@29.26:29.34VARIABLE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java (""
+isFinalfalse"
+typeSet<Software>"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*software2U
+java.util.SetTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java (2p
+pl.agh.edu.io.Software.SoftwareTYPE_ARGUMENT>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java (2c
+java.util.HashSet.HashSet()CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java) (2∏
+5pl.agh.edu.io.Classroom.Classroom?classes@32.30:32.37VARIABLE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java   (%"
+isFinalfalse"
+typeSet<ClassSession>"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*classes2U
+java.util.SetTYPE>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java   (2q
+ pl.agh.edu.io.Class.ClassSessionTYPE_ARGUMENT>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java   (2c
+java.util.HashSet.HashSet()CALL>
+4src\main\java\pl\agh\edu\io\Classroom\Classroom.java ,  (A

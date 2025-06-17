@@ -1,0 +1,37 @@
+
+Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.java‰
+Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.javaFILEF
+Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.java"
+LOC7*Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.java…
+1pl.agh.edu.io.Class.ClassSessionNotFoundExceptionCLASSN
+Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.java (*"
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"
+LOC4*ClassSessionNotFoundException2¥
+Upl.agh.edu.io.Class.ClassSessionNotFoundException.ClassSessionNotFoundException(long)DECLARATIONN
+Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.java ((2t
+java.lang.RuntimeExceptionEXTENDN
+Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.java3 (CÉ
+Upl.agh.edu.io.Class.ClassSessionNotFoundException.ClassSessionNotFoundException(long)CONSTRUCTORN
+Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.java (("
+packagepl.agh.edu.io*ClassSessionNotFoundException2ï
+=java.lang.RuntimeException.RuntimeException(java.lang.String)CALLN
+Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.java (2∞
+Xpl.agh.edu.io.Class.ClassSessionNotFoundException.ClassSessionNotFoundException(long)!idCALLN
+Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.java" ($2µ
+Xpl.agh.edu.io.Class.ClassSessionNotFoundException.ClassSessionNotFoundException(long)!id	PARAMETERN
+Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.java. (02ê
+1pl.agh.edu.io.Class.ClassSessionNotFoundExceptionRETURN_TYPEN
+Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.java ((‚
+Xpl.agh.edu.io.Class.ClassSessionNotFoundException.ClassSessionNotFoundException(long)!id	PARAMETERN
+Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.java. (0"
+typelong"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*id2\
+longTYPEN
+Dsrc\main\java\pl\agh\edu\io\Class\ClassSessionNotFoundException.java) (-

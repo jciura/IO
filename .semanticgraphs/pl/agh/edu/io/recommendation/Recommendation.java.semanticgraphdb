@@ -1,0 +1,370 @@
+
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.javaÓ
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.javaFILE@
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java"	
+LOC64*>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java
++pl.agh.edu.io.recommendation.RecommendationCLASSH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java ("'
+packagepl.agh.edu.io.recommendation"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"	
+LOC58*Recommendation2•
+<pl.agh.edu.io.recommendation.Recommendation.Recommendation()DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (2g
+RecommendationDECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (2”
+;pl.agh.edu.io.recommendation.Recommendation.isEnoughSpace()DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java ( 2œ
+Cpl.agh.edu.io.recommendation.Recommendation.setEnoughSpace(boolean)DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (2™
+@pl.agh.edu.io.recommendation.Recommendation.isRequiredSoftware()DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java   ("2¡
+Hpl.agh.edu.io.recommendation.Recommendation.setRequiredSoftware(boolean)DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java$ $( 2‘
+8pl.agh.edu.io.recommendation.Recommendation.isEconomic()DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java( ((2™
+@pl.agh.edu.io.recommendation.Recommendation.setEconomic(boolean)DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java, ,(2–
+=pl.agh.edu.io.recommendation.Recommendation.getClassroomDto()DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java0 0($2h
+setClassroomDtoDECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java4 4(2”
+;pl.agh.edu.io.recommendation.Recommendation.isOkComputers()DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java8 8(2œ
+Cpl.agh.edu.io.recommendation.Recommendation.setOkComputers(boolean)DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java< <(2›
+Bpl.agh.edu.io.recommendation.Recommendation?classroomDto@6.25:6.37DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (%2œ
+Cpl.agh.edu.io.recommendation.Recommendation?isEnoughSpace@7.20:7.33DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (!2¡
+Hpl.agh.edu.io.recommendation.Recommendation?isRequiredSoftware@8.17:8.35DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (#2™
+@pl.agh.edu.io.recommendation.Recommendation?isEconomic@9.20:9.30DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java	 	(2ž
+Epl.agh.edu.io.recommendation.Recommendation?isOkComputers@10.20:10.33DECLARATIONH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java
+ 
+(!Õ
+<pl.agh.edu.io.recommendation.Recommendation.Recommendation()CONSTRUCTORH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java ("'
+packagepl.agh.edu.io.recommendation*Recommendation2„
++pl.agh.edu.io.recommendation.RecommendationRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java („
+RecommendationCONSTRUCTORH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java ("	
+package*Recommendation2”
+Bpl.agh.edu.io.recommendation.Recommendation?classroomDto@6.25:6.37CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java
+ (2•
+Cpl.agh.edu.io.recommendation.Recommendation?isEnoughSpace@7.20:7.33CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java
+ (2š
+Hpl.agh.edu.io.recommendation.Recommendation?isRequiredSoftware@8.17:8.35CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java
+ (2’
+@pl.agh.edu.io.recommendation.Recommendation?isEconomic@9.20:9.30CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java
+ (2—
+Epl.agh.edu.io.recommendation.Recommendation?isOkComputers@10.20:10.33CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java
+ (2„
++pl.agh.edu.io.recommendation.RecommendationRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (•
+classroomDto	PARAMETERH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java' (3"
+typeClassroomDto"
+isFinalfalse"	
+package"
+isLocaltrue*classroomDto2^
+ClassroomDtoTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (&
+isEnoughSpace	PARAMETERH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java= (J"
+typeboolean"
+isFinalfalse"	
+package"
+isLocaltrue*isEnoughSpace2Y
+booleanTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java5 (<—
+isRequiredSoftware	PARAMETERH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.javaT (f"
+typeboolean"
+isFinalfalse"	
+package"
+isLocaltrue*isRequiredSoftware2Y
+booleanTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.javaL (S‡
+
+isEconomic	PARAMETERH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.javap (z"
+typeboolean"
+isFinalfalse"	
+package"
+isLocaltrue*
+isEconomic2Y
+booleanTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.javah (o
+isOkComputers	PARAMETERJ
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java„ (‘"
+typeboolean"
+isFinalfalse"	
+package"
+isLocaltrue*isOkComputers2Z
+booleanTYPEI
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java| (ƒ¨
+;pl.agh.edu.io.recommendation.Recommendation.isEnoughSpace()METHODH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java ( "'
+packagepl.agh.edu.io.recommendation"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeboolean"
+accesspublic"
+LOC2*isEnoughSpace2•
+Cpl.agh.edu.io.recommendation.Recommendation?isEnoughSpace@7.20:7.33CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java	 (2`
+booleanRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (ü
+Cpl.agh.edu.io.recommendation.Recommendation.setEnoughSpace(boolean)METHODH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java ("'
+packagepl.agh.edu.io.recommendation"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setEnoughSpace2£
+Qpl.agh.edu.io.recommendation.Recommendation.setEnoughSpace(boolean)!isEnoughSpaceCALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java ($2•
+Cpl.agh.edu.io.recommendation.Recommendation?isEnoughSpace@7.20:7.33CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (2¨
+Qpl.agh.edu.io.recommendation.Recommendation.setEnoughSpace(boolean)!isEnoughSpace	PARAMETERH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java$ (12]
+voidRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (ï
+Qpl.agh.edu.io.recommendation.Recommendation.setEnoughSpace(boolean)!isEnoughSpace	PARAMETERH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java$ (1"
+typeboolean"
+isFinalfalse"'
+packagepl.agh.edu.io.recommendation"
+isLocaltrue*isEnoughSpace2Y
+booleanTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (#·
+@pl.agh.edu.io.recommendation.Recommendation.isRequiredSoftware()METHODH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java   (""'
+packagepl.agh.edu.io.recommendation"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeboolean"
+accesspublic"
+LOC2*isRequiredSoftware2š
+Hpl.agh.edu.io.recommendation.Recommendation?isRequiredSoftware@8.17:8.35CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java!	 !(2`
+booleanRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java   (Ÿ
+Hpl.agh.edu.io.recommendation.Recommendation.setRequiredSoftware(boolean)METHODH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java$ $( "'
+packagepl.agh.edu.io.recommendation"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setRequiredSoftware2­
+[pl.agh.edu.io.recommendation.Recommendation.setRequiredSoftware(boolean)!isRequiredSoftwareCALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java% %(.2š
+Hpl.agh.edu.io.recommendation.Recommendation?isRequiredSoftware@8.17:8.35CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java% %(2²
+[pl.agh.edu.io.recommendation.Recommendation.setRequiredSoftware(boolean)!isRequiredSoftware	PARAMETERH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java$) $(;2]
+voidRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java$ $(þ
+[pl.agh.edu.io.recommendation.Recommendation.setRequiredSoftware(boolean)!isRequiredSoftware	PARAMETERH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java$) $(;"
+typeboolean"
+isFinalfalse"'
+packagepl.agh.edu.io.recommendation"
+isLocaltrue*isRequiredSoftware2Y
+booleanTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java$! $((Ÿ
+8pl.agh.edu.io.recommendation.Recommendation.isEconomic()METHODH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java( (("'
+packagepl.agh.edu.io.recommendation"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeboolean"
+accesspublic"
+LOC2*
+isEconomic2’
+@pl.agh.edu.io.recommendation.Recommendation?isEconomic@9.20:9.30CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java)	 )(2`
+booleanRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java( ((ç
+@pl.agh.edu.io.recommendation.Recommendation.setEconomic(boolean)METHODH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java, ,("'
+packagepl.agh.edu.io.recommendation"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setEconomic2
+Kpl.agh.edu.io.recommendation.Recommendation.setEconomic(boolean)!isEconomicCALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java- -(2’
+@pl.agh.edu.io.recommendation.Recommendation?isEconomic@9.20:9.30CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java- -(2¢
+Kpl.agh.edu.io.recommendation.Recommendation.setEconomic(boolean)!isEconomic	PARAMETERH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java,! ,(+2]
+voidRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java, ,(æ
+Kpl.agh.edu.io.recommendation.Recommendation.setEconomic(boolean)!isEconomic	PARAMETERH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java,! ,(+"
+typeboolean"
+isFinalfalse"'
+packagepl.agh.edu.io.recommendation"
+isLocaltrue*
+isEconomic2Y
+booleanTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java, ,( µ
+=pl.agh.edu.io.recommendation.Recommendation.getClassroomDto()METHODH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java0 0($"'
+packagepl.agh.edu.io.recommendation"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeClassroomDto"
+accesspublic"
+LOC2*getClassroomDto2”
+Bpl.agh.edu.io.recommendation.Recommendation?classroomDto@6.25:6.37CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java1	 1(2e
+ClassroomDtoRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java0 0(Ù
+setClassroomDtoMETHODH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java4 4("	
+package"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setClassroomDto2”
+Bpl.agh.edu.io.recommendation.Recommendation?classroomDto@6.25:6.37CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java5 5(2]
+voidRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java4 4(•
+classroomDto	PARAMETERH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java4* 4(6"
+typeClassroomDto"
+isFinalfalse"	
+package"
+isLocaltrue*classroomDto2^
+ClassroomDtoTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java4 4()ª
+;pl.agh.edu.io.recommendation.Recommendation.isOkComputers()METHODH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java8 8("'
+packagepl.agh.edu.io.recommendation"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeboolean"
+accesspublic"
+LOC2*isOkComputers2—
+Epl.agh.edu.io.recommendation.Recommendation?isOkComputers@10.20:10.33CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java9	 9(2`
+booleanRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java8 8(þ
+Cpl.agh.edu.io.recommendation.Recommendation.setOkComputers(boolean)METHODH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java< <("'
+packagepl.agh.edu.io.recommendation"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*setOkComputers2£
+Qpl.agh.edu.io.recommendation.Recommendation.setOkComputers(boolean)!isOkComputersCALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java= =($2—
+Epl.agh.edu.io.recommendation.Recommendation?isOkComputers@10.20:10.33CALLH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java= =(2¨
+Qpl.agh.edu.io.recommendation.Recommendation.setOkComputers(boolean)!isOkComputers	PARAMETERH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java<$ <(12]
+voidRETURN_TYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java< <(ï
+Qpl.agh.edu.io.recommendation.Recommendation.setOkComputers(boolean)!isOkComputers	PARAMETERH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java<$ <(1"
+typeboolean"
+isFinalfalse"'
+packagepl.agh.edu.io.recommendation"
+isLocaltrue*isOkComputers2Y
+booleanTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java< <(#
+Bpl.agh.edu.io.recommendation.Recommendation?classroomDto@6.25:6.37VARIABLEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (%"
+isFinalfalse"
+typeClassroomDto"
+isStaticfalse"
+accessprivate"
+isLocalfalse"'
+packagepl.agh.edu.io.recommendation*classroomDto2^
+ClassroomDtoTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (‡
+Cpl.agh.edu.io.recommendation.Recommendation?isEnoughSpace@7.20:7.33VARIABLEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (!"
+isFinalfalse"
+typeboolean"
+isStaticfalse"
+accessprivate"
+isLocalfalse"'
+packagepl.agh.edu.io.recommendation*isEnoughSpace2Y
+booleanTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (‘
+Hpl.agh.edu.io.recommendation.Recommendation?isRequiredSoftware@8.17:8.35VARIABLEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java (#"
+isFinalfalse"
+typeboolean"
+isStaticfalse"
+accessprivate"
+isLocalfalse"'
+packagepl.agh.edu.io.recommendation*isRequiredSoftware2Y
+booleanTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java	 (
+@pl.agh.edu.io.recommendation.Recommendation?isEconomic@9.20:9.30VARIABLEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java	 	("
+isFinalfalse"
+typeboolean"
+isStaticfalse"
+accessprivate"
+isLocalfalse"'
+packagepl.agh.edu.io.recommendation*
+isEconomic2Y
+booleanTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java	 	(‰
+Epl.agh.edu.io.recommendation.Recommendation?isOkComputers@10.20:10.33VARIABLEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java
+ 
+(!"
+isFinalfalse"
+typeboolean"
+isStaticfalse"
+accessprivate"
+isLocalfalse"'
+packagepl.agh.edu.io.recommendation*isOkComputers2Y
+booleanTYPEH
+>src\main\java\pl\agh\edu\io\recommendation\Recommendation.java
+ 
+(

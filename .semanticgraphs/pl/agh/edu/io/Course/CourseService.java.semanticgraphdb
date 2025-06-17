@@ -1,0 +1,386 @@
+
+5src\main\java\pl\agh\edu\io\Course\CourseService.java∏
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaFILE7
+5src\main\java\pl\agh\edu\io\Course\CourseService.java"	
+LOC83*5src\main\java\pl\agh\edu\io\Course\CourseService.javaº
+"pl.agh.edu.io.Course.CourseServiceCLASS?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java ("
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"	
+LOC71*CourseService2Ò
+†pl.agh.edu.io.Course.CourseService.CourseService(pl.agh.edu.io.Course.CourseRepository, pl.agh.edu.io.User.UserService, pl.agh.edu.io.Class.ClassSessionService)DECLARATION?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java (2Ü
+6pl.agh.edu.io.Course.CourseService.getCourseById(long)DECLARATION?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java ("2Ç
+2pl.agh.edu.io.Course.CourseService.getAllCourses()DECLARATION?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java   ((2â
+9pl.agh.edu.io.Course.CourseService.deleteCourseById(long)DECLARATION?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java$ $( 2\
+updateCourseDECLARATION?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java/ /(!2ã
+;pl.agh.edu.io.Course.CourseService.getCoursesByUserId(long)DECLARATION?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java> >(-2ú
+Lpl.agh.edu.io.Course.CourseService.convertToDto(pl.agh.edu.io.Course.Course)DECLARATION?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaH H(!2è
+?pl.agh.edu.io.Course.CourseService?courseRepository@15.35:15.51DECLARATION?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java# (32ä
+:pl.agh.edu.io.Course.CourseService?userService@16.30:16.41DECLARATION?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java ()2í
+Bpl.agh.edu.io.Course.CourseService?classSessionService@17.38:17.57DECLARATION?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java& (9≠
+†pl.agh.edu.io.Course.CourseService.CourseService(pl.agh.edu.io.Course.CourseRepository, pl.agh.edu.io.User.UserService, pl.agh.edu.io.Class.ClassSessionService)CONSTRUCTOR?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java ("
+packagepl.agh.edu.io*CourseService2˚
+±pl.agh.edu.io.Course.CourseService.CourseService(pl.agh.edu.io.Course.CourseRepository, pl.agh.edu.io.User.UserService, pl.agh.edu.io.Class.ClassSessionService)!courseRepositoryCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java  (02ˆ
+¨pl.agh.edu.io.Course.CourseService.CourseService(pl.agh.edu.io.Course.CourseRepository, pl.agh.edu.io.User.UserService, pl.agh.edu.io.Class.ClassSessionService)!userServiceCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java (&2˛
+¥pl.agh.edu.io.Course.CourseService.CourseService(pl.agh.edu.io.Course.CourseRepository, pl.agh.edu.io.User.UserService, pl.agh.edu.io.Class.ClassSessionService)!classSessionServiceCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java# (62à
+?pl.agh.edu.io.Course.CourseService?courseRepository@15.35:15.51CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java (2É
+:pl.agh.edu.io.Course.CourseService?userService@16.30:16.41CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java (2ã
+Bpl.agh.edu.io.Course.CourseService?classSessionService@17.38:17.57CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java ( 2Ä
+±pl.agh.edu.io.Course.CourseService.CourseService(pl.agh.edu.io.Course.CourseRepository, pl.agh.edu.io.User.UserService, pl.agh.edu.io.Class.ClassSessionService)!courseRepository	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java* (:2˚
+¨pl.agh.edu.io.Course.CourseService.CourseService(pl.agh.edu.io.Course.CourseRepository, pl.agh.edu.io.User.UserService, pl.agh.edu.io.Class.ClassSessionService)!userService	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaH (S2Ñ
+¥pl.agh.edu.io.Course.CourseService.CourseService(pl.agh.edu.io.Course.CourseRepository, pl.agh.edu.io.User.UserService, pl.agh.edu.io.Class.ClassSessionService)!classSessionService	PARAMETER@
+5src\main\java\pl\agh\edu\io\Course\CourseService.javao (Ç2r
+"pl.agh.edu.io.Course.CourseServiceRETURN_TYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java (Ÿ
+±pl.agh.edu.io.Course.CourseService.CourseService(pl.agh.edu.io.Course.CourseRepository, pl.agh.edu.io.User.UserService, pl.agh.edu.io.Class.ClassSessionService)!courseRepository	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java* (:"
+typeCourseRepository"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*courseRepository2n
+%pl.agh.edu.io.Course.CourseRepositoryTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java ()√
+¨pl.agh.edu.io.Course.CourseService.CourseService(pl.agh.edu.io.Course.CourseRepository, pl.agh.edu.io.User.UserService, pl.agh.edu.io.Class.ClassSessionService)!userService	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaH (S"
+typeUserService"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*userService2g
+pl.agh.edu.io.User.UserServiceTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java< (GÂ
+¥pl.agh.edu.io.Course.CourseService.CourseService(pl.agh.edu.io.Course.CourseRepository, pl.agh.edu.io.User.UserService, pl.agh.edu.io.Class.ClassSessionService)!classSessionService	PARAMETER@
+5src\main\java\pl\agh\edu\io\Course\CourseService.javao (Ç"
+typeClassSessionService"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*classSessionService2p
+'pl.agh.edu.io.Class.ClassSessionServiceTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java[ (nÏ
+6pl.agh.edu.io.Course.CourseService.getCourseById(long)METHOD?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java (""
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+type	CourseDto"
+accesspublic"
+LOC5*getCourseById2ï
+Lpl.agh.edu.io.Course.CourseService.convertToDto(pl.agh.edu.io.Course.Course)CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java (2ì
+Jpl.agh.edu.io.Course.CourseNotFoundException.CourseNotFoundException(long)CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java' (>2à
+?pl.agh.edu.io.Course.CourseService?courseRepository@15.35:15.51CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java ((2Ç
+9pl.agh.edu.io.Course.CourseService.getCourseById(long)!idCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java2 (42Ç
+9pl.agh.edu.io.Course.CourseService.getCourseById(long)!idCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java? (A2í
+Ipl.agh.edu.io.Course.CourseService.getCourseById(long)?course@26.15:26.21CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java ("2á
+9pl.agh.edu.io.Course.CourseService.getCourseById(long)!id	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java( (*2ô
+Ipl.agh.edu.io.Course.CourseService.getCourseById(long)?course@26.15:26.21DECLARATION?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java (2Y
+	CourseDtoRETURN_TYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java (¸
+Ipl.agh.edu.io.Course.CourseService.getCourseById(long)?course@26.15:26.21VARIABLE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java ("
+typeCourse"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*course2d
+pl.agh.edu.io.Course.CourseTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java (2ì
+Jpl.agh.edu.io.Course.CourseNotFoundException.CourseNotFoundException(long)CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java' (>2à
+?pl.agh.edu.io.Course.CourseService?courseRepository@15.35:15.51CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java ((2Ç
+9pl.agh.edu.io.Course.CourseService.getCourseById(long)!idCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java2 (42Ç
+9pl.agh.edu.io.Course.CourseService.getCourseById(long)!idCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java? (A•
+9pl.agh.edu.io.Course.CourseService.getCourseById(long)!id	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java( (*"
+typelong"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*id2M
+longTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java# ('Â
+2pl.agh.edu.io.Course.CourseService.getAllCourses()METHOD?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java   (("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeList<CourseDto>"
+accesspublic"
+LOC2*getAllCourses2m
+$java.util.stream.Collectors.toList()CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java!^ !(d2à
+?pl.agh.edu.io.Course.CourseService?courseRepository@15.35:15.51CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java! !(2T
+ListRETURN_TYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java   (˜
+9pl.agh.edu.io.Course.CourseService.deleteCourseById(long)METHOD?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java$ $( "
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC9*deleteCourseById2a
+java.util.List.isEmpty()CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java(" (()2r
+)pl.agh.edu.io.Course.Course.getSessions()CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java( ((2ì
+Jpl.agh.edu.io.Course.CourseNotFoundException.CourseNotFoundException(long)CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java&' &(>2ì
+Jpl.agh.edu.io.Course.CourseNotEmptyException.CourseNotEmptyException(long)CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java) )(-2à
+?pl.agh.edu.io.Course.CourseService?courseRepository@15.35:15.51CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java% %((2Ö
+<pl.agh.edu.io.Course.CourseService.deleteCourseById(long)!idCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java%2 %(42Ö
+<pl.agh.edu.io.Course.CourseService.deleteCourseById(long)!idCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java&? &(A2ï
+Lpl.agh.edu.io.Course.CourseService.deleteCourseById(long)?course@37.15:37.21CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java( ((2Ö
+<pl.agh.edu.io.Course.CourseService.deleteCourseById(long)!idCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java). )(02à
+?pl.agh.edu.io.Course.CourseService?courseRepository@15.35:15.51CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java, ,(2ï
+Lpl.agh.edu.io.Course.CourseService.deleteCourseById(long)?course@37.15:37.21CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java,  ,(&2ä
+<pl.agh.edu.io.Course.CourseService.deleteCourseById(long)!id	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java$& $((2ú
+Lpl.agh.edu.io.Course.CourseService.deleteCourseById(long)?course@37.15:37.21DECLARATION?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java% %(2T
+voidRETURN_TYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java$ $(Ö
+Lpl.agh.edu.io.Course.CourseService.deleteCourseById(long)?course@37.15:37.21VARIABLE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java% %("
+typeCourse"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*course2d
+pl.agh.edu.io.Course.CourseTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java% %(2ì
+Jpl.agh.edu.io.Course.CourseNotFoundException.CourseNotFoundException(long)CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java&' &(>2à
+?pl.agh.edu.io.Course.CourseService?courseRepository@15.35:15.51CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java% %((2Ö
+<pl.agh.edu.io.Course.CourseService.deleteCourseById(long)!idCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java%2 %(42Ö
+<pl.agh.edu.io.Course.CourseService.deleteCourseById(long)!idCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java&? &(A®
+<pl.agh.edu.io.Course.CourseService.deleteCourseById(long)!id	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java$& $(("
+typelong"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*id2M
+longTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java$! $(%á
+
+updateCourseMETHOD?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java/ /(!"	
+package"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+type	CourseDto"
+accesspublic"	
+LOC13*updateCourse2â
+@pl.agh.edu.io.Course.Course.setLecturer(pl.agh.edu.io.User.User)CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java9 9(2ã
+Bpl.agh.edu.io.Course.Course.setStudentRep(pl.agh.edu.io.User.User)CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java: :(2ì
+Jpl.agh.edu.io.Course.CourseNotFoundException.CourseNotFoundException(long)CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java1' 1(>2à
+?pl.agh.edu.io.Course.CourseService?courseRepository@15.35:15.51CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java0 0((2É
+:pl.agh.edu.io.Course.CourseService?userService@16.30:16.41CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java5 5(&2É
+:pl.agh.edu.io.Course.CourseService?userService@16.30:16.41CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java6 6((2à
+?pl.agh.edu.io.Course.CourseService?courseRepository@15.35:15.51CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java; ;(,2Y
+	CourseDtoRETURN_TYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java/ /(ﬂ
+id	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java/' /()"
+typelong"
+isFinalfalse"	
+package"
+isLocaltrue*id2M
+longTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java/" /(&ˇ
+updatedCourse	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java/5 /(B"
+type	CourseDto"
+isFinalfalse"	
+package"
+isLocaltrue*updatedCourse2R
+	CourseDtoTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java/+ /(4ë
+;pl.agh.edu.io.Course.CourseService.getCoursesByUserId(long)METHOD?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java> >(-"
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typeList<CourseDto>"
+accesspublic"
+LOC8*getCoursesByUserId2m
+$java.util.stream.Collectors.toList()CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaE$ E(*2à
+?pl.agh.edu.io.Course.CourseService?courseRepository@15.35:15.51CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java? ?(2ó
+Npl.agh.edu.io.Course.CourseService.getCoursesByUserId(long)?course@64.24:64.30CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaA A(2ã
+Bpl.agh.edu.io.Course.CourseService.getCoursesByUserId(long)!userIdCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaA8 A(>2ó
+Npl.agh.edu.io.Course.CourseService.getCoursesByUserId(long)?course@64.24:64.30CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaB! B('2ó
+Npl.agh.edu.io.Course.CourseService.getCoursesByUserId(long)?course@64.24:64.30CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaBC B(I2ã
+Bpl.agh.edu.io.Course.CourseService.getCoursesByUserId(long)!userIdCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaBe B(k2ê
+Bpl.agh.edu.io.Course.CourseService.getCoursesByUserId(long)!userId	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java>3 >(92û
+Npl.agh.edu.io.Course.CourseService.getCoursesByUserId(long)?course@64.24:64.30DECLARATION?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java@ @(2T
+ListRETURN_TYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java> >(≤
+Bpl.agh.edu.io.Course.CourseService.getCoursesByUserId(long)!userId	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java>3 >(9"
+typelong"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*userId2M
+longTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java>. >(2
+Npl.agh.edu.io.Course.CourseService.getCoursesByUserId(long)?course@64.24:64.30VARIABLE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java@ @("
+type"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*course2TYPE¿
+Lpl.agh.edu.io.Course.CourseService.convertToDto(pl.agh.edu.io.Course.Course)METHOD?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaH H(!"
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+type	CourseDto"
+accesspublic"	
+LOC10*convertToDto2l
+#pl.agh.edu.io.Course.Course.getId()CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaJ J(2n
+%pl.agh.edu.io.Course.Course.getName()CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaK K(2ç
+Dpl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaL L((2r
+)pl.agh.edu.io.Course.Course.getLecturer()CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaL0 L(;2ç
+Dpl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaM M((2t
++pl.agh.edu.io.Course.Course.getStudentRep()CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaM0 M(=2ô
+Pjava.util.stream.Stream.map(java.util.function.Function<? super T, ? extends R>)CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaO O(2f
+java.util.Collection.stream()CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaN% N(+2r
+)pl.agh.edu.io.Course.Course.getSessions()CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaN N("2m
+$java.util.stream.Collectors.toList()CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaP, P(22ú
+Spl.agh.edu.io.Course.CourseService.convertToDto(pl.agh.edu.io.Course.Course)!courseCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaJ J(2ú
+Spl.agh.edu.io.Course.CourseService.convertToDto(pl.agh.edu.io.Course.Course)!courseCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaK K(2É
+:pl.agh.edu.io.Course.CourseService?userService@16.30:16.41CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaL L(2ú
+Spl.agh.edu.io.Course.CourseService.convertToDto(pl.agh.edu.io.Course.Course)!courseCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaL) L(/2É
+:pl.agh.edu.io.Course.CourseService?userService@16.30:16.41CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaM M(2ú
+Spl.agh.edu.io.Course.CourseService.convertToDto(pl.agh.edu.io.Course.Course)!courseCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaM) M(/2ú
+Spl.agh.edu.io.Course.CourseService.convertToDto(pl.agh.edu.io.Course.Course)!courseCALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaN N(2ü
+Vpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)CALL?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaO O(>2°
+Spl.agh.edu.io.Course.CourseService.convertToDto(pl.agh.edu.io.Course.Course)!course	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaH) H(/2Y
+	CourseDtoRETURN_TYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaH H(‹
+Spl.agh.edu.io.Course.CourseService.convertToDto(pl.agh.edu.io.Course.Course)!course	PARAMETER?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaH) H(/"
+typeCourse"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*course2d
+pl.agh.edu.io.Course.CourseTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.javaH" H((à
+?pl.agh.edu.io.Course.CourseService?courseRepository@15.35:15.51VALUE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java# (3"
+isFinaltrue"
+typeCourseRepository"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*courseRepository2n
+%pl.agh.edu.io.Course.CourseRepositoryTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java ("Ú
+:pl.agh.edu.io.Course.CourseService?userService@16.30:16.41VALUE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java ()"
+isFinaltrue"
+typeUserService"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*userService2g
+pl.agh.edu.io.User.UserServiceTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java (ì
+Bpl.agh.edu.io.Course.CourseService?classSessionService@17.38:17.57VALUE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java& (9"
+isFinaltrue"
+typeClassSessionService"
+isStaticfalse"
+accessprivate"
+isLocalfalse"
+packagepl.agh.edu.io*classSessionService2p
+'pl.agh.edu.io.Class.ClassSessionServiceTYPE?
+5src\main\java\pl\agh\edu\io\Course\CourseService.java (%

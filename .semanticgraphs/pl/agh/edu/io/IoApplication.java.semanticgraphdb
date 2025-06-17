@@ -1,0 +1,40 @@
+
+.src\main\java\pl\agh\edu\io\IoApplication.java£
+.src\main\java\pl\agh\edu\io\IoApplication.javaFILE0
+.src\main\java\pl\agh\edu\io\IoApplication.java"	
+LOC12*.src\main\java\pl\agh\edu\io\IoApplication.javaß
+pl.agh.edu.io.IoApplicationCLASS8
+.src\main\java\pl\agh\edu\io\IoApplication.java ("
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspublic"
+LOC7*IoApplication2}
+4pl.agh.edu.io.IoApplication.main(java.lang.String[])DECLARATION8
+.src\main\java\pl\agh\edu\io\IoApplication.java (Ê
+4pl.agh.edu.io.IoApplication.main(java.lang.String[])METHOD8
+.src\main\java\pl\agh\edu\io\IoApplication.java ("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStatictrue"
+
+isAbstractfalse"
+typevoid"
+accesspublic"
+LOC2*main2{
+9pl.agh.edu.io.IoApplication.main(java.lang.String[])!argsCALL8
+.src\main\java\pl\agh\edu\io\IoApplication.java	3 	(72€
+9pl.agh.edu.io.IoApplication.main(java.lang.String[])!args	PARAMETER8
+.src\main\java\pl\agh\edu\io\IoApplication.java% ()2M
+voidRETURN_TYPE8
+.src\main\java\pl\agh\edu\io\IoApplication.java («
+9pl.agh.edu.io.IoApplication.main(java.lang.String[])!args	PARAMETER8
+.src\main\java\pl\agh\edu\io\IoApplication.java% ()"
+typeString[]"
+isFinalfalse"
+packagepl.agh.edu.io"
+isLocaltrue*args2T
+java.lang.String[]TYPE8
+.src\main\java\pl\agh\edu\io\IoApplication.java ($

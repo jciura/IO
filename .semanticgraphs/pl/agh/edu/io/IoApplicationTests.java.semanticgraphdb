@@ -1,0 +1,28 @@
+
+3src\test\java\pl\agh\edu\io\IoApplicationTests.java²
+3src\test\java\pl\agh\edu\io\IoApplicationTests.javaFILE5
+3src\test\java\pl\agh\edu\io\IoApplicationTests.java"	
+LOC12*3src\test\java\pl\agh\edu\io\IoApplicationTests.java÷
+ pl.agh.edu.io.IoApplicationTestsCLASS=
+3src\test\java\pl\agh\edu\io\IoApplicationTests.java ("
+packagepl.agh.edu.io"
+isFinalfalse"
+inner classfalse"
+
+isAbstractfalse"
+accesspackage_private"
+LOC7*IoApplicationTests2}
+/pl.agh.edu.io.IoApplicationTests.contextLoads()DECLARATION=
+3src\test\java\pl\agh\edu\io\IoApplicationTests.java		 	(á
+/pl.agh.edu.io.IoApplicationTests.contextLoads()METHOD=
+3src\test\java\pl\agh\edu\io\IoApplicationTests.java		 	("
+packagepl.agh.edu.io"
+isFinalfalse"
+isStaticfalse"
+
+isAbstractfalse"
+typevoid"
+accesspackage_private"
+LOC2*contextLoads2R
+voidRETURN_TYPE=
+3src\test\java\pl\agh\edu\io\IoApplicationTests.java	 	(
