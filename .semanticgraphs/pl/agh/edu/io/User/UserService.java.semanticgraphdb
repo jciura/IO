@@ -1,303 +1,0 @@
-
-1src\main\java\pl\agh\edu\io\User\UserService.java¨
-1src\main\java\pl\agh\edu\io\User\UserService.javaFILE3
-1src\main\java\pl\agh\edu\io\User\UserService.java"	
-LOC68*1src\main\java\pl\agh\edu\io\User\UserService.javaÒ	
-pl.agh.edu.io.User.UserServiceCLASS;
-1src\main\java\pl\agh\edu\io\User\UserService.java ("
-packagepl.agh.edu.io"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"
-accesspublic"	
-LOC59*UserService2ô
-Mpl.agh.edu.io.User.UserService.UserService(pl.agh.edu.io.User.UserRepository)DECLARATION;
-1src\main\java\pl\agh\edu\io\User\UserService.java (2|
-0pl.agh.edu.io.User.UserService.getUserById(long)DECLARATION;
-1src\main\java\pl\agh\edu\io\User\UserService.java (2Ç
-6pl.agh.edu.io.User.UserService.getUserEntityById(long)DECLARATION;
-1src\main\java\pl\agh\edu\io\User\UserService.java (!2x
-,pl.agh.edu.io.User.UserService.getAllUsers()DECLARATION;
-1src\main\java\pl\agh\edu\io\User\UserService.java ($2~
-2pl.agh.edu.io.User.UserService.delteUserById(long)DECLARATION;
-1src\main\java\pl\agh\edu\io\User\UserService.java" "(2V
-
-updateUserDECLARATION;
-1src\main\java\pl\agh\edu\io\User\UserService.java- -(2ê
-Dpl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)DECLARATION;
-1src\main\java\pl\agh\edu\io\User\UserService.java: :(2Ö
-9pl.agh.edu.io.User.UserService?userRepository@12.33:12.47DECLARATION;
-1src\main\java\pl\agh\edu\io\User\UserService.java! (/˘
-Mpl.agh.edu.io.User.UserService.UserService(pl.agh.edu.io.User.UserRepository)CONSTRUCTOR;
-1src\main\java\pl\agh\edu\io\User\UserService.java ("
-packagepl.agh.edu.io*UserService2°
-\pl.agh.edu.io.User.UserService.UserService(pl.agh.edu.io.User.UserRepository)!userRepositoryCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java (,2~
-9pl.agh.edu.io.User.UserService?userRepository@12.33:12.47CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java (2¶
-\pl.agh.edu.io.User.UserService.UserService(pl.agh.edu.io.User.UserRepository)!userRepository	PARAMETER;
-1src\main\java\pl\agh\edu\io\User\UserService.java& (42j
-pl.agh.edu.io.User.UserServiceRETURN_TYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java (Û
-\pl.agh.edu.io.User.UserService.UserService(pl.agh.edu.io.User.UserRepository)!userRepository	PARAMETER;
-1src\main\java\pl\agh\edu\io\User\UserService.java& (4"
-typeUserRepository"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*userRepository2f
-!pl.agh.edu.io.User.UserRepositoryTYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java (%˛
-
-0pl.agh.edu.io.User.UserService.getUserById(long)METHOD;
-1src\main\java\pl\agh\edu\io\User\UserService.java ("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeUserDto"
-accesspublic"
-LOC5*getUserById2â
-Dpl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java (2â
-Dpl.agh.edu.io.User.UserNotFoundException.UserNotFoundException(long)CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java' (<2~
-9pl.agh.edu.io.User.UserService?userRepository@12.33:12.47CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java ("2x
-3pl.agh.edu.io.User.UserService.getUserById(long)!idCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java, (.2x
-3pl.agh.edu.io.User.UserService.getUserById(long)!idCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java= (?2Ü
-Apl.agh.edu.io.User.UserService.getUserById(long)?user@19.13:19.17CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java ( 2}
-3pl.agh.edu.io.User.UserService.getUserById(long)!id	PARAMETER;
-1src\main\java\pl\agh\edu\io\User\UserService.java$ (&2ç
-Apl.agh.edu.io.User.UserService.getUserById(long)?user@19.13:19.17DECLARATION;
-1src\main\java\pl\agh\edu\io\User\UserService.java (2S
-UserDtoRETURN_TYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java (π
-Apl.agh.edu.io.User.UserService.getUserById(long)?user@19.13:19.17VARIABLE;
-1src\main\java\pl\agh\edu\io\User\UserService.java ("
-typeUser"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*user2\
-pl.agh.edu.io.User.UserTYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java (2â
-Dpl.agh.edu.io.User.UserNotFoundException.UserNotFoundException(long)CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java' (<2~
-9pl.agh.edu.io.User.UserService?userRepository@12.33:12.47CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java ("2x
-3pl.agh.edu.io.User.UserService.getUserById(long)!idCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java, (.2x
-3pl.agh.edu.io.User.UserService.getUserById(long)!idCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java= (?ó
-3pl.agh.edu.io.User.UserService.getUserById(long)!id	PARAMETER;
-1src\main\java\pl\agh\edu\io\User\UserService.java$ (&"
-typelong"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*id2I
-longTYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java (#Ö
-6pl.agh.edu.io.User.UserService.getUserEntityById(long)METHOD;
-1src\main\java\pl\agh\edu\io\User\UserService.java (!"
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeUser"
-accesspublic"
-LOC3*getUserEntityById2â
-Dpl.agh.edu.io.User.UserNotFoundException.UserNotFoundException(long)CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java' (<2~
-9pl.agh.edu.io.User.UserService?userRepository@12.33:12.47CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java (2~
-9pl.agh.edu.io.User.UserService.getUserEntityById(long)!idCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java' ()2~
-9pl.agh.edu.io.User.UserService.getUserEntityById(long)!idCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java= (?2É
-9pl.agh.edu.io.User.UserService.getUserEntityById(long)!id	PARAMETER;
-1src\main\java\pl\agh\edu\io\User\UserService.java' ()2c
-pl.agh.edu.io.User.UserRETURN_TYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java (ù
-9pl.agh.edu.io.User.UserService.getUserEntityById(long)!id	PARAMETER;
-1src\main\java\pl\agh\edu\io\User\UserService.java' ()"
-typelong"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*id2I
-longTYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java" (&ƒ
-,pl.agh.edu.io.User.UserService.getAllUsers()METHOD;
-1src\main\java\pl\agh\edu\io\User\UserService.java ($"
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeList<UserDto>"
-accesspublic"
-LOC2*getAllUsers2i
-$java.util.stream.Collectors.toList()CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java\ (b2~
-9pl.agh.edu.io.User.UserService?userRepository@12.33:12.47CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java (2P
-ListRETURN_TYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java (€
-2pl.agh.edu.io.User.UserService.delteUserById(long)METHOD;
-1src\main\java\pl\agh\edu\io\User\UserService.java" "("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typevoid"
-accesspublic"
-LOC9*delteUserById2]
-java.util.List.isEmpty()CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java& &(&2i
-$pl.agh.edu.io.User.User.getCourses()CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java& &(2â
-Dpl.agh.edu.io.User.UserNotFoundException.UserNotFoundException(long)CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java$' $(<2ç
-Hpl.agh.edu.io.User.UserHasClassesException.UserHasClassesException(long)CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java' '(-2~
-9pl.agh.edu.io.User.UserService?userRepository@12.33:12.47CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java# #("2z
-5pl.agh.edu.io.User.UserService.delteUserById(long)!idCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java#, #(.2z
-5pl.agh.edu.io.User.UserService.delteUserById(long)!idCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java$= $(?2à
-Cpl.agh.edu.io.User.UserService.delteUserById(long)?user@35.13:35.17CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java& &(2z
-5pl.agh.edu.io.User.UserService.delteUserById(long)!idCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java'. '(02~
-9pl.agh.edu.io.User.UserService?userRepository@12.33:12.47CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java* *(2à
-Cpl.agh.edu.io.User.UserService.delteUserById(long)?user@35.13:35.17CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java* *("2
-5pl.agh.edu.io.User.UserService.delteUserById(long)!id	PARAMETER;
-1src\main\java\pl\agh\edu\io\User\UserService.java"# "(%2è
-Cpl.agh.edu.io.User.UserService.delteUserById(long)?user@35.13:35.17DECLARATION;
-1src\main\java\pl\agh\edu\io\User\UserService.java# #(2P
-voidRETURN_TYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java" "(ø
-Cpl.agh.edu.io.User.UserService.delteUserById(long)?user@35.13:35.17VARIABLE;
-1src\main\java\pl\agh\edu\io\User\UserService.java# #("
-typeUser"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*user2\
-pl.agh.edu.io.User.UserTYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java# #(2â
-Dpl.agh.edu.io.User.UserNotFoundException.UserNotFoundException(long)CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java$' $(<2~
-9pl.agh.edu.io.User.UserService?userRepository@12.33:12.47CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java# #("2z
-5pl.agh.edu.io.User.UserService.delteUserById(long)!idCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java#, #(.2z
-5pl.agh.edu.io.User.UserService.delteUserById(long)!idCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java$= $(?ô
-5pl.agh.edu.io.User.UserService.delteUserById(long)!id	PARAMETER;
-1src\main\java\pl\agh\edu\io\User\UserService.java"# "(%"
-typelong"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*id2I
-longTYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java" "("∑
-
-updateUserMETHOD;
-1src\main\java\pl\agh\edu\io\User\UserService.java- -("	
-package"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeUserDto"
-accesspublic"	
-LOC11*
-updateUser2è
-Jpl.agh.edu.io.Course.CourseNotFoundException.CourseNotFoundException(long)CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java/' /(>2~
-9pl.agh.edu.io.User.UserService?userRepository@12.33:12.47CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java. .("2~
-9pl.agh.edu.io.User.UserService?userRepository@12.33:12.47CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java7 7(*2S
-UserDtoRETURN_TYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java- -(◊
-id	PARAMETER;
-1src\main\java\pl\agh\edu\io\User\UserService.java-# -(%"
-typelong"
-isFinalfalse"	
-package"
-isLocaltrue*id2I
-longTYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java- -("Ô
-updatedUser	PARAMETER;
-1src\main\java\pl\agh\edu\io\User\UserService.java-/ -(:"
-typeUserDto"
-isFinalfalse"	
-package"
-isLocaltrue*updatedUser2L
-UserDtoTYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java-' -(.Í
-Dpl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)METHOD;
-1src\main\java\pl\agh\edu\io\User\UserService.java: :("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeUserDto"
-accesspublic"
-LOC9*convertToDto2d
-pl.agh.edu.io.User.User.getId()CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java< <(2k
-&pl.agh.edu.io.User.User.getFirstName()CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java= =(!2j
-%pl.agh.edu.io.User.User.getLastName()CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java> >( 2g
-"pl.agh.edu.io.User.User.getEmail()CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java? ?(2m
-(pl.agh.edu.io.User.User.getPhoneNumber()CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java@ @(#2f
-!pl.agh.edu.io.User.User.getRole()CALL;
-1src\main\java\pl\agh\edu\io\User\UserService.javaA A(2é
-Ipl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)!userCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java< <(2é
-Ipl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)!userCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java= =(2é
-Ipl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)!userCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java> >(2é
-Ipl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)!userCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java? ?(2é
-Ipl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)!userCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.java@ @(2é
-Ipl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)!userCALL;
-1src\main\java\pl\agh\edu\io\User\UserService.javaA A(2ì
-Ipl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)!user	PARAMETER;
-1src\main\java\pl\agh\edu\io\User\UserService.java:% :()2S
-UserDtoRETURN_TYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java: :(¬
-Ipl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)!user	PARAMETER;
-1src\main\java\pl\agh\edu\io\User\UserService.java:% :()"
-typeUser"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*user2\
-pl.agh.edu.io.User.UserTYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java:  :($Ú
-9pl.agh.edu.io.User.UserService?userRepository@12.33:12.47VALUE;
-1src\main\java\pl\agh\edu\io\User\UserService.java! (/"
-isFinaltrue"
-typeUserRepository"
-isStaticfalse"
-accessprivate"
-isLocalfalse"
-packagepl.agh.edu.io*userRepository2f
-!pl.agh.edu.io.User.UserRepositoryTYPE;
-1src\main\java\pl\agh\edu\io\User\UserService.java ( 

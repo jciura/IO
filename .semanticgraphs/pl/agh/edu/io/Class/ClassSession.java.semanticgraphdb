@@ -1,348 +1,0 @@
-
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java²
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaFILE5
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java"	
-LOC73*3src\main\java\pl\agh\edu\io\Class\ClassSession.javaº
- pl.agh.edu.io.Class.ClassSessionCLASS=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java
- 
-("
-packagepl.agh.edu.io"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"
-accesspublic"	
-LOC65*ClassSession2÷
-¨pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (2}
-/pl.agh.edu.io.Class.ClassSession.ClassSession()DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java# #(2}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java& &(!2|
-.pl.agh.edu.io.Class.ClassSession.getDateTime()DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java* *($2|
-.pl.agh.edu.io.Class.ClassSession.getDuration()DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java. .(2€
-2pl.agh.edu.io.Class.ClassSession.setDuration(long)DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java2 2(2v
-(pl.agh.edu.io.Class.ClassSession.getId()DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java6 6(2z
-,pl.agh.edu.io.Class.ClassSession.getCourse()DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java: :(2•
-Gpl.agh.edu.io.Class.ClassSession.setCourse(pl.agh.edu.io.Course.Course)DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java> >(2“
-Epl.agh.edu.io.Class.ClassSession.setDateTime(java.time.LocalDateTime)DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaB B(2ž
-Ppl.agh.edu.io.Class.ClassSession.setClassroom(pl.agh.edu.io.Classroom.Classroom)DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaF F(2}
-/pl.agh.edu.io.Class.ClassSession?id@13.17:13.19DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (2„
-6pl.agh.edu.io.Class.ClassSession?classroom@17.22:17.31DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (2ƒ
-5pl.agh.edu.io.Class.ClassSession?dateTime@19.26:19.34DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java ("2ƒ
-5pl.agh.edu.io.Class.ClassSession?duration@22.17:22.25DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (2
-3pl.agh.edu.io.Class.ClassSession?course@26.19:26.25DECLARATION=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (õ
-¨pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)CONSTRUCTOR=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java ("
-packagepl.agh.edu.io*ClassSession2÷
-¯pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!courseCALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (2ú
-²pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!classroomCALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java ("2ù
-±pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!dateTimeCALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java ( 2ù
-±pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!durationCALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java   ( 2z
-3pl.agh.edu.io.Class.ClassSession?course@26.19:26.25CALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (2}
-6pl.agh.edu.io.Class.ClassSession?classroom@17.22:17.31CALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (2|
-5pl.agh.edu.io.Class.ClassSession?dateTime@19.26:19.34CALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (2|
-5pl.agh.edu.io.Class.ClassSession?duration@22.17:22.25CALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java   (2ú
-­pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!name	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (#2ü
-¯pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!course	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java, (22ÿ
-²pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!classroom	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java> (G2þ
-±pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!dateTime	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaW (_2þ
-±pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!duration	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaf (n2n
- pl.agh.edu.io.Class.ClassSessionRETURN_TYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (°
-­pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!name	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (#"
-typeString"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*name2a
-jakarta.persistence.StringTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (µ
-¯pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!course	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java, (2"
-typeCourse"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*course2b
-pl.agh.edu.io.Course.CourseTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java% (+Ä
-²pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!classroom	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java> (G"
-type	Classroom"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*	classroom2h
-!pl.agh.edu.io.Classroom.ClassroomTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java4 (=¼
-±pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!dateTime	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaW (_"
-typeLocalDateTime"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*dateTime2^
-java.time.LocalDateTimeTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaI (V 
-±pl.agh.edu.io.Class.ClassSession.ClassSession(jakarta.persistence.String, pl.agh.edu.io.Course.Course, pl.agh.edu.io.Classroom.Classroom, java.time.LocalDateTime, long)!duration	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaf (n"
-typelong"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*duration2K
-longTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaa (e•
-/pl.agh.edu.io.Class.ClassSession.ClassSession()CONSTRUCTOR=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java# #("
-packagepl.agh.edu.io*ClassSession2n
- pl.agh.edu.io.Class.ClassSessionRETURN_TYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java# #(ù
-/pl.agh.edu.io.Class.ClassSession.getClassroom()METHOD=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java& &(!"
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-type	Classroom"
-accesspublic"
-LOC2*getClassroom2}
-6pl.agh.edu.io.Class.ClassSession?classroom@17.22:17.31CALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java' '(2o
-!pl.agh.edu.io.Classroom.ClassroomRETURN_TYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java& &(ð
-.pl.agh.edu.io.Class.ClassSession.getDateTime()METHOD=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java* *($"
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeLocalDateTime"
-accesspublic"
-LOC2*getDateTime2|
-5pl.agh.edu.io.Class.ClassSession?dateTime@19.26:19.34CALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java+ +(2e
-java.time.LocalDateTimeRETURN_TYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java* *(Ô
-.pl.agh.edu.io.Class.ClassSession.getDuration()METHOD=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java. .("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typelong"
-accesspublic"
-LOC2*getDuration2|
-5pl.agh.edu.io.Class.ClassSession?duration@22.17:22.25CALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java/ /(2R
-longRETURN_TYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java. .(ç
-2pl.agh.edu.io.Class.ClassSession.setDuration(long)METHOD=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java2 2("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typevoid"
-accesspublic"
-LOC2*setDuration2‚
-;pl.agh.edu.io.Class.ClassSession.setDuration(long)!durationCALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java3 3( 2|
-5pl.agh.edu.io.Class.ClassSession?duration@22.17:22.25CALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java3 3(2‡
-;pl.agh.edu.io.Class.ClassSession.setDuration(long)!duration	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java2! 2()2R
-voidRETURN_TYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java2 2(©
-;pl.agh.edu.io.Class.ClassSession.setDuration(long)!duration	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java2! 2()"
-typelong"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*duration2K
-longTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java2 2( Â
-(pl.agh.edu.io.Class.ClassSession.getId()METHOD=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java6 6("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typelong"
-accesspublic"
-LOC2*getId2v
-/pl.agh.edu.io.Class.ClassSession?id@13.17:13.19CALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java7 7(2R
-longRETURN_TYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java6 6(ç
-,pl.agh.edu.io.Class.ClassSession.getCourse()METHOD=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java: :("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeCourse"
-accesspublic"
-LOC2*	getCourse2z
-3pl.agh.edu.io.Class.ClassSession?course@26.19:26.25CALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java; ;(2i
-pl.agh.edu.io.Course.CourseRETURN_TYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java: :(ž
-Gpl.agh.edu.io.Class.ClassSession.setCourse(pl.agh.edu.io.Course.Course)METHOD=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java> >("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typevoid"
-accesspublic"
-LOC2*	setCourse2•
-Npl.agh.edu.io.Class.ClassSession.setCourse(pl.agh.edu.io.Course.Course)!courseCALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java? ?(2z
-3pl.agh.edu.io.Class.ClassSession?course@26.19:26.25CALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java? ?(2š
-Npl.agh.edu.io.Class.ClassSession.setCourse(pl.agh.edu.io.Course.Course)!course	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java>! >('2R
-voidRETURN_TYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java> >(Ó
-Npl.agh.edu.io.Class.ClassSession.setCourse(pl.agh.edu.io.Course.Course)!course	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java>! >('"
-typeCourse"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*course2b
-pl.agh.edu.io.Course.CourseTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java> >( ª
-Epl.agh.edu.io.Class.ClassSession.setDateTime(java.time.LocalDateTime)METHOD=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaB B("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typevoid"
-accesspublic"
-LOC2*setDateTime2š
-Spl.agh.edu.io.Class.ClassSession.setDateTime(java.time.LocalDateTime)!localDateTimeCALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaC C(%2|
-5pl.agh.edu.io.Class.ClassSession?dateTime@19.26:19.34CALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaC C(2Ÿ
-Spl.agh.edu.io.Class.ClassSession.setDateTime(java.time.LocalDateTime)!localDateTime	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaB* B(72R
-voidRETURN_TYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaB B(â
-Spl.agh.edu.io.Class.ClassSession.setDateTime(java.time.LocalDateTime)!localDateTime	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaB* B(7"
-typeLocalDateTime"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*localDateTime2^
-java.time.LocalDateTimeTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaB B()Å
-Ppl.agh.edu.io.Class.ClassSession.setClassroom(pl.agh.edu.io.Classroom.Classroom)METHOD=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaF F("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typevoid"
-accesspublic"
-LOC2*setClassroom2¡
-Zpl.agh.edu.io.Class.ClassSession.setClassroom(pl.agh.edu.io.Classroom.Classroom)!classroomCALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaG G("2}
-6pl.agh.edu.io.Class.ClassSession?classroom@17.22:17.31CALL=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaG G(2¦
-Zpl.agh.edu.io.Class.ClassSession.setClassroom(pl.agh.edu.io.Classroom.Classroom)!classroom	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaF' F(02R
-voidRETURN_TYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaF F(ë
-Zpl.agh.edu.io.Class.ClassSession.setClassroom(pl.agh.edu.io.Classroom.Classroom)!classroom	PARAMETER=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaF' F(0"
-type	Classroom"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*	classroom2h
-!pl.agh.edu.io.Classroom.ClassroomTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.javaF F(&½
-/pl.agh.edu.io.Class.ClassSession?id@13.17:13.19VARIABLE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java ("
-isFinalfalse"
-typelong"
-isStaticfalse"
-accessprivate"
-isLocalfalse"
-packagepl.agh.edu.io*id2K
-longTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (í
-6pl.agh.edu.io.Class.ClassSession?classroom@17.22:17.31VARIABLE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java ("
-isFinalfalse"
-type	Classroom"
-isStaticfalse"
-accessprivate"
-isLocalfalse"
-packagepl.agh.edu.io*	classroom2h
-!pl.agh.edu.io.Classroom.ClassroomTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (å
-5pl.agh.edu.io.Class.ClassSession?dateTime@19.26:19.34VARIABLE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (""
-isFinalfalse"
-typeLocalDateTime"
-isStaticfalse"
-accessprivate"
-isLocalfalse"
-packagepl.agh.edu.io*dateTime2^
-java.time.LocalDateTimeTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (É
-5pl.agh.edu.io.Class.ClassSession?duration@22.17:22.25VARIABLE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java ("
-isFinalfalse"
-typelong"
-isStaticfalse"
-accessprivate"
-isLocalfalse"
-packagepl.agh.edu.io*duration2K
-longTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (Þ
-3pl.agh.edu.io.Class.ClassSession?course@26.19:26.25VARIABLE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java ("
-isFinalfalse"
-typeCourse"
-isStaticfalse"
-accessprivate"
-isLocalfalse"
-packagepl.agh.edu.io*course2b
-pl.agh.edu.io.Course.CourseTYPE=
-3src\main\java\pl\agh\edu\io\Class\ClassSession.java (

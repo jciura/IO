@@ -1,116 +1,0 @@
-
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java–
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.javaFILE?
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java"	
-LOC17*=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java§	
-*pl.agh.edu.io.Class.ClassSessionRepository	INTERFACEG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java
- 
-('"
-packagepl.agh.edu.io"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"
-accesspublic"
-LOC7*ClassSessionRepository2 
-rpl.agh.edu.io.Class.ClassSessionRepository.findSessionsByClassroomAndTime(java.lang.Long, java.time.LocalDateTime)DECLARATIONG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java (52¨
-Tpl.agh.edu.io.Class.ClassSessionRepository.findByCourse(pl.agh.edu.io.Course.Course)DECLARATIONG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java (#2ö
-Bpl.agh.edu.io.Class.ClassSessionRepository.findAllByCourseId(long)DECLARATIONG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java ((2à
-5org.springframework.data.jpa.repository.JpaRepositoryEXTENDG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java
-0 
-(=2Å
- pl.agh.edu.io.Class.ClassSessionEXTEND_TYPE_ARGUMENTG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java
-> 
-(J2o
-java.lang.LongEXTEND_TYPE_ARGUMENTG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java
-L 
-(Pí
-rpl.agh.edu.io.Class.ClassSessionRepository.findSessionsByClassroomAndTime(java.lang.Long, java.time.LocalDateTime)METHODG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java (5"
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeList<ClassSession>"
-accesspackage_private"
-LOC1*findSessionsByClassroomAndTime2‘
-~pl.agh.edu.io.Class.ClassSessionRepository.findSessionsByClassroomAndTime(java.lang.Long, java.time.LocalDateTime)!classroomId	PARAMETERG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.javaQ (\2“
-{pl.agh.edu.io.Class.ClassSessionRepository.findSessionsByClassroomAndTime(java.lang.Long, java.time.LocalDateTime)!dateTime	PARAMETERH
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java (á2f
-java.util.ListRETURN_TYPEG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java (2Å
- pl.agh.edu.io.Class.ClassSessionRETURN_TYPE_ARGUMENTG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java	 (ç
-~pl.agh.edu.io.Class.ClassSessionRepository.findSessionsByClassroomAndTime(java.lang.Long, java.time.LocalDateTime)!classroomId	PARAMETERG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.javaQ (\"
-typeLong"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*classroomId2_
-java.lang.LongTYPEG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.javaL (Pö
-{pl.agh.edu.io.Class.ClassSessionRepository.findSessionsByClassroomAndTime(java.lang.Long, java.time.LocalDateTime)!dateTime	PARAMETERH
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java (á"
-typeLocalDateTime"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*dateTime2h
-java.time.LocalDateTimeTYPEG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.javaq (~Í
-Tpl.agh.edu.io.Class.ClassSessionRepository.findByCourse(pl.agh.edu.io.Course.Course)METHODG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java (#"
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeList<ClassSession>"
-accesspackage_private"
-LOC0*findByCourse2±
-[pl.agh.edu.io.Class.ClassSessionRepository.findByCourse(pl.agh.edu.io.Course.Course)!course	PARAMETERG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java+ (12f
-java.util.ListRETURN_TYPEG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java (2Å
- pl.agh.edu.io.Class.ClassSessionRETURN_TYPE_ARGUMENTG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java	 (Ù
-[pl.agh.edu.io.Class.ClassSessionRepository.findByCourse(pl.agh.edu.io.Course.Course)!course	PARAMETERG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java+ (1"
-typeCourse"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*course2l
-pl.agh.edu.io.Course.CourseTYPEG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java$ (*«
-Bpl.agh.edu.io.Class.ClassSessionRepository.findAllByCourseId(long)METHODG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java (("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeList<ClassSession>"
-accesspackage_private"
-LOC0*findAllByCourseId2õ
-Epl.agh.edu.io.Class.ClassSessionRepository.findAllByCourseId(long)!id	PARAMETERG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java. (02f
-java.util.ListRETURN_TYPEG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java (2Å
- pl.agh.edu.io.Class.ClassSessionRETURN_TYPE_ARGUMENTG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java	 (¡
-Epl.agh.edu.io.Class.ClassSessionRepository.findAllByCourseId(long)!id	PARAMETERG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java. (0"
-typelong"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*id2U
-longTYPEG
-=src\main\java\pl\agh\edu\io\Class\ClassSessionRepository.java) (-

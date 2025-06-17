@@ -1,471 +1,0 @@
-
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java«
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaFILE<
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java"	
-LOC86*:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java™
-'pl.agh.edu.io.Class.ClassSessionServiceCLASSD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java ( "
-packagepl.agh.edu.io"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"
-accesspublic"	
-LOC74*ClassSessionService2ä
-¥pl.agh.edu.io.Class.ClassSessionService.ClassSessionService(pl.agh.edu.io.Class.ClassSessionRepository, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.User.UserService)DECLARATIOND
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java (2è
-:pl.agh.edu.io.Class.ClassSessionService.getClassById(long)DECLARATIOND
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java ('2å
-7pl.agh.edu.io.Class.ClassSessionService.getAllClasses()DECLARATIOND
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java !  (.2í
-=pl.agh.edu.io.Class.ClassSessionService.deleteClassById(long)DECLARATIOND
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java% %(2`
-updateClassDECLARATIOND
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java, ,(&2´
-Vpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)DECLARATIOND
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java; ;('2ü
-Jpl.agh.edu.io.Class.ClassSessionService?classSessionRepository@15.41:15.63DECLARATIOND
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java) (?2ú
-Gpl.agh.edu.io.Class.ClassSessionService?classroomRepository@16.38:16.57DECLARATIOND
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java& (92î
-?pl.agh.edu.io.Class.ClassSessionService?userService@17.30:17.41DECLARATIOND
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java ()ù
-¥pl.agh.edu.io.Class.ClassSessionService.ClassSessionService(pl.agh.edu.io.Class.ClassSessionRepository, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.User.UserService)CONSTRUCTORD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java ("
-packagepl.agh.edu.io*ClassSessionService2ö
-Àpl.agh.edu.io.Class.ClassSessionService.ClassSessionService(pl.agh.edu.io.Class.ClassSessionRepository, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.User.UserService)!classSessionRepositoryCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java& (<2ó
-»pl.agh.edu.io.Class.ClassSessionService.ClassSessionService(pl.agh.edu.io.Class.ClassSessionRepository, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.User.UserService)!classroomRepositoryCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java# (62è
-¿pl.agh.edu.io.Class.ClassSessionService.ClassSessionService(pl.agh.edu.io.Class.ClassSessionRepository, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.User.UserService)!userServiceCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java (&2ò
-Jpl.agh.edu.io.Class.ClassSessionService?classSessionRepository@15.41:15.63CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java (#2ï
-Gpl.agh.edu.io.Class.ClassSessionService?classroomRepository@16.38:16.57CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java ( 2ç
-?pl.agh.edu.io.Class.ClassSessionService?userService@17.30:17.41CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java (2ü
-Àpl.agh.edu.io.Class.ClassSessionService.ClassSessionService(pl.agh.edu.io.Class.ClassSessionRepository, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.User.UserService)!classSessionRepository	PARAMETERD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java6 (L2ú
-»pl.agh.edu.io.Class.ClassSessionService.ClassSessionService(pl.agh.edu.io.Class.ClassSessionRepository, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.User.UserService)!classroomRepository	PARAMETERD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javab (u2ñ
-¿pl.agh.edu.io.Class.ClassSessionService.ClassSessionService(pl.agh.edu.io.Class.ClassSessionRepository, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.User.UserService)!userService	PARAMETERF
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaÉ (é2|
-'pl.agh.edu.io.Class.ClassSessionServiceRETURN_TYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java (é
-Àpl.agh.edu.io.Class.ClassSessionService.ClassSessionService(pl.agh.edu.io.Class.ClassSessionRepository, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.User.UserService)!classSessionRepository	PARAMETERD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java6 (L"
-typeClassSessionRepository"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*classSessionRepository2x
-*pl.agh.edu.io.Class.ClassSessionRepositoryTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java (5Ü
-»pl.agh.edu.io.Class.ClassSessionService.ClassSessionService(pl.agh.edu.io.Class.ClassSessionRepository, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.User.UserService)!classroomRepository	PARAMETERD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javab (u"
-typeClassroomRepository"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*classroomRepository2y
-+pl.agh.edu.io.Classroom.ClassroomRepositoryTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaN (a‰
-¿pl.agh.edu.io.Class.ClassSessionService.ClassSessionService(pl.agh.edu.io.Class.ClassSessionRepository, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.User.UserService)!userService	PARAMETERF
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaÉ (é"
-typeUserService"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*userService2m
-pl.agh.edu.io.User.UserServiceTYPEE
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaw (Ç·
-:pl.agh.edu.io.Class.ClassSessionService.getClassById(long)METHODD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java ('"
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeClassSessionDto"
-accesspublic"
-LOC5*getClassById2£
-Upl.agh.edu.io.Class.ClassSessionNotFoundException.ClassSessionNotFoundException(long)CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java' (D2ò
-Jpl.agh.edu.io.Class.ClassSessionService?classSessionRepository@15.41:15.63CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java$ (:2ã
-=pl.agh.edu.io.Class.ClassSessionService.getClassById(long)!idCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaD (F2ã
-=pl.agh.edu.io.Class.ClassSessionService.getClassById(long)!idCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaE (G2ò
-Jpl.agh.edu.io.Class.ClassSessionService?classSessionRepository@15.41:15.63CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java (22°
-Spl.agh.edu.io.Class.ClassSessionService.getClassById(long)?classSession@26.21:26.33CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java8 (D2ê
-=pl.agh.edu.io.Class.ClassSessionService.getClassById(long)!id	PARAMETERD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java- (/2®
-Spl.agh.edu.io.Class.ClassSessionService.getClassById(long)?classSession@26.21:26.33DECLARATIOND
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java (!2d
-ClassSessionDtoRETURN_TYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java (”
-Spl.agh.edu.io.Class.ClassSessionService.getClassById(long)?classSession@26.21:26.33VARIABLED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java (!"
-typeClassSession"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*classSession2n
- pl.agh.edu.io.Class.ClassSessionTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java (2£
-Upl.agh.edu.io.Class.ClassSessionNotFoundException.ClassSessionNotFoundException(long)CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java' (D2ò
-Jpl.agh.edu.io.Class.ClassSessionService?classSessionRepository@15.41:15.63CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java$ (:2ã
-=pl.agh.edu.io.Class.ClassSessionService.getClassById(long)!idCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaD (F2ã
-=pl.agh.edu.io.Class.ClassSessionService.getClassById(long)!idCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaE (G≥
-=pl.agh.edu.io.Class.ClassSessionService.getClassById(long)!id	PARAMETERD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java- (/"
-typelong"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*id2R
-longTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java( (,õ
-7pl.agh.edu.io.Class.ClassSessionService.getAllClasses()METHODD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java !  (."
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeList<ClassSessionDto>"
-accesspublic"
-LOC3*getAllClasses2ò
-Jpl.agh.edu.io.Class.ClassSessionService?classSessionRepository@15.41:15.63CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java! !(%2Y
-ListRETURN_TYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java   (‡
-=pl.agh.edu.io.Class.ClassSessionService.deleteClassById(long)METHODD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java% %("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typevoid"
-accesspublic"
-LOC5*deleteClassById2£
-Upl.agh.edu.io.Class.ClassSessionNotFoundException.ClassSessionNotFoundException(long)CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java'' '(D2ò
-Jpl.agh.edu.io.Class.ClassSessionService?classSessionRepository@15.41:15.63CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java&$ &(:2é
-@pl.agh.edu.io.Class.ClassSessionService.deleteClassById(long)!idCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java&D &(F2é
-@pl.agh.edu.io.Class.ClassSessionService.deleteClassById(long)!idCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java'E '(G2ò
-Jpl.agh.edu.io.Class.ClassSessionService?classSessionRepository@15.41:15.63CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java) )(2§
-Vpl.agh.edu.io.Class.ClassSessionService.deleteClassById(long)?classSession@38.21:38.33CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java)& )(22ì
-@pl.agh.edu.io.Class.ClassSessionService.deleteClassById(long)!id	PARAMETERD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java%% %('2´
-Vpl.agh.edu.io.Class.ClassSessionService.deleteClassById(long)?classSession@38.21:38.33DECLARATIOND
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java& &(!2Y
-voidRETURN_TYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java% %(‹
-Vpl.agh.edu.io.Class.ClassSessionService.deleteClassById(long)?classSession@38.21:38.33VARIABLED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java& &(!"
-typeClassSession"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*classSession2n
- pl.agh.edu.io.Class.ClassSessionTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java& &(2£
-Upl.agh.edu.io.Class.ClassSessionNotFoundException.ClassSessionNotFoundException(long)CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java'' '(D2ò
-Jpl.agh.edu.io.Class.ClassSessionService?classSessionRepository@15.41:15.63CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java&$ &(:2é
-@pl.agh.edu.io.Class.ClassSessionService.deleteClassById(long)!idCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java&D &(F2é
-@pl.agh.edu.io.Class.ClassSessionService.deleteClassById(long)!idCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java'E '(G∂
-@pl.agh.edu.io.Class.ClassSessionService.deleteClassById(long)!id	PARAMETERD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java%% %('"
-typelong"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*id2R
-longTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java%  %($À
-updateClassMETHODD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java, ,(&"	
-package"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeClassSessionDto"
-accesspublic"	
-LOC13*updateClass2£
-Upl.agh.edu.io.Class.ClassSessionNotFoundException.ClassSessionNotFoundException(long)CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java.' .(D2ã
-=java.lang.RuntimeException.RuntimeException(java.lang.String)CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java5/ 5(?2ò
-Jpl.agh.edu.io.Class.ClassSessionService?classSessionRepository@15.41:15.63CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java-$ -(:2ï
-Gpl.agh.edu.io.Class.ClassSessionService?classroomRepository@16.38:16.57CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java4 4(#2ò
-Jpl.agh.edu.io.Class.ClassSessionService?classSessionRepository@15.41:15.63CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java8 8(22d
-ClassSessionDtoRETURN_TYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java, ,(È
-id	PARAMETERD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java,, ,(."
-typelong"
-isFinalfalse"	
-package"
-isLocaltrue*id2R
-longTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java,' ,(+è
-
-updatedDto	PARAMETERD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java,@ ,(J"
-typeClassSessionDto"
-isFinalfalse"	
-package"
-isLocaltrue*
-updatedDto2]
-ClassSessionDtoTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java,0 ,(?£@
-Vpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)METHODD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java; ;('"
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeClassSessionDto"
-accesspublic"	
-LOC26*convertToDto2}
-/pl.agh.edu.io.Classroom.Classroom.getSoftware()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java<A <(L2}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java<2 <(>2n
- java.util.stream.Stream.toList()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java? ?(2û
-Pjava.util.stream.Stream.map(java.util.function.Function<? super T, ? extends R>)CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java> >(2k
-java.util.Collection.stream()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java=< =(B2}
-/pl.agh.edu.io.Classroom.Classroom.getSoftware()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java=. =(92}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java= =(+2a
-java.util.List.of()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java@ @(2w
-)pl.agh.edu.io.Classroom.Classroom.getId()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaC, C(12}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaC C()2}
-/pl.agh.edu.io.Classroom.Classroom.getBuilding()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaD, D(72}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaD D()2{
--pl.agh.edu.io.Classroom.Classroom.getNumber()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaE, E(52}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaE E()2z
-,pl.agh.edu.io.Classroom.Classroom.getFloor()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaF, F(42}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaF F()2}
-/pl.agh.edu.io.Classroom.Classroom.getCapacity()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaG, G(72}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaG G()2Ä
-2pl.agh.edu.io.Classroom.Classroom.isHasComputers()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaH, H(:2}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaH H()2v
-(pl.agh.edu.io.Class.ClassSession.getId()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaM M("2s
-%pl.agh.edu.io.Course.Course.getName()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaN) N(02z
-,pl.agh.edu.io.Class.ClassSession.getCourse()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaN N(&2í
-Dpl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaO O((2w
-)pl.agh.edu.io.Course.Course.getLecturer()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaOB O(M2z
-,pl.agh.edu.io.Class.ClassSession.getCourse()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaO6 O(?2í
-Dpl.agh.edu.io.User.UserService.convertToDto(pl.agh.edu.io.User.User)CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaP P((2y
-+pl.agh.edu.io.Course.Course.getStudentRep()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaPB P(O2z
-,pl.agh.edu.io.Class.ClassSession.getCourse()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaP6 P(?2|
-.pl.agh.edu.io.Class.ClassSession.getDateTime()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaR R((2|
-.pl.agh.edu.io.Class.ClassSession.getDuration()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaS S((2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java<% <(12±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java= =(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaC C(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaD D(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaE E(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaF F(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaG G(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaH H(2æ
-ppl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)?softwareNames@60.21:60.34CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaI I(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaM M(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaN N(2ç
-?pl.agh.edu.io.Class.ClassSessionService?userService@17.30:17.41CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaO O(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaO) O(52ç
-?pl.agh.edu.io.Class.ClassSessionService?userService@17.30:17.41CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaP P(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaP) P(52Ω
-opl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)?classRoomDto@66.21:66.33CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaQ Q(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaR R(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaS S(2w
-)pl.agh.edu.io.Software.Software.getName()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java> >(&2∂
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSession	PARAMETERD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java;5 ;(A2≈
-ppl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)?softwareNames@60.21:60.34DECLARATIOND
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java< <("2ƒ
-opl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)?classRoomDto@66.21:66.33DECLARATIOND
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaB B(!2d
-ClassSessionDtoRETURN_TYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java; ;(©
-ppl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)?softwareNames@60.21:60.34VARIABLED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java< <(""
-typeList<String>"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*softwareNames2\
-java.util.ListTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java< <(2g
-java.lang.StringTYPE_ARGUMENTD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java< <(2}
-/pl.agh.edu.io.Classroom.Classroom.getSoftware()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java<A <(L2}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java<2 <(>2n
- java.util.stream.Stream.toList()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java? ?(2û
-Pjava.util.stream.Stream.map(java.util.function.Function<? super T, ? extends R>)CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java> >(2k
-java.util.Collection.stream()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java=< =(B2}
-/pl.agh.edu.io.Classroom.Classroom.getSoftware()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java=. =(92}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java= =(+2a
-java.util.List.of()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java@ @(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java<% <(12±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java= =(2w
-)pl.agh.edu.io.Software.Software.getName()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java> >(&‰
-opl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)?classRoomDto@66.21:66.33VARIABLED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaB B(!"
-typeClassroomDto"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*classRoomDto2Z
-ClassroomDtoTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaB B(2w
-)pl.agh.edu.io.Classroom.Classroom.getId()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaC, C(12}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaC C()2}
-/pl.agh.edu.io.Classroom.Classroom.getBuilding()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaD, D(72}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaD D()2{
--pl.agh.edu.io.Classroom.Classroom.getNumber()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaE, E(52}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaE E()2z
-,pl.agh.edu.io.Classroom.Classroom.getFloor()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaF, F(42}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaF F()2}
-/pl.agh.edu.io.Classroom.Classroom.getCapacity()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaG, G(72}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaG G()2Ä
-2pl.agh.edu.io.Classroom.Classroom.isHasComputers()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaH, H(:2}
-/pl.agh.edu.io.Class.ClassSession.getClassroom()CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaH H()2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaC C(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaD D(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaE E(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaF F(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaG G(2±
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSessionCALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaH H(2æ
-ppl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)?softwareNames@60.21:60.34CALLD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.javaI I(á
-cpl.agh.edu.io.Class.ClassSessionService.convertToDto(pl.agh.edu.io.Class.ClassSession)!classSession	PARAMETERD
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java;5 ;(A"
-typeClassSession"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*classSession2n
- pl.agh.edu.io.Class.ClassSessionTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java;( ;(4Æ
-Jpl.agh.edu.io.Class.ClassSessionService?classSessionRepository@15.41:15.63VALUED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java) (?"
-isFinaltrue"
-typeClassSessionRepository"
-isStaticfalse"
-accessprivate"
-isLocalfalse"
-packagepl.agh.edu.io*classSessionRepository2x
-*pl.agh.edu.io.Class.ClassSessionRepositoryTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java ((¶
-Gpl.agh.edu.io.Class.ClassSessionService?classroomRepository@16.38:16.57VALUED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java& (9"
-isFinaltrue"
-typeClassroomRepository"
-isStaticfalse"
-accessprivate"
-isLocalfalse"
-packagepl.agh.edu.io*classroomRepository2y
-+pl.agh.edu.io.Classroom.ClassroomRepositoryTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java (%Å
-?pl.agh.edu.io.Class.ClassSessionService?userService@17.30:17.41VALUED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java ()"
-isFinaltrue"
-typeUserService"
-isStaticfalse"
-accessprivate"
-isLocalfalse"
-packagepl.agh.edu.io*userService2l
-pl.agh.edu.io.User.UserServiceTYPED
-:src\main\java\pl\agh\edu\io\Class\ClassSessionService.java (

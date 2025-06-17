@@ -1,171 +1,0 @@
-
-2src\main\java\pl\agh\edu\io\Software\Software.java¯
-2src\main\java\pl\agh\edu\io\Software\Software.javaFILE4
-2src\main\java\pl\agh\edu\io\Software\Software.java"	
-LOC43*2src\main\java\pl\agh\edu\io\Software\Software.java¢
-pl.agh.edu.io.Software.SoftwareCLASS<
-2src\main\java\pl\agh\edu\io\Software\Software.java	 	("
-packagepl.agh.edu.io"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"
-accesspublic"	
-LOC35*Software2‘
-Dpl.agh.edu.io.Software.Software.Software(jakarta.persistence.String)DECLARATION<
-2src\main\java\pl\agh\edu\io\Software\Software.java (2w
-*pl.agh.edu.io.Software.Software.Software()DECLARATION<
-2src\main\java\pl\agh\edu\io\Software\Software.java (2t
-'pl.agh.edu.io.Software.Software.getId()DECLARATION<
-2src\main\java\pl\agh\edu\io\Software\Software.java (2v
-)pl.agh.edu.io.Software.Software.getName()DECLARATION<
-2src\main\java\pl\agh\edu\io\Software\Software.java (2œ
-Opl.agh.edu.io.Software.Software.addClassroom(pl.agh.edu.io.Classroom.Classroom)DECLARATION<
-2src\main\java\pl\agh\edu\io\Software\Software.java# #(2Ÿ
-Rpl.agh.edu.io.Software.Software.removeClassroom(pl.agh.edu.io.Classroom.Classroom)DECLARATION<
-2src\main\java\pl\agh\edu\io\Software\Software.java' '(2{
-.pl.agh.edu.io.Software.Software?id@12.16:12.18DECLARATION<
-2src\main\java\pl\agh\edu\io\Software\Software.java (2}
-0pl.agh.edu.io.Software.Software?name@14.19:14.23DECLARATION<
-2src\main\java\pl\agh\edu\io\Software\Software.java (2ƒ
-6pl.agh.edu.io.Software.Software?classrooms@17.27:17.37DECLARATION<
-2src\main\java\pl\agh\edu\io\Software\Software.java (%Ä
-Dpl.agh.edu.io.Software.Software.Software(jakarta.persistence.String)CONSTRUCTOR<
-2src\main\java\pl\agh\edu\io\Software\Software.java ("
-packagepl.agh.edu.io*Software2
-Ipl.agh.edu.io.Software.Software.Software(jakarta.persistence.String)!nameCALL<
-2src\main\java\pl\agh\edu\io\Software\Software.java (2v
-0pl.agh.edu.io.Software.Software?name@14.19:14.23CALL<
-2src\main\java\pl\agh\edu\io\Software\Software.java (2”
-Ipl.agh.edu.io.Software.Software.Software(jakarta.persistence.String)!name	PARAMETER<
-2src\main\java\pl\agh\edu\io\Software\Software.java (2l
-pl.agh.edu.io.Software.SoftwareRETURN_TYPE<
-2src\main\java\pl\agh\edu\io\Software\Software.java (É
-Ipl.agh.edu.io.Software.Software.Software(jakarta.persistence.String)!name	PARAMETER<
-2src\main\java\pl\agh\edu\io\Software\Software.java ("
-typeString"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*name2`
-jakarta.persistence.StringTYPE<
-2src\main\java\pl\agh\edu\io\Software\Software.java (‰
-*pl.agh.edu.io.Software.Software.Software()CONSTRUCTOR<
-2src\main\java\pl\agh\edu\io\Software\Software.java ("
-packagepl.agh.edu.io*Software2l
-pl.agh.edu.io.Software.SoftwareRETURN_TYPE<
-2src\main\java\pl\agh\edu\io\Software\Software.java (»
-'pl.agh.edu.io.Software.Software.getId()METHOD<
-2src\main\java\pl\agh\edu\io\Software\Software.java ("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeint"
-accesspublic"
-LOC2*getId2t
-.pl.agh.edu.io.Software.Software?id@12.16:12.18CALL<
-2src\main\java\pl\agh\edu\io\Software\Software.java (2P
-intRETURN_TYPE<
-2src\main\java\pl\agh\edu\io\Software\Software.java (Û
-)pl.agh.edu.io.Software.Software.getName()METHOD<
-2src\main\java\pl\agh\edu\io\Software\Software.java ("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeString"
-accesspublic"
-LOC2*getName2v
-0pl.agh.edu.io.Software.Software?name@14.19:14.23CALL<
-2src\main\java\pl\agh\edu\io\Software\Software.java   (2g
-jakarta.persistence.StringRETURN_TYPE<
-2src\main\java\pl\agh\edu\io\Software\Software.java (½
-Opl.agh.edu.io.Software.Software.addClassroom(pl.agh.edu.io.Classroom.Classroom)METHOD<
-2src\main\java\pl\agh\edu\io\Software\Software.java# #("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typevoid"
-accesspublic"
-LOC2*addClassroom2|
-6pl.agh.edu.io.Software.Software?classrooms@17.27:17.37CALL<
-2src\main\java\pl\agh\edu\io\Software\Software.java$ $(2Ÿ
-Ypl.agh.edu.io.Software.Software.addClassroom(pl.agh.edu.io.Classroom.Classroom)!classroomCALL<
-2src\main\java\pl\agh\edu\io\Software\Software.java$ $( 2¤
-Ypl.agh.edu.io.Software.Software.addClassroom(pl.agh.edu.io.Classroom.Classroom)!classroom	PARAMETER<
-2src\main\java\pl\agh\edu\io\Software\Software.java#' #(02Q
-voidRETURN_TYPE<
-2src\main\java\pl\agh\edu\io\Software\Software.java# #(è
-Ypl.agh.edu.io.Software.Software.addClassroom(pl.agh.edu.io.Classroom.Classroom)!classroom	PARAMETER<
-2src\main\java\pl\agh\edu\io\Software\Software.java#' #(0"
-type	Classroom"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*	classroom2g
-!pl.agh.edu.io.Classroom.ClassroomTYPE<
-2src\main\java\pl\agh\edu\io\Software\Software.java# #(&É
-Rpl.agh.edu.io.Software.Software.removeClassroom(pl.agh.edu.io.Classroom.Classroom)METHOD<
-2src\main\java\pl\agh\edu\io\Software\Software.java' '("
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typevoid"
-accesspublic"
-LOC2*removeClassroom2|
-6pl.agh.edu.io.Software.Software?classrooms@17.27:17.37CALL<
-2src\main\java\pl\agh\edu\io\Software\Software.java( ((2¢
-\pl.agh.edu.io.Software.Software.removeClassroom(pl.agh.edu.io.Classroom.Classroom)!classroomCALL<
-2src\main\java\pl\agh\edu\io\Software\Software.java( ((#2§
-\pl.agh.edu.io.Software.Software.removeClassroom(pl.agh.edu.io.Classroom.Classroom)!classroom	PARAMETER<
-2src\main\java\pl\agh\edu\io\Software\Software.java'* '(32Q
-voidRETURN_TYPE<
-2src\main\java\pl\agh\edu\io\Software\Software.java' '(ë
-\pl.agh.edu.io.Software.Software.removeClassroom(pl.agh.edu.io.Classroom.Classroom)!classroom	PARAMETER<
-2src\main\java\pl\agh\edu\io\Software\Software.java'* '(3"
-type	Classroom"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*	classroom2g
-!pl.agh.edu.io.Classroom.ClassroomTYPE<
-2src\main\java\pl\agh\edu\io\Software\Software.java'  '()¸
-.pl.agh.edu.io.Software.Software?id@12.16:12.18VARIABLE<
-2src\main\java\pl\agh\edu\io\Software\Software.java ("
-isFinalfalse"
-typeint"
-isStaticfalse"
-accessprivate"
-isLocalfalse"
-packagepl.agh.edu.io*id2I
-intTYPE<
-2src\main\java\pl\agh\edu\io\Software\Software.java (Ö
-0pl.agh.edu.io.Software.Software?name@14.19:14.23VARIABLE<
-2src\main\java\pl\agh\edu\io\Software\Software.java ("
-isFinalfalse"
-typeString"
-isStaticfalse"
-accessprivate"
-isLocalfalse"
-packagepl.agh.edu.io*name2`
-jakarta.persistence.StringTYPE<
-2src\main\java\pl\agh\edu\io\Software\Software.java (²
-6pl.agh.edu.io.Software.Software?classrooms@17.27:17.37VARIABLE<
-2src\main\java\pl\agh\edu\io\Software\Software.java (%"
-isFinalfalse"
-typeSet<Classroom>"
-isStaticfalse"
-accessprivate"
-isLocalfalse"
-packagepl.agh.edu.io*
-classrooms2S
-java.util.SetTYPE<
-2src\main\java\pl\agh\edu\io\Software\Software.java (2p
-!pl.agh.edu.io.Classroom.ClassroomTYPE_ARGUMENT<
-2src\main\java\pl\agh\edu\io\Software\Software.java (2a
-java.util.HashSet.HashSet()CALL<
-2src\main\java\pl\agh\edu\io\Software\Software.java, (5

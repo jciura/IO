@@ -1,228 +1,0 @@
-
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.javaË
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.javaFILEG
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java"	
-LOC46*Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.javaá
-2pl.agh.edu.io.recommendation.RecommendationRequestCLASSO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (""'
-packagepl.agh.edu.io.recommendation"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"
-accesspublic"	
-LOC39*RecommendationRequest2™
-Jpl.agh.edu.io.recommendation.RecommendationRequest.RecommendationRequest()DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (2u
-RecommendationRequestDECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (2†
-@pl.agh.edu.io.recommendation.RecommendationRequest.getDateTime()DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (!2∑
-Wpl.agh.edu.io.recommendation.RecommendationRequest.setDateTime(java.time.LocalDateTime)DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (2†
-@pl.agh.edu.io.recommendation.RecommendationRequest.getDuration()DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (2§
-Dpl.agh.edu.io.recommendation.RecommendationRequest.setDuration(long)DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java! !(2§
-Dpl.agh.edu.io.recommendation.RecommendationRequest.getClassroomDto()DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java% %($2o
-setClassroomDtoDECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java) )(2©
-Ipl.agh.edu.io.recommendation.RecommendationRequest?classroomDto@8.22:8.34DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java ("2•
-Epl.agh.edu.io.recommendation.RecommendationRequest?dateTime@9.26:9.34DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java	 	("2ß
-Gpl.agh.edu.io.recommendation.RecommendationRequest?duration@10.14:10.22DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java
- 
-(ˇ
-Jpl.agh.edu.io.recommendation.RecommendationRequest.RecommendationRequest()CONSTRUCTORO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java ("'
-packagepl.agh.edu.io.recommendation*RecommendationRequest2í
-2pl.agh.edu.io.recommendation.RecommendationRequestRETURN_TYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (ï
-RecommendationRequestCONSTRUCTORO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java ("	
-package*RecommendationRequest2¢
-Ipl.agh.edu.io.recommendation.RecommendationRequest?classroomDto@8.22:8.34CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (2û
-Epl.agh.edu.io.recommendation.RecommendationRequest?dateTime@9.26:9.34CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (2†
-Gpl.agh.edu.io.recommendation.RecommendationRequest?duration@10.14:10.22CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (2í
-2pl.agh.edu.io.recommendation.RecommendationRequestRETURN_TYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (£
-classroomDto	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java+ (7"
-typeClassroomDto"
-isFinalfalse"	
-package"
-isLocaltrue*classroomDto2e
-ClassroomDtoTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (*ß
-dateTime	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.javaG (O"
-typeLocalDateTime"
-isFinalfalse"	
-package"
-isLocaltrue*dateTime2p
-java.time.LocalDateTimeTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java9 (Fã
-duration	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.javaV (^"
-typelong"
-isFinalfalse"	
-package"
-isLocaltrue*duration2]
-longTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.javaQ (Uÿ
-@pl.agh.edu.io.recommendation.RecommendationRequest.getDateTime()METHODO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (!"'
-packagepl.agh.edu.io.recommendation"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeLocalDateTime"
-accesspublic"
-LOC2*getDateTime2û
-Epl.agh.edu.io.recommendation.RecommendationRequest?dateTime@9.26:9.34CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java	 (2w
-java.time.LocalDateTimeRETURN_TYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (–
-Wpl.agh.edu.io.recommendation.RecommendationRequest.setDateTime(java.time.LocalDateTime)METHODO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java ("'
-packagepl.agh.edu.io.recommendation"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typevoid"
-accesspublic"
-LOC2*setDateTime2π
-`pl.agh.edu.io.recommendation.RecommendationRequest.setDateTime(java.time.LocalDateTime)!dateTimeCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (2û
-Epl.agh.edu.io.recommendation.RecommendationRequest?dateTime@9.26:9.34CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (2æ
-`pl.agh.edu.io.recommendation.RecommendationRequest.setDateTime(java.time.LocalDateTime)!dateTime	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java' (/2d
-voidRETURN_TYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (ù
-`pl.agh.edu.io.recommendation.RecommendationRequest.setDateTime(java.time.LocalDateTime)!dateTime	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java' (/"
-typeLocalDateTime"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*dateTime2p
-java.time.LocalDateTimeTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (&æ
-@pl.agh.edu.io.recommendation.RecommendationRequest.getDuration()METHODO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java ("'
-packagepl.agh.edu.io.recommendation"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typelong"
-accesspublic"
-LOC2*getDuration2†
-Gpl.agh.edu.io.recommendation.RecommendationRequest?duration@10.14:10.22CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java	 (2d
-longRETURN_TYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (ô
-Dpl.agh.edu.io.recommendation.RecommendationRequest.setDuration(long)METHODO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java! !("'
-packagepl.agh.edu.io.recommendation"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typevoid"
-accesspublic"
-LOC2*setDuration2¶
-Mpl.agh.edu.io.recommendation.RecommendationRequest.setDuration(long)!durationCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java" "(2†
-Gpl.agh.edu.io.recommendation.RecommendationRequest?duration@10.14:10.22CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java" "(2´
-Mpl.agh.edu.io.recommendation.RecommendationRequest.setDuration(long)!duration	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java! !(&2d
-voidRETURN_TYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java! !(Ó
-Mpl.agh.edu.io.recommendation.RecommendationRequest.setDuration(long)!duration	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java! !(&"
-typelong"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*duration2]
-longTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java! !(ÿ
-Dpl.agh.edu.io.recommendation.RecommendationRequest.getClassroomDto()METHODO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java% %($"'
-packagepl.agh.edu.io.recommendation"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeClassroomDto"
-accesspublic"
-LOC2*getClassroomDto2¢
-Ipl.agh.edu.io.recommendation.RecommendationRequest?classroomDto@8.22:8.34CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java&	 &(2l
-ClassroomDtoRETURN_TYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java% %(ı
-setClassroomDtoMETHODO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java) )("	
-package"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typevoid"
-accesspublic"
-LOC2*setClassroomDto2¢
-Ipl.agh.edu.io.recommendation.RecommendationRequest?classroomDto@8.22:8.34CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java* *(2d
-voidRETURN_TYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java) )(£
-classroomDto	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java)* )(6"
-typeClassroomDto"
-isFinalfalse"	
-package"
-isLocaltrue*classroomDto2e
-ClassroomDtoTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java) )()§
-Ipl.agh.edu.io.recommendation.RecommendationRequest?classroomDto@8.22:8.34VARIABLEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java (""
-isFinalfalse"
-typeClassroomDto"
-isStaticfalse"
-accessprivate"
-isLocalfalse"'
-packagepl.agh.edu.io.recommendation*classroomDto2e
-ClassroomDtoTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java	 (®
-Epl.agh.edu.io.recommendation.RecommendationRequest?dateTime@9.26:9.34VARIABLEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java	 	(""
-isFinalfalse"
-typeLocalDateTime"
-isStaticfalse"
-accessprivate"
-isLocalfalse"'
-packagepl.agh.edu.io.recommendation*dateTime2p
-java.time.LocalDateTimeTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java	 	(é
-Gpl.agh.edu.io.recommendation.RecommendationRequest?duration@10.14:10.22VARIABLEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java
- 
-("
-isFinalfalse"
-typelong"
-isStaticfalse"
-accessprivate"
-isLocalfalse"'
-packagepl.agh.edu.io.recommendation*duration2]
-longTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationRequest.java
-	 
-(

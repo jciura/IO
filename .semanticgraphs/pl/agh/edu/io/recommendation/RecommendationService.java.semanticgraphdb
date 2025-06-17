@@ -1,342 +1,0 @@
-
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaË
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaFILEG
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java"	
-LOC76*Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaê
-2pl.agh.edu.io.recommendation.RecommendationServiceCLASSO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (""'
-packagepl.agh.edu.io.recommendation"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"
-accesspublic"	
-LOC62*RecommendationService2´
- pl.agh.edu.io.recommendation.RecommendationService.RecommendationService(pl.agh.edu.io.Classroom.ClassroomService, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.Software.SoftwareRepository)DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java ( 2Ÿ
-ypl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java  (22t
-createRecommendationDECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java1 1(/2Ã
-lpl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaD D(2Ø
-Opl.agh.edu.io.recommendation.RecommendationService?classroomService@16.35:16.51DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java# (32≤
-Rpl.agh.edu.io.recommendation.RecommendationService?classroomRepository@17.38:17.57DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java& (92±
-Qpl.agh.edu.io.recommendation.RecommendationService?softwareRepository@18.37:18.55DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java% (7Ô
- pl.agh.edu.io.recommendation.RecommendationService.RecommendationService(pl.agh.edu.io.Classroom.ClassroomService, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.Software.SoftwareRepository)CONSTRUCTORO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java ( "'
-packagepl.agh.edu.io.recommendation*RecommendationService2µ
-€pl.agh.edu.io.recommendation.RecommendationService.RecommendationService(pl.agh.edu.io.Classroom.ClassroomService, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.Software.SoftwareRepository)!classroomServiceCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java  (02∏
-ﬁpl.agh.edu.io.recommendation.RecommendationService.RecommendationService(pl.agh.edu.io.Classroom.ClassroomService, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.Software.SoftwareRepository)!classroomRepositoryCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java# (62∑
-›pl.agh.edu.io.recommendation.RecommendationService.RecommendationService(pl.agh.edu.io.Classroom.ClassroomService, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.Software.SoftwareRepository)!softwareRepositoryCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java" (42®
-Opl.agh.edu.io.recommendation.RecommendationService?classroomService@16.35:16.51CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (2´
-Rpl.agh.edu.io.recommendation.RecommendationService?classroomRepository@17.38:17.57CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java ( 2™
-Qpl.agh.edu.io.recommendation.RecommendationService?softwareRepository@18.37:18.55CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (2∫
-€pl.agh.edu.io.recommendation.RecommendationService.RecommendationService(pl.agh.edu.io.Classroom.ClassroomService, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.Software.SoftwareRepository)!classroomService	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java ('2Ω
-ﬁpl.agh.edu.io.recommendation.RecommendationService.RecommendationService(pl.agh.edu.io.Classroom.ClassroomService, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.Software.SoftwareRepository)!classroomRepository	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (-2º
-›pl.agh.edu.io.recommendation.RecommendationService.RecommendationService(pl.agh.edu.io.Classroom.ClassroomService, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.Software.SoftwareRepository)!softwareRepository	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (+2í
-2pl.agh.edu.io.recommendation.RecommendationServiceRETURN_TYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java ( ∂
-€pl.agh.edu.io.recommendation.RecommendationService.RecommendationService(pl.agh.edu.io.Classroom.ClassroomService, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.Software.SoftwareRepository)!classroomService	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java ('"
-typeClassroomService"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*classroomService2Å
-(pl.agh.edu.io.Classroom.ClassroomServiceTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (¬
-ﬁpl.agh.edu.io.recommendation.RecommendationService.RecommendationService(pl.agh.edu.io.Classroom.ClassroomService, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.Software.SoftwareRepository)!classroomRepository	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (-"
-typeClassroomRepository"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*classroomRepository2Ñ
-+pl.agh.edu.io.Classroom.ClassroomRepositoryTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (Ω
-›pl.agh.edu.io.recommendation.RecommendationService.RecommendationService(pl.agh.edu.io.Classroom.ClassroomService, pl.agh.edu.io.Classroom.ClassroomRepository, pl.agh.edu.io.Software.SoftwareRepository)!softwareRepository	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (+"
-typeSoftwareRepository"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*softwareRepository2Ç
-)pl.agh.edu.io.Software.SoftwareRepositoryTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (∂-
-ypl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)METHODO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java  (2"'
-packagepl.agh.edu.io.recommendation"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeList<Recommendation>"
-accesspublic"	
-LOC17*getRecommendations2ô
-@pl.agh.edu.io.recommendation.RecommendationRequest.getDateTime()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java" (-2Ç
-)java.time.LocalDateTime.plusMinutes(long)CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (  (32ô
-@pl.agh.edu.io.recommendation.RecommendationRequest.getDuration()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java 8  (C2«
-npl.agh.edu.io.Classroom.ClassroomRepository.findAllAvailable(java.time.LocalDateTime, java.time.LocalDateTime)CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java#3 #(C2ù
-Dpl.agh.edu.io.recommendation.RecommendationRequest.getClassroomDto()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java&% &(42©
-Pjava.util.stream.Stream.map(java.util.function.Function<? super T, ? extends R>)CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java* *(2v
-java.util.Collection.stream()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java) )(2x
-java.util.Comparator.reversed()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java, ,('2ß
-Njava.util.Comparator.comparingInt(java.util.function.ToIntFunction<? super T>)CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java+ +(+2}
-$java.util.stream.Collectors.toList()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java-  -(&2÷
-}pl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)!reqCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (!2Ë
-épl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?reqStart@31.19:31.27CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java   ('2÷
-}pl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)!reqCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java 4  (72´
-Rpl.agh.edu.io.recommendation.RecommendationService?classroomRepository@17.38:17.57CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java# #(22Ë
-épl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?reqStart@31.19:31.27CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java#D #(L2Ê
-åpl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?reqEnd@32.22:32.28CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java#N #(T2÷
-}pl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)!reqCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java&! &($2‰
-äpl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?free@35.24:35.28CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java) )(2·
-ápl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?c@42.17:42.18CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java*+ *(,2È
-èpl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?reference@38.21:38.30CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java*. *(72€
-}pl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)!req	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaI (L2Ô
-épl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?reqStart@31.19:31.27DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (2Ì
-åpl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?reqEnd@32.22:32.28DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java   (2Î
-äpl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?free@35.24:35.28DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java# #(2
-èpl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?reference@38.21:38.30DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java& &(2Ë
-ápl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?c@42.17:42.18DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java* *(2n
-java.util.ListRETURN_TYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (2î
-+pl.agh.edu.io.recommendation.RecommendationRETURN_TYPE_ARGUMENTO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (¿
-épl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?reqStart@31.19:31.27VARIABLEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java ("
-typeLocalDateTime"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*reqStart2p
-java.time.LocalDateTimeTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (2ô
-@pl.agh.edu.io.recommendation.RecommendationRequest.getDateTime()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java" (-2÷
-}pl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)!reqCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (!¨	
-åpl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?reqEnd@32.22:32.28VARIABLEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java   ("
-typeLocalDateTime"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*reqEnd2p
-java.time.LocalDateTimeTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java   (2Ç
-)java.time.LocalDateTime.plusMinutes(long)CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (  (32ô
-@pl.agh.edu.io.recommendation.RecommendationRequest.getDuration()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java 8  (C2Ë
-épl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?reqStart@31.19:31.27CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java   ('2÷
-}pl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)!reqCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java 4  (7é
-äpl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?free@35.24:35.28VARIABLEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java# #("
-typeList<Classroom>"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*free2g
-java.util.ListTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java# #(2É
-!pl.agh.edu.io.Classroom.ClassroomTYPE_ARGUMENTO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java# #(2«
-npl.agh.edu.io.Classroom.ClassroomRepository.findAllAvailable(java.time.LocalDateTime, java.time.LocalDateTime)CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java#3 #(C2´
-Rpl.agh.edu.io.recommendation.RecommendationService?classroomRepository@17.38:17.57CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java# #(22Ë
-épl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?reqStart@31.19:31.27CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java#D #(L2Ê
-åpl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?reqEnd@32.22:32.28CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java#N #(T∫
-èpl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?reference@38.21:38.30VARIABLEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java& &("
-typeClassroomDto"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*	reference2e
-ClassroomDtoTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java& &(2ù
-Dpl.agh.edu.io.recommendation.RecommendationRequest.getClassroomDto()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java&% &(42÷
-}pl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)!reqCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java&! &($Ÿ
-}pl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)!req	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaI (L"
-typeRecommendationRequest"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*req2ã
-2pl.agh.edu.io.recommendation.RecommendationRequestTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java3 (Hƒ
-ápl.agh.edu.io.recommendation.RecommendationService.getRecommendations(pl.agh.edu.io.recommendation.RecommendationRequest)?c@42.17:42.18VARIABLEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java* *("
-type"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*c2TYPEè
-
-createRecommendationMETHODO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java1 1(/"	
-package"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeRecommendation"
-accessprivate"	
-LOC17*createRecommendation2à
-/pl.agh.edu.io.Classroom.Classroom.getCapacity()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java2. 2(92à
-/pl.agh.edu.io.Classroom.Classroom.getSoftware()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java34 3(?2|
-#java.util.stream.Collectors.toSet()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java7( 7(-2ã
-2pl.agh.edu.io.Classroom.Classroom.isHasComputers()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java8. 8(<2±
-Xpl.agh.edu.io.Classroom.ClassroomService.convertToDto(pl.agh.edu.io.Classroom.Classroom)CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java<! <(-2®
-Opl.agh.edu.io.recommendation.RecommendationService?classroomService@16.35:16.51CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java< <( 2ã
-+pl.agh.edu.io.recommendation.RecommendationRETURN_TYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java1 1(Ø
-	classroom	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java1: 1(C"
-type	Classroom"
-isFinalfalse"	
-package"
-isLocaltrue*	classroom2z
-!pl.agh.edu.io.Classroom.ClassroomTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java10 1(9ù
-	reference	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java1R 1(["
-typeClassroomDto"
-isFinalfalse"	
-package"
-isLocaltrue*	reference2e
-ClassroomDtoTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java1E 1(Q…
-lpl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)METHODO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaD D("'
-packagepl.agh.edu.io.recommendation"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeint"
-accessprivate"
-LOC7*countMatches2î
-;pl.agh.edu.io.recommendation.Recommendation.isEnoughSpace()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaF F(2ô
-@pl.agh.edu.io.recommendation.Recommendation.isRequiredSoftware()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaG G("2ë
-8pl.agh.edu.io.recommendation.Recommendation.isEconomic()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaH H(2î
-;pl.agh.edu.io.recommendation.Recommendation.isOkComputers()CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaI I(2…
-ppl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)!recCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaF F(2◊
-~pl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)?score@69.12:69.17CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaF! F(&2…
-ppl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)!recCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaG G(2◊
-~pl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)?score@69.12:69.17CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaG& G(+2…
-ppl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)!recCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaH H(2◊
-~pl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)?score@69.12:69.17CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaH H(#2…
-ppl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)!recCALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaI I(2◊
-~pl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)?score@69.12:69.17CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaI! I(&2◊
-~pl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)?score@69.12:69.17CALLO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaJ J(2Œ
-ppl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)!rec	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaD, D(/2ﬁ
-~pl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)?score@69.12:69.17DECLARATIONO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaE E(2c
-intRETURN_TYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaD D(ô
-~pl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)?score@69.12:69.17VARIABLEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaE E("
-typeint"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*score2\
-intTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaE E(æ
-ppl.agh.edu.io.recommendation.RecommendationService.countMatches(pl.agh.edu.io.recommendation.Recommendation)!rec	PARAMETERO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaD, D(/"
-typeRecommendation"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*rec2Ñ
-+pl.agh.edu.io.recommendation.RecommendationTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.javaD D(+À
-Opl.agh.edu.io.recommendation.RecommendationService?classroomService@16.35:16.51VALUEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java# (3"
-isFinaltrue"
-typeClassroomService"
-isStaticfalse"
-accessprivate"
-isLocalfalse"'
-packagepl.agh.edu.io.recommendation*classroomService2Å
-(pl.agh.edu.io.Classroom.ClassroomServiceTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java ("◊
-Rpl.agh.edu.io.recommendation.RecommendationService?classroomRepository@17.38:17.57VALUEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java& (9"
-isFinaltrue"
-typeClassroomRepository"
-isStaticfalse"
-accessprivate"
-isLocalfalse"'
-packagepl.agh.edu.io.recommendation*classroomRepository2Ñ
-+pl.agh.edu.io.Classroom.ClassroomRepositoryTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java (%“
-Qpl.agh.edu.io.recommendation.RecommendationService?softwareRepository@18.37:18.55VALUEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java% (7"
-isFinaltrue"
-typeSoftwareRepository"
-isStaticfalse"
-accessprivate"
-isLocalfalse"'
-packagepl.agh.edu.io.recommendation*softwareRepository2Ç
-)pl.agh.edu.io.Software.SoftwareRepositoryTYPEO
-Esrc\main\java\pl\agh\edu\io\recommendation\RecommendationService.java ($

@@ -1,99 +1,0 @@
-
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.javaÒ
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.javaFILEJ
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java"	
-LOC24*Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java®
-5pl.agh.edu.io.recommendation.RecommendationControllerCLASSR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java
- 
-(%"'
-packagepl.agh.edu.io.recommendation"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"
-accesspublic"	
-LOC16*RecommendationController2Ê
-Çpl.agh.edu.io.recommendation.RecommendationController.RecommendationController(pl.agh.edu.io.recommendation.RecommendationService)DECLARATIONR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java (#2ﬁ
-{pl.agh.edu.io.recommendation.RecommendationController.getRecommendation(pl.agh.edu.io.recommendation.RecommendationRequest)DECLARATIONR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java0 (A2¨
-Ipl.agh.edu.io.recommendation.RecommendationController?service@12.40:12.47DECLARATIONR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java( (/≈
-Çpl.agh.edu.io.recommendation.RecommendationController.RecommendationController(pl.agh.edu.io.recommendation.RecommendationService)CONSTRUCTORR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java (#"'
-packagepl.agh.edu.io.recommendation*RecommendationController2Á
-äpl.agh.edu.io.recommendation.RecommendationController.RecommendationController(pl.agh.edu.io.recommendation.RecommendationService)!serviceCALLR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java (2•
-Ipl.agh.edu.io.recommendation.RecommendationController?service@12.40:12.47CALLR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java (2Ï
-äpl.agh.edu.io.recommendation.RecommendationController.RecommendationController(pl.agh.edu.io.recommendation.RecommendationService)!service	PARAMETERR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java: (A2ò
-5pl.agh.edu.io.recommendation.RecommendationControllerRETURN_TYPER
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java (#Ò
-äpl.agh.edu.io.recommendation.RecommendationController.RecommendationController(pl.agh.edu.io.recommendation.RecommendationService)!service	PARAMETERR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java: (A"
-typeRecommendationService"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*service2é
-2pl.agh.edu.io.recommendation.RecommendationServiceTYPER
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java$ (9Ñ
-{pl.agh.edu.io.recommendation.RecommendationController.getRecommendation(pl.agh.edu.io.recommendation.RecommendationRequest)METHODR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java0 (A"'
-packagepl.agh.edu.io.recommendation"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse",
-type$ResponseEntity<List<Recommendation>>"
-accesspublic"
-LOC5*getRecommendation2•
-Ipl.agh.edu.io.recommendation.RecommendationController?service@12.40:12.47CALLR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java$ (+2€
-pl.agh.edu.io.recommendation.RecommendationController.getRecommendation(pl.agh.edu.io.recommendation.RecommendationRequest)!reqCALLR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java? (B2È
-åpl.agh.edu.io.recommendation.RecommendationController.getRecommendation(pl.agh.edu.io.recommendation.RecommendationRequest)?recs@21.29:21.33CALLR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java! (%2‡
-pl.agh.edu.io.recommendation.RecommendationController.getRecommendation(pl.agh.edu.io.recommendation.RecommendationRequest)!req	PARAMETERR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java/ (22
-åpl.agh.edu.io.recommendation.RecommendationController.getRecommendation(pl.agh.edu.io.recommendation.RecommendationRequest)?recs@21.29:21.33DECLARATIONR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java (!2ä
-'org.springframework.http.ResponseEntityRETURN_TYPER
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java (2z
-java.util.ListRETURN_TYPE_ARGUMENTR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java (2ó
-+pl.agh.edu.io.recommendation.RecommendationRETURN_TYPE_ARGUMENTR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java (-‚
-åpl.agh.edu.io.recommendation.RecommendationController.getRecommendation(pl.agh.edu.io.recommendation.RecommendationRequest)?recs@21.29:21.33VARIABLER
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java (!"
-typeList<Recommendation>"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*recs2j
-java.util.ListTYPER
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java (2ê
-+pl.agh.edu.io.recommendation.RecommendationTYPE_ARGUMENTR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java (2•
-Ipl.agh.edu.io.recommendation.RecommendationController?service@12.40:12.47CALLR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java$ (+2€
-pl.agh.edu.io.recommendation.RecommendationController.getRecommendation(pl.agh.edu.io.recommendation.RecommendationRequest)!reqCALLR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java? (B·
-pl.agh.edu.io.recommendation.RecommendationController.getRecommendation(pl.agh.edu.io.recommendation.RecommendationRequest)!req	PARAMETERR
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java/ (2"
-typeRecommendationRequest"
-isFinalfalse"'
-packagepl.agh.edu.io.recommendation"
-isLocaltrue*req2é
-2pl.agh.edu.io.recommendation.RecommendationRequestTYPER
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java (.—
-Ipl.agh.edu.io.recommendation.RecommendationController?service@12.40:12.47VALUER
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java( (/"
-isFinaltrue"
-typeRecommendationService"
-isStaticfalse"
-accessprivate"
-isLocalfalse"'
-packagepl.agh.edu.io.recommendation*service2é
-2pl.agh.edu.io.recommendation.RecommendationServiceTYPER
-Hsrc\main\java\pl\agh\edu\io\recommendation\RecommendationController.java ('

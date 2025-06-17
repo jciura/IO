@@ -1,37 +1,0 @@
-
-=src\main\java\pl\agh\edu\io\User\UserHasClassesException.javaÏ
-=src\main\java\pl\agh\edu\io\User\UserHasClassesException.javaFILE?
-=src\main\java\pl\agh\edu\io\User\UserHasClassesException.java"
-LOC6*=src\main\java\pl\agh\edu\io\User\UserHasClassesException.javaš
-*pl.agh.edu.io.User.UserHasClassesExceptionCLASSG
-=src\main\java\pl\agh\edu\io\User\UserHasClassesException.java ($"
-packagepl.agh.edu.io"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"
-accesspublic"
-LOC4*UserHasClassesException2 
-Hpl.agh.edu.io.User.UserHasClassesException.UserHasClassesException(long)DECLARATIONG
-=src\main\java\pl\agh\edu\io\User\UserHasClassesException.java ("2m
-java.lang.RuntimeExceptionEXTENDG
-=src\main\java\pl\agh\edu\io\User\UserHasClassesException.java- (=¬
-Hpl.agh.edu.io.User.UserHasClassesException.UserHasClassesException(long)CONSTRUCTORG
-=src\main\java\pl\agh\edu\io\User\UserHasClassesException.java (""
-packagepl.agh.edu.io*UserHasClassesException2Ž
-=java.lang.RuntimeException.RuntimeException(java.lang.String)CALLG
-=src\main\java\pl\agh\edu\io\User\UserHasClassesException.java (2œ
-Kpl.agh.edu.io.User.UserHasClassesException.UserHasClassesException(long)!idCALLG
-=src\main\java\pl\agh\edu\io\User\UserHasClassesException.java! (#2¡
-Kpl.agh.edu.io.User.UserHasClassesException.UserHasClassesException(long)!id	PARAMETERG
-=src\main\java\pl\agh\edu\io\User\UserHasClassesException.java( (*2‚
-*pl.agh.edu.io.User.UserHasClassesExceptionRETURN_TYPEG
-=src\main\java\pl\agh\edu\io\User\UserHasClassesException.java ("Ç
-Kpl.agh.edu.io.User.UserHasClassesException.UserHasClassesException(long)!id	PARAMETERG
-=src\main\java\pl\agh\edu\io\User\UserHasClassesException.java( (*"
-typelong"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*id2U
-longTYPEG
-=src\main\java\pl\agh\edu\io\User\UserHasClassesException.java# ('

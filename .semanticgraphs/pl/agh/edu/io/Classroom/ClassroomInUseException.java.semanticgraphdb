@@ -1,37 +1,0 @@
-
-Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.javaÞ
-Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.javaFILED
-Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.java"
-LOC6*Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.java³
-/pl.agh.edu.io.Classroom.ClassroomInUseExceptionCLASSL
-Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.java ($"
-packagepl.agh.edu.io"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"
-accesspublic"
-LOC4*ClassroomInUseException2ª
-Mpl.agh.edu.io.Classroom.ClassroomInUseException.ClassroomInUseException(long)DECLARATIONL
-Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.java ("2r
-java.lang.RuntimeExceptionEXTENDL
-Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.java- (=Ù
-Mpl.agh.edu.io.Classroom.ClassroomInUseException.ClassroomInUseException(long)CONSTRUCTORL
-Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.java (""
-packagepl.agh.edu.io*ClassroomInUseException2“
-=java.lang.RuntimeException.RuntimeException(java.lang.String)CALLL
-Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.java (2¦
-Ppl.agh.edu.io.Classroom.ClassroomInUseException.ClassroomInUseException(long)!idCALLL
-Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.java% ('2«
-Ppl.agh.edu.io.Classroom.ClassroomInUseException.ClassroomInUseException(long)!id	PARAMETERL
-Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.java( (*2Œ
-/pl.agh.edu.io.Classroom.ClassroomInUseExceptionRETURN_TYPEL
-Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.java ("Ö
-Ppl.agh.edu.io.Classroom.ClassroomInUseException.ClassroomInUseException(long)!id	PARAMETERL
-Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.java( (*"
-typelong"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*id2Z
-longTYPEL
-Bsrc\main\java\pl\agh\edu\io\Classroom\ClassroomInUseException.java# ('

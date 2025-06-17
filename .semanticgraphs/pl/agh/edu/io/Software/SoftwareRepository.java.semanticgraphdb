@@ -1,47 +1,0 @@
-
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.javaÌ
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.javaFILE>
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.java"
-LOC8*<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.java£
-)pl.agh.edu.io.Software.SoftwareRepository	INTERFACEF
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.java (#"
-packagepl.agh.edu.io"
-isFinalfalse"
-inner classfalse"
-
-isAbstractfalse"
-accesspublic"
-LOC2*SoftwareRepository2
-Fpl.agh.edu.io.Software.SoftwareRepository.findByName(java.lang.String)DECLARATIONF
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.java (!2‡
-5org.springframework.data.jpa.repository.JpaRepositoryEXTENDF
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.java, (92
-pl.agh.edu.io.Software.SoftwareEXTEND_TYPE_ARGUMENTF
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.java: (B2q
-java.lang.IntegerEXTEND_TYPE_ARGUMENTF
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.javaD (KÐ
-Fpl.agh.edu.io.Software.SoftwareRepository.findByName(java.lang.String)METHODF
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.java (!"
-packagepl.agh.edu.io"
-isFinalfalse"
-isStaticfalse"
-
-isAbstractfalse"
-typeOptional<Software>"
-accesspackage_private"
-LOC0*
-findByName2¨
-Spl.agh.edu.io.Software.SoftwareRepository.findByName(java.lang.String)!softwareName	PARAMETERF
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.java) (52i
-java.util.OptionalRETURN_TYPEF
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.java (2
-pl.agh.edu.io.Software.SoftwareRETURN_TYPE_ARGUMENTF
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.java (å
-Spl.agh.edu.io.Software.SoftwareRepository.findByName(java.lang.String)!softwareName	PARAMETERF
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.java) (5"
-typeString"
-isFinalfalse"
-packagepl.agh.edu.io"
-isLocaltrue*softwareName2`
-java.lang.StringTYPEF
-<src\main\java\pl\agh\edu\io\Software\SoftwareRepository.java" ((
