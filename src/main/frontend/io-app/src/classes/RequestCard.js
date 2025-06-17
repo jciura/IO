@@ -62,6 +62,9 @@ function RequestCard({request}) {
             <div className="px-3 py-3 rounded-2 bg-info">
                 <div className="mb-3">
                     <h4><b>Przedmiot:</b> <i>{request.classSessionDto.courseName}</i></h4>
+                    {request.isForAllSessions && (
+                        <p className="text-warning"><b>Dotyczy wszystkich sesji tego przedmiotu</b></p>
+                    )}
                 </div>
                 <div className="d-flex p-2">
                     <div className="d-flex col-6">
