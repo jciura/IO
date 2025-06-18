@@ -1,9 +1,11 @@
 import Popup from "reactjs-popup";
 import Select from "react-select/base";
 import {useEffect, useState} from "react";
+import {useClasses} from "./ClassesContext";
 
 function ClassView({event}) {
     // console.log(event)
+    const {fetchAll} = useClasses();
     const [newDate, setNewDate] = useState(null);
     const [newClassDuration, setNewClassDuration] = useState(null);
     const [newClassroom, setNewClassroom] = useState(null);
@@ -40,7 +42,7 @@ function ClassView({event}) {
         setNewClassroom(null);
     }
 
-    async function handleClassChangeRequest() {
+    async function handleClassChangeRequest(close) {
         try {
             const response = await fetch(
                 `http://localhost:8080/reschedule/request/${currentUserId}`,
@@ -62,10 +64,13 @@ function ClassView({event}) {
 
             if (response.ok) {
                 console.log("Request sent");
-                window.location.reload();
+                // window.location.reload();
+                await fetchAll();
+                close();
             }
             else {
                 console.log("ERROR");
+                alert("Masz już inne zajęcia w tym terminie!");
             }
         } catch (error) {
             console.log("Error during reschedule request: ", error);
@@ -119,6 +124,7 @@ function ClassView({event}) {
 
     async function handleRequestAccept(){
         try {
+            console.log(event);
             const response = await fetch(`http://localhost:8080/reschedule/${event.request.id}/accept`, {
                 method: "POST",
                 headers: {
@@ -127,7 +133,8 @@ function ClassView({event}) {
             });
 
             if (response.ok) {
-                window.location.reload();
+                // window.location.reload();
+                await fetchAll();
                 console.log("Request accepted.");
             }
         } catch (error) {
@@ -145,7 +152,8 @@ function ClassView({event}) {
             });
 
             if (response.ok) {
-                window.location.reload();
+                // window.location.reload();
+                await fetchAll();
                 console.log("Request rejected.");
             }
         } catch (error) {
@@ -163,7 +171,8 @@ function ClassView({event}) {
             });
 
             if (response.ok) {
-                window.location.reload();
+                // window.location.reload();
+                await fetchAll();
                 console.log("Request successfully deleted.");
             }
         } catch (error) {
@@ -293,7 +302,7 @@ function ClassView({event}) {
                                             </label>
                                         </div>
                                         <div className="d-flex">
-                                            <button onClick={() => {handleClassChangeRequest(); close()}} disabled={!areInputsFilled} className="btn btn-secondary ms-auto">Zaproponuj</button>
+                                            <button onClick={() => handleClassChangeRequest(close)} disabled={!areInputsFilled} className="btn btn-secondary ms-auto">Zaproponuj</button>
                                         </div>
                                     </div>
                                 )
