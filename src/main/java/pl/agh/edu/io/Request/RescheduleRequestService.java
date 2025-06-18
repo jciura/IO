@@ -229,14 +229,13 @@ public class RescheduleRequestService {
 
         List<ClassSession> sessions = new ArrayList<>(request.getClassSessions());
 
-        for (ClassSession session : sessions) {
-            request.setOldTime(session.getDateTime());
-            request.setOldDuration(session.getDuration());
-            request.setOldClassroom(session.getClassroom());
+        if (sessions.size() > 1) {
+            for (ClassSession session: sessions) {
+                request.setOldTime(session.getDateTime());
+                request.setOldDuration(session.getDuration());
+                request.setOldClassroom(session.getClassroom());
 
-            LocalDateTime newDateTime;
-            //Jeżeli id > 0 to multiple request i przesuwamy date z requesta
-            if (session.getId() > 0) {
+                LocalDateTime newDateTime;
                 newDateTime = calculateNewDateTime(session.getDateTime(), request.getNewDateTime());
 
                 Optional<SpecialDay> specialDayOpt = specialDayRepository.findByDate(newDateTime.toLocalDate());
@@ -253,24 +252,46 @@ public class RescheduleRequestService {
                     throw new RuntimeException("Classroom is not available at the selected time");
                 }
 
-            } else {
-                newDateTime = request.getNewDateTime();
+                session.setDateTime(newDateTime);
+                session.setClassroom(request.getNewClassroom());
+                session.setDuration(request.getNewDuration());
+                classSessionRepository.save(session);
+
+                // Odrzucanie innych requestów dla każdej sesji
+                List<RescheduleRequest> otherRequests = new ArrayList<>(
+                        rescheduleRequestRepository.findByClassSessionIdAndStatus(session.getId(), RequestStatus.PENDING)
+                );
+
+                for (RescheduleRequest otherRequest : otherRequests) {
+                    otherRequest.setStatus(RequestStatus.REJECTED);
+                }
+                rescheduleRequestRepository.saveAll(otherRequests);
+            }
+        } else {
+            ClassSession session = sessions.get(0);
+            request.setOldTime(session.getDateTime());
+            request.setOldDuration(session.getDuration());
+            request.setOldClassroom(session.getClassroom());
+            LocalDateTime newDateTime = request.getNewDateTime();
+
+            Optional<SpecialDay> specialDayOpt = specialDayRepository.findByDate(newDateTime.toLocalDate());
+            if (specialDayOpt.isPresent()) {
+                classSessionRepository.delete(session);
+                return;
+            }
+
+            boolean isAvailable = classSessionRepository
+                    .findSessionsByClassroomAndTime(request.getNewClassroom().getId(), newDateTime)
+                    .isEmpty();
+
+            if (!isAvailable) {
+                throw new RuntimeException("Classroom is not available at the selected time");
             }
 
             session.setDateTime(newDateTime);
             session.setClassroom(request.getNewClassroom());
             session.setDuration(request.getNewDuration());
             classSessionRepository.save(session);
-
-            // Odrzucanie innych requestów dla każdej sesji
-            List<RescheduleRequest> otherRequests = new ArrayList<>(
-                    rescheduleRequestRepository.findByClassSessionIdAndStatus(session.getId(), RequestStatus.PENDING)
-            );
-
-            for (RescheduleRequest otherRequest : otherRequests) {
-                otherRequest.setStatus(RequestStatus.REJECTED);
-            }
-            rescheduleRequestRepository.saveAll(otherRequests);
         }
 
         request.setStatus(RequestStatus.ACCEPTED);
