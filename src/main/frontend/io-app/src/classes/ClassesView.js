@@ -141,13 +141,13 @@ function ClassesView() {
     // }
 
     return (
-        <div className="p-4">
+        <div className="p-5">
             <h1>Plan zajęć</h1>
             <hr></hr>
             <Calendar
                 localizer={localizer}
                 events={classesEvents}
-                style={{height: 700}}
+                style={{height: 1500}}
                 date={currentDate}
                 onNavigate={date => setCurrentDate(date)}
                 views={[Views.DAY, Views.WORK_WEEK, Views.MONTH]}
@@ -159,7 +159,8 @@ function ClassesView() {
                 popup={true}
                 eventPropGetter={(event) => {
                     return {
-                        style: {backgroundColor: event.color}
+                        style: {backgroundColor: event.color},
+                        // className: "ms-1"
                     }
                 }}
                 components={{event: ClassView}}

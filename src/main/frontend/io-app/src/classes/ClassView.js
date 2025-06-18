@@ -3,7 +3,7 @@ import Select from "react-select/base";
 import {useEffect, useState} from "react";
 
 function ClassView({event}) {
-    console.log(event)
+    // console.log(event)
     const [newDate, setNewDate] = useState(null);
     const [newClassDuration, setNewClassDuration] = useState(null);
     const [newClassroom, setNewClassroom] = useState(null);
@@ -22,9 +22,9 @@ function ClassView({event}) {
     useEffect(() => {
         if (event == null)
             return;
-        console.log(event);
+        // console.log(event);
         if (!event.isRequest) {
-            console.log("EVENT:", event);
+            // console.log("EVENT:", event);
             setNewDate(event.classSession.dateTime);
             setNewClassDuration(event.classSession.duration);
         } else
@@ -177,7 +177,7 @@ function ClassView({event}) {
 
     return (
         <div className="d-flex flex-row justify-content-between">
-            <div>
+            <div style={{width: 100, marginRight: 20}}>
                 <strong className="mt-2 mb-2">{event.title}</strong>
                 {event.desc && <div className="mt-2">{event.desc}</div>}
             </div>

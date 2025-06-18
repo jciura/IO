@@ -63,21 +63,18 @@ public class RescheduleRequestService {
     private boolean isLecturerBusy(User lecturer, LocalDateTime proposedStart, int proposedDurationMinutes) {
         LocalDateTime proposedEnd = proposedStart.plusMinutes(proposedDurationMinutes);
 
-        List<ClassSession> overlapping = classSessionRepository
-                .findAllOverlappingByLecturer(
-                        lecturer.getId(),
-                        proposedStart,
-                        proposedEnd
-                );
+        List<ClassSessionDto> lecturerClasses = classSessionService.getAllClasses().stream()
+                        .filter(classSessionDto -> classSessionDto.lecturer().id() == lecturer.getId())
+                        .toList();
 
-        return overlapping.stream().anyMatch(session -> {
-            LocalDateTime sessionStart = session.getDateTime();
-            LocalDateTime sessionEnd = sessionStart.plusMinutes(session.getDuration());
-            return sessionStart.isBefore(proposedEnd) && sessionEnd.isAfter(proposedStart);
+        return lecturerClasses.stream().anyMatch(session -> {
+            LocalDateTime sessionStart = session.dateTime();
+            LocalDateTime sessionEnd = sessionStart.plusMinutes(session.duration());
+            return (sessionStart.isBefore(proposedStart) && sessionEnd.isAfter((proposedStart))) || (sessionStart.isBefore(proposedEnd) && sessionEnd.isAfter(proposedEnd));
         });
     }
 
-    //Wszystkie przekłądania działają w jednej funkcji
+    //Wszystkie zmiany terminów działają w jednej funkcji
     @Transactional
     public void createRequest(RescheduleRequestDto requestDto, long userId) {
         User lecturer = userService.getUserEntityById(userId);
