@@ -1,7 +1,6 @@
 import {Link, Outlet} from "react-router-dom";
 
 function Layout() {
-
     const userFromLocalStorage = JSON.parse(localStorage.getItem("USER")) ?? null;
 
     return (
@@ -9,32 +8,50 @@ function Layout() {
             <nav className="navbar navbar-expand bg-light">
                 <div className="container-fluid">
                     <ul className="navbar-nav">
-                        <li className="nav-item me-2"><Link to="/" className="nav-link">Strona główna</Link></li>
+                        <li className="nav-item me-2">
+                            <Link to="/" className="nav-link">Strona główna</Link>
+                        </li>
+
                         {userFromLocalStorage &&
-                        (userFromLocalStorage.role === "PROWADZACY" || userFromLocalStorage.role === "STAROSTA") ?
-                            (<li className="nav-item me-2">
-                                <Link to={"/classes"} className="nav-link">Moje zajęcia</Link>
-                            </li>) : (<></>)}
-                        {userFromLocalStorage &&
-                        (userFromLocalStorage.role === "STAROSTA") ?
-                            (<li className="nav-item me-2">
-                                <Link to={"/confirmations"} className="nav-link">Prośby o zmianę</Link>
-                            </li>) : (<></>)}
-                        {userFromLocalStorage && userFromLocalStorage.role === "ADMINISTRATOR" ?
-                            (<li className="nav-item me-2">
-                                <Link to={"/admin-panel"} className="nav-link">Sale</Link>
-                            </li>) : (<></>)
-                        }
-                        {userFromLocalStorage ?
-                            (<li className="nav-item me-2"><Link to="/login" className="nav-link">Moje konto</Link></li>) :
-                            (<li className="nav-item me-2"><Link to="/login" className="nav-link">Logowanie</Link></li>)
-                        }
+                            (userFromLocalStorage.role === "PROWADZACY" || userFromLocalStorage.role === "STAROSTA") && (
+                                <li className="nav-item me-2">
+                                    <Link to="/classes" className="nav-link">Moje zajęcia</Link>
+                                </li>
+                            )}
+
+                        {userFromLocalStorage && userFromLocalStorage.role === "STAROSTA" && (
+                            <li className="nav-item me-2">
+                                <Link to="/confirmations" className="nav-link">Prośby o zmianę</Link>
+                            </li>
+                        )}
+
+                        {userFromLocalStorage && userFromLocalStorage.role === "ADMINISTRATOR" && (
+                            <li className="nav-item me-2">
+                                <Link to="/admin-panel" className="nav-link">Sale</Link>
+                            </li>
+                        )}
+
+                        {userFromLocalStorage && userFromLocalStorage.role === "ADMINISTRATOR" && (
+                            <li className="nav-item me-2">
+                                <Link to="/course-panel" className="nav-link">Dodaj kurs</Link>
+                            </li>
+                        )}
+
+                        {userFromLocalStorage ? (
+                            <li className="nav-item me-2">
+                                <Link to="/login" className="nav-link">Moje konto</Link>
+                            </li>
+                        ) : (
+                            <li className="nav-item me-2">
+                                <Link to="/login" className="nav-link">Logowanie</Link>
+                            </li>
+                        )}
                     </ul>
                 </div>
             </nav>
             <Outlet />
         </div>
-    )
+    );
 }
 
 export default Layout;

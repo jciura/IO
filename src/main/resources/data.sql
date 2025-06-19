@@ -50,6 +50,9 @@ INSERT INTO courses (id, lecturer_id, representative_id, name) VALUES
                                                                    (4, 19, 10, 'Zagadki niebieskiego sera'),
                                                                    (5, 21, 10, 'Algebra');
 
+ALTER TABLE courses
+    ALTER COLUMN id RESTART WITH 6;
+
 insert into classes (id, classroom_id, date_time, duration, course_id) values (1, 100, '2025-03-14 12:00:00', 65, 2);
 insert into classes (id, classroom_id, date_time, duration, course_id) values (2, 101, '2025-07-27 14:40:00', 86, 2);
 insert into classes (id, classroom_id, date_time, duration, course_id) values (3, 103, '2025-07-24 08:00:00', 83, 4);

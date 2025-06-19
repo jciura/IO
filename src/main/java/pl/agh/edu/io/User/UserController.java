@@ -2,11 +2,8 @@ package pl.agh.edu.io.User;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.List;
-
-import static org.springframework.http.ResponseEntity.badRequest;
 
 @RestController
 @RequestMapping("/users")
@@ -41,6 +38,16 @@ public class UserController {
     @PutMapping("/{id}")
     public ResponseEntity<UserDto> updateUser(@PathVariable long id, @RequestBody UserDto updatedUser) {
         return ResponseEntity.ok(userService.updateUser(id, updatedUser));
+    }
+
+    @GetMapping("/lecturers")
+    public ResponseEntity<List<UserDto>> getAllLecturers() {
+        return ResponseEntity.ok(userService.getAllLecturers());
+    }
+
+    @GetMapping("/students")
+    public ResponseEntity<List<UserDto>> getAllStudents() {
+        return ResponseEntity.ok(userService.getAllStudents());
     }
 
     @PostMapping("/login")

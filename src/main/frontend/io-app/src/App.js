@@ -1,9 +1,10 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import LoginForm from "./LoginForm";
 import Layout from "./Layout";
 import ClassesView from "./classes/ClassesView";
 import AdminPanel from "./admin-panel/AdminPanel";
 import RequestList from "./classes/RequestList";
+import CoursePanel from "./admin-panel/CoursePanel";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
                   <Route path="/classes" element={<ClassesView />} />
                   <Route path="/confirmations" element={<RequestList />} />
                   <Route path="/admin-panel" element={<AdminPanel />} />
+                  <Route path="/course-panel" element={<CoursePanel/>}/>
               </Route>
           </Routes>
       </BrowserRouter>

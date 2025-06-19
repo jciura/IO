@@ -1,10 +1,13 @@
 package pl.agh.edu.io.Course;
 
 import jakarta.transaction.Transactional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import pl.agh.edu.io.Class.ClassSessionService;
 import pl.agh.edu.io.User.User;
+import pl.agh.edu.io.User.UserRepository;
 import pl.agh.edu.io.User.UserService;
 
 import java.util.List;
@@ -13,14 +16,17 @@ import java.util.stream.Collectors;
 @Service
 @Transactional
 public class CourseService {
+    private static final Logger log = LoggerFactory.getLogger(CourseService.class);
     private final CourseRepository courseRepository;
     private final UserService userService;
     private final ClassSessionService classSessionService;
+    private final UserRepository userRepository;
 
-    public CourseService(CourseRepository courseRepository, UserService userService, @Lazy ClassSessionService classSessionService) {
+    public CourseService(CourseRepository courseRepository, UserService userService, @Lazy ClassSessionService classSessionService, UserRepository userRepository) {
         this.courseRepository = courseRepository;
         this.userService = userService;
         this.classSessionService = classSessionService;
+        this.userRepository = userRepository;
     }
 
     public CourseDto getCourseById(long id) {
@@ -28,6 +34,19 @@ public class CourseService {
                 .orElseThrow(() -> new CourseNotFoundException(id));
 
         return convertToDto(course);
+    }
+
+    public CourseDto addCourse(String name, Long lecturerId, Long studentRepId) {
+        User lecturer = userRepository.findById(lecturerId)
+                .orElseThrow(() -> new RuntimeException("Nie znaleziono prowadzącego"));
+        User studentRep = userRepository.findById(studentRepId)
+                .orElseThrow(() -> new RuntimeException("Nie znaleziono starosty"));
+
+        Course course = new Course(name, lecturer, studentRep);
+
+        Course savedCourse = courseRepository.save(course);
+
+        return convertToDto(savedCourse);
     }
 
     public List<CourseDto> getAllCourses() {

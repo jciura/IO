@@ -32,6 +32,18 @@ public class UserService {
         return userRepository.findAll().stream().map(this::convertToDto).collect(Collectors.toList());
     }
 
+    public List<UserDto> getAllLecturers() {
+        return userRepository.findAll().stream()
+                .filter(user -> user.getRole() == UserRole.PROWADZACY)
+                .map(this::convertToDto).collect(Collectors.toList());
+    }
+
+    public List<UserDto> getAllStudents() {
+        return userRepository.findAll().stream()
+                .filter(user -> user.getRole() == UserRole.STAROSTA)
+                .map(this::convertToDto).collect(Collectors.toList());
+    }
+
     public void delteUserById(long id) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException(id));
