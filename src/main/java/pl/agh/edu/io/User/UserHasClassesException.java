@@ -2,6 +2,6 @@ package pl.agh.edu.io.User;
 
 public class UserHasClassesException extends RuntimeException {
     public UserHasClassesException(long id) {
-        super("User with id: " + id + " still has attached courses");
+        super("Użytkownik z id: " + id + " jest zapisany na kursu, najpierw go usuń z kursów");
     }
 }

@@ -2,10 +2,10 @@ package pl.agh.edu.io.Course;
 
 public class CourseNotFoundException extends RuntimeException {
     public CourseNotFoundException(long id) {
-        super("Course with id " + id + " not found");
+        super("Kurs o id: " + id + " nie znaleziony");
     }
 
     public CourseNotFoundException(String name) {
-        super("Course " + name + " not found");
+        super("Kurs " + name + " nie znaleziony");
     }
 }

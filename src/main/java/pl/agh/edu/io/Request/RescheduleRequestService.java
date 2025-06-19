@@ -10,9 +10,7 @@ import pl.agh.edu.io.Course.CourseRepository;
 import pl.agh.edu.io.SpecialDay.SpecialDay;
 import pl.agh.edu.io.SpecialDay.SpecialDayException;
 import pl.agh.edu.io.SpecialDay.SpecialDayRepository;
-import pl.agh.edu.io.User.User;
-import pl.agh.edu.io.User.UserRole;
-import pl.agh.edu.io.User.UserService;
+import pl.agh.edu.io.User.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -44,7 +42,6 @@ public class RescheduleRequestService {
     }
 
     private boolean isMovingForward(RescheduleRequestDto requestDto) {
-        System.out.println(requestDto);
         LocalDate oldDate = requestDto.oldTime().toLocalDate();
         LocalDate newDate = requestDto.newDateTime().toLocalDate();
         return !newDate.isBefore(oldDate);
@@ -107,7 +104,7 @@ public class RescheduleRequestService {
         User lecturer = userService.getUserEntityById(userId);
 
         if (lecturer.getRole() != UserRole.PROWADZACY) {
-            throw new RuntimeException("This user is not a lecturer");
+            throw new UnauthorizedException("Ten użytkownik nie jest prowadzącym");
         }
 
         ClassroomDto classroomDto = requestDto.newClassroom();
@@ -115,7 +112,6 @@ public class RescheduleRequestService {
                 .findByBuildingAndNumber(classroomDto.building(), classroomDto.number())
                 .orElseThrow(() -> new ClassroomNotFoundException(classroomDto.building(), classroomDto.number()));
 
-        System.out.println(requestDto);
 
         if (requestDto.isForAllSessions()) {
             //Multiple
@@ -137,7 +133,7 @@ public class RescheduleRequestService {
                 LocalDateTime newDateTime = calculateNewDateTime(session.getDateTime(), newDateTimeTemplate, forward);
 
                 if (isLecturerBusy(lecturer, newDateTime, requestDto.newDuration())) {
-                    throw new RuntimeException("Lecturer has another class at: " + newDateTime);
+                    throw new LecturerBusyException("Prowadzący ma już zajęcia w terminie: " + newDateTime);
                 }
 
                 //Trzeba ten wyjątek obsłużyć na froncie, wyświelimy czy na pewno chce, jak tak to trzeba wysłać nowy request tylko pole confirmation musi mieć
@@ -149,12 +145,14 @@ public class RescheduleRequestService {
                     throw new SpecialDayException("Data: " + newDateTime + " to dzień specjalny i jest traktowana jako: " + specialDay.getTreatedAsPolishName());
                 }
 
+                LocalDateTime newEndDateTime = newDateTime.plusMinutes(requestDto.newDuration());
+
                 boolean isAvailable = classSessionRepository
-                        .findSessionsByClassroomAndTime(newClassroom.getId(), newDateTime)
+                        .findOverlappingSessions(newClassroom.getId(), newDateTime, newEndDateTime)
                         .isEmpty();
 
                 if (!isAvailable) {
-                    throw new RuntimeException("Classroom is not available at the selected time");
+                    throw new ClassroomUnavailableException("Sala jest zajęta w wybranym terminie");
                 }
             }
 
@@ -181,21 +179,29 @@ public class RescheduleRequestService {
                     .orElseThrow(() -> new ClassSessionNotFoundException(requestDto.classSessionDto().id()));
 
             if (requestDto.classSessionDto().lecturer().id() != lecturer.getId()) {
-                throw new RuntimeException("Unauthorized: not the session's teacher");
+                throw new UnauthorizedException("Brak uprawnień: użytkownik nie jest prowadzącym tego zajęcia");
             }
 
+            LocalDateTime newDateTime = requestDto.newDateTime();
+            LocalDateTime newEndDateTime = newDateTime.plusMinutes(requestDto.newDuration());
 
-            List<ClassSession> sessionsAtSameTime = classSessionRepository.findSessionsByClassroomAndTime(
-                    newClassroom.getId(),
-                    requestDto.newDateTime()
-            );
 
-            if (!sessionsAtSameTime.isEmpty()) {
-                throw new RuntimeException("Classroom is not available at the selected time");
+            boolean isAvailable = classSessionRepository
+                    .findOverlappingSessions(newClassroom.getId(), newDateTime, newEndDateTime)
+                    .isEmpty();
+
+            if (!isAvailable) {
+                throw new ClassroomUnavailableException("Sala jest zajęta w wybranym terminie");
             }
 
-            if (isLecturerBusy(lecturer, requestDto.newDateTime(), requestDto.newDuration())) {
-                throw new RuntimeException("Lecturer has another class at: " + requestDto.newDateTime());
+            if (isLecturerBusy(lecturer, newDateTime, requestDto.newDuration())) {
+                throw new LecturerBusyException("Prowadzący ma już zajęcia w terminie: " + newDateTime);
+            }
+
+            Optional<SpecialDay> specialDayOpt = specialDayRepository.findByDate(newDateTime.toLocalDate());
+            if (specialDayOpt.isPresent() && !requestDto.confirmation()) {
+                SpecialDay specialDay = specialDayOpt.get();
+                throw new SpecialDayException("Data: " + newDateTime + " to dzień specjalny i jest traktowana jako: " + specialDay.getTreatedAsPolishName());
             }
 
             RescheduleRequest request = new RescheduleRequest(
@@ -254,77 +260,46 @@ public class RescheduleRequestService {
                 .orElseThrow(() -> new RescheduleRequestNotFoundException(requestId));
 
         if (request.getStatus() != RequestStatus.PENDING)
-            throw new RuntimeException("Already processed");
-
+            throw new IllegalStateException("Wniosek został już przetworzony");
 
         List<ClassSession> sessions = new ArrayList<>(request.getClassSessions());
-
         boolean forward = isMovingForward(convertToDto(request));
 
-
-        if (sessions.size() > 1) {
-            for (ClassSession session: sessions) {
-                request.setOldTime(session.getDateTime());
-                request.setOldDuration(session.getDuration());
-                request.setOldClassroom(session.getClassroom());
-
-                LocalDateTime newDateTime;
-                newDateTime = calculateNewDateTime(session.getDateTime(), request.getNewDateTime(), forward);
-
-                Optional<SpecialDay> specialDayOpt = specialDayRepository.findByDate(newDateTime.toLocalDate());
-                if (specialDayOpt.isPresent()) {
-                    classSessionRepository.delete(session);
-                    continue;
-                }
-
-                boolean isAvailable = classSessionRepository
-                        .findSessionsByClassroomAndTime(request.getNewClassroom().getId(), newDateTime)
-                        .isEmpty();
-
-                if (!isAvailable) {
-                    throw new RuntimeException("Classroom is not available at the selected time");
-                }
-
-                session.setDateTime(newDateTime);
-                session.setClassroom(request.getNewClassroom());
-                session.setDuration(request.getNewDuration());
-                classSessionRepository.save(session);
-
-                // Odrzucanie innych requestów dla każdej sesji
-                List<RescheduleRequest> otherRequests = new ArrayList<>(
-                        rescheduleRequestRepository.findByClassSessionIdAndStatus(session.getId(), RequestStatus.PENDING)
-                );
-
-                for (RescheduleRequest otherRequest : otherRequests) {
-                    otherRequest.setStatus(RequestStatus.REJECTED);
-                }
-                rescheduleRequestRepository.saveAll(otherRequests);
-            }
-        } else {
-            ClassSession session = sessions.get(0);
+        for (ClassSession session : sessions) {
             request.setOldTime(session.getDateTime());
             request.setOldDuration(session.getDuration());
             request.setOldClassroom(session.getClassroom());
-            LocalDateTime newDateTime = request.getNewDateTime();
+
+            LocalDateTime newDateTime = sessions.size() > 1
+                    ? calculateNewDateTime(session.getDateTime(), request.getNewDateTime(), forward)
+                    : request.getNewDateTime();
+            LocalDateTime newEndTime = newDateTime.plusMinutes(request.getNewDuration());
 
             Optional<SpecialDay> specialDayOpt = specialDayRepository.findByDate(newDateTime.toLocalDate());
             if (specialDayOpt.isPresent()) {
                 classSessionRepository.delete(session);
-                return;
+                continue;
             }
 
             boolean isAvailable = classSessionRepository
-                    .findSessionsByClassroomAndTime(request.getNewClassroom().getId(), newDateTime)
+                    .findOverlappingSessions(request.getNewClassroom().getId(), newDateTime, newEndTime)
                     .isEmpty();
 
             if (!isAvailable) {
-                throw new RuntimeException("Classroom is not available at the selected time");
+                throw new ClassroomUnavailableException("Sala jest zajęta w wybranym terminie");
             }
 
             session.setDateTime(newDateTime);
             session.setClassroom(request.getNewClassroom());
             session.setDuration(request.getNewDuration());
             classSessionRepository.save(session);
+
+            List<RescheduleRequest> otherRequests = rescheduleRequestRepository
+                    .findByClassSessionIdAndStatus(session.getId(), RequestStatus.PENDING);
+            for (RescheduleRequest otherRequest : otherRequests) {
+                otherRequest.setStatus(RequestStatus.REJECTED);
+            }
+            rescheduleRequestRepository.saveAll(otherRequests);
         }
 
         request.setStatus(RequestStatus.ACCEPTED);
@@ -336,7 +311,7 @@ public class RescheduleRequestService {
                 .orElseThrow(() -> new RescheduleRequestNotFoundException(requestId));
 
         if (request.getStatus() != RequestStatus.PENDING)
-            throw new RuntimeException("Already processed");
+            throw new IllegalStateException("Wniosek został już przetworzony");
 
         request.setStatus(RequestStatus.REJECTED);
         rescheduleRequestRepository.save(request);

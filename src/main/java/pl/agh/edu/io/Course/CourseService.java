@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import pl.agh.edu.io.Class.ClassSessionService;
 import pl.agh.edu.io.User.User;
+import pl.agh.edu.io.User.UserNotFoundException;
 import pl.agh.edu.io.User.UserRepository;
 import pl.agh.edu.io.User.UserService;
 
@@ -38,9 +39,9 @@ public class CourseService {
 
     public CourseDto addCourse(String name, Long lecturerId, Long studentRepId) {
         User lecturer = userRepository.findById(lecturerId)
-                .orElseThrow(() -> new RuntimeException("Nie znaleziono prowadzącego"));
+                .orElseThrow(() -> new UserNotFoundException("Nie znaleziono prowadzącego"));
         User studentRep = userRepository.findById(studentRepId)
-                .orElseThrow(() -> new RuntimeException("Nie znaleziono starosty"));
+                .orElseThrow(() -> new UserNotFoundException("Nie znaleziono starosty"));
 
         Course course = new Course(name, lecturer, studentRep);
 
