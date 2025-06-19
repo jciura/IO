@@ -32,6 +32,7 @@ insert into users (id, first_name, last_name, email, phone_number, role, passwor
 insert into users (id, first_name, last_name, email, phone_number, role, password)
 values (10, 'Agathe', 'Willox', 'awillox9@sakura.ne.jp', '+86 979 771 3845', 3,
         '$2a$10$cYdF8yvfJE6QT7sQUYpwwOjMkqjepRG38TNesJ7.5YpqTIdeaE.LS'); -- hasło: starosta
+insert into users (id, first_name, last_name, email, phone_number, role, password)
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (11, 'Karlens', 'Langworthy', 'klangworthya@cdc.gov', '+62 630 413 8534', 3, '$2a$04$cTNTLHF9NPVA7jeNGmwFaOzNhhTsF.rejTRbT.ABhTwXDJze2QZ0K');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (12, 'Tobin', 'Ellicott', 'tellicottb@etsy.com', '+63 459 810 8275', 2, '$2a$10$Xmtfs/13iQjz/on1BciczuIKUx4lDqNI0yavdki7tGT3uAk0H/s3.');  -- hasło: koord
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (13, 'Mischa', 'Moquin', 'mmoquinc@goodreads.com', '+225 821 991 0495', 3, '$2a$04$uXX9of.z4YqAnmkHg2liv.vuc5IvdIEz6dJQg04ojN0d2RZIUr6Xu');
