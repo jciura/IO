@@ -79,7 +79,7 @@ export const ClassesProvider = ({ userId, children }) => {
                         start: new Date(c.dateTime),
                         end: new Date(new Date(c.dateTime).getTime() + c.duration * 60000),
                         desc: c.classroomDto.building + ", " + c.classroomDto.floor + ", " + c.classroomDto.number,
-                        color: "blue",
+                        color: "lightblue",
                         isRequest: false,
                         classSession: c
                     });

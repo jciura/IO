@@ -158,7 +158,7 @@ public class RescheduleRequestService {
                 }
             }
 
-            ClassSession firstSession = sessionsToReschedule.getFirst();
+            ClassSession firstSession = sessionsToReschedule.get(0);
 
             RescheduleRequest rescheduleRequest = new RescheduleRequest(
                     sessionsToReschedule,
@@ -301,7 +301,7 @@ public class RescheduleRequestService {
                 rescheduleRequestRepository.saveAll(otherRequests);
             }
         } else {
-            ClassSession session = sessions.getFirst();
+            ClassSession session = sessions.get(0);
             request.setOldTime(session.getDateTime());
             request.setOldDuration(session.getDuration());
             request.setOldClassroom(session.getClassroom());
@@ -349,7 +349,7 @@ public class RescheduleRequestService {
     public RescheduleRequestDto convertToDto(RescheduleRequest request) {
         ClassSessionDto firstSessionDto = null;
         if (!request.getClassSessions().isEmpty()) {
-            firstSessionDto = classSessionService.convertToDto(request.getClassSessions().getFirst());
+            firstSessionDto = classSessionService.convertToDto(request.getClassSessions().get(0));
         }
 
         return new RescheduleRequestDto(

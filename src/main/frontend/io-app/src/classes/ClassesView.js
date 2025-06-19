@@ -44,8 +44,12 @@ function ClassesContent() {
                 popup={true}
                 eventPropGetter={(event) => {
                     return {
-                        style: {backgroundColor: event.color},
-                        // className: "ms-1"
+                        style: {
+                            backgroundColor: 'transparent',
+                            padding: 0,
+                            border: 'none',
+                            height: '100%',
+                        }
                     }
                 }}
                 components={{event: ClassView}}

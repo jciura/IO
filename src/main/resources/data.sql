@@ -29,9 +29,9 @@ insert into users (id, first_name, last_name, email, phone_number, role, passwor
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (7, 'Robin', 'Ducker', 'rducker6@simplemachines.org', '+351 686 205 2056', 3, '$2a$04$fcdkMvXehNmx/SPExE31WeEo/uI9DJ/eXShfri1O8uHAd63aDS0A6');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (8, 'Joana', 'Myhan', 'jmyhan7@patch.com', '+225 399 326 2596', 1, '$2a$04$KUxlSt56jCQcZ43t2AneLuTL9j1XTS3h38dWmMZDe3YF5uueU5HyG');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (9, 'Waly', 'Lyster', 'wlyster8@desdev.cn', '+1 504 520 0747', 1, '$2a$04$VC0R7L6h7Ss9oS37m2J32eYSj0VwpWYnMzGdwx6HRpn4Ek2dm1.fy');
-insert into users (id, first_name, last_name, email, phone_number, role, password) values (10, 'Agathe', 'Willox', 'awillox9@sakura.ne.jp', '+86 979 771 3845', 3, '$2a$04$ydooWrZ/SgwWf3d7FacBC.Ea1U9UNpCUTfo4VxKcAHtpnXn0PrCEu');
+insert into users (id, first_name, last_name, email, phone_number, role, password) values (10, 'Agathe', 'Willox', 'awillox9@sakura.ne.jp', '+86 979 771 3845', 3, '$2a$04$ydooWrZ/SgwWf3d7FacBC.Ea1U9UNpCUTfo4VxKcAHtpnXn0PrCEu'); -- hasło: starosta
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (11, 'Karlens', 'Langworthy', 'klangworthya@cdc.gov', '+62 630 413 8534', 3, '$2a$04$cTNTLHF9NPVA7jeNGmwFaOzNhhTsF.rejTRbT.ABhTwXDJze2QZ0K');
-insert into users (id, first_name, last_name, email, phone_number, role, password) values (12, 'Tobin', 'Ellicott', 'tellicottb@etsy.com', '+63 459 810 8275', 2, '$2a$04$QOTaoV09xHOfvkZMR8Yui.z8AChYn7GdYpHHZ/S9u1n/j33AM7qvm');
+insert into users (id, first_name, last_name, email, phone_number, role, password) values (12, 'Tobin', 'Ellicott', 'tellicottb@etsy.com', '+63 459 810 8275', 2, '$2a$10$Xmtfs/13iQjz/on1BciczuIKUx4lDqNI0yavdki7tGT3uAk0H/s3.');  -- hasło: koord
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (13, 'Mischa', 'Moquin', 'mmoquinc@goodreads.com', '+225 821 991 0495', 3, '$2a$04$uXX9of.z4YqAnmkHg2liv.vuc5IvdIEz6dJQg04ojN0d2RZIUr6Xu');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (14, 'Engelbert', 'Bellward', 'ebellwardd@vimeo.com', '+48 630 387 6984', 3, '$2a$04$t6SxwMZKuzd43eBvc.CBhOTuuwW4hd/M33yJPBbQKqQJ1mbl4t94O');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (15, 'Birk', 'Brunesco', 'bbrunescoe@nasa.gov', '+62 549 535 8837', 1, '$2a$04$YiiQrLKSCgfHdY6C0fEyfedP01DBcTE/KADvVb.0ERo.koN1xeuem');
@@ -40,7 +40,7 @@ insert into users (id, first_name, last_name, email, phone_number, role, passwor
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (18, 'Naoma', 'Agate', 'nagateh@people.com.cn', '+7 719 297 3453', 3, '$2a$04$1AmUMXNHsJpNl0KI6ivrd.RzCVjNZjzEVyP8e/DnCa0fCtVzdg9xi');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (19, 'Frans', 'Seeger', 'fseegeri@artisteer.com', '+420 820 641 2918', 1, '$2a$04$0scwYqn8FFgnMMW0U9nE6uOZwH9z5HIcs8RYCpPPPQefFYGcv0Lse');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (20, 'Donn', 'Bouzan', 'dbouzanj@goodreads.com', '+256 398 456 7310', 2, '$2a$04$Dy6zEAw6wtvw2AAd9.Ib5uI9rlW7XXIY2zaVTzVAdJEHYIjk7dSwO');
-insert into users (id, first_name, last_name, email, phone_number, role, password) values (21, 'test', 'testowy', 'test@gmail.com', '+48 123 456 789', 1, '$2a$10$kDtOd5y4iKTaj4nyaRvoyuU0EyV2THAF2w7y0Kl2/h4Uj35uGVJsC');
+insert into users (id, first_name, last_name, email, phone_number, role, password) values (21, 'test', 'testowy', 'test@gmail.com', '+48 123 456 789', 1, '$2a$10$kDtOd5y4iKTaj4nyaRvoyuU0EyV2THAF2w7y0Kl2/h4Uj35uGVJsC');  -- hasło: test
 
 INSERT INTO courses (id, lecturer_id, representative_id, name) VALUES
                                                                    (0, 1, 5, 'Biologia molekularna'),
@@ -77,3 +77,24 @@ insert into classes (id, classroom_id, date_time, duration, course_id) values (1
 insert into classes (id, classroom_id, date_time, duration, course_id) values (19, 103, '2025-06-20 10:30:00', 65, 5);
 insert into classes (id, classroom_id, date_time, duration, course_id) values (20, 103, '2025-07-31 18:00:00', 89, 5);
 insert into classes (id, classroom_id, date_time, duration, course_id) values (21, 103, '2025-06-27 10:30:00', 65, 5);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-03-14 12:00:00', 65, 2);
+insert into classes (classroom_id, date_time, duration, course_id) values (101, '2025-07-27 14:40:00', 86, 2);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-07-24 08:00:00', 83, 4);
+insert into classes (classroom_id, date_time, duration, course_id) values (104, '2025-01-29 14:30:00', 86, 1);
+insert into classes (classroom_id, date_time, duration, course_id) values (101, '2025-11-30 16:30:00', 63, 2);
+insert into classes (classroom_id, date_time, duration, course_id) values (104, '2025-02-02 16:30:00', 71, 1);
+insert into classes (classroom_id, date_time, duration, course_id) values (102, '2025-06-27 15:15:00', 70, 1);
+insert into classes (classroom_id, date_time, duration, course_id) values (102, '2025-05-09 18:45:00', 62, 4);
+insert into classes (classroom_id, date_time, duration, course_id) values (102, '2025-05-27 18:30:00', 90, 1);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-05-02 10:30:00', 68, 1);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-08-20 09:45:00', 79, 2);
+insert into classes (classroom_id, date_time, duration, course_id) values (101, '2025-03-07 18:00:00', 89, 0);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-07-09 15:50:00', 60, 3);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-04-04 08:45:00', 63, 2);
+insert into classes (classroom_id, date_time, duration, course_id) values (101, '2025-07-30 15:00:00', 73, 1);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-03-30 14:45:00', 85, 3);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-07-25 11:00:00', 89, 4);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-06-02 13:00:00', 73, 5);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-06-20 10:30:00', 65, 5);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-07-31 18:00:00', 89, 5);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-06-27 10:30:00', 65, 5);

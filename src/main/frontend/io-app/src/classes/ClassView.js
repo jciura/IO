@@ -1,4 +1,5 @@
 import Popup from "reactjs-popup";
+import 'reactjs-popup/dist/index.css';
 import Select from "react-select/base";
 import {useEffect, useState} from "react";
 import {useClasses} from "./ClassesContext";
@@ -16,7 +17,10 @@ function ClassView({event}) {
     const [recommendedClassrooms, setRecommendedClassrooms] = useState([]);
     const [isForAllSessions, setIsForAllSessions] = useState(false);
 
+    const [hovered, setHover] = useState(false);
+
     var areInputsFilled = newDate && newClassDuration && newClassroom;
+    const eventDesc = event.desc.split(", ");
 
     const currentUser = JSON.parse(localStorage.getItem("USER"));
     console.log(currentUser);
@@ -24,9 +28,9 @@ function ClassView({event}) {
     useEffect(() => {
         if (event == null)
             return;
-        // console.log(event);
+        console.log(event);
         if (!event.isRequest) {
-            // console.log("EVENT:", event);
+            console.log("EVENT:", event);
             setNewDate(event.classSession.dateTime);
             setNewClassDuration(event.classSession.duration);
         } else
@@ -181,140 +185,165 @@ function ClassView({event}) {
         }
     }
 
-    function checkIfClassSessionIsPast() {
+    function checkIfClassSessionWillHappen() {
         return event.start > new Date();
     }
 
     return (
-        <div className="d-flex flex-row justify-content-between">
-            <div style={{width: 100, marginRight: 20}}>
-                <strong className="mt-2 mb-2">{event.title}</strong>
-                {event.desc && <div className="mt-2">{event.desc}</div>}
-            </div>
-            {event.isRequest === true ? (
-                <div className="d-flex">
-                    {event.request.requesterId === currentUserId ? (
-                        <Popup trigger={<button className="btn btn-danger ms-auto">Usuń</button>} contentStyle={{maxWidth: "50%"}} className="bg-light rounded-2" modal nested>
-                            {
-                                close => (
-                                    <div className="p-3">
-                                        <h1>Czy na pewno chcesz usunąć tę propozycję?</h1>
-                                        <hr></hr>
-                                        <div className="d-flex">
-                                            <button onClick={close} className="btn btn-outline-success ms-auto">Nie</button>
-                                            <button onClick={() => {handleRequestDelete(); close()}} className="btn btn-danger ms-3">Tak</button>
-                                        </div>
+        <div className="d-flex flex-row justify-content-between"
+             onMouseEnter={() => setHover(true)}
+             onMouseLeave={() => setHover(false)}
+             style={{
+                     height: '100%',
+                     width: '100%',
+                     backgroundColor: hovered ? '#cce5ff' : event.color || '#ddd',
+                     color: '#000',
+                     padding: '4px 6px',
+                     borderRadius: '4px',
+                     transition: 'background-color 0.2s'
+                 }}>
+            {event.isRequest === false ? (
+                <Popup trigger={<div className="p-2">
+                    <strong className="mt-2 mb-2">{event.title}</strong>
+                    {event.desc && <div className="mt-2 mb-2">{event.desc}</div>}
+                </div>} contentStyle={{maxWidth: "50%"}} className="bg-light rounded-2" modal nested>
+                    {
+                        close => (
+                            <div className="p-3">
+                                <h1>{event.title}</h1>
+                                <hr/>
+                                <div className="row">
+                                    <div className="col-3">
+                                        <p><b>Budynek: </b>{eventDesc[0]}</p>
+                                        <p><b>Sala: </b>{eventDesc[2]}</p>
+                                        <p><b>Piętro: </b>{eventDesc[1]}</p>
                                     </div>
-                                )
-                            }
-                        </Popup>
-                    ) : (
-                        <div className="d-flex justify-content-end">
-                            <Popup trigger={<button className="btn btn-primary">Zdecyduj</button>} contentStyle={{maxWidth: "50%"}} className="bg-light rounded-2" modal nested>
+                                    <div className="col">
+                                        <p><b>Data rozpoczęcia: </b>{event.classSession.dateTime}</p>
+                                        <p><b>Czas trwania: </b>{event.classSession.duration} min</p>
+                                        <p><b>Starosta grupy: </b>{event.classSession.classRep.firstName}
+                                            {event.classSession.classRep.lastName}, {event.classSession.classRep.email}</p>
+                                    </div>
+                                </div>
+
+                                <div className="d-flex justify-content-between w-100">
+                                {checkIfClassSessionWillHappen() && currentUser.role === "PROWADZACY" && (
+                                    <Popup trigger={<button className="btn btn-secondary">Zaproponuj zmianę</button>} onOpen={() => setInitialPopupValues()} contentStyle={{maxWidth: "50%"}} className="bg-light rounded-2" modal nested>
+                                        {
+                                            close => (
+                                                <div>
+                                                    <div className="d-flex p-2">
+                                                        <div className="d-flex col-6">
+                                                            <div className="d-flex flex-column col-6">
+                                                                <label className="mb-4">Aktualna data:</label>
+                                                                <label className="mb-4">Aktualny czas trwania:</label>
+                                                                <label>Aktualna sala:</label>
+                                                            </div>
+                                                            <div className="d-flex flex-column col-6">
+                                                                <p className="mb-4">{event.classSession.dateTime}</p>
+                                                                <p className="mb-4">{event.classSession.duration}</p>
+                                                                <p>{event.classSession.classroomDto.building}, {event.classSession.classroomDto.floor}, {event.classSession.classroomDto.number}</p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="d-flex col-6">
+                                                            <div className="d-flex flex-column col-6">
+                                                                <label htmlFor="dateInput" className="mb-4"><b>Nowa data:</b></label>
+                                                                <label htmlFor="durationInput" className="mb-4"><b>Nowy czas trwania:</b></label>
+                                                                <label htmlFor="classroomInput" className="mb-4"><b>Nowa sala:</b></label>
+                                                            </div>
+                                                            <div className="d-flex flex-column col-6">
+                                                                <input id="dateInput" type="datetime-local" className="mb-3"
+                                                                       defaultValue={event.classSession.dateTime}
+                                                                       onChange={(event) => setNewDate(event.target.value)}/>
+                                                                <input id="durationInput" type="number" className="mb-3"
+                                                                       defaultValue={event.classSession.duration} min={10} max={150}
+                                                                       onChange={(event) => setNewClassDuration(event.target.value)}/>
+                                                                <Select isDisabled={false}
+                                                                        onMenuOpen={() => {setIsMenuOpen(true); loadClassroomRecommendations()}}
+                                                                        onMenuClose={() => setIsMenuOpen(false)}
+                                                                        menuIsOpen={isMenuOpen}
+                                                                        value={selectedClassroom}
+                                                                        onInputChange={() => console.log("Input change")}
+                                                                        onChange={(selectedOption) => handleClassroomSelection(selectedOption)}
+                                                                        // options={[{value: "A1", label: "Sala A1"}, {value: "A2", label: "Sala A2"}]}
+                                                                        options={recommendedClassrooms}
+                                                                        isSearchable={false}
+                                                                        isClearable={true}
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="form-check mt-2">
+                                                        <input
+                                                            className="form-check-input"
+                                                            type="checkbox"
+                                                            id="forAllSessionsCheck"
+                                                            checked={isForAllSessions}
+                                                            onChange={(e) => setIsForAllSessions(e.target.checked)}
+                                                        />
+                                                        <label className="form-check-label" htmlFor="forAllSessionsCheck">
+                                                            Zastosuj do wszystkich sesji zajęć
+                                                        </label>
+                                                    </div>
+                                                    <div className="d-flex">
+                                                        <button onClick={() => {handleClassChangeRequest(); close()}} disabled={!areInputsFilled} className="btn btn-secondary ms-auto">Zaproponuj</button>
+                                                    </div>
+                                                </div>
+                                            )
+                                        }
+                                    </Popup>
+                                )}
+                                <button className="btn btn-outline-info" onClick={close}>Zamknij</button>
+                                </div>
+                            </div>
+                        )}
+                </Popup>
+            ) : (
+                <div>
+                    <div>
+                        <strong className="mt-2 mb-2">{event.title}</strong>
+                        {event.desc && <div className="mt-2 mb-2">{event.desc}</div>}
+                    </div>
+                    <div className="d-flex">
+                        {event.request.requesterId === currentUserId ? (
+                            <Popup trigger={<button className="btn btn-danger ms-auto">Usuń</button>} contentStyle={{maxWidth: "50%"}} className="bg-light rounded-2" modal nested>
                                 {
                                     close => (
                                         <div className="p-3">
-                                            <h1>Jaka jest Twoja decyzja dotycząca tej propozycji?</h1>
+                                            <h1>Czy na pewno chcesz usunąć tę propozycję?</h1>
                                             <hr></hr>
                                             <div className="d-flex">
-                                                <button onClick={() => {handleRequestAccept(); close()}} className="btn btn-success ms-auto">Akceptuję</button>
-                                                <button onClick={() => {handleRequestReject(); close()}} className="btn btn-danger ms-3">Odrzucam</button>
-                                                <button onClick={close} className="btn btn-secondary ms-3">Jeszcze się zastanowię</button>
+                                                <button onClick={close} className="btn btn-outline-success ms-auto">Nie</button>
+                                                <button onClick={() => {handleRequestDelete(); close()}} className="btn btn-danger ms-3">Tak</button>
                                             </div>
                                         </div>
                                     )
                                 }
                             </Popup>
-                            {/*<Popup trigger={<button className="btn btn-danger ms-3">Odrzuć</button>} contentStyle={{maxWidth: "50%"}} className="bg-light rounded-2" modal nested>*/}
-                            {/*    {*/}
-                            {/*        close => (*/}
-                            {/*            <div className="p-3">*/}
-                            {/*                <h1>Czy na pewno potwierdzasz odrzucenie tej propozycji?</h1>*/}
-                            {/*                <hr></hr>*/}
-                            {/*                <div className="d-flex">*/}
-                            {/*                    <button onClick={close} className="btn btn-outline-success ms-auto">Nie</button>*/}
-                            {/*                    <button onClick={() => handleRequestReject(); close()}} className="btn btn-danger ms-3">Tak</button>*/}
-                            {/*                </div>*/}
-                            {/*            </div>*/}
-                            {/*        )*/}
-                            {/*    }*/}
-                            {/*</Popup>*/}
-                        </div>
-                    )}
+                        ) : (
+                            <div className="d-flex justify-content-end">
+                                <Popup trigger={<button className="btn btn-primary">Zdecyduj</button>} contentStyle={{maxWidth: "50%"}} className="bg-light rounded-2" modal nested>
+                                    {
+                                        close => (
+                                            <div className="p-3">
+                                                <h1>Jaka jest Twoja decyzja dotycząca tej propozycji?</h1>
+                                                <hr></hr>
+                                                <div className="d-flex">
+                                                    <button onClick={() => {handleRequestAccept(); close()}} className="btn btn-success ms-auto">Akceptuję</button>
+                                                    <button onClick={() => {handleRequestReject(); close()}} className="btn btn-danger ms-3">Odrzucam</button>
+                                                    <button onClick={close} className="btn btn-secondary ms-3">Jeszcze się zastanowię</button>
+                                                </div>
+                                            </div>
+                                        )
+                                    }
+                                </Popup>
+                            </div>
+                        )}
+                    </div>
                 </div>
-            ) : (
-                <div>
-                    {checkIfClassSessionIsPast() && currentUser.role === "PROWADZACY" && (
-                        <Popup trigger={<button className="btn btn-secondary ms-auto">Zaproponuj zmianę</button>} onOpen={() => setInitialPopupValues()} contentStyle={{maxWidth: "50%"}} className="bg-light rounded-2" modal nested>
-                            {
-                                close => (
-                                    <div>
-                                        <div className="d-flex p-2">
-                                            <div className="d-flex col-6">
-                                                <div className="d-flex flex-column col-6">
-                                                    <label className="mb-4">Aktualna data:</label>
-                                                    <label className="mb-4">Aktualny czas trwania:</label>
-                                                    <label>Aktualna sala:</label>
-                                                </div>
-                                                <div className="d-flex flex-column col-6">
-                                                    <p className="mb-4">{event.classSession.dateTime}</p>
-                                                    <p className="mb-4">{event.classSession.duration}</p>
-                                                    <p>{event.classSession.classroomDto.building}, {event.classSession.classroomDto.floor}, {event.classSession.classroomDto.number}</p>
-                                                </div>
-                                            </div>
-                                            <div className="d-flex col-6">
-                                                <div className="d-flex flex-column col-6">
-                                                    <label htmlFor="dateInput" className="mb-4"><b>Nowa data:</b></label>
-                                                    <label htmlFor="durationInput" className="mb-4"><b>Nowy czas trwania:</b></label>
-                                                    <label htmlFor="classroomInput" className="mb-4"><b>Nowa sala:</b></label>
-                                                </div>
-                                                <div className="d-flex flex-column col-6">
-                                                    <input id="dateInput" type="datetime-local" className="mb-3"
-                                                           defaultValue={event.classSession.dateTime}
-                                                           onChange={(event) => setNewDate(event.target.value)}/>
-                                                    <input id="durationInput" type="number" className="mb-3"
-                                                           defaultValue={event.classSession.duration} min={10} max={150}
-                                                           onChange={(event) => setNewClassDuration(event.target.value)}/>
-                                                    <Select isDisabled={false}
-                                                            onMenuOpen={() => {setIsMenuOpen(true); loadClassroomRecommendations()}}
-                                                            onMenuClose={() => setIsMenuOpen(false)}
-                                                            menuIsOpen={isMenuOpen}
-                                                            value={selectedClassroom}
-                                                            onInputChange={() => console.log("Input change")}
-                                                            onChange={(selectedOption) => handleClassroomSelection(selectedOption)}
-                                                            // options={[{value: "A1", label: "Sala A1"}, {value: "A2", label: "Sala A2"}]}
-                                                            options={recommendedClassrooms}
-                                                            isSearchable={false}
-                                                            isClearable={true}
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="form-check mt-2">
-                                            <input
-                                                className="form-check-input"
-                                                type="checkbox"
-                                                id="forAllSessionsCheck"
-                                                checked={isForAllSessions}
-                                                onChange={(e) => setIsForAllSessions(e.target.checked)}
-                                            />
-                                            <label className="form-check-label" htmlFor="forAllSessionsCheck">
-                                                Zastosuj do wszystkich sesji zajęć
-                                            </label>
-                                        </div>
-                                        <div className="d-flex">
-                                            <button onClick={() => handleClassChangeRequest(close)} disabled={!areInputsFilled} className="btn btn-secondary ms-auto">Zaproponuj</button>
-                                        </div>
-                                    </div>
-                                )
-                            }
-                        </Popup>
-                    )
+            )
                     }
                 </div>
-                )
-            }
-        </div>
     )
 }
 
