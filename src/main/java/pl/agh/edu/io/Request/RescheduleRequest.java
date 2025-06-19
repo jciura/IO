@@ -54,7 +54,7 @@ public class RescheduleRequest {
 
     public RescheduleRequest(List<ClassSession> classSessions, LocalDateTime newDateTime, Classroom newClassroom,
                              int newDuration, RequestStatus status, User lecturer, User classRep, int requesterId,
-                             boolean isForAllSessions) {
+                             boolean isForAllSessions, LocalDateTime oldTime) {
         this.classSessions = classSessions;
         this.newDateTime = newDateTime;
         this.newClassroom = newClassroom;
@@ -64,6 +64,7 @@ public class RescheduleRequest {
         this.classRep = classRep;
         this.requesterId = requesterId;
         this.isForAllSessions = isForAllSessions;
+        this.oldTime = oldTime;
     }
 
     public Long getId() {

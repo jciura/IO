@@ -31,6 +31,7 @@ function ClassCard({classSession}) {
 
     async function handleClassChangeRequest() {
         try {
+            console.log(classSession.dateTime, "HUJ");
             const response = await fetch(
                 `http://localhost:8080/reschedule/request/${JSON.parse(localStorage.getItem("USER")).id}`,
                 {
@@ -44,6 +45,7 @@ function ClassCard({classSession}) {
                         newClassroom: newClassroom,
                         newDateTime: newDate,
                         newDuration: newClassDuration,
+                        oldTime: classSession.dateTime,
                         status: "PENDING",
                         isForAllSessions: isForAllSessions
                     })

@@ -37,6 +37,12 @@ function Layout() {
                             </li>
                         )}
 
+                        {userFromLocalStorage && userFromLocalStorage.role === "ADMINISTRATOR" && (
+                            <li className="nav-item me-2">
+                                <Link to="/software-panel" className="nav-link">Dodaj oprogramowanie</Link>
+                            </li>
+                        )}
+
                         {userFromLocalStorage ? (
                             <li className="nav-item me-2">
                                 <Link to="/login" className="nav-link">Moje konto</Link>

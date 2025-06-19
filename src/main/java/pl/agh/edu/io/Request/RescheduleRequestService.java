@@ -14,6 +14,7 @@ import pl.agh.edu.io.User.User;
 import pl.agh.edu.io.User.UserRole;
 import pl.agh.edu.io.User.UserService;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.*;
@@ -42,19 +43,47 @@ public class RescheduleRequestService {
         this.specialDayRepository = specialDayRepository;
     }
 
-    private LocalDateTime calculateNewDateTime(LocalDateTime currentDateTime, LocalDateTime newDateTime) {
+    private boolean isMovingForward(RescheduleRequestDto requestDto) {
+        System.out.println(requestDto);
+        LocalDate oldDate = requestDto.oldTime().toLocalDate();
+        LocalDate newDate = requestDto.newDateTime().toLocalDate();
+        return !newDate.isBefore(oldDate);
+    }
+
+    private LocalDateTime calculateNewDateTime(LocalDateTime currentDateTime, LocalDateTime newDateTime, boolean forward) {
         int newDayOfWeek = newDateTime.getDayOfWeek().getValue();
         LocalTime newTime = newDateTime.toLocalTime();
 
         int currentDayOfWeek = currentDateTime.getDayOfWeek().getValue();
 
-        int daysDifference = (currentDayOfWeek - newDayOfWeek + 7) % 7;
-        LocalDateTime adjustedDateTime = (daysDifference == 0) ? currentDateTime : currentDateTime.minusDays(daysDifference);
+        int dayDifference = newDayOfWeek - currentDayOfWeek;
 
-        return adjustedDateTime.withHour(newTime.getHour())
-                .withMinute(newTime.getMinute())
-                .withSecond(0)
-                .withNano(0);
+        if (dayDifference == 0) {
+            return currentDateTime.withHour(newTime.getHour())
+                    .withMinute(newTime.getMinute())
+                    .withSecond(0)
+                    .withNano(0);
+        }
+
+        if (forward) {
+            if (dayDifference < 0) {
+                dayDifference += 7;
+            }
+            return currentDateTime.plusDays(dayDifference)
+                    .withHour(newTime.getHour())
+                    .withMinute(newTime.getMinute())
+                    .withSecond(0)
+                    .withNano(0);
+        } else {
+            if (dayDifference > 0) {
+                dayDifference -= 7;
+            }
+            return currentDateTime.plusDays(dayDifference)
+                    .withHour(newTime.getHour())
+                    .withMinute(newTime.getMinute())
+                    .withSecond(0)
+                    .withNano(0);
+        }
     }
 
     private boolean isLecturerBusy(User lecturer, LocalDateTime proposedStart, int proposedDurationMinutes) {
@@ -86,6 +115,8 @@ public class RescheduleRequestService {
                 .findByBuildingAndNumber(classroomDto.building(), classroomDto.number())
                 .orElseThrow(() -> new ClassroomNotFoundException(classroomDto.building(), classroomDto.number()));
 
+        System.out.println(requestDto);
+
         if (requestDto.isForAllSessions()) {
             //Multiple
             Course course = courseRepository.findByName(requestDto.classSessionDto().courseName())
@@ -100,8 +131,10 @@ public class RescheduleRequestService {
 
             LocalDateTime newDateTimeTemplate = requestDto.newDateTime();
 
+            boolean forward = isMovingForward(requestDto);
+
             for (ClassSession session : sessionsToReschedule) {
-                LocalDateTime newDateTime = calculateNewDateTime(session.getDateTime(), newDateTimeTemplate);
+                LocalDateTime newDateTime = calculateNewDateTime(session.getDateTime(), newDateTimeTemplate, forward);
 
                 if (isLecturerBusy(lecturer, newDateTime, requestDto.newDuration())) {
                     throw new RuntimeException("Lecturer has another class at: " + newDateTime);
@@ -136,7 +169,8 @@ public class RescheduleRequestService {
                     lecturer,
                     firstSession.getCourse().getStudentRep(),
                     requestDto.requesterId(),
-                    true
+                    true,
+                    requestDto.oldTime()
             );
 
             rescheduleRequestRepository.save(rescheduleRequest);
@@ -173,7 +207,8 @@ public class RescheduleRequestService {
                     lecturer,
                     session.getCourse().getStudentRep(),
                     requestDto.requesterId(),
-                    false
+                    false,
+                    requestDto.oldTime()
             );
 
             rescheduleRequestRepository.save(request);
@@ -224,6 +259,9 @@ public class RescheduleRequestService {
 
         List<ClassSession> sessions = new ArrayList<>(request.getClassSessions());
 
+        boolean forward = isMovingForward(convertToDto(request));
+
+
         if (sessions.size() > 1) {
             for (ClassSession session: sessions) {
                 request.setOldTime(session.getDateTime());
@@ -231,7 +269,7 @@ public class RescheduleRequestService {
                 request.setOldClassroom(session.getClassroom());
 
                 LocalDateTime newDateTime;
-                newDateTime = calculateNewDateTime(session.getDateTime(), request.getNewDateTime());
+                newDateTime = calculateNewDateTime(session.getDateTime(), request.getNewDateTime(), forward);
 
                 Optional<SpecialDay> specialDayOpt = specialDayRepository.findByDate(newDateTime.toLocalDate());
                 if (specialDayOpt.isPresent()) {

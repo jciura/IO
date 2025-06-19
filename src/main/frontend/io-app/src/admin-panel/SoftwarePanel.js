@@ -4,72 +4,86 @@ import Popup from "reactjs-popup";
 function SoftwarePanel() {
     const [softwareName, setSoftwareName] = useState("");
     const [softwares, setSoftwares] = useState([]);
+    const [showUsagePopup, setShowUsagePopup] = useState(false);
+    const [popupMessage, setPopupMessage] = useState("");
 
     useEffect(() => {
-        fetchUsers();
-        fetchCourses();
+        fetchSoftwares();
     }, []);
 
-    async function fetchUsers() {
+    async function fetchSoftwares() {
         try {
-            const [lecturersRes, studentsRes] = await Promise.all([
-                fetch("http://localhost:8080/users/lecturers"),
-                fetch("http://localhost:8080/users/students")
-            ]);
-
-            if (lecturersRes.ok && studentsRes.ok) {
-                setLecturers(await lecturersRes.json());
-                setStudents(await studentsRes.json());
-            }
-        } catch (error) {
-            console.error("Błąd podczas pobierania użytkowników:", error);
-        }
-    }
-
-    async function fetchCourses() {
-        try {
-            const response = await fetch("http://localhost:8080/courses");
+            const response = await fetch("http://localhost:8080/software");
             if (response.ok) {
                 const data = await response.json();
-                setCourses(data);
+                setSoftwares(data);
             } else {
-                console.error("Nie udało się pobrać kursów.");
+                console.error("Nie udało się pobrać oprogramowania.");
             }
         } catch (error) {
-            console.error("Błąd podczas pobierania kursów:", error);
+            console.error("Błąd podczas pobierania oprogramowania:", error);
         }
     }
 
-    async function handleAddCourse() {
+    async function handleAddSoftware() {
         try {
-            const lecturer = lecturers.find(l => l.id.toString() === selectedLecturerId);
-            const student = students.find(s => s.id.toString() === selectedStudentId);
-
-            if (!lecturer || !student || !courseName) {
-                console.error("Brakuje wymaganych danych.");
+            if (!softwareName.trim()) {
+                alert("Podaj nazwę oprogramowania.");
                 return;
             }
-
-            const encodedName = encodeURIComponent(courseName);
-
-            const response = await fetch(
-                `http://localhost:8080/courses/${encodedName}/${selectedLecturerId}/${selectedStudentId}`,
-                {
-                    method: "POST"
-                }
-            );
-
+            const encodedName = encodeURIComponent(softwareName.trim());
+            const response = await fetch(`http://localhost:8080/software/${encodedName}`, {
+                method: "POST",
+            });
             if (response.ok) {
-                console.log("Dodano kurs.");
-                await fetchCourses();
-                setCourseName("");
-                setSelectedLecturerId(null);
-                setSelectedStudentId(null);
+                await fetchSoftwares();
+                setSoftwareName("");
             } else {
-                console.error("Nie udało się dodać kursu.");
+                console.error("Nie udało się dodać oprogramowania.");
             }
         } catch (error) {
-            console.error("Błąd przy dodawaniu kursu:", error);
+            console.error("Błąd przy dodawaniu oprogramowania:", error);
+        }
+    }
+
+    async function isSoftwareUsed(name) {
+        try {
+            const response = await fetch(`http://localhost:8080/classrooms/software/${name}`);
+            if (!response.ok) {
+                console.error("Nie udało się sprawdzić użycia oprogramowania.");
+                return false;
+            }
+            const usageData = await response.json();
+            console.log(usageData);
+            return usageData && usageData.length > 0;
+        } catch (error) {
+            console.error("Błąd przy sprawdzaniu użycia oprogramowania:", error);
+            return false;
+        }
+    }
+
+    async function handleDeleteSoftware(id, name) {
+        const used = await isSoftwareUsed(name);
+
+        if (used) {
+            setPopupMessage("Oprogramowanie jest używane w kursach i nie można go usunąć.");
+            setShowUsagePopup(true);
+            return;
+        }
+
+        if (!window.confirm("Na pewno chcesz usunąć to oprogramowanie?")) return;
+
+        try {
+            const response = await fetch(`http://localhost:8080/software/${id}`, {
+                method: "DELETE",
+            });
+            if (response.ok) {
+                await fetchSoftwares();
+            } else {
+                console.error("Nie udało się usunąć oprogramowania.");
+            }
+        } catch (error) {
+            console.error("Błąd przy usuwaniu oprogramowania:", error);
         }
     }
 
@@ -77,51 +91,32 @@ function SoftwarePanel() {
         <div className="p-4">
             <div className="row mb-4">
                 <div className="col">
-                    <h1>Dodaj kurs</h1>
+                    <h1>Zarządzanie oprogramowaniem</h1>
                 </div>
                 <div className="col text-end">
-                    <Popup trigger={<button className="btn btn-lg btn-primary">Dodaj kurs</button>} modal nested>
+                    <Popup trigger={<button className="btn btn-lg btn-primary">Dodaj oprogramowanie</button>} modal
+                           nested>
                         {close => (
                             <div className="p-3">
-                                <h2>Nowy kurs</h2>
+                                <h2>Nowe oprogramowanie</h2>
                                 <hr/>
                                 <div className="mb-3">
-                                    <label><b>Nazwa kursu:</b></label>
-                                    <input type="text" className="form-control"
-                                           onChange={(e) => setCourseName(e.target.value)}/>
-                                </div>
-                                <div className="mb-3">
-                                    <label><b>Prowadzący:</b></label>
-                                    <select className="form-select"
-                                            onChange={(e) => setSelectedLecturerId(e.target.value)}>
-                                        <option value="">-- Wybierz prowadzącego --</option>
-                                        {lecturers.map(lecturer => (
-                                            <option key={lecturer.id} value={lecturer.id}>
-                                                {lecturer.firstName} {lecturer.lastName}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
-                                <div className="mb-3">
-                                    <label><b>Starosta:</b></label>
-                                    <select className="form-select"
-                                            onChange={(e) => setSelectedStudentId(e.target.value)}>
-                                        <option value="">-- Wybierz starostę --</option>
-                                        {students.map(student => (
-                                            <option key={student.id} value={student.id}>
-                                                {student.firstName} {student.lastName}
-                                            </option>
-                                        ))}
-                                    </select>
+                                    <label><b>Nazwa oprogramowania:</b></label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        value={softwareName}
+                                        onChange={(e) => setSoftwareName(e.target.value)}
+                                    />
                                 </div>
                                 <div className="d-flex gap-2">
                                     <button
                                         className="btn btn-success"
                                         onClick={() => {
-                                            handleAddCourse();
+                                            handleAddSoftware();
                                             close();
                                         }}
-                                        disabled={!courseName || !selectedLecturerId || !selectedStudentId}
+                                        disabled={!softwareName.trim()}
                                     >
                                         Dodaj
                                     </button>
@@ -136,32 +131,55 @@ function SoftwarePanel() {
             <hr/>
 
             <div>
-                <h2>Lista kursów</h2>
-                {courses.length === 0 ? (
-                    <p>Brak kursów.</p>
+                <h2>Lista oprogramowania</h2>
+                {softwares.length === 0 ? (
+                    <p>Brak oprogramowania.</p>
                 ) : (
                     <table className="table table-striped">
                         <thead>
                         <tr>
-                            <th>Nazwa kursu</th>
-                            <th>Prowadzący</th>
-                            <th>Starosta</th>
+                            <th>Nazwa</th>
+                            <th>Akcje</th>
                         </tr>
                         </thead>
                         <tbody>
-                        {courses.map(course => (
-                            <tr key={course.id}>
-                                <td>{course.name}</td>
-                                <td>{course.lecturer?.firstName} {course.lecturer?.lastName}</td>
-                                <td>{course.studentRep?.firstName} {course.studentRep?.lastName}</td>
+                        {softwares.map(sw => (
+                            <tr key={sw.id}>
+                                <td>{sw.name}</td>
+                                <td>
+                                    <button
+                                        className="btn btn-danger btn-sm"
+                                        onClick={() => handleDeleteSoftware(sw.id, sw.name)}
+                                    >
+                                        Usuń
+                                    </button>
+                                </td>
                             </tr>
                         ))}
                         </tbody>
                     </table>
                 )}
             </div>
+
+            <Popup open={showUsagePopup} closeOnDocumentClick onClose={() => setShowUsagePopup(false)} modal>
+                {close => (
+                    <div className="p-3">
+                        <h3>Uwaga</h3>
+                        <hr/>
+                        <p>{popupMessage}</p>
+                        <div className="text-end">
+                            <button className="btn btn-primary" onClick={() => {
+                                setShowUsagePopup(false);
+                                close();
+                            }}>
+                                OK
+                            </button>
+                        </div>
+                    </div>
+                )}
+            </Popup>
         </div>
     );
 }
 
-export default CoursePanel;
+export default SoftwarePanel;

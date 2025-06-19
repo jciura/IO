@@ -5,6 +5,7 @@ import ClassesView from "./classes/ClassesView";
 import AdminPanel from "./admin-panel/AdminPanel";
 import RequestList from "./classes/RequestList";
 import CoursePanel from "./admin-panel/CoursePanel";
+import SoftwarePanel from "./admin-panel/SoftwarePanel";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
                   <Route path="/confirmations" element={<RequestList />} />
                   <Route path="/admin-panel" element={<AdminPanel />} />
                   <Route path="/course-panel" element={<CoursePanel/>}/>
+                  <Route path="/software-panel" element={<SoftwarePanel/>}/>
               </Route>
           </Routes>
       </BrowserRouter>

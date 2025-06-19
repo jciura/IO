@@ -57,6 +57,7 @@ function ClassView({event}) {
                         newClassroom: newClassroom,
                         newDateTime: newDate,
                         newDuration: newClassDuration,
+                        oldTime: event.classSession.dateTime,
                         status: "PENDING",
                         isForAllSessions: isForAllSessions
                     })
