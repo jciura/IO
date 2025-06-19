@@ -16,10 +16,7 @@ import pl.agh.edu.io.User.UserService;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -64,13 +61,14 @@ public class RescheduleRequestService {
         LocalDateTime proposedEnd = proposedStart.plusMinutes(proposedDurationMinutes);
 
         List<ClassSessionDto> lecturerClasses = classSessionService.getAllClasses().stream()
-                        .filter(classSessionDto -> classSessionDto.lecturer().id() == lecturer.getId())
-                        .toList();
+                .filter(classSessionDto -> classSessionDto.lecturer().id() == lecturer.getId())
+                .toList();
+
 
         return lecturerClasses.stream().anyMatch(session -> {
             LocalDateTime sessionStart = session.dateTime();
             LocalDateTime sessionEnd = sessionStart.plusMinutes(session.duration());
-            return (sessionStart.isBefore(proposedStart) && sessionEnd.isAfter((proposedStart))) || (sessionStart.isBefore(proposedEnd) && sessionEnd.isAfter(proposedEnd));
+            return proposedStart.isBefore(sessionEnd) && proposedEnd.isAfter(sessionStart);
         });
     }
 
@@ -97,11 +95,8 @@ public class RescheduleRequestService {
 
             List<ClassSession> sessionsToReschedule = allLecturerSessions.stream()
                     .filter(session -> session.getDateTime().isAfter(LocalDateTime.now()))
+                    .sorted(Comparator.comparing(ClassSession::getDateTime))
                     .toList();
-
-            if (sessionsToReschedule.isEmpty()) {
-                throw new RuntimeException("No future sessions to reschedule");
-            }
 
             LocalDateTime newDateTimeTemplate = requestDto.newDateTime();
 
@@ -130,11 +125,11 @@ public class RescheduleRequestService {
                 }
             }
 
-            ClassSession firstSession = sessionsToReschedule.get(0);
+            ClassSession firstSession = sessionsToReschedule.getFirst();
 
             RescheduleRequest rescheduleRequest = new RescheduleRequest(
                     sessionsToReschedule,
-                    calculateNewDateTime(firstSession.getDateTime(), newDateTimeTemplate),
+                    requestDto.newDateTime(),
                     newClassroom,
                     requestDto.newDuration(),
                     RequestStatus.PENDING,
@@ -268,7 +263,7 @@ public class RescheduleRequestService {
                 rescheduleRequestRepository.saveAll(otherRequests);
             }
         } else {
-            ClassSession session = sessions.get(0);
+            ClassSession session = sessions.getFirst();
             request.setOldTime(session.getDateTime());
             request.setOldDuration(session.getDuration());
             request.setOldClassroom(session.getClassroom());
@@ -316,7 +311,7 @@ public class RescheduleRequestService {
     public RescheduleRequestDto convertToDto(RescheduleRequest request) {
         ClassSessionDto firstSessionDto = null;
         if (!request.getClassSessions().isEmpty()) {
-            firstSessionDto = classSessionService.convertToDto(request.getClassSessions().get(0));
+            firstSessionDto = classSessionService.convertToDto(request.getClassSessions().getFirst());
         }
 
         return new RescheduleRequestDto(
