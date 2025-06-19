@@ -49,13 +49,11 @@ public class UserController {
         for (UserDto userDto: allUsers) {
             if (userDto.email().equals(loginData.email())) {
                 User user = userService.getUserEntityById(userDto.id());
-//                BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-//                System.out.println(loginData.password() + " " + user.getPassword() + " " + encoder.encode(loginData.password()));
-//                if (encoder.matches(loginData.password(), user.getPassword()))
-//                    return ResponseEntity.ok(userDto);
-//                return ResponseEntity.badRequest().build();
-
-                return ResponseEntity.ok(userDto);
+                BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+                System.out.println(loginData.password() + " " + user.getPassword() + " " + encoder.encode(loginData.password()));
+                if (encoder.matches(loginData.password(), user.getPassword()))
+                    return ResponseEntity.ok(userDto);
+                return ResponseEntity.badRequest().build();
             }
         }
         return ResponseEntity.notFound().build();
