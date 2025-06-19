@@ -7,6 +7,7 @@ import pl.agh.edu.io.Classroom.*;
 import pl.agh.edu.io.Course.Course;
 import pl.agh.edu.io.Course.CourseNotFoundException;
 import pl.agh.edu.io.Course.CourseRepository;
+import pl.agh.edu.io.SpecialDay.PolishDayOfWeek;
 import pl.agh.edu.io.SpecialDay.SpecialDay;
 import pl.agh.edu.io.SpecialDay.SpecialDayException;
 import pl.agh.edu.io.SpecialDay.SpecialDayRepository;
@@ -120,8 +121,11 @@ public class RescheduleRequestService {
 
             List<ClassSession> allLecturerSessions = classSessionRepository.findAllByCourseId(course.getId());
 
+            PolishDayOfWeek regularDay = course.getRegularDayOfWeek();
+
             List<ClassSession> sessionsToReschedule = allLecturerSessions.stream()
                     .filter(session -> session.getDateTime().isAfter(LocalDateTime.now()))
+                    .filter(session -> PolishDayOfWeek.valueOf(session.getDateTime().getDayOfWeek().name()).equals(regularDay))
                     .sorted(Comparator.comparing(ClassSession::getDateTime))
                     .toList();
 
@@ -266,6 +270,13 @@ public class RescheduleRequestService {
         boolean forward = isMovingForward(convertToDto(request));
 
         for (ClassSession session : sessions) {
+            Course course = session.getCourse();
+            PolishDayOfWeek regularDay = course.getRegularDayOfWeek();
+            PolishDayOfWeek sessionDay = PolishDayOfWeek.valueOf(session.getDateTime().getDayOfWeek().name());
+            if (!sessionDay.equals(regularDay)) {
+                continue;
+            }
+
             request.setOldTime(session.getDateTime());
             request.setOldDuration(session.getDuration());
             request.setOldClassroom(session.getClassroom());

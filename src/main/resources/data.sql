@@ -32,7 +32,6 @@ insert into users (id, first_name, last_name, email, phone_number, role, passwor
 insert into users (id, first_name, last_name, email, phone_number, role, password)
 values (10, 'Agathe', 'Willox', 'awillox9@sakura.ne.jp', '+86 979 771 3845', 3,
         '$2a$10$cYdF8yvfJE6QT7sQUYpwwOjMkqjepRG38TNesJ7.5YpqTIdeaE.LS'); -- hasło: starosta
-insert into users (id, first_name, last_name, email, phone_number, role, password)
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (11, 'Karlens', 'Langworthy', 'klangworthya@cdc.gov', '+62 630 413 8534', 3, '$2a$04$cTNTLHF9NPVA7jeNGmwFaOzNhhTsF.rejTRbT.ABhTwXDJze2QZ0K');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (12, 'Tobin', 'Ellicott', 'tellicottb@etsy.com', '+63 459 810 8275', 2, '$2a$10$Xmtfs/13iQjz/on1BciczuIKUx4lDqNI0yavdki7tGT3uAk0H/s3.');  -- hasło: koord
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (13, 'Mischa', 'Moquin', 'mmoquinc@goodreads.com', '+225 821 991 0495', 3, '$2a$04$uXX9of.z4YqAnmkHg2liv.vuc5IvdIEz6dJQg04ojN0d2RZIUr6Xu');
@@ -45,13 +44,13 @@ insert into users (id, first_name, last_name, email, phone_number, role, passwor
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (20, 'Donn', 'Bouzan', 'dbouzanj@goodreads.com', '+256 398 456 7310', 2, '$2a$04$Dy6zEAw6wtvw2AAd9.Ib5uI9rlW7XXIY2zaVTzVAdJEHYIjk7dSwO');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (21, 'test', 'testowy', 'test@gmail.com', '+48 123 456 789', 1, '$2a$10$kDtOd5y4iKTaj4nyaRvoyuU0EyV2THAF2w7y0Kl2/h4Uj35uGVJsC');  -- hasło: test
 
-INSERT INTO courses (id, lecturer_id, representative_id, name) VALUES
-                                                                   (0, 1, 5, 'Biologia molekularna'),
-                                                                   (1, 2, 7, 'Karboniki wschodnie'),
-                                                                   (2, 3, 5, 'Czarne dziury w niewidzialnym wszechświecie'),
-                                                                   (3, 21, 16, 'ABOBA'),
-                                                                   (4, 19, 10, 'Zagadki niebieskiego sera'),
-                                                                   (5, 21, 10, 'Algebra');
+INSERT INTO courses (id, lecturer_id, representative_id, name, regular_day_of_week)
+VALUES (0, 1, 5, 'Biologia molekularna', 'FRIDAY'),
+       (1, 2, 7, 'Karboniki wschodnie', 'FRIDAY'),
+       (2, 3, 5, 'Czarne dziury w niewidzialnym wszechświecie', 'FRIDAY'),
+       (3, 21, 16, 'ABOBA', 'FRIDAY'),
+       (4, 19, 10, 'Zagadki niebieskiego sera', 'FRIDAY'),
+       (5, 21, 10, 'Algebra', 'FRIDAY');
 
 ALTER TABLE courses
     ALTER COLUMN id RESTART WITH 6;
@@ -82,3 +81,7 @@ insert into classes (id, classroom_id, date_time, duration, course_id) values (2
 insert into classes (id, classroom_id, date_time, duration, course_id) values (21, 103, '2025-06-27 10:30:00', 65, 5);
 insert into classes (id, classroom_id, date_time, duration, course_id)
 values (22, 103, '2025-06-20 13:00:00', 65, 4);
+insert into classes (id, classroom_id, date_time, duration, course_id)
+values (23, 103, '2025-07-04 10:30:00', 65, 5);
+insert into classes (id, classroom_id, date_time, duration, course_id)
+values (24, 103, '2025-07-11 10:30:00', 65, 5);
