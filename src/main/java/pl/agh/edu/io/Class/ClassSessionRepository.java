@@ -9,8 +9,15 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public interface ClassSessionRepository extends JpaRepository<ClassSession, Long> {
-    @Query("SELECT c FROM ClassSession cs JOIN cs.classroom c WHERE cs.dateTime = :dateTime AND c.id = :classroomId")
-    List<ClassSession> findSessionsByClassroomAndTime(@Param("classroomId") Long classroomId, @Param("dateTime") LocalDateTime dateTime);
+    @Query(value = "SELECT cs.* FROM classes cs WHERE cs.classroom_id = :classroomId " +
+            "AND cs.date_time < :endDateTime " +
+            "AND TIMESTAMPADD(MINUTE, cs.duration, cs.date_time) > :startDateTime",
+            nativeQuery = true)
+    List<ClassSession> findOverlappingSessions(
+            @Param("classroomId") Long classroomId,
+            @Param("startDateTime") LocalDateTime startDateTime,
+            @Param("endDateTime") LocalDateTime endDateTime
+    );
 
     List<ClassSession> findByCourse(Course course);
 

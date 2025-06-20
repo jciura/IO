@@ -73,13 +73,13 @@ function ClassView({event}) {
 
             if (response.ok) {
                 console.log("Request sent");
-                // window.location.reload();
                 await fetchAll();
                 close();
             }
             else {
-                console.log("ERROR");
-                alert("Masz już inne zajęcia w tym terminie!");
+                const errorText = await response.text();
+                console.log("ERROR:", errorText);
+                alert(errorText);
             }
         } catch (error) {
             console.log("Error during reschedule request: ", error);
