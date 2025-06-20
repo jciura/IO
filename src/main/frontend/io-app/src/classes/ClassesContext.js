@@ -5,6 +5,9 @@ export const ClassesContext = createContext();
 export const ClassesProvider = ({ userId, children }) => {
     const [classesEvents, setClassesEvents] = useState([]);
 
+    const eventColors = ["lightblue", "lightcoral", "turquoise", "lightsalmon", "palegreen", "lavender", "khaki", "plum", "coral", "aquamarine"]
+    //const eventColors = ["lightblue", "darkturquoise", "turquoise", "deepskyblue", "lightskyblue", "paleturquoise", "lightsteelblue", "plum", "mediumturquoise", "aquamarine"]
+
     const fetchRescheduleRequests = async (events) => {
         try {
             const response = await fetch(`http://localhost:8080/reschedule/${userId}`, {
@@ -79,7 +82,7 @@ export const ClassesProvider = ({ userId, children }) => {
                         start: new Date(c.dateTime),
                         end: new Date(new Date(c.dateTime).getTime() + c.duration * 60000),
                         desc: c.classroomDto.building + ", " + c.classroomDto.floor + ", " + c.classroomDto.number,
-                        color: "lightblue",
+                        color: eventColors[c.courseName.length%eventColors.length],
                         isRequest: false,
                         classSession: c
                     });

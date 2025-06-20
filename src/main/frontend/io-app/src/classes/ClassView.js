@@ -3,6 +3,7 @@ import 'reactjs-popup/dist/index.css';
 import Select from "react-select/base";
 import {useEffect, useState} from "react";
 import {useClasses} from "./ClassesContext";
+import {hover} from "@testing-library/user-event/dist/hover";
 
 function ClassView({event}) {
     // console.log(event)
@@ -21,6 +22,9 @@ function ClassView({event}) {
 
     var areInputsFilled = newDate && newClassDuration && newClassroom;
     const eventDesc = event.desc.split(", ");
+
+    const monthParser = {"01": "stycznia", "02": "lutego", "03": "marca", "04": "kwietnia", "05": "maja", "06": "czerwca",
+        "07": "lipca", "08": "sierpnia", "09": "września", "10": "października", "11": "listopada", "12": "grudnia"}
 
     const currentUser = JSON.parse(localStorage.getItem("USER"));
     console.log(currentUser);
@@ -189,6 +193,12 @@ function ClassView({event}) {
         return event.start > new Date();
     }
 
+    function parseDateTime(term) {
+        let month = term.slice(5, 7);
+
+        return String(Number(term.slice(8, 10))) + " " + monthParser[month] + " " + term.slice(0, 4);
+    }
+
     return (
         <div className="d-flex flex-row justify-content-between"
              onMouseEnter={() => setHover(true)}
@@ -196,30 +206,38 @@ function ClassView({event}) {
              style={{
                      height: '100%',
                      width: '100%',
-                     backgroundColor: hovered ? '#cce5ff' : event.color || '#ddd',
+                     border: `1px solid`,
+                     borderColor: hovered ? 'black' : 'transparent',
+                     //backgroundColor: hovered ? '#cce5ff' : event.color || '#ddd',
+                     backgroundColor: event.color,
+                     filter: hovered ? 'brightness(1.15)' : 'brightness(1)',
                      color: '#000',
                      padding: '4px 6px',
                      borderRadius: '4px',
-                     transition: 'background-color 0.2s'
+                     transition: 'all 0.2s ease',
+                     wordWrap: 'break-word',
+                     whiteSpace: 'normal',
                  }}>
             {event.isRequest === false ? (
-                <Popup trigger={<div className="p-2">
+                <Popup trigger={<div className="p-2 w-100">
                     <strong className="mt-2 mb-2">{event.title}</strong>
                     {event.desc && <div className="mt-2 mb-2">{event.desc}</div>}
-                </div>} contentStyle={{maxWidth: "50%"}} className="bg-light rounded-2" modal nested>
+                </div>} contentStyle={{maxWidth: "50%"}} className="bg-light rounded-2" modal nested onClose={()=>setHover(false)}>
                     {
                         close => (
                             <div className="p-3">
-                                <h1>{event.title}</h1>
+                                <h1 style={{color: event.color, filter: 'brightness(0.9)'}}>{event.title}</h1>
                                 <hr/>
                                 <div className="row">
-                                    <div className="col-3">
+                                    <div className="col-4">
                                         <p><b>Budynek: </b>{eventDesc[0]}</p>
                                         <p><b>Sala: </b>{eventDesc[2]}</p>
                                         <p><b>Piętro: </b>{eventDesc[1]}</p>
+                                        <p><b>Pojemność: </b>{event.classSession.classroomDto.capacity}</p>
                                     </div>
                                     <div className="col">
-                                        <p><b>Data rozpoczęcia: </b>{event.classSession.dateTime}</p>
+                                        <p><b>Data: </b>{parseDateTime(event.classSession.dateTime)}</p>
+                                        <p><b>Godzina rozpoczęcia: </b>{event.classSession.dateTime.slice(11, 16)}</p>
                                         <p><b>Czas trwania: </b>{event.classSession.duration} min</p>
                                         <p><b>Starosta grupy: </b>{event.classSession.classRep.firstName}
                                             {event.classSession.classRep.lastName}, {event.classSession.classRep.email}</p>
@@ -293,7 +311,7 @@ function ClassView({event}) {
                                         }
                                     </Popup>
                                 )}
-                                <button className="btn btn-outline-info" onClick={close}>Zamknij</button>
+                                <button className="btn btn-outline-info ms-auto" onClick={close}>Zamknij</button>
                                 </div>
                             </div>
                         )}

@@ -48,35 +48,15 @@ INSERT INTO courses (id, lecturer_id, representative_id, name) VALUES
                                                                    (2, 3, 5, 'Czarne dziury w niewidzialnym wszechświecie'),
                                                                    (3, 21, 16, 'ABOBA'),
                                                                    (4, 19, 10, 'Zagadki niebieskiego sera'),
-                                                                   (5, 21, 10, 'Algebra');
+                                                                   (5, 21, 10, 'Algebra'),
+                                                                   (6, 21, 19, 'Wielkie podboje kosmosu');
 
 ALTER TABLE courses
-    ALTER COLUMN id RESTART WITH 6;
+    ALTER COLUMN id RESTART WITH 7;
 
 ALTER TABLE Software
     ALTER COLUMN id RESTART WITH 3;
 
-insert into classes (id, classroom_id, date_time, duration, course_id) values (1, 100, '2025-03-14 12:00:00', 65, 2);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (2, 101, '2025-07-27 14:40:00', 86, 2);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (3, 103, '2025-07-24 08:00:00', 83, 4);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (4, 104, '2025-01-29 14:30:00', 86, 1);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (5, 101, '2025-11-30 16:30:00', 63, 2);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (6, 104, '2025-02-02 16:30:00', 71, 1);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (7, 102, '2025-06-27 15:15:00', 70, 1);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (8, 102, '2025-05-09 18:45:00', 62, 4);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (9, 102, '2025-05-27 18:30:00', 90, 1);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (10, 103, '2025-05-02 10:30:00', 68, 1);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (11, 100, '2025-08-20 09:45:00', 79, 2);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (12, 101, '2025-03-07 18:00:00', 89, 0);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (13, 100, '2025-07-09 15:50:00', 60, 3);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (14, 100, '2025-04-04 08:45:00', 63, 2);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (15, 101, '2025-07-30 15:00:00', 73, 1);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (16, 100, '2025-03-30 14:45:00', 85, 3);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (17, 103, '2025-07-25 11:00:00', 89, 4);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (18, 100, '2025-06-02 13:00:00', 73, 5);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (19, 103, '2025-06-20 10:30:00', 65, 5);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (20, 103, '2025-07-31 18:00:00', 89, 5);
-insert into classes (id, classroom_id, date_time, duration, course_id) values (21, 103, '2025-06-27 10:30:00', 65, 5);
 insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-03-14 12:00:00', 65, 2);
 insert into classes (classroom_id, date_time, duration, course_id) values (101, '2025-07-27 14:40:00', 86, 2);
 insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-07-24 08:00:00', 83, 4);
@@ -98,3 +78,28 @@ insert into classes (classroom_id, date_time, duration, course_id) values (100, 
 insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-06-20 10:30:00', 65, 5);
 insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-07-31 18:00:00', 89, 5);
 insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-06-27 10:30:00', 65, 5);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-03-14 12:00:00', 65, 2);
+insert into classes (classroom_id, date_time, duration, course_id) values (101, '2025-07-27 14:40:00', 86, 2);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-07-24 08:00:00', 83, 4);
+insert into classes (classroom_id, date_time, duration, course_id) values (104, '2025-01-29 14:30:00', 86, 1);
+insert into classes (classroom_id, date_time, duration, course_id) values (101, '2025-11-30 16:30:00', 63, 2);
+insert into classes (classroom_id, date_time, duration, course_id) values (104, '2025-02-02 16:30:00', 71, 1);
+insert into classes (classroom_id, date_time, duration, course_id) values (102, '2025-06-27 15:15:00', 70, 1);
+insert into classes (classroom_id, date_time, duration, course_id) values (102, '2025-05-09 18:45:00', 62, 4);
+insert into classes (classroom_id, date_time, duration, course_id) values (102, '2025-05-27 18:30:00', 90, 1);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-05-02 10:30:00', 68, 1);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-08-20 09:45:00', 79, 2);
+insert into classes (classroom_id, date_time, duration, course_id) values (101, '2025-03-07 18:00:00', 89, 0);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-07-09 15:50:00', 60, 3);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-04-04 08:45:00', 63, 2);
+insert into classes (classroom_id, date_time, duration, course_id) values (101, '2025-07-30 15:00:00', 73, 1);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-03-30 14:45:00', 85, 3);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-07-25 11:00:00', 89, 4);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-06-02 15:00:00', 100, 5);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-07-31 18:00:00', 89, 5);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-06-27 12:30:00', 85, 5);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-06-22 12:30:00', 85, 3);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-06-21 12:30:00', 85, 3);
+insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-06-26 12:30:00', 85, 4);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-06-25 12:30:00', 85, 6);
+insert into classes (classroom_id, date_time, duration, course_id) values (100, '2025-06-24 12:30:00', 85, 6);
