@@ -42,14 +42,14 @@ insert into users (id, first_name, last_name, email, phone_number, role, passwor
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (18, 'Naoma', 'Agate', 'nagateh@people.com.cn', '+7 719 297 3453', 3, '$2a$04$1AmUMXNHsJpNl0KI6ivrd.RzCVjNZjzEVyP8e/DnCa0fCtVzdg9xi');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (19, 'Frans', 'Seeger', 'fseegeri@artisteer.com', '+420 820 641 2918', 1, '$2a$04$0scwYqn8FFgnMMW0U9nE6uOZwH9z5HIcs8RYCpPPPQefFYGcv0Lse');
 insert into users (id, first_name, last_name, email, phone_number, role, password) values (20, 'Donn', 'Bouzan', 'dbouzanj@goodreads.com', '+256 398 456 7310', 2, '$2a$04$Dy6zEAw6wtvw2AAd9.Ib5uI9rlW7XXIY2zaVTzVAdJEHYIjk7dSwO');
-insert into users (id, first_name, last_name, email, phone_number, role, password) values (21, 'test', 'testowy', 'test@gmail.com', '+48 123 456 789', 1, '$2a$10$kDtOd5y4iKTaj4nyaRvoyuU0EyV2THAF2w7y0Kl2/h4Uj35uGVJsC');  -- hasło: test
+insert into users (id, first_name, last_name, email, phone_number, role, password) values (21, 'Michał', 'Maliszewski', 'michael@poczta.agh.edu.pl', '+48 123 456 789', 1, '$2a$10$kDtOd5y4iKTaj4nyaRvoyuU0EyV2THAF2w7y0Kl2/h4Uj35uGVJsC');  -- hasło: test
 
 INSERT INTO courses (id, lecturer_id, representative_id, name, regular_day_of_week)
 VALUES (0, 1, 5, 'Biologia molekularna', 'FRIDAY'),
-       (1, 2, 7, 'Karboniki wschodnie', 'FRIDAY'),
+       (1, 2, 7, 'Krystalografia i krystalochemia', 'FRIDAY'),
        (2, 3, 5, 'Czarne dziury w niewidzialnym wszechświecie', 'FRIDAY'),
-       (3, 21, 16, 'ABOBA', 'FRIDAY'),
-       (4, 19, 10, 'Zagadki niebieskiego sera', 'FRIDAY'),
+       (3, 21, 16, 'Podstawy zarządzania', 'FRIDAY'),
+       (4, 19, 10, 'Analiza matematyczna 1', 'FRIDAY'),
        (5, 21, 10, 'Algebra', 'FRIDAY');
 
 ALTER TABLE courses

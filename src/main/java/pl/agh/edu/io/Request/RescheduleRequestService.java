@@ -84,18 +84,23 @@ public class RescheduleRequestService {
         }
     }
 
-    private boolean isLecturerBusy(User lecturer, LocalDateTime proposedStart, int proposedDurationMinutes) {
-        LocalDateTime proposedEnd = proposedStart.plusMinutes(proposedDurationMinutes);
+    private boolean isLecturerBusy(User lecturer, RescheduleRequestDto rescheduleRequestDto) {
+        LocalDateTime proposedStart = rescheduleRequestDto.newDateTime();
+        LocalDateTime proposedEnd = proposedStart.plusMinutes(rescheduleRequestDto.newDuration());
 
         List<ClassSessionDto> lecturerClasses = classSessionService.getAllClasses().stream()
                 .filter(classSessionDto -> classSessionDto.lecturer().id() == lecturer.getId())
                 .toList();
 
 
+        System.out.println("Lecturers occupancy:");
         return lecturerClasses.stream().anyMatch(session -> {
             LocalDateTime sessionStart = session.dateTime();
             LocalDateTime sessionEnd = sessionStart.plusMinutes(session.duration());
-            return proposedStart.isBefore(sessionEnd) && proposedEnd.isAfter(sessionStart);
+            boolean thisClassAndOnlyClassChange = rescheduleRequestDto.classSessionDto().id() == session.id()
+                    && !rescheduleRequestDto.newClassroom().equals(rescheduleRequestDto.oldClassroom());
+            System.out.println(sessionStart + " " + sessionEnd + " " + thisClassAndOnlyClassChange);
+            return proposedStart.isBefore(sessionEnd) && proposedEnd.isAfter(sessionStart) && !thisClassAndOnlyClassChange;
         });
     }
 
@@ -136,7 +141,7 @@ public class RescheduleRequestService {
             for (ClassSession session : sessionsToReschedule) {
                 LocalDateTime newDateTime = calculateNewDateTime(session.getDateTime(), newDateTimeTemplate, forward);
 
-                if (isLecturerBusy(lecturer, newDateTime, requestDto.newDuration())) {
+                if (isLecturerBusy(lecturer, requestDto)) {
                     throw new LecturerBusyException("Prowadzący ma już zajęcia w terminie: " + newDateTime);
                 }
 
@@ -198,7 +203,7 @@ public class RescheduleRequestService {
                 throw new ClassroomUnavailableException("Sala jest zajęta w wybranym terminie");
             }
 
-            if (isLecturerBusy(lecturer, newDateTime, requestDto.newDuration())) {
+            if (isLecturerBusy(lecturer, requestDto)) {
                 throw new LecturerBusyException("Prowadzący ma już zajęcia w terminie: " + newDateTime);
             }
 
