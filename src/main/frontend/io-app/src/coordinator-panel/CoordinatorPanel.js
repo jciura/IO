@@ -1,12 +1,15 @@
 import {useRef, useState} from "react";
+import CsvTablePreview from "./CsvFilePreview";
 
 
 function CoordinatorPanel() {
     const [isScheduleUploaded, setIsScheduleUploaded] = useState(false);
+    const [selectedFile, setSelectedFile] = useState(null);
     const fileInputRef = useRef(null);
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
+        setSelectedFile(file ?? null);
 
         if (!file) {
             setIsScheduleUploaded(false);
@@ -63,6 +66,7 @@ function CoordinatorPanel() {
                     ref={fileInputRef}
                     onChange={(event) => handleFileChange(event)}/>
             </div>
+            {isScheduleUploaded && <CsvTablePreview file={selectedFile}/>}
             <button className="btn btn-primary" disabled={!isScheduleUploaded} onClick={() => handleFileImport()}>Importuj plan</button>
         </div>
     )
