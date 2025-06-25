@@ -13,9 +13,11 @@ import pl.agh.edu.io.Class.ClassSessionRepository;
 import pl.agh.edu.io.Classroom.Classroom;
 import pl.agh.edu.io.Classroom.ClassroomNotFoundException;
 import pl.agh.edu.io.Classroom.ClassroomRepository;
+import pl.agh.edu.io.Classroom.ClassroomUnavailableException;
 import pl.agh.edu.io.Course.Course;
 import pl.agh.edu.io.Course.CourseNotFoundException;
 import pl.agh.edu.io.Course.CourseRepository;
+import pl.agh.edu.io.User.LecturerBusyException;
 
 import java.io.InputStreamReader;
 import java.time.LocalDate;
@@ -54,6 +56,7 @@ public class TimetableService {
                 .withCSVParser(parser)
                 .build()) {
             String[] row;
+            long rowCounter = 2;
 
             // assume first line is header
             reader.readNext();
@@ -74,7 +77,27 @@ public class TimetableService {
                 LocalTime startTime = LocalTime.parse(row[8], timeFormat);
                 LocalTime endTime = LocalTime.parse(row[9], timeFormat);
                 LocalDateTime startDateTime = LocalDateTime.of(startDate, startTime);
+                LocalDateTime endDateTime = LocalDateTime.of(startDate, endTime);
                 long duration = java.time.Duration.between(startTime, endTime).toMinutes();
+                
+                List<ClassSession> overlappingSessions = classSessionRepo.findOverlappingSessions(
+                		classroom.getId(), startDateTime, endDateTime);
+                if (!overlappingSessions.isEmpty()) {
+                	throw new ClassroomUnavailableException(
+                			"Aborting operation. One or more collisions found, first at row " + rowCounter + 
+                			": Classroom is unavailable"
+                			);
+                }
+                
+                long lecturerId = course.getLecturer().getId();
+                List<ClassSession> overlappingByLecturer = classSessionRepo.findAllOverlappingByLecturer(
+                		lecturerId, startDateTime, endDateTime);
+                if (!overlappingByLecturer.isEmpty()) {
+                	throw new LecturerBusyException(
+                			"Aborting operation. One or more collisions found, first at row " + rowCounter + 
+                			": Lecturer is busy"
+                			);
+                }
 
                 classSession.setClassroom(classroom);
                 classSession.setCourse(course);
@@ -82,8 +105,7 @@ public class TimetableService {
                 classSession.setDuration(duration);
 
                 toSave.add(classSession);
-
-                System.out.println(classSession);
+                rowCounter++;
             }
         } catch (CsvValidationException e) {
             throw new Exception("CSV format error: " + e.getMessage());
