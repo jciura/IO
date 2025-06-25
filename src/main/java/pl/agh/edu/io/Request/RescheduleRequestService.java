@@ -278,7 +278,8 @@ public class RescheduleRequestService {
             Course course = session.getCourse();
             PolishDayOfWeek regularDay = course.getRegularDayOfWeek();
             PolishDayOfWeek sessionDay = PolishDayOfWeek.valueOf(session.getDateTime().getDayOfWeek().name());
-            if (!sessionDay.equals(regularDay)) {
+
+            if (!sessionDay.equals(regularDay) && request.isForAllSessions()) {
                 continue;
             }
 
