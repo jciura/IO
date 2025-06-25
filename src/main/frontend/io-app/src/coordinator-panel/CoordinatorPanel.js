@@ -44,8 +44,12 @@ function CoordinatorPanel() {
                 const data = await response.text();
                 console.log(data);
             }
+            else if (response.status === 400) {
+                const data = await response.text();
+                alert(data);
+            }
             else {
-                console.log("Error during schedule import");
+                alert("Wystąpił błąd podczas ładowania planu");
             }
         } catch (e) {
             console.log("ERROR:", e);

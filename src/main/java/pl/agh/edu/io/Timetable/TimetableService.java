@@ -20,6 +20,7 @@ import pl.agh.edu.io.Course.CourseRepository;
 import pl.agh.edu.io.User.LecturerBusyException;
 
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -52,7 +53,7 @@ public class TimetableService {
 
 
         List<ClassSession> toSave = new ArrayList<>();
-        try (CSVReader reader = new CSVReaderBuilder(new InputStreamReader(file.getInputStream()))
+        try (CSVReader reader = new CSVReaderBuilder(new InputStreamReader(file.getInputStream(), StandardCharsets.UTF_8))
                 .withCSVParser(parser)
                 .build()) {
             String[] row;
@@ -84,8 +85,8 @@ public class TimetableService {
                 		classroom.getId(), startDateTime, endDateTime);
                 if (!overlappingSessions.isEmpty()) {
                 	throw new ClassroomUnavailableException(
-                			"Aborting operation. One or more collisions found, first at row " + rowCounter + 
-                			": Classroom is unavailable"
+                			"Przerwanie wczytywania. Znaleziono jedną lub więcej kolizji, pierwszą w " + rowCounter +
+                			" rzędzie: klasa jest niedostępna"
                 			);
                 }
                 
@@ -94,8 +95,8 @@ public class TimetableService {
                 		lecturerId, startDateTime, endDateTime);
                 if (!overlappingByLecturer.isEmpty()) {
                 	throw new LecturerBusyException(
-                			"Aborting operation. One or more collisions found, first at row " + rowCounter + 
-                			": Lecturer is busy"
+                			"Przerwanie wczytywania. Znaleziono jedną lub więcej kolizji, pierwszą w " + rowCounter +
+                			" rzędzie: prowadzący prowadzi w tym czasie inne zajęcia"
                 			);
                 }
 
