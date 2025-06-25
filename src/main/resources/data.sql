@@ -79,6 +79,10 @@ insert into classes (classroom_id, date_time, duration, course_id) values (100, 
 insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-06-20 10:30:00', 65, 5);
 insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-07-31 18:00:00', 89, 5);
 insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-06-27 10:30:00', 65, 5);
-insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-06-20 13:00:00', 65, 4);
+insert into classes (classroom_id, date_time, duration, course_id)
+values (103, '2025-06-27 13:00:00', 65, 4);
 insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-07-04 10:30:00', 65, 5);
 insert into classes (classroom_id, date_time, duration, course_id) values (103, '2025-07-11 10:30:00', 65, 5);
+insert into classes (classroom_id, date_time, duration, course_id)
+values (103, '2025-07-18 10:30:00', 65, 5);
+

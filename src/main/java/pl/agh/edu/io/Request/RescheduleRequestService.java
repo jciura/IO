@@ -273,13 +273,19 @@ public class RescheduleRequestService {
 
         List<ClassSession> sessions = new ArrayList<>(request.getClassSessions());
         boolean forward = isMovingForward(convertToDto(request));
+        Course course = sessions.get(0).getCourse();
+
+        PolishDayOfWeek regularDay = course.getRegularDayOfWeek();
+
+        if (request.isForAllSessions() && !sessions.isEmpty()) {
+            PolishDayOfWeek newDay = PolishDayOfWeek.valueOf(request.getNewDateTime().getDayOfWeek().name());
+            course.setRegularDayOfWeek(newDay);
+        }
 
         for (ClassSession session : sessions) {
-            Course course = session.getCourse();
-            PolishDayOfWeek regularDay = course.getRegularDayOfWeek();
             PolishDayOfWeek sessionDay = PolishDayOfWeek.valueOf(session.getDateTime().getDayOfWeek().name());
 
-            if (!sessionDay.equals(regularDay) && request.isForAllSessions()) {
+            if (request.isForAllSessions() && !sessionDay.equals(regularDay)) {
                 continue;
             }
 
@@ -318,7 +324,7 @@ public class RescheduleRequestService {
             }
             rescheduleRequestRepository.saveAll(otherRequests);
         }
-
+        courseRepository.save(course);
         request.setStatus(RequestStatus.ACCEPTED);
         rescheduleRequestRepository.save(request);
     }
