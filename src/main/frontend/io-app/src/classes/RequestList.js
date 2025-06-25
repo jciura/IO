@@ -24,7 +24,7 @@ function RequestList() {
     }, [currentUserId]);
 
     return (
-        <div className="row">
+        <div className="row p-5">
             {requests.length > 0 ? (
                 requests.map((request) => (
                     <RequestCard key={request.id} request={request} />

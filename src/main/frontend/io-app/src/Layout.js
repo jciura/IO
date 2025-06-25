@@ -1,16 +1,18 @@
 import { Link, Outlet } from "react-router-dom";
+import {useContext, useEffect} from "react";
+import {UserContext, UserProvider} from "./UserContext";
 
 function Layout() {
-    const user = JSON.parse(localStorage.getItem("USER")) ?? null;
+    const {user, setUser} = useContext(UserContext);
 
     return (
         <div>
             <nav className="navbar navbar-expand bg-light">
                 <div className="container-fluid">
                     <ul className="navbar-nav">
-                        <li className="nav-item me-2">
-                            <Link to="/" className="nav-link">Strona główna</Link>
-                        </li>
+                        {/*<li className="nav-item me-2">*/}
+                        {/*    <Link to="/" className="nav-link">Strona główna</Link>*/}
+                        {/*</li>*/}
 
                         {user && (user.role === "PROWADZACY" || user.role === "STAROSTA") && (
                             <li className="nav-item me-2">

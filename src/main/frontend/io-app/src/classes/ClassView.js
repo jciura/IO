@@ -345,6 +345,7 @@ function ClassView({event}) {
                                         close => (
                                             <div className="p-3">
                                                 <h1>Jaka jest Twoja decyzja dotycząca tej propozycji?</h1>
+                                                {event.request.isForAllSessions === true && <p className="text-warning"><b>Dotyczy wszystkich sesji tego przedmiotu</b></p>}
                                                 <hr></hr>
                                                 <div className="d-flex">
                                                     <button onClick={() => {handleRequestAccept(); close()}} className="btn btn-success ms-auto">Akceptuję</button>

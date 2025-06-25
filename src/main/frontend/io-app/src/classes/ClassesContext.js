@@ -31,7 +31,8 @@ export const ClassesProvider = ({ userId, children }) => {
                         isRequest: true,
                         request: {
                             id: request.id,
-                            requesterId: request.requesterId
+                            requesterId: request.requesterId,
+                            isForAllSessions: request.isForAllSessions
                         }
                     })
                 }

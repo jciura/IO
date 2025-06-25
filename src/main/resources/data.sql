@@ -55,7 +55,7 @@ VALUES (0, 1, 5, 'Biologia molekularna', 'FRIDAY'),
 ALTER TABLE courses
     ALTER COLUMN id RESTART WITH 6;
 
-ALTER TABLE Software
+ALTER TABLE software
     ALTER COLUMN id RESTART WITH 3;
 
 insert into classes (id, classroom_id, date_time, duration, course_id) values (1, 100, '2025-03-14 12:00:00', 65, 2);
@@ -85,3 +85,7 @@ insert into classes (id, classroom_id, date_time, duration, course_id)
 values (23, 103, '2025-07-04 10:30:00', 65, 5);
 insert into classes (id, classroom_id, date_time, duration, course_id)
 values (24, 103, '2025-07-11 10:30:00', 65, 5);
+
+
+ALTER TABLE classes
+    ALTER COLUMN id RESTART WITH 25;

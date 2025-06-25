@@ -1,4 +1,5 @@
-import { useState } from "react";
+import {useContext, useEffect, useState} from "react";
+import {UserContext} from "./UserContext";
 
 function LoginForm() {
     var userFromLocalStorage = JSON.parse(localStorage.getItem("USER")) ?? null;
@@ -7,6 +8,12 @@ function LoginForm() {
     const [isSuccessful, setIsSuccessful] = useState(false);
     const [token, setToken] = useState("");  //TODO: Obsługa tokenów
     const [info, setInfo] = useState(null);
+
+    const {user, setUser} = useContext(UserContext);
+
+    useEffect(() => {
+
+    }, [isSuccessful]);
 
     async function handleLogin() {
         try {
@@ -23,15 +30,11 @@ function LoginForm() {
 
             if (response.ok) {
                 const data = await response.json();
-                console.log(data.token);
-                // const parsedData = parseJwt(data.token);
-                console.log(data);
-                // console.log(parsedData);
                 console.log("Logged in successfully");
                 setIsSuccessful(true);
                 localStorage.setItem("USER", JSON.stringify(data));
+                setUser(data);
                 userFromLocalStorage = data;
-                window.location.reload();
                 console.log(data.role);
                 console.log(localStorage.getItem("USER"));
             } else if (response.status === 400) {
@@ -49,8 +52,8 @@ function LoginForm() {
     function handleLogout() {
         setIsSuccessful(false);
         localStorage.removeItem("USER");
+        setUser(null);
         userFromLocalStorage = null;
-        window.location.reload();
     }
 
     // function parseJwt (token) {
