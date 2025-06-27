@@ -201,7 +201,10 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(Arrays.asList(
                 "http://localhost:3000",
-                "https://io-75z46jiff-jciuras-projects-bb0ec7c8.vercel.app"
+                "https://io-75z46jiff-jciuras-projects-bb0ec7c8.vercel.app",
+                "https://io-git-master-jciuras-projects-bb0ec7c8.vercel.app",
+                "https://io-376q3gu5d-jciuras-projects-bb0ec7c8.vercel.app",
+                "https://io-seven-navy.vercel.app"
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
