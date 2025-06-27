@@ -1,5 +1,6 @@
 import {useContext, useEffect, useState} from "react";
 import {UserContext} from "./UserContext";
+import {API_URL} from './config';
 
 function LoginForm() {
     var userFromLocalStorage = JSON.parse(localStorage.getItem("USER")) ?? null;
@@ -17,7 +18,7 @@ function LoginForm() {
 
     async function handleLogin() {
         try {
-            const response = await fetch("http://localhost:8080/users/login", {
+            const response = await fetch(`${API_URL}/users/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -1,4 +1,5 @@
-import {useContext, createContext, useState, useEffect} from "react";
+import {createContext, useContext, useEffect, useState} from "react";
+import {API_URL} from "../config";
 
 export const ClassesContext = createContext();
 
@@ -10,7 +11,7 @@ export const ClassesProvider = ({ userId, children }) => {
 
     const fetchRescheduleRequests = async (events) => {
         try {
-            const response = await fetch(`http://localhost:8080/reschedule/${userId}`, {
+            const response = await fetch(`${API_URL}/reschedule/${userId}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -45,7 +46,7 @@ export const ClassesProvider = ({ userId, children }) => {
 
     const fetchCompletedRescheduleRequests = async (events) => {
         try {
-            const response = await fetch(`http://localhost:8080/reschedule/completed/${userId}`, {
+            const response = await fetch(`${API_URL}/reschedule/completed/${userId}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -65,7 +66,7 @@ export const ClassesProvider = ({ userId, children }) => {
         if (userId == null)
             return
         try {
-            const response = await fetch(`http://localhost:8080/classes/user_id/${userId}`, {
+            const response = await fetch(`${API_URL}/classes/user_id/${userId}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"

@@ -1,6 +1,7 @@
 import Popup from "reactjs-popup";
 import Select from 'react-select';
 import {useState} from "react";
+import {API_URL} from "../config";
 
 function ClassCard({classSession}) {
 
@@ -33,7 +34,7 @@ function ClassCard({classSession}) {
         try {
             console.log(classSession.dateTime, "HUJ");
             const response = await fetch(
-                `http://localhost:8080/reschedule/request/${JSON.parse(localStorage.getItem("USER")).id}`,
+                `${API_URL}/reschedule/request/${JSON.parse(localStorage.getItem("USER")).id}`,
                 {
                     method: "POST",
                     headers: {
@@ -67,7 +68,7 @@ function ClassCard({classSession}) {
     async function loadClassroomRecommendations() {
         console.log("CHECK: ", newDate, newClassDuration, newClassroom, "FLAG: ", areInputsFilled);
         try {
-            const response = await fetch("http://localhost:8080/recommendations/getRecommendations", {
+            const response = await fetch(`${API_URL}/recommendations/getRecommendations`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

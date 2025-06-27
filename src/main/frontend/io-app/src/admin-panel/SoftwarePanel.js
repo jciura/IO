@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import Popup from "reactjs-popup";
+import {API_URL} from "../config";
 
 function SoftwarePanel() {
     const [softwareName, setSoftwareName] = useState("");
@@ -13,7 +14,7 @@ function SoftwarePanel() {
 
     async function fetchSoftwares() {
         try {
-            const response = await fetch("http://localhost:8080/software");
+            const response = await fetch(`${API_URL}/software`);
             if (response.ok) {
                 const data = await response.json();
                 setSoftwares(data);
@@ -32,7 +33,7 @@ function SoftwarePanel() {
                 return;
             }
             const encodedName = encodeURIComponent(softwareName.trim());
-            const response = await fetch(`http://localhost:8080/software/${encodedName}`, {
+            const response = await fetch(`${API_URL}/software/${encodedName}`, {
                 method: "POST",
             });
             if (response.ok) {
@@ -48,7 +49,7 @@ function SoftwarePanel() {
 
     async function isSoftwareUsed(name) {
         try {
-            const response = await fetch(`http://localhost:8080/classrooms/software/${name}`);
+            const response = await fetch(`${API_URL}/classrooms/software/${name}`);
             if (!response.ok) {
                 console.error("Nie udało się sprawdzić użycia oprogramowania.");
                 return false;
@@ -74,7 +75,7 @@ function SoftwarePanel() {
         if (!window.confirm("Na pewno chcesz usunąć to oprogramowanie?")) return;
 
         try {
-            const response = await fetch(`http://localhost:8080/software/${id}`, {
+            const response = await fetch(`${API_URL}/software/${id}`, {
                 method: "DELETE",
             });
             if (response.ok) {

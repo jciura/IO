@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import Popup from "reactjs-popup";
+import {API_URL} from "../config";
 
 function CoursePanel() {
     const [courseName, setCourseName] = useState("");
@@ -17,8 +18,8 @@ function CoursePanel() {
     async function fetchUsers() {
         try {
             const [lecturersRes, studentsRes] = await Promise.all([
-                fetch("http://localhost:8080/users/lecturers"),
-                fetch("http://localhost:8080/users/students")
+                fetch(`${API_URL}/users/lecturers`),
+                fetch(`${API_URL}/users/students`)
             ]);
 
             if (lecturersRes.ok && studentsRes.ok) {
@@ -32,7 +33,7 @@ function CoursePanel() {
 
     async function fetchCourses() {
         try {
-            const response = await fetch("http://localhost:8080/courses");
+            const response = await fetch("${API_URL}/courses");
             if (response.ok) {
                 const data = await response.json();
                 setCourses(data);
@@ -57,7 +58,7 @@ function CoursePanel() {
             const encodedName = encodeURIComponent(courseName);
 
             const response = await fetch(
-                `http://localhost:8080/courses/${encodedName}/${selectedLecturerId}/${selectedStudentId}`,
+                `${API_URL}/courses/${encodedName}/${selectedLecturerId}/${selectedStudentId}`,
                 {
                     method: "POST"
                 }

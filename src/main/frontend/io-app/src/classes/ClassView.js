@@ -3,7 +3,7 @@ import 'reactjs-popup/dist/index.css';
 import Select from "react-select/base";
 import {useEffect, useState} from "react";
 import {useClasses} from "./ClassesContext";
-import {hover} from "@testing-library/user-event/dist/hover";
+import {API_URL} from "../config";
 
 function ClassView({event}) {
     // console.log(event)
@@ -53,7 +53,7 @@ function ClassView({event}) {
     async function handleClassChangeRequest(close) {
         try {
             const response = await fetch(
-                `http://localhost:8080/reschedule/request/${currentUserId}`,
+                `${API_URL}/reschedule/request/${currentUserId}`,
                 {
                     method: "POST",
                     headers: {
@@ -90,7 +90,7 @@ function ClassView({event}) {
     async function loadClassroomRecommendations() {
         console.log("CHECK: ", newDate, newClassDuration, newClassroom, "FLAG: ", areInputsFilled);
         try {
-            const response = await fetch("http://localhost:8080/recommendations/getRecommendations", {
+            const response = await fetch(`${API_URL}/recommendations/getRecommendations`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -134,7 +134,7 @@ function ClassView({event}) {
     async function handleRequestAccept(){
         try {
             console.log(event);
-            const response = await fetch(`http://localhost:8080/reschedule/${event.request.id}/accept`, {
+            const response = await fetch(`${API_URL}/reschedule/${event.request.id}/accept`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -153,7 +153,7 @@ function ClassView({event}) {
 
     async function handleRequestReject() {
         try {
-            const response = await fetch(`http://localhost:8080/reschedule/${event.request.id}/reject`, {
+            const response = await fetch(`${API_URL}/reschedule/${event.request.id}/reject`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -172,7 +172,7 @@ function ClassView({event}) {
 
     async function handleRequestDelete() {
         try {
-            const response = await fetch(`http://localhost:8080/reschedule/${event.request.id}`, {
+            const response = await fetch(`${API_URL}/reschedule/${event.request.id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"

@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import RequestCard from "./RequestCard";
+import {API_URL} from "../config";
 
 function RequestList() {
     const [requests, setRequests] = useState([]);
@@ -8,7 +9,7 @@ function RequestList() {
     useEffect(() => {
         async function fetchRequests() {
             try {
-                const response = await fetch(`http://localhost:8080/reschedule/${currentUserId}`);
+                const response = await fetch(`${API_URL}/reschedule/${currentUserId}`);
                 if (response.ok) {
                     const data = await response.json();
                     setRequests(data);

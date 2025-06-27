@@ -1,11 +1,12 @@
 import Popup from "reactjs-popup";
+import {API_URL} from "../config";
 
 function RequestCard({request}) {
     const currentUserId = JSON.parse(localStorage.getItem("USER")).id;
 
     async function handleRequestDelete() {
         try {
-            const response = await fetch(`http://localhost:8080/reschedule/${request.id}`, {
+            const response = await fetch(`${API_URL}/reschedule/${request.id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
@@ -23,7 +24,7 @@ function RequestCard({request}) {
 
     async function handleRequestAccept() {
         try {
-            const response = await fetch(`http://localhost:8080/reschedule/${request.id}/accept`, {
+            const response = await fetch(`${API_URL}/reschedule/${request.id}/accept`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -41,7 +42,7 @@ function RequestCard({request}) {
 
     async function handleRequestReject() {
         try {
-            const response = await fetch(`http://localhost:8080/reschedule/${request.id}/reject`, {
+            const response = await fetch(`${API_URL}/reschedule/${request.id}/reject`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

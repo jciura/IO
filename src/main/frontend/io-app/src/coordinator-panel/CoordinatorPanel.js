@@ -1,5 +1,6 @@
 import {useRef, useState} from "react";
 import CsvTablePreview from "./CsvFilePreview";
+import {API_URL} from "../config";
 
 
 function CoordinatorPanel() {
@@ -33,7 +34,7 @@ function CoordinatorPanel() {
 
             const formData = new FormData();
             formData.append("file", file);
-            const response = await fetch("http://localhost:8080/timetable/upload", {
+            const response = await fetch(`${API_URL}/timetable/upload`, {
                 method: "POST",
                 body: formData
             });

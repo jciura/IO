@@ -1,5 +1,6 @@
 import Popup from "reactjs-popup";
 import {useState} from "react";
+import {API_URL} from "../config";
 
 function ClassroomCard({classroom, onUpdate}) {
     var backgroundColor;
@@ -14,7 +15,7 @@ function ClassroomCard({classroom, onUpdate}) {
 
     async function handleShowSoftware(classroomId) {
         try {
-            const response = await fetch(`http://localhost:8080/classrooms/${classroomId}`, {
+            const response = await fetch(`${API_URL}/classrooms/${classroomId}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -32,7 +33,7 @@ function ClassroomCard({classroom, onUpdate}) {
 
     async function handleDeleteClassroom(classroomId) {
         try {
-            const response = await fetch(`http://localhost:8080/classrooms/${classroomId}`, {
+            const response = await fetch(`${API_URL}/classrooms/${classroomId}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
@@ -52,7 +53,7 @@ function ClassroomCard({classroom, onUpdate}) {
     async function handleAddSoftware(classroomId) {
         try {
             console.log(classroomId, newSoftware);
-            const response = await fetch(`http://localhost:8080/classrooms/${classroomId}/software/${newSoftware}`, {
+            const response = await fetch(`${API_URL}/classrooms/${classroomId}/software/${newSoftware}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

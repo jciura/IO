@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import ClassroomCard from "./ClassroomCard";
 import Popup from "reactjs-popup";
+import {API_URL} from "../config";
 
 function AdminPanel() {
     const userFromLocalStorage = JSON.parse(localStorage.getItem("USER")) ?? null;
@@ -17,7 +18,7 @@ function AdminPanel() {
             if (userId == null)
                 return
             try {
-                const response = await fetch('http://localhost:8080/classrooms', {
+                const response = await fetch(`${API_URL}/classrooms`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"
@@ -37,7 +38,7 @@ function AdminPanel() {
 
     async function showClassrooms() {
         try {
-            const response = await fetch('http://localhost:8080/classrooms', {
+            const response = await fetch(`${API_URL}/classrooms`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -54,7 +55,7 @@ function AdminPanel() {
     }
 
     async function handleAddClassroom() {
-        const response = await fetch('http://localhost:8080/classrooms', {
+        const response = await fetch(`${API_URL}/classrooms`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
