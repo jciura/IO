@@ -14,21 +14,21 @@ public class RescheduleRequestController {
         this.rescheduleRequestService = rescheduleRequestService;
     }
 
-    @PostMapping("/request/{userId}/single")
-    public ResponseEntity<Void> createOneTimeRequest(@PathVariable long userId, @RequestBody RescheduleRequestDto rescheduleRequestDto) {
-        rescheduleRequestService.createOneTimeRequest(rescheduleRequestDto, userId);
-        return ResponseEntity.ok().build();
-    }
-
-    @PostMapping("/request/{userId}/multiple")
-    public ResponseEntity<Void> createMultipleRequest(@PathVariable long userId, @RequestBody MultipleRescheduleRequestDto multipleRescheduleRequestDto) {
-        //rescheduleRequestService.createMultipleRequest(multipleRescheduleRequestDto, userId);
+    @PostMapping("/request/{userId}")
+    public ResponseEntity<Void> createRequest(@PathVariable long userId, @RequestBody RescheduleRequestDto rescheduleRequestDto) {
+        rescheduleRequestService.createRequest(rescheduleRequestDto, userId);
         return ResponseEntity.ok().build();
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<List<RescheduleRequestDto>> getRequestByUser(@PathVariable long userId) {
+    public ResponseEntity<List<RescheduleRequestDto>> getPendingRequestByUser(@PathVariable long userId) {
         List<RescheduleRequestDto> dto = rescheduleRequestService.getPendingRequests(userId);
+        return ResponseEntity.ok(dto);
+    }
+
+    @GetMapping("/completed/{userId}")
+    public ResponseEntity<List<RescheduleRequestDto>> getCompletedRequestsByUser(@PathVariable long userId) {
+        List<RescheduleRequestDto> dto = rescheduleRequestService.getCompletedUserRequests(userId);
         return ResponseEntity.ok(dto);
     }
 
@@ -41,6 +41,12 @@ public class RescheduleRequestController {
     @PostMapping("/{id}/reject")
     public ResponseEntity<Void> reject(@PathVariable Long id) {
         rescheduleRequestService.rejectRequest(id);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable long id) {
+        rescheduleRequestService.deleteById(id);
         return ResponseEntity.ok().build();
     }
 }

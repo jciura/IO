@@ -2,6 +2,7 @@ package pl.agh.edu.io.Course;
 
 import jakarta.persistence.*;
 import pl.agh.edu.io.Class.ClassSession;
+import pl.agh.edu.io.SpecialDay.PolishDayOfWeek;
 import pl.agh.edu.io.User.User;
 
 import java.util.ArrayList;
@@ -31,6 +32,9 @@ public class Course {
     // Wszystkie zajęcia w ramach kursu
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ClassSession> sessions = new ArrayList<>();
+
+    @Enumerated(EnumType.STRING)
+    private PolishDayOfWeek regularDayOfWeek;
 
     public Course() {
     }
@@ -81,5 +85,13 @@ public class Course {
     public void removeSession(ClassSession session) {
         sessions.remove(session);
         session.setCourse(null);
+    }
+
+    public PolishDayOfWeek getRegularDayOfWeek() {
+        return regularDayOfWeek;
+    }
+
+    public void setRegularDayOfWeek(PolishDayOfWeek regularDayOfWeek) {
+        this.regularDayOfWeek = regularDayOfWeek;
     }
 }

@@ -2,7 +2,9 @@
 
 ## 1. Uruchomienie aplikacji
 
-Możliwe sposoby uruchomienia:
+Aplikacja wymaga uruchomienia serwera bazodanowego i serwisu internetowego, aby mogła poprawnie działać.
+
+Możliwe sposoby uruchomienia serwera bazodanowego:
 
 ### a) Z poziomu IDE (np. IntelliJ IDEA, Eclipse)
 
@@ -12,6 +14,12 @@ Możliwe sposoby uruchomienia:
 ### b) Z linii poleceń (Gradle)
 
 ./gradlew bootRun
+
+Sposób uruchomienia serwisu internetowego:
+1. Otwórz terminal (np. cmd lub Windows PowerShell na Windowsie).
+2. Przejdź do głównego katalogu projektu (uruchamiając terminal w środowisku, w którym uruchomiony jest projekt, można pominąć ten punkt).
+3. Za pomocą polecenia `cd/src/main/frontend/io-app` wejdź do katalogu zawierającego pliki serwisu.
+4. Uruchom serwis używając polecenia `npm start`.  
 
 ## 2. Dostępne interfejsy
 
