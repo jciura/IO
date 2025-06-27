@@ -11,7 +11,7 @@ import java.util.List;
 public interface ClassSessionRepository extends JpaRepository<ClassSession, Long> {
     @Query(value = "SELECT cs.* FROM classes cs WHERE cs.classroom_id = :classroomId " +
             "AND cs.date_time < :endDateTime " +
-            "AND TIMESTAMPADD(MINUTE, cs.duration, cs.date_time) > :startDateTime",
+            "AND cs.date_time + (cs.duration * INTERVAL '1 minute') > :startDateTime",
             nativeQuery = true)
     List<ClassSession> findOverlappingSessions(
             @Param("classroomId") Long classroomId,
